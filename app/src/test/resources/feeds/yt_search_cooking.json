@@ -1,0 +1,55 @@
+{
+ "kind": "youtube#searchListResponse",
+ "items": [
+  {
+   "kind": "youtube#searchResult",
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "v1"
+   },
+   "snippet": {
+    "title": "Easy Home Cooking: One-Pot Jollof Rice Recipe"
+   }
+  },
+  {
+   "kind": "youtube#searchResult",
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "v2"
+   },
+   "snippet": {
+    "title": "A Chef Explains Knife Skills for Home Cooks"
+   }
+  },
+  {
+   "kind": "youtube#searchResult",
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "v3"
+   },
+   "snippet": {
+    "title": "Premier League Match Highlights, Full Match"
+   }
+  },
+  {
+   "kind": "youtube#searchResult",
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "v4"
+   },
+   "snippet": {
+    "title": "SHOCKING cooking fail, recipe gone wrong"
+   }
+  },
+  {
+   "kind": "youtube#searchResult",
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "v5"
+   },
+   "snippet": {
+    "title": "Quick recipe tip"
+   }
+  }
+ ]
+}

@@ -1,0 +1,134 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Orbit</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  #back{position:absolute;inset:0;overflow:hidden;transition:transform .35s cubic-bezier(.2,.9,.2,1)}
+  #back img{position:absolute;left:34%;top:-6%;width:76%;height:112%;object-fit:cover;opacity:0;transition:opacity 1.2s}
+  #back img.amb{left:-3%;top:-3%;width:106%;height:106%}
+  #back .tint{position:absolute;inset:0;background:var(--brand,#3df2ff);opacity:.12;transition:background .5s}
+  #back .wash{position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 30%,rgba(5,8,15,.62) 58%,rgba(5,8,15,.18) 100%),linear-gradient(0deg,var(--bg) 0%,rgba(5,8,15,0) 50%)}
+  header{position:absolute;left:84px;right:84px;top:44px;display:flex;justify-content:space-between;align-items:flex-start}
+  #clock{font-family:'Unbounded',sans-serif;font-weight:700;font-size:64px;line-height:1;letter-spacing:-.03em}
+  #date{font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.3em;opacity:.6;margin-top:8px;text-transform:uppercase}
+  #host{margin-top:22px;max-width:760px;font-size:26px;line-height:1.3;opacity:.9;background:linear-gradient(100deg,#fff 55%,var(--accent) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  #right{text-align:right;font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.22em;line-height:2;text-transform:uppercase}
+  #right .sky{color:var(--accent)} #right .well{opacity:.55} #right .live{color:var(--live);font-weight:700} #right .next{color:var(--accent);font-weight:700} #right .dim{opacity:.55}
+  #hero{position:absolute;left:84px;top:300px;width:1000px}
+  #eyebrow{font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.34em;color:var(--accent);text-transform:uppercase;display:flex;align-items:center;gap:14px;min-height:28px}
+  #title{font-family:'Unbounded',sans-serif;font-weight:800;font-size:80px;line-height:.98;letter-spacing:-.035em;margin:20px 0 20px;max-height:164px;overflow:hidden}
+  #board{display:none;gap:40px;margin:0 0 18px;font-family:'Unbounded',sans-serif;font-weight:700;font-size:40px;letter-spacing:-.02em}
+  #board .t{display:flex;align-items:baseline;gap:16px} #board .t .s{font-family:'Space Mono',monospace;font-size:34px;color:var(--accent)} #board .t.bat .a::after{content:'';display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--live);margin-left:12px;box-shadow:0 0 14px var(--live)}
+  #desc{font-size:27px;line-height:1.35;opacity:.85;max-width:880px;min-height:74px}
+  #cta{display:inline-block;margin-top:24px;padding:15px 26px;border-radius:40px;background:#fff;color:#000;font-family:'Space Mono',monospace;font-weight:700;font-size:14px;letter-spacing:.24em;text-transform:uppercase}
+  #rows{position:absolute;left:84px;right:0;bottom:52px}
+  #rowname{font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.34em;text-transform:uppercase;margin-bottom:16px;display:flex;gap:40px}
+  #rowname span{opacity:.35} #rowname span.on{opacity:1;color:var(--accent)} #rowname span.empty{display:none}
+  #row{display:flex;gap:18px;align-items:flex-end;transition:transform .25s cubic-bezier(.2,.9,.2,1)}
+  #row .card{flex:none;width:300px;height:169px;transform:scale(.96);opacity:.72}
+  #row .card.poster{width:200px;height:300px}
+  #row .card.focus{opacity:1}
+  #row .card .plain{position:absolute;left:18px;right:18px;top:48px;font-size:17px;line-height:1.3;opacity:.8}
+  #row .card.dice{display:flex;align-items:center;justify-content:center;font-family:'Unbounded',sans-serif;font-weight:800;font-size:26px;text-align:center;padding:20px;box-sizing:border-box;background:linear-gradient(135deg,var(--accent) 0%,#0b1020 100%)}
+  #hint{position:absolute;right:84px;bottom:52px;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:.24em;opacity:.35;text-transform:uppercase}
+</style></head>
+<body>
+<div id="root">
+  <div id="back"><img id="amb1" class="amb" alt=""><img id="amb2" class="amb" alt=""><img id="art" alt=""><div class="tint"></div><div class="wash"></div></div>
+  <header>
+    <div><div id="clock"></div><div id="date"></div><div id="host"></div></div>
+    <div id="right"><div class="sky" id="skyline"></div><div class="well" id="wellline"></div><div id="ticker"></div></div>
+  </header>
+  <div id="hero"><div id="eyebrow"></div><div id="title"></div><div id="board"></div><div id="desc"></div><div id="cta">Select to play</div></div>
+  <div id="rows"><div id="moods"></div><div id="rowname"></div><div id="row"></div></div>
+  <div id="hint">Menu  all channels</div>
+  <div id="dusk"></div>
+  <div id="veil"></div>
+</div>
+<script src="profiles.js"></script><script src="sky.js"></script><script src="personal.js"></script><script src="wellbeing.js"></script><script src="feeds.js"></script><script src="common.js"></script>
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id); const S = Shell.state; const esc = Shell.esc;
+  const NAMES = { tonight: 'Tonight', cont: 'Continue', ch: 'Channels', sport: 'Sport', today: 'Today', sys: 'System' };
+  let ri = 0, mi = 0, onMoods = false; const ci = {}; let rows = {}, keys = [];
+  function header() {
+    const d = new Date(); $('clock').textContent = Shell.hhmm(d); $('date').textContent = d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
+    $('host').textContent = S.hostLine; $('skyline').textContent = Sky.line(S.sky); $('wellline').textContent = S.apps.length ? Wellbeing.line(S.well) : '';
+    $('ticker').innerHTML = Shell.myLive().filter(x => x.state === 'LIVE' || x.state === 'NEXT').slice(0, 2).map(x => `<span class="${x.state === 'LIVE' ? 'live' : 'next'}">${esc(x.state)}</span>  ${esc(x.short || x.title)}${x.short ? '' : '  <span class="dim">· ' + esc(x.line1) + '</span>'}`).join('<br>');
+  }
+  function scoreHtml(c, big) {
+    if (!c.teams || !c.teams.length) return '';
+    return c.teams.map(t => `<div class="t ${t.batting ? 'bat' : ''} ${(!t.score && !t.batting) ? 'dim' : ''}"><span class="a">${esc(big ? t.name : t.abbr)}</span><span class="s">${esc(t.score || (t.batting ? '' : 'yet to bat'))}</span></div>`).join('');
+  }
+  function card(it, focused) {
+    const el = document.createElement('div'); el.className = 'card' + (it.poster ? ' poster' : '') + (it.kind === 'surprise' ? ' dice' : '') + (focused ? ' focus' : '');
+    el.style.background = it.art ? '#101828' : it.kind === 'surprise' ? '' : `linear-gradient(135deg, ${it.color} 0%, #0b1020 90%)`;
+    if (it.kind === 'surprise') { el.textContent = 'Surprise me'; return el; }
+    let html = it.art ? `<img src="${esc(it.art)}" alt="" onerror="this.parentNode.classList.add('noart'); this.remove();"><div class="shade"></div>` : '';
+    if (it.kind === 'show') html += `<div class="rank">${esc(it.rank)}</div><div class="name ${it.art ? 'onlyfail' : ''}">${esc(it.name)}</div>`;
+    else if (it.kind === 'app') html += it.art ? '' : `<div class="name">${esc(it.name)}</div>`;
+    else if (it.kind === 'live' && it.data.teams && it.data.teams.length) html += `<div class="tag">${esc(it.tag)}${it.data.venue ? '  ·  ' + esc(it.data.venue) : ''}</div><div class="score">${scoreHtml(it.data)}</div>`;
+    else { html += `<div class="tag">${esc(it.tag || '')}</div><div class="name">${esc(it.name)}</div>`; if (it.kind === 'today') html += `<div class="plain">${esc(it.desc)}</div>`; }
+    if (it.live) html += '<div class="pill">LIVE</div>'; else if (it.state === 'NEXT') html += '<div class="pill next">NEXT</div>';
+    el.innerHTML = html; return el;
+  }
+  // ambient frames when the focused item has no artwork of its own
+  let ambN = 1, ambFront = 1, ambTimer = 0;
+  function ambient(on) {
+    const a1 = $('amb1'), a2 = $('amb2');
+    if (!on) { a1.style.opacity = 0; a2.style.opacity = 0; clearInterval(ambTimer); ambTimer = 0; return; }
+    const set = Shell.mood().frames;
+    const show = () => { const next = ambFront === 1 ? a2 : a1, cur = ambFront === 1 ? a1 : a2; ambN = ambN % 8 + 1; next.src = `frames/${set}-${String(ambN).padStart(2, '0')}.jpg`; next.style.opacity = .55; cur.style.opacity = 0; ambFront = ambFront === 1 ? 2 : 1; };
+    if (!ambTimer) { show(); ambTimer = setInterval(show, 14000); }
+  }
+  function render() {
+    header();
+    rows = Shell.items(); keys = rows.order.filter(k => (rows[k] || []).length);
+    $('moods').innerHTML = `<span class="lead">Tonight I feel like</span>` + Shell.moods.map((m, i) => `<span class="m ${m.id === S.mood ? 'on' : ''} ${onMoods && i === mi ? 'cur' : ''}">${esc(m.label)}</span>`).join('');
+    $('moods').classList.toggle('focus', onMoods);
+    if (!keys.length) return; if (ri >= keys.length) ri = keys.length - 1;
+    const key = keys[ri], list = rows[key]; ci[key] = Math.max(0, Math.min(list.length - 1, ci[key] || 0));
+    $('rowname').innerHTML = rows.order.map(k => `<span class="${k === key && !onMoods ? 'on' : ''}${(rows[k] || []).length ? '' : ' empty'}">${NAMES[k]}</span>`).join('');
+    const row = $('row'); row.innerHTML = ''; let offset = 0; list.forEach((it, i) => { row.appendChild(card(it, i === ci[key] && !onMoods)); if (i < ci[key]) offset += (it.poster ? 200 : 300) + 18; }); row.style.transform = `translateX(${-offset}px)`;
+    const it = list[ci[key]]; if (!it) return;
+    $('eyebrow').innerHTML = (it.live ? '<span class="pill">LIVE</span>' : it.state === 'NEXT' ? '<span class="pill next">NEXT</span>' : '') + esc(it.eyebrow.replace(/^LIVE\s+·\s+/, ''));
+    $('title').textContent = it.name; $('desc').textContent = it.desc;
+    const board = $('board'); if (it.kind === 'live' && it.data.teams && it.data.teams.length) { board.style.display = 'flex'; board.innerHTML = scoreHtml(it.data, true); } else { board.style.display = 'none'; board.innerHTML = ''; }
+    $('cta').textContent = it.kind === 'today' ? 'Select to read' : it.kind === 'system' ? 'Select to switch' : it.kind === 'surprise' ? 'Select to roll' : 'Select to play';
+    $('cta').style.visibility = (it.kind === 'live' && !it.pkg) ? 'hidden' : 'visible';
+    const img = $('art'); const art = it.art || (it.kind === 'live' ? it.data.image : null);
+    if (art) { ambient(false); img.onerror = () => { img.onerror = null; img.src = art; }; img.src = art.includes('/hqdefault.jpg') ? art.replace('/hqdefault.jpg', '/maxresdefault.jpg') : art; img.style.opacity = .5; }
+    else { img.onerror = null; img.style.opacity = 0; ambient(true); }
+    document.documentElement.style.setProperty('--brand', it.color || Shell.mood().accent);
+  }
+  Shell.on('data', render); Shell.on('tick', header); Shell.on('wake', () => { ri = 0; onMoods = false; });
+  Shell.on('back', () => { ri = 0; onMoods = false; render(); });
+  Shell.on('mood', () => { ambN = 1; clearInterval(ambTimer); ambTimer = 0; });
+  Shell.on('surprise', (pick) => {
+    const target = Object.keys(rows).find(k => Array.isArray(rows[k]) && rows[k].some(x => x.id === pick.id));
+    let n = 0; const t = setInterval(() => {
+      const key = keys[ri]; if (rows[key]) { ci[key] = Math.floor(Math.random() * rows[key].length); render(); }
+      if (++n > 6) { clearInterval(t); if (target) { ri = Math.max(0, keys.indexOf(target)); ci[target] = rows[target].findIndex(x => x.id === pick.id); render(); } }
+    }, 150);
+  });
+  Shell.on('key', (k) => {
+    const back = $('back');
+    if (onMoods) {
+      const chip = Shell.moods[mi];
+      if (k === 'ArrowLeft') mi = Math.max(0, mi - 1); else if (k === 'ArrowRight') mi = Math.min(Shell.moods.length - 1, mi + 1);
+      else if (k === 'Enter' && chip.opens) { Shell.openHome(chip.opens); return; }
+      else if (k === 'ArrowDown' || k === 'Enter') { onMoods = false; if (chip.opens) render(); else Shell.setMood(chip.id); return; }
+      // moving across the strip previews a mood; opener chips only take the cursor
+      if ((k === 'ArrowLeft' || k === 'ArrowRight') && !Shell.moods[mi].opens) Shell.setMood(Shell.moods[mi].id); else render(); return;
+    }
+    const key = keys[ri] || keys[0]; if (!key) return;
+    if (k === 'ArrowLeft') { ci[key] = (ci[key] || 0) - 1; back.style.transform = 'translateX(8px)'; } else if (k === 'ArrowRight') { ci[key] = (ci[key] || 0) + 1; back.style.transform = 'translateX(-8px)'; }
+    else if (k === 'ArrowUp') { if (ri === 0) { onMoods = true; mi = Math.max(0, Shell.moods.findIndex(m => m.id === S.mood)); } else ri--; }
+    else if (k === 'ArrowDown') ri = Math.min(keys.length - 1, ri + 1);
+    else if (k === 'Enter') { Shell.launchItem(rows[key][ci[key] || 0]); return; }
+    setTimeout(() => { back.style.transform = ''; }, 350);
+    render();
+  });
+  render();
+})();
+</script>
+</body></html>

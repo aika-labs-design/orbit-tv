@@ -1,0 +1,269 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Orbit Atlas</title>
+<link rel="stylesheet" href="cinema.css"><link rel="stylesheet" href="journeys.css">
+</head>
+<body>
+<div id="root" tabindex="-1">
+  <div class="space"></div><div class="stars"></div>
+  <div class="wm">ORBIT</div>
+  <nav id="tabs"></nav>
+  <div class="me"><div class="t" id="me"></div><div class="av" id="av"></div></div>
+  <div id="globe"><img id="gimg" alt=""><div id="pins"></div></div>
+  <div class="side">
+    <div class="eyebrow">Journeys &nbsp;·&nbsp; anywhere on Earth</div>
+    <h1>Where to tonight?</h1>
+    <div class="search" id="search"><b></b><input id="q" placeholder="Search any city, town, beach or festival" autocomplete="off" disabled></div>
+    <div id="groups"></div>
+  </div>
+  <div class="credit">Videos from YouTube creators · Weather Open-Meteo · Places Wikipedia, Wikidata</div>
+  <div class="hint" id="hint"></div>
+  <div id="veil"></div>
+</div>
+<script src="journeys.js"></script><script src="home.js"></script><script src="taste.js"></script><script src="cinema-rows.js"></script><script src="world-data.js"></script><script src="profiles.js"></script>
+<script src="sky.js"></script><script src="personal.js"></script><script src="wellbeing.js"></script><script src="feeds.js"></script><script src="common.js"></script>
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id); const esc = Shell.esc;
+  const store = { get: (k, d) => { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } }, set: (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
+  const prof = () => Shell.current();   // the person watching; their home places and living city shape the page
+  // the same top menu as Cinema, which stores the tabs it built for the person watching
+  const tabList = () => { const p = prof(), t = p ? store.get('orbit.cinema.tabs.' + p.id, null) : null; return Array.isArray(t) && t.length ? t : CinemaRows.tabs(null); };   // keyed by person: never another person's loves
+  let BASE = [], PLACES = [], COUNTRY = {}, ALIASES = [], placesFor = '';   // BASE: places.json; PLACES: BASE with this person's homes first
+  const info = {};      // place id -> { image, weather, local, line } from the travel service
+  const live = {};      // place id -> first live video
+  let zone = 'shelf', gi = 0, ci = 0, ti = 3, groups = [], frame = 16, target = 16, pinPlace = null;
+  const PERF = location.hash.slice(1).split(',');   // ADB-only measuring switches: noglobe, nopins, noshadow, noimg
+  if (PERF.includes('noshadow')) document.body.classList.add('perf-noshadow');
+  if (PERF.includes('noimg')) document.body.classList.add('perf-noimg');
+
+  // ---------- globe: steps through pre-rendered frames toward the target; pins are projected ----------
+  const pad = (n) => String(n).padStart(2, '0');
+  // Each frame is a full 1040 px decode on this TV, so the globe waits for focus to rest and then
+  // swaps once to the target frame (stepping through frames measured p90 89 ms and +120 MB).
+  let turnT = 0;
+  function turnTo(lon) {
+    if (PERF.includes('noglobe')) return;
+    target = Journeys.frameFor(lon); clearTimeout(turnT);
+    turnT = setTimeout(() => {
+      if (frame === target) return; const f = target, im = new Image(); im.src = `globe/f${pad(f)}.jpg`;
+      const show = () => { if (f !== target) return; frame = f; $('gimg').src = im.src; pins(); };
+      (im.decode ? im.decode() : Promise.resolve()).then(show, show);   // decoded off-screen first, so the paint never waits on it
+    }, 300);
+  }
+  // pins are rebuilt only when the frame or the set of places changes; a key press just moves the focus classes
+  let pinKey = '';
+  function pins() {
+    if (PERF.includes('nopins')) return;
+    const list = pinList(), key = frame + ':' + list.map(p => p.id + ((info[p.id] || {}).weather ? 'w' : '')).join(',') + ':' + Math.floor(Date.now() / 60000);
+    if (key !== pinKey) {
+      pinKey = key; const now = Date.now();
+      $('pins').innerHTML = list.map(p => {
+        const pr = Journeys.project(p.lat, p.lon, frame * 5); if (!pr.visible) return '';
+        const t = Journeys.localTime(p.tz, now), w = (info[p.id] || {}).weather;
+        return `<div class="pin" data-id="${esc(p.id)}" style="left:${(pr.x * 1040).toFixed(0)}px;top:${(pr.y * 1040).toFixed(0)}px"><i></i><div>${esc(p.name.split(',')[0])}<small>${t.hhmm}${w ? ' · ' + esc(String(w.tempC)) + '°' : ''}${p.tags.includes('home') ? ' · home' : ''}</small></div></div>`;
+      }).join('');
+    }
+    const els = [...$('pins').querySelectorAll('.pin')];
+    const named = Journeys.labelled(els.map(el => ({ id: el.dataset.id, x: parseFloat(el.style.left), y: parseFloat(el.style.top) })), pinPlace && pinPlace.id, firstHome);
+    els.forEach(el => {
+      const id = el.dataset.id, on = !!pinPlace && pinPlace.id === id;
+      const label = named.has(id);   // the focused place and this person's home unless the two would overlap; the rest are gold points
+      el.classList.toggle('on', on); el.classList.toggle('cur', on); el.classList.toggle('dot', !label);
+    });
+  }
+  let firstHome = '';
+  function pinList() {
+    const seen = new Set(), out = [];
+    const add = (p) => { if (p && !seen.has(p.id)) { seen.add(p.id); out.push(p); } };
+    if (pinPlace) add(pinPlace);
+    groups.forEach(g => g.cards.slice(0, 4).forEach(c => add(c.place)));
+    PLACES.filter(p => p.tags.includes('home')).slice(0, 3).forEach(add);
+    return out.slice(0, 12);
+  }
+
+  // ---------- shelves ----------
+  const history = () => prof() ? store.get('orbit.jhistory.' + prof().id, []) : [];
+  function card(p, extra) { const c = Object.assign({ place: p, title: p.name, sub: p.country, image: (info[p.id] || {}).image || null }, extra || {}); c.image = Journeys.smallImg(c.image); return c; }
+  function buildGroups() {
+    const now = Date.now(), out = [];
+    const liveCards = PLACES.filter(p => p.tags.includes('live') || ['tokyo', 'venice', 'dubai'].includes(p.id)).map(p => live[p.id] ? card(p, { mode: 'live', video: live[p.id], image: live[p.id].thumb, sub: live[p.id].channel, live: true }) : null).filter(Boolean);
+    if (liveCards.length) out.push({ id: 'live', title: 'Live right now', sub: 'Real cameras, streaming this moment', cards: liveCards });
+    const awake = Journeys.awakeNow(PLACES.filter(p => !p.tags.includes('home')), now).slice(0, 8).map(p => { const t = Journeys.localTime(p.tz, now); return card(p, { sub: `${t.hhmm} · ${Journeys.phase(t.hour, 6.5, 18.5) === 'dawn' ? 'sunrise' : Journeys.phase(t.hour, 6.5, 18.5) === 'golden' ? 'golden hour' : 'evening'}` }); });
+    if (awake.length) out.push({ id: 'awake', title: 'Awake now', sub: 'Places at sunrise, golden hour or a lit evening', cards: awake });
+    const h = history(), loved = h.find(e => e.loved) || h[0];
+    if (loved) { const lp = PLACES.find(p => p.id === loved.id) || loved.place; const tags = (lp && lp.tags) || [];
+      const sim = PLACES.filter(p => p.id !== (lp && lp.id) && p.tags.some(t => tags.includes(t) && t !== 'home')).slice(0, 8).map(p => card(p));
+      if (sim.length) out.push({ id: 'because', title: 'Because you loved ' + (lp ? lp.name.split(',')[0] : ''), sub: tags.filter(t => t !== 'home').join(', '), cards: sim }); }
+    const homes = PLACES.filter(p => p.tags.includes('home')).map(p => card(p, { sub: 'home · ' + Journeys.localTime(p.tz, now).hhmm }));
+    if (homes.length) out.push({ id: 'homes', title: 'Your homes', sub: 'Walk the streets you know', cards: homes });
+    return out;
+  }
+  let results = null;   // search results replace the first shelves
+  let shelfKey = '';
+  function render(dataChanged) {
+    if (results && dataChanged) results.cards = results.cards.map(c => card(c.place, { sub: c.sub }));   // photos and lines that arrived since the search
+    if (dataChanged || !groups.length) { groups = results ? [results, ...buildGroups()] : buildGroups(); restoreBack(); }
+    const key = groups.map(g => g.id + ':' + g.cards.map(c => c.place.id).join(',') + (g.note || '')).join('|') + '#' + gi + zone;
+    if (key === shelfKey) { patchCards(); focusOnly(); return; }   // same shelves: new photos or lines are patched in place
+    shelfKey = key;
+    gi = Math.max(0, Math.min(groups.length - 1, gi));
+    const visible = groups.slice(gi === 0 ? 0 : gi - 1, (gi === 0 ? 0 : gi - 1) + 2);   // two shelves fit; the focused one and its neighbour
+    $('groups').innerHTML = visible.map(g => {
+      const gk = groups.indexOf(g), cur = zone === 'shelf' && gk === gi, i = cur ? ci : 0;
+      return `<div class="group"><h3>${esc(g.title)}${g.sub ? `<span>${esc(g.sub)}</span>` : ''}</h3><div class="cardw"><div class="cards" style="transform:translateX(${-Math.max(0, i - 1) * 272}px)">${g.cards.map((c, k) => {
+        const t = Journeys.localTime(c.place.tz, Date.now());
+        return `<div class="c ${cur && k === i ? 'f' : ''}" data-img="${esc(c.image || '')}"><div class="i" style="${c.image ? `background-image:url('${esc(c.image)}')` : 'background:linear-gradient(135deg,#2a2116,#0e0d0b)'}">${c.image ? '' : `<div class="face">${esc(c.place.name.split(',')[0])}</div>`}${c.live ? '<div class="tag">LIVE</div>' : ''}<div class="lt">${t.hhmm}</div></div><div class="t">${esc(c.title)}</div><div class="s">${esc(c.sub || '')}</div></div>`;
+      }).join('')}</div></div>${g.note ? `<div class="note">${esc(g.note)}</div>` : ''}</div>`;
+    }).join('');
+    focusOnly();
+  }
+  function patchCards() {
+    const rows = [...$('groups').querySelectorAll('.group')], start = gi === 0 ? 0 : gi - 1;
+    rows.forEach((row, r) => { const g = groups[start + r]; if (!g) return;
+      row.querySelectorAll('.c').forEach((el, k) => { const c = g.cards[k]; if (!c) return;
+        if (c.image && el.dataset.img !== c.image) { el.dataset.img = c.image; const i = el.querySelector('.i'); i.style.backgroundImage = `url('${c.image.replace(/'/g, '%27')}')`; const f = i.querySelector('.face'); if (f) f.remove(); }
+        const sub = el.querySelector('.s'); if (sub.textContent !== (c.sub || '')) sub.textContent = c.sub || '';
+        const lt = el.querySelector('.lt'), hhmm = Journeys.localTime(c.place.tz, Date.now()).hhmm; if (lt && lt.textContent !== hhmm) lt.textContent = hhmm; }); });
+  }
+  // a key press along a shelf: move the gold ring and slide the row; nothing is rebuilt
+  function focusOnly() {
+    $('search').classList.toggle('cur', zone === 'search');
+    const rows = [...$('groups').querySelectorAll('.group')], visibleStart = gi === 0 ? 0 : gi - 1;
+    rows.forEach((row, r) => { const cur = zone === 'shelf' && visibleStart + r === gi; const cs = row.querySelectorAll('.c');
+      cs.forEach((el, k) => el.classList.toggle('f', cur && k === ci)); const strip = row.querySelector('.cards'); if (strip) strip.style.transform = `translateX(${-Math.max(0, (cur ? ci : 0) - 1) * 272}px)`; });
+    const c = focusedCard(); if (c) { pinPlace = c.place; turnTo(c.place.lon); } pins(); topbar();
+  }
+  const focusedCard = () => zone === 'shelf' && groups[gi] ? groups[gi].cards[ci] : (zone === 'globe' && pinPlace ? card(pinPlace) : null);
+  function topbar() {
+    const T = tabList();
+    const set = (el, html) => { if (el.__html !== html) { el.__html = html; el.innerHTML = html; } };   // only touch the DOM when it changed
+    set($('tabs'), T.map((t, k) => `<span class="${t.id === 'journeys' ? 'on' : ''} ${zone === 'tabs' && k === ti ? 'cur' : ''}">${esc(t.label)}</span>`).join(''));
+    $('tabs').classList.toggle('focus', zone === 'tabs');
+    const p = prof(), hour = p ? Math.floor(Journeys.localTime(p.living.tz, Date.now()).hour) : new Date().getHours();
+    // as Cinema: "Buenos días, Ana" where Orbit has a checked greeting in the main language, else English, with the name
+    const english = hour >= 5 && hour < 12 ? 'Good morning' : hour >= 12 && hour < 17 ? 'Good afternoon' : 'Good evening';
+    const greet = p ? WorldData.greeting(p.languages[0], hour) || english : '';
+    set($('me'), p ? `<b>${esc(greet)}, ${esc(p.name)}</b>${esc(Journeys.livingClock(p, Date.now()))}${livingWx ? ' &nbsp;·&nbsp; ' + esc(String(livingWx.tempC)) + '° ' + esc(livingWx.desc) : ''}` : '');
+    $('av').textContent = p ? p.name.charAt(0).toUpperCase() : '';
+  }
+  function hint(t) { const h = $('hint'); h.textContent = t; h.classList.add('on'); setTimeout(() => h.classList.remove('on'), 2600); }
+
+  // ---------- data from the travel service ----------
+  // The weather where the person lives (as Cinema's header shows it), asked again after 30 minutes.
+  let livingWx = null, livingFor = '', livingAt = 0;
+  function askLiving() {
+    const p = prof(); if (!p) return; const l = p.living, k = p.id + '|' + l.name;
+    if (k === livingFor && Date.now() - livingAt < 30 * 60000) return;
+    if (k !== livingFor) livingWx = null;
+    livingFor = k; livingAt = Date.now();
+    Shell.journey({ op: 'place', name: l.name, lat: l.lat, lon: l.lon, tz: l.tz }).then(r => { if (livingFor === k) { livingWx = r.ok ? r.place.weather : null; topbar(); } });
+  }
+  // This person's homes joined to the curated places; redone when the person (or their homes) change.
+  function placesNow() {
+    const p = prof(), k = p ? p.id + '|' + p.home.places.map(x => x.name).join('|') : '';
+    if (k === placesFor && PLACES.length) return false;
+    placesFor = k; PLACES = Journeys.withHomes(BASE, p, p ? (COUNTRY[p.home.country] || {}).name : '', ALIASES);
+    const h = PLACES.find(x => x.tags.includes('home')); firstHome = h ? h.id : '';
+    return true;
+  }
+  function loadInfo(p) { if (info[p.id]) return; info[p.id] = {}; Shell.journey({ op: 'place', name: p.name, lat: p.lat, lon: p.lon, tz: p.tz }).then(r => { if (r.ok) { info[p.id] = r.place; render(true); } }); }
+  function loadLive(p) { Shell.journey({ op: 'videos', name: p.name, mode: 'live', query: Journeys.liveQuery(p) }).then(r => { const v = r.ok && r.videos.find(x => Journeys.isOf(x, p, Object.values(COUNTRY).map(c => c.name))); if (v) { live[p.id] = v; render(true); } }); }
+
+  // Back from a journey (a page of its own): focus returns to the card that opened it once its shelf is there (search results are asked again).
+  let pendingBack = (() => { const b = store.get('orbit.atlas.back', null); store.set('orbit.atlas.back', null); return b && Date.now() - b.at < 2 * 3600000 ? b : null; })();
+  setTimeout(() => { pendingBack = null; }, 20000);
+  function restoreBack() {
+    if (!pendingBack) return;
+    const k = groups.findIndex(g => g.id === pendingBack.group), j = k >= 0 ? groups[k].cards.findIndex(c => c.place.id === pendingBack.place) : -1;
+    if (j >= 0) { zone = 'shelf'; gi = k; ci = j; pendingBack = null; }
+  }
+  function open(c) {
+    if (!c) return;
+    const g = zone === 'shelf' && groups[gi];
+    store.set('orbit.atlas.back', { group: g ? g.id : null, place: c.place.id, query: g && g.id === 'results' ? lastQuery : null, at: Date.now() });
+    store.set('orbit.journey', { place: c.place, mode: c.mode || 'walk', video: c.video ? c.video.id : null });
+    try { Android.page('journey', window.__orbitToken || ''); } catch (e) {}
+  }
+  let lastQuery = '';
+  function search(q) {
+    if (!q.trim()) return; lastQuery = q; results = { id: 'results', title: 'Results for ' + q, sub: 'Choose one to travel there', cards: [], note: 'Searching…' }; gi = 0; ci = 0; render(true);
+    Shell.journey({ op: 'geocode', query: q }).then(r => {
+      const list = (r.ok ? r.results : []).map((g, k) => ({ id: 'q' + k + g.name, name: g.name + (g.admin1 && g.admin1 !== g.name ? ', ' + g.admin1 : ''), country: g.country, lat: g.lat, lon: g.lon, tz: g.tz, tags: [] }));
+      results = { id: 'results', title: 'Results for ' + q, sub: 'Choose one to travel there', cards: list.map(p => card(p)), note: list.length ? '' : 'No place found by that name' };
+      list.slice(0, 3).forEach(loadInfo); zone = 'shelf'; gi = 0; ci = 0; restoreBack(); render(true);
+    });
+  }
+
+  // ---------- keys ----------
+  // The search box takes keys only while typing. Outside typing it is disabled, so the WebView can never hand it the remote again:
+  // on the Fire keyboard, Next closes the keyboard but kept the box focused, and Select on a result reopened the keyboard.
+  let typing = false;
+  function startTyping() { const q = $('q'); typing = true; q.disabled = false; q.focus(); }
+  function endTyping(run) {
+    if (!typing) return; typing = false;
+    const q = $('q'); q.blur(); q.disabled = true; $('root').focus();
+    zone = 'search';
+    if (run && q.value.trim()) search(q.value); else render();
+  }
+  $('q').addEventListener('keydown', (e) => {
+    e.stopPropagation();
+    if (e.key === 'Enter' || e.keyCode === 13 || e.key === 'Tab' || e.keyCode === 9) { e.preventDefault(); endTyping(true); }   // Next or Done on the Fire keyboard
+    else if (e.key === 'ArrowDown' || e.key === 'ArrowUp' || e.key === 'Escape') { e.preventDefault(); endTyping(false); }
+  });
+  $('q').addEventListener('change', () => endTyping(true));
+  $('q').addEventListener('blur', () => endTyping(true));
+  Shell.on('key', (k) => {
+    if (typing) return;
+    const T = tabList();
+    if (zone === 'tabs') {
+      if (k === 'ArrowLeft') ti = Math.max(0, ti - 1); else if (k === 'ArrowRight') ti = Math.min(T.length - 1, ti + 1);
+      else if (k === 'ArrowDown') zone = 'search';
+      else if (k === 'Enter' && T[ti].id !== 'journeys') { store.set('orbit.cinema.tab', T[ti].id); try { Android.page('cinema', window.__orbitToken || ''); } catch (e) {} return; }
+      render(); return;
+    }
+    if (zone === 'search') {
+      if (k === 'ArrowUp') { zone = 'tabs'; ti = T.findIndex(t => t.id === 'journeys'); }
+      else if (k === 'ArrowDown') zone = 'shelf';
+      else if (k === 'ArrowLeft') zone = 'globe';
+      else if (k === 'Enter') { startTyping(); return; }
+      render(); return;
+    }
+    if (zone === 'globe') {
+      // Left/Right step to the next pin along the globe; Right from the eastern edge returns to the shelves
+      const ps = PLACES.slice().sort((a, b) => a.lon - b.lon); let i = Math.max(0, ps.findIndex(p => pinPlace && p.id === pinPlace.id));
+      if (k === 'ArrowLeft') i = (i - 1 + ps.length) % ps.length; else if (k === 'ArrowRight') i = (i + 1) % ps.length;
+      else if (k === 'ArrowUp') { zone = 'search'; render(); return; }
+      else if (k === 'Enter') { open(card(pinPlace)); return; }
+      else if (k === 'ArrowDown') { zone = 'shelf'; render(); return; }
+      pinPlace = ps[i]; loadInfo(pinPlace); turnTo(pinPlace.lon); pins(); return;
+    }
+    const g = groups[gi]; if (!g) return;
+    if (k === 'ArrowLeft') { if (ci === 0) { zone = 'globe'; if (!pinPlace) pinPlace = g.cards[0].place; } else ci--; }
+    else if (k === 'ArrowRight') ci = Math.min(g.cards.length - 1, ci + 1);
+    else if (k === 'ArrowUp') { if (gi === 0) zone = 'search'; else { gi--; ci = 0; } }
+    else if (k === 'ArrowDown') { if (gi < groups.length - 1) { gi++; ci = 0; } }
+    else if (k === 'Enter') { open(g.cards[ci]); return; }
+    const c = focusedCard(); if (c && c.place) loadInfo(c.place);
+    render();
+  });
+  // Back: closes typing, then leaves the results for the search pill, then leaves Atlas
+  Shell.on('back', () => { if (typing) endTyping(false); else if (results) { results = null; gi = 0; ci = 0; zone = 'search'; render(true); } else { try { Android.page('cinema', window.__orbitToken || ''); } catch (e) {} } });
+  let tickMin = -1;   // once a minute the shelves are recomputed: card clocks move and Awake now follows the sun
+  Shell.on('tick', () => { const m = Math.floor(Date.now() / 60000); if (m !== tickMin && PLACES.length) { tickMin = m; render(true); } pins(); topbar(); });
+  Shell.on('data', topbar);
+  Shell.on('profiles', () => { askLiving(); if (BASE.length && placesNow()) { gi = 0; ci = 0; render(true); PLACES.filter(p => p.tags.includes('home')).forEach(loadInfo); } });
+
+  fetch('data/languages.json').then(r => r.json()).then(l => { WorldData.load(l); topbar(); }).catch(() => {});
+  const countries = fetch('data/countries.json').then(r => r.json()).catch(() => []);
+  const aliases = fetch('aliases.json').then(r => r.json()).catch(() => []);
+  Promise.all([fetch('places.json').then(r => r.json()), countries, aliases]).then(([ps, cs, al]) => {
+    cs.forEach(c => { COUNTRY[c.code] = c; }); ALIASES = al;
+    BASE = ps; placesNow(); askLiving(); $('gimg').src = `globe/f${pad(frame)}.jpg`;
+    if (pendingBack && pendingBack.query) search(pendingBack.query);
+    render(true);
+    groups.forEach(g => g.cards.slice(0, 5).forEach(c => loadInfo(c.place)));
+    PLACES.filter(p => p.tags.includes('live') || ['tokyo', 'venice', 'dubai'].includes(p.id)).forEach(loadLive);
+  });
+})();
+</script>
+</body></html>

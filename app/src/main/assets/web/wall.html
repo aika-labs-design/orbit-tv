@@ -1,0 +1,71 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Orbit Wall</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  :root{--bg:#06090f}
+  #bg{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 0%,#16213a 0%,var(--bg) 55%)}
+  header{position:absolute;left:72px;right:72px;top:44px;display:flex;justify-content:space-between;align-items:flex-start}
+  #clock{font-family:'Unbounded',sans-serif;font-weight:700;font-size:72px;line-height:1;letter-spacing:-.03em}
+  #date{font-family:'Space Mono',monospace;font-size:15px;letter-spacing:.3em;opacity:.6;margin-top:10px;text-transform:uppercase}
+  #ticker{text-align:right;font-family:'Space Mono',monospace;font-size:15px;letter-spacing:.14em;line-height:1.9;max-width:900px}
+  #ticker .live{color:var(--live);font-weight:700} #ticker .next{color:var(--accent);font-weight:700} #ticker .dim{opacity:.55}
+  .section{position:absolute;left:72px;right:72px}
+  .section h2{font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.36em;color:var(--accent);margin:0 0 16px;text-transform:uppercase;display:flex;gap:14px;align-items:center}
+  .section h2 i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--live);box-shadow:0 0 12px var(--live)}
+  .grid{display:grid;grid-template-columns:repeat(8,1fr);gap:18px}
+  .grid .card{aspect-ratio:16/9;transform:scale(1)}
+  .grid .card.focus{transform:scale(1.1)}
+  .grid .card.off{opacity:.55}
+  .grid .quiet{grid-column:1/-1;font-family:'Space Mono',monospace;font-size:16px;letter-spacing:.24em;text-transform:uppercase;opacity:.45;padding:40px 0}
+  #info{position:absolute;left:72px;bottom:44px;right:72px;display:flex;justify-content:space-between;align-items:flex-end}
+  #title{font-family:'Unbounded',sans-serif;font-weight:700;font-size:44px;letter-spacing:-.02em;line-height:1.05}
+  #sub{font-family:'Space Mono',monospace;font-size:15px;letter-spacing:.24em;opacity:.65;margin-top:12px;text-transform:uppercase;max-width:1300px}
+  #hint{font-family:'Space Mono',monospace;font-size:13px;letter-spacing:.24em;opacity:.4;text-transform:uppercase}
+</style></head>
+<body>
+<div id="root">
+  <div id="bg"></div>
+  <header><div><div id="clock"></div><div id="date"></div></div><div id="ticker"></div></header>
+  <div class="section" id="live" style="top:210px"><h2 id="livehead"><i></i> Live channels</h2><div class="grid" id="chgrid"></div></div>
+  <div class="section" id="apps" style="top:690px"><h2>Apps on this TV</h2><div class="grid" id="appgrid"></div></div>
+  <div id="info"><div><div id="title"></div><div id="sub"></div></div><div id="hint">Select to play · Menu for the home</div></div>
+  <div id="dusk"></div>
+  <div id="veil"></div>
+</div>
+<script src="profiles.js"></script><script src="sky.js"></script><script src="personal.js"></script><script src="wellbeing.js"></script><script src="feeds.js"></script><script src="common.js"></script>
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id); const S = Shell.state;
+  let rows = [], r = 0, c = 0;
+  function tile(it) {
+    const el = document.createElement('div'); el.className = 'card' + (it.kind === 'channel' && it.url && !it.live ? ' off' : ''); el.style.background = it.art ? '#101828' : `linear-gradient(135deg, ${it.color} 0%, #0b1020 85%)`;
+    el.innerHTML = (it.art ? `<img src="${Shell.esc(it.art)}"><div class="shade"></div>` : '') + (it.kind === 'app' && it.art ? '' : `<div class="tag">${Shell.esc((it.tag || '').split(' · ')[0])}</div><div class="name">${Shell.esc(it.name)}</div>`) + (it.live ? '<div class="pill">LIVE</div>' : it.missing ? '<div class="pill dim">NOT INSTALLED</div>' : '');
+    el.item = it; return el;
+  }
+  function header() { const d = new Date(); $('clock').textContent = Shell.hhmm(d); $('date').textContent = d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' }); $('ticker').innerHTML = Shell.myLive().filter(x => x.state !== 'NONE').slice(0, 3).map(x => `<span class="${x.state === 'LIVE' ? 'live' : x.state === 'NEXT' ? 'next' : 'dim'}">${Shell.esc(x.state)}</span>  ${Shell.esc(x.title)}  <span class="dim">· ${Shell.esc(x.line1)}</span>`).join('<br>'); }
+  function render() {
+    header(); const all = Shell.items();
+    const me = Shell.current(), home = me && me.home ? S.countryNames[me.home.country] : '';   // the home country's channels; unknown: a neutral title
+    $('livehead').innerHTML = '<i></i> ' + Shell.esc(home ? `Live now · ${home} channels` : 'Live channels');
+    const ch = all.ch.map(tile), apps = all.cont.slice(0, 8).map(tile);
+    $('chgrid').innerHTML = ''; ch.forEach(e => $('chgrid').appendChild(e));
+    if (!ch.length) { const q = document.createElement('div'); q.className = 'quiet'; q.textContent = home ? `No ${home} channels on this TV yet.` : 'No live channels yet.'; $('chgrid').appendChild(q); }   // never another person's
+    $('appgrid').innerHTML = ''; apps.forEach(e => $('appgrid').appendChild(e));
+    rows = []; for (let i = 0; i < ch.length; i += 8) rows.push(ch.slice(i, i + 8)); rows.push(apps); rows = rows.filter(x => x.length); if (!rows.length) return; r = Math.max(0, Math.min(r, rows.length - 1)); c = Math.max(0, Math.min(c, rows[r].length - 1)); focus();
+  }
+  function focus() {
+    document.querySelectorAll('.card.focus').forEach(e => e.classList.remove('focus')); const el = rows[r] && rows[r][c]; if (!el) return; el.classList.add('focus');
+    $('title').textContent = el.item.name; $('sub').textContent = el.item.kind === 'channel' ? `${el.item.tag}${el.item.live ? '  ·  live now' : el.item.url ? '  ·  not live right now' : ''}` : el.item.desc;
+  }
+  Shell.on('data', render); Shell.on('tick', header); Shell.on('back', () => { r = 0; c = 0; focus(); });
+  Shell.on('key', (k) => {
+    if (!rows.length) return;
+    if (k === 'ArrowLeft') c = Math.max(0, c - 1); else if (k === 'ArrowRight') c = Math.min(rows[r].length - 1, c + 1);
+    else if (k === 'ArrowUp') { r = Math.max(0, r - 1); c = Math.min(c, rows[r].length - 1); } else if (k === 'ArrowDown') { r = Math.min(rows.length - 1, r + 1); c = Math.min(c, rows[r].length - 1); }
+    else if (k === 'Enter') { Shell.launchItem(rows[r][c].item); return; }
+    focus();
+  });
+  render();
+})();
+</script>
+</body></html>

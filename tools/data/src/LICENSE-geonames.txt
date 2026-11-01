@@ -1,0 +1,5 @@
+GeoNames data (countryInfo.txt, timeZones.txt, and the trimmed cities.tsv taken from cities15000.txt)
+Source: https://www.geonames.org/ , dumps at https://download.geonames.org/export/dump/
+Licence: Creative Commons Attribution 4.0 International, https://creativecommons.org/licenses/by/4.0/
+Credit: "Contains data from GeoNames (geonames.org), CC BY 4.0."
+Changes: cities.tsv keeps only the five most populous places per country plus the capital, with five columns.

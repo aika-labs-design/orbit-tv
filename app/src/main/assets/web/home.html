@@ -1,0 +1,220 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Orbit Home Mode</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  #back{position:absolute;inset:0;overflow:hidden;background:#000}
+  #back img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 2.4s;will-change:opacity}
+  #back .wash{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,8,15,.86) 0%,rgba(5,8,15,.45) 45%,rgba(5,8,15,.1) 100%),linear-gradient(0deg,rgba(5,8,15,.92) 0%,rgba(5,8,15,0) 46%)}
+  header{position:absolute;left:84px;right:84px;top:48px;display:flex;justify-content:space-between;align-items:flex-start}
+  #place{font-family:'Space Mono',monospace;font-size:16px;letter-spacing:.4em;color:var(--accent);text-transform:uppercase}
+  #clock{font-family:'Unbounded',sans-serif;font-weight:800;font-size:120px;line-height:1;letter-spacing:-.04em;margin-top:10px}
+  #greet{font-size:52px;font-weight:600;margin-top:14px;text-shadow:0 2px 18px rgba(0,0,0,.8)}
+  #here{font-family:'Space Mono',monospace;font-size:15px;letter-spacing:.28em;opacity:.6;margin-top:18px;text-transform:uppercase}
+  #weather{text-align:right;font-family:'Space Mono',monospace;font-size:18px;letter-spacing:.2em;line-height:2.1;text-transform:uppercase;text-shadow:0 1px 10px rgba(0,0,0,.9)}
+  #weather b{font-family:'Unbounded',sans-serif;font-size:30px;letter-spacing:-.01em;margin:0 10px}
+  #weather .wet{color:#8fd3ff}
+  #fest{position:absolute;left:84px;top:470px;display:none;align-items:baseline;gap:20px;padding:12px 26px;border-radius:40px;background:var(--accent);color:#120a02}
+  #fest .l{font-size:30px;font-weight:700} #fest .e{font-family:'Space Mono',monospace;font-size:15px;letter-spacing:.24em;text-transform:uppercase;font-weight:700}
+  #host{position:absolute;left:84px;top:550px;width:1100px;font-size:40px;line-height:1.25;font-weight:500;text-shadow:0 2px 18px rgba(0,0,0,.85);transition:opacity .6s}
+  #rows{position:absolute;left:84px;right:0;bottom:56px}
+  #rowname{font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.34em;text-transform:uppercase;margin-bottom:16px;display:flex;gap:40px}
+  #rowname span{opacity:.35} #rowname span.on{opacity:1;color:var(--accent)}
+  #row{display:flex;gap:18px;align-items:flex-end;transition:transform .25s cubic-bezier(.2,.9,.2,1)}
+  #row .card{flex:none;width:300px;height:169px;opacity:.75}
+  #row .card.focus{opacity:1}
+  #row .card .name{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}   /* never past the card */
+  #row .card .plain{position:absolute;left:18px;right:18px;top:44px;font-size:16px;line-height:1.3;opacity:.8}
+  #desc{position:absolute;right:84px;bottom:262px;width:560px;text-align:right;font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.18em;line-height:1.7;opacity:.6;text-transform:uppercase}
+  #credit{position:absolute;right:84px;bottom:18px;font-size:13px;color:rgba(255,255,255,.4)}
+</style></head>
+<body>
+<div id="root">
+  <div id="back"><img id="ph1" alt=""><img id="ph2" alt=""><div class="wash"></div></div>
+  <header>
+    <div><div id="place"></div><div id="clock"></div><div id="greet"></div><div id="here"></div></div>
+    <div id="weather"></div>
+  </header>
+  <div id="fest"><span class="l"></span><span class="e"></span></div>
+  <div id="host"></div>
+  <div id="rows"><div id="rowname"></div><div id="row"></div></div>
+  <div id="desc"></div>
+  <div id="credit"></div>
+  <div id="veil"></div>
+</div>
+<audio id="amb" loop preload="none"></audio>
+<script src="home.js"></script><script src="journeys.js"></script><script src="world-data.js"></script><script src="profiles.js"></script>
+<script src="sky.js"></script><script src="personal.js"></script><script src="wellbeing.js"></script><script src="feeds.js"></script><script src="common.js"></script>
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id); const S = Shell.state; const esc = Shell.esc;
+  // Whose home is open: the profile Shell.openHome asked for, else the person watching (profiles arrive from the TV after load).
+  let wanted = null; try { wanted = localStorage.getItem('orbit.home'); } catch (e) {}
+  const prof = () => { const c = Shell.current(); return Home.pick(Shell.profiles(), wanted, c && c.id); };
+  const home = () => { const p = prof(); return p ? (S.feeds.homes || {})[p.id] || null : null; };
+  const pack = () => (home() && home().pack) || null;
+  const isReady = () => Home.ready(prof(), home());
+
+  // ---------- context ----------
+  function ctx() {
+    const pr = prof(), hp = pr.home.places[0], now = Home.localNow(hp.tz, Date.now()), b = Home.bucket(now.hour), h = home(), p = pack();
+    const weather = Home.freshWeather(h.weather, h.weatherMs, Date.now());
+    const live = Shell.channelItems(pr).find(c => c.live);
+    const l = pr.living, here = l && l.name !== hp.name ? { name: l.name, tz: l.tz, desc: livingWx && livingWx.desc, tempC: livingWx ? livingWx.tempC : null } : null;
+    return { now, bucket: b, wet: !!(weather[0] && weather[0].wet), weather, place: hp.name, label: p.label || '', country: pr.home.country,
+      festival: Home.nextFestival(p.festivals, now.dateKey), liveChannel: live ? live.name : null, here, hhmm: now.hhmm };
+  }
+  // The weather where the person lives, from the travel service (as Cinema's header does); asked again after 30 minutes.
+  let livingWx = null, livingFor = '', livingAt = 0;
+  function askLiving() {
+    const pr = prof(); if (!pr || !pr.living) return; const l = pr.living, k = pr.id + '|' + l.name;
+    if (k === livingFor && Date.now() - livingAt < 30 * 60000) return;
+    if (k !== livingFor) livingWx = null;
+    livingFor = k; livingAt = Date.now();
+    Shell.journey({ op: 'place', name: l.name, lat: l.lat, lon: l.lon, tz: l.tz }).then(r => { if (livingFor === k) { livingWx = r.ok ? r.place.weather : null; header(); } });
+  }
+
+  // ---------- backdrop: the home places' Wikipedia photographs ----------
+  let front = 1, photos = [], photoFor = '', pi = 0;
+  function askPhotos() {
+    const pr = prof(), k = pr ? pr.id + '|' + pr.home.places.map(x => x.name).join('|') : '';
+    if (k === photoFor) return;
+    photoFor = k; photos = []; pi = 0; $('ph1').style.opacity = 0; $('ph2').style.opacity = 0; $('credit').textContent = '';
+    if (!pr || !isReady()) { photoFor = ''; return; }
+    pr.home.places.forEach(pl => Shell.journey({ op: 'place', name: pl.name, lat: pl.lat, lon: pl.lon, tz: pl.tz }).then(r => {
+      const u = r.ok && Home.photoUrl(r.place.image); if (!u || photoFor !== k || photos.includes(u)) return;
+      photos.push(u); if (photos.length === 1) photo();
+    }));
+  }
+  function photo() {
+    if (paused || !photos.length) return;   // no decoding behind another app or the screensaver
+    const u = photos[pi % photos.length]; pi++;
+    const next = front === 1 ? $('ph2') : $('ph1'), cur = front === 1 ? $('ph1') : $('ph2');
+    next.onload = () => { next.style.opacity = 1; cur.style.opacity = 0; $('credit').textContent = 'Photograph from Wikipedia, Wikimedia Commons  ·  Weather Open-Meteo'; };
+    next.src = u; front = front === 1 ? 2 : 1;
+  }
+
+  // ---------- sound ----------
+  let mode = 'auto', playing = '', radioUrl = '', radioState = 'stopped', fadeTimer = 0, paused = false;
+  const amb = $('amb');
+  function ambient(kind) {
+    if (!kind) { clearInterval(fadeTimer); amb.pause(); playing = ''; return; }
+    if (kind === playing && !amb.paused) return;
+    playing = kind; amb.src = `homes/sounds/${kind}.m4a`; amb.volume = 0;
+    const p = amb.play(); if (p && p.catch) p.catch(e => Shell.log('ambient ' + e));
+    clearInterval(fadeTimer); fadeTimer = setInterval(() => { amb.volume = Math.min(0.5, amb.volume + 0.05); if (amb.volume >= 0.5) clearInterval(fadeTimer); }, 200);
+  }
+  function applySound() {
+    if (!isReady()) { ambient(''); return; }
+    const c = ctx(); ambient(Home.soundFor({ mode, bucket: c.bucket, wet: c.wet, country: c.country, radioOn: !!radioUrl, paused: paused || document.hidden }));
+  }
+  function stopRadio() { if (radioUrl) { radioUrl = ''; try { Android.radio('', window.__orbitToken || ''); } catch (e) {} } }
+  function stopAll() { stopRadio(); ambient(''); }
+  function leave() { stopAll(); try { Android.page('cinema', window.__orbitToken || ''); } catch (e) {} }
+
+  // ---------- rows ----------
+  const NAMES = { live: 'Live from home', radio: 'Radio', sounds: 'Sounds', news: 'News', more: 'More' };
+  const SOUND_NAMES = { auto: 'Auto', rain: 'Rain', temple: 'Temple', birds: 'Birds', night: 'Night', off: 'Off' };
+  let ri = 0; const ci = {}; let rows = {}, keys = [];
+  function build() {
+    const ok = isReady(), pr = prof(), p = ok ? pack() : null, h = ok ? home() : null;
+    const live = p ? Shell.channelItems(pr) : [];   // the open home's country: curated, or found by the daily live search
+    const radio = ((h && h.stations) || []).map(s => ({ kind: 'radio', id: 'r:' + s.url, name: Home.stationName(s.name), url: s.url, color: '#3a2a12', tag: 'RADIO',
+      desc: s.name + '. ' + (radioUrl === s.url ? (radioState === 'playing' ? 'On air. Select to stop.' : 'Tuning in...') : 'Select to listen.') }));
+    const sounds = !ok ? [] : ['auto', ...Home.sounds(pr.home.country), 'off'].map(k => ({ kind: 'sound', id: 's:' + k, mode: k, name: SOUND_NAMES[k] || k, color: '#14202e', tag: 'SOUND',
+      desc: k === 'auto' ? 'Follows the time and the weather at home.' : k === 'off' ? 'Silence.' : `${SOUND_NAMES[k] || k} on a loop.` }));
+    const n = h && h.news; const news = n && n.headlines.length ? [{ kind: 'today', id: 'news', name: n.label, color: '#162038', tag: `${n.headlines.length} HEADLINES`, data: n, desc: n.headlines[0].title }] : [];
+    const other = pr ? Home.next(Shell.profiles(), pr.id) : null;
+    const more = [...(other ? [{ kind: 'switch', id: 'switch', to: other.id, name: `Switch to ${other.home.places[0].name} · ${other.name}'s home`, color: '#222a3a', tag: 'HOME',
+      desc: `${other.name}'s home. One home at a time. This swaps the whole room.` }] : []),
+      { kind: 'leave', id: 'leave', name: 'Back to Orbit', color: '#222a3a', tag: 'EXIT', desc: 'Stops the sound and goes back to the home screen.' }];
+    rows = { live, radio, sounds, news, more }; keys = Object.keys(rows).filter(k => rows[k].length);
+    if (ri >= keys.length) ri = keys.length - 1;
+  }
+  function card(it, focused) {
+    const el = document.createElement('div'); el.className = 'card' + (focused ? ' focus' : '');
+    el.style.background = it.art ? '#101828' : `linear-gradient(135deg, ${it.color} 0%, #0b1020 90%)`;
+    let html = it.art ? `<img src="${esc(it.art)}" alt=""><div class="shade"></div>` : '';
+    html += `<div class="tag">${esc(it.tag || '')}</div><div class="name">${esc(it.name)}</div>`;
+    if (it.kind === 'today') html += `<div class="plain">${esc(it.desc)}</div>`;
+    const on = (it.kind === 'sound' && it.mode === mode) || (it.kind === 'radio' && it.url === radioUrl);
+    if (it.live) html += '<div class="pill">LIVE</div>'; else if (on) html += `<div class="pill next">${it.kind === 'radio' ? (radioState === 'playing' ? 'ON AIR' : 'TUNING') : 'ON'}</div>`;
+    el.innerHTML = html; return el;
+  }
+
+  // ---------- render ----------
+  let lines = [], li = 0;
+  function header() {
+    if (!isReady()) {   // a calm wait: nothing from another person's or another country's home
+      document.documentElement.style.setProperty('--accent', '#c9a24a');
+      $('place').textContent = 'Home Mode'; $('clock').textContent = ''; $('weather').innerHTML = ''; $('fest').style.display = 'none';
+      $('greet').textContent = 'Getting your home ready';
+      $('here').textContent = '';
+      lines = [prof() && prof().home.places.length ? `Weather, news and radio from ${prof().home.places[0].name} arrive in a moment.` : 'Your home arrives once it is set up for you.'];
+      li = 0; $('host').textContent = lines[0]; return;
+    }
+    const c = ctx(), p = pack(), pr = prof();
+    document.documentElement.style.setProperty('--accent', p.accent || '#ff8f3f');
+    $('place').textContent = `${c.place}  ·  ${c.label || ''}`.replace(/\s+·\s+$/, '');
+    $('clock').textContent = c.hhmm;
+    $('greet').textContent = Home.greet(pr, c.now.hour, WorldData.greeting);
+    $('here').textContent = c.here ? `${Journeys.livingClock(pr, Date.now())}${typeof c.here.tempC === 'number' ? `  ·  ${esc(String(c.here.tempC))}°  ${c.here.desc}` : ''}` : '';
+    $('weather').innerHTML = c.weather.map(w => `<div class="${w.wet ? 'wet' : ''}">${esc(w.name)}<b>${esc(String(w.tempC))}°</b>${esc(w.desc)}</div>`).join('');
+    const f = c.festival, fe = $('fest');
+    if (f && f.days <= 7) { fe.style.display = 'flex'; fe.querySelector('.l').textContent = f.local || f.name; fe.querySelector('.e').textContent = `${f.local && f.local !== f.name ? f.name + '  ·  ' : ''}${f.days === 0 ? 'today' : f.days === 1 ? 'tomorrow' : 'in ' + f.days + ' days'}`; }
+    else fe.style.display = 'none';
+    lines = Home.lines(c); if (li >= lines.length) li = 0; $('host').textContent = lines[li] || '';
+  }
+  function render() {
+    askLiving(); askPhotos(); header(); build(); if (!keys.length) return;
+    const key = keys[ri], list = rows[key]; ci[key] = Math.max(0, Math.min(list.length - 1, ci[key] || 0));
+    $('rowname').innerHTML = keys.map(k => `<span class="${k === key ? 'on' : ''}">${NAMES[k]}</span>`).join('');
+    const row = $('row'); row.innerHTML = ''; list.forEach((it, i) => row.appendChild(card(it, i === ci[key]))); row.style.transform = `translateX(${-ci[key] * 318}px)`;
+    $('desc').textContent = (list[ci[key]] || {}).desc || '';
+  }
+
+  // ---------- actions ----------
+  function act(it) {
+    if (!it) return;
+    if (it.kind === 'radio') {
+      if (radioUrl === it.url) { stopRadio(); radioState = 'stopped'; applySound(); }
+      else { radioUrl = it.url; radioState = 'connecting'; ambient(''); Shell.toast('Tuning in'); try { Android.radio(it.url, window.__orbitToken || ''); } catch (e) { Shell.log('radio ' + it.url); } }
+    } else if (it.kind === 'sound') { mode = it.mode; stopRadio(); applySound(); }
+    else if (it.kind === 'today') Shell.openReader(it.data);
+    else if (it.kind === 'switch') { stopAll(); wanted = it.to; try { localStorage.setItem('orbit.home', wanted); } catch (e) {} ri = 0; mode = 'auto'; render(); applySound(); return; }
+    else if (it.kind === 'leave') { leave(); return; }
+    else if (it.kind === 'channel') { stopAll(); Shell.launchItem(it); return; }
+    render();
+  }
+
+  let wasReady = false;
+  Shell.on('data', () => { render(); if (isReady() !== wasReady) { wasReady = isReady(); applySound(); } });
+  Shell.on('tick', () => { header(); if (mode === 'auto' && !radioUrl) applySound(); });
+  Shell.on('key', (k) => {
+    paused = false;
+    const key = keys[ri]; if (!key) return;
+    if (k === 'ArrowLeft') ci[key] = (ci[key] || 0) - 1; else if (k === 'ArrowRight') ci[key] = (ci[key] || 0) + 1;
+    else if (k === 'ArrowUp') ri = Math.max(0, ri - 1); else if (k === 'ArrowDown') ri = Math.min(keys.length - 1, ri + 1);
+    else if (k === 'Enter') { act(rows[key][ci[key] || 0]); return; }
+    render();
+  });
+  Shell.on('back', leave);
+  Shell.on('wake', leave);                       // waking never lands in Home Mode, so audio never starts by itself
+  Shell.on('pause', () => { paused = true; stopRadio(); ambient(''); });
+  Shell.on('resume', () => { paused = false; applySound(); });
+  Shell.on('returned', () => { paused = false; applySound(); });
+  Shell.on('radio', (st) => {
+    if (!radioUrl) return;
+    radioState = st;
+    if (st === 'failed') { radioUrl = ''; Shell.toast('Station not answering'); applySound(); }
+    else if (st === 'stopped') { radioUrl = ''; applySound(); }
+    render();
+  });
+  document.addEventListener('visibilitychange', () => { if (document.hidden) stopAll(); });
+  setInterval(() => { if (lines.length > 1) { li = (li + 1) % lines.length; $('host').style.opacity = 0; setTimeout(() => { $('host').textContent = lines[li]; $('host').style.opacity = 1; }, 600); } }, 30000);
+  setInterval(() => { if (photos.length > 1) photo(); }, 20000);
+  fetch('data/languages.json').then(r => r.json()).then(l => { WorldData.load(l); header(); }).catch(e => Shell.log('home languages failed: ' + e));
+  fetch('homes/local.json').then(r => r.json()).then(d => { Home.loadLocal(d); render(); applySound(); }).catch(e => Shell.log('home local touches failed: ' + e));
+  render(); applySound();
+})();
+</script>
+</body></html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Orbit Journey</title>
+<link rel="stylesheet" href="cinema.css"><link rel="stylesheet" href="journeys.css">
+</head>
+<body>
+<div id="root">
+  <div id="player"><div class="jstill" id="still"></div><div id="yt"></div></div>
+  <div class="jshade" id="shade"></div>
+  <div class="jv" id="ov">
+    <div class="wm">ORBIT</div>
+    <div class="place"><div class="eyebrow" id="eb"></div><div class="name" id="name"></div><div class="local" id="local"></div><div class="sub" id="sub"></div></div>
+    <div class="now"><div class="h" id="clock"></div><div class="d" id="wx"></div></div>
+    <div class="mini" id="mini"></div>
+    <div class="jmsg" id="msg"></div>
+    <div class="modes" id="modes"></div>
+    <div class="next" id="next"></div>
+    <div class="sound">Sound of the place, on<br>Up / Down to change how you travel</div>
+    <div class="credit" id="credit"></div>
+  </div>
+  <div class="hint" id="hint"></div>
+  <div id="veil"></div>
+</div>
+<script src="ytframe.js"></script><script src="journeys.js"></script><script src="profiles.js"></script>
+<script src="sky.js"></script><script src="personal.js"></script><script src="wellbeing.js"></script><script src="feeds.js"></script><script src="common.js"></script>
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id); const esc = Shell.esc;
+  const store = { get: (k, d) => { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } }, set: (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
+  const prof = () => Shell.current();   // the person watching: their living city's clock and their own journeys history
+  const hkey = () => prof() ? 'orbit.jhistory.' + prof().id : null;
+  const J0 = store.get('orbit.journey', null);
+  if (!J0 || !J0.place) { try { Android.page('atlas', window.__orbitToken || ''); } catch (e) {} return; }
+  const place = J0.place; let mode = J0.mode || 'walk', mi = Journeys.MODES.indexOf(mode), info = null, videos = {}, empty = {}, playing = null, ni = 0, startedAt = 0, zone = 'next';
+
+  // ---------- player: sound on; any leave destroys it ----------
+  // A plain YouTube embed driven over postMessage (ytframe.js): no YouTube script runs in this frame, which holds the bridge token.
+  let player = null, paused = false;   // paused: Orbit is behind another app or asleep; nothing may start playing
+  function stop() { if (player) { player.destroy(); player = null; $('still').style.opacity = ''; } }
+  function play(v) {
+    if (paused) return;
+    playing = v; $('credit').textContent = `Video: ${v.channel} on YouTube`;
+    stop(); $('still').style.backgroundImage = v.thumb ? `url('${esc(v.thumb)}')` : '';
+    const following = () => { const list = videos[mode] || []; const k = list.indexOf(v); return k >= 0 ? list[k + 1] : null; };
+    player = YtFrame.mount($('yt'), v.id, { muted: false, volume: 100 }, {
+      playing: () => { $('still').style.opacity = 0; },
+      ended: () => { const n = following(); if (n) play(n); },
+      error: () => { const n = following(); if (n) play(n); else msg('This video is not available here'); },
+    });
+    startedAt = Date.now(); showOverlay();
+  }
+
+  // ---------- overlay: fades after 6 s, any key brings it back ----------
+  let hideT = 0;
+  function showOverlay() { $('ov').classList.remove('hide'); $('shade').classList.remove('hide'); clearTimeout(hideT); hideT = setTimeout(() => { if (player) { $('ov').classList.add('hide'); $('shade').classList.add('hide'); } }, 6000); }
+  function msg(t) { $('msg').textContent = t || ''; }
+
+  function render() {
+    const now = Date.now(), t = Journeys.localTime(place.tz, now), w = info && info.weather;
+    $('eb').innerHTML = `Journey · ${esc(Journeys.NAMES[mode])}${loved() ? `<i>because you loved ${esc(loved())}</i>` : ''}`;
+    $('name').textContent = place.name.split(',')[0];
+    $('local').textContent = (info && info.local && info.local !== place.name.split(',')[0]) ? info.local : '';
+    $('sub').textContent = playing ? playing.title : (info && info.line) || place.country || '';
+    $('clock').textContent = t.hhmm;
+    $('wx').innerHTML = `${esc(t.weekday)} in ${esc(place.name.split(',')[0])}${w ? ` &nbsp;·&nbsp; <b>${w.tempC}° ${esc(w.desc)}</b><br>Sunrise ${esc(w.sunrise)} &nbsp;·&nbsp; Sunset ${esc(w.sunset)}` : ''}${prof() ? ' &nbsp;·&nbsp; ' + esc(Journeys.livingClock(prof(), now)) : ''}`;
+    const f = Journeys.frameFor(place.lon), pr = Journeys.project(place.lat, place.lon, f * 5);
+    $('mini').style.backgroundImage = `url(globe/f${String(f).padStart(2, '0')}.jpg)`; $('mini').style.setProperty('--px', (pr.x * 120 - 5).toFixed(0) + 'px'); $('mini').style.setProperty('--py', (pr.y * 120 - 5).toFixed(0) + 'px');
+    $('modes').innerHTML = Journeys.MODES.map((m, k) => `<span class="${m === mode ? 'on' : ''} ${empty[m] ? 'empty' : ''} ${m === 'live' ? 'live' : ''} ${zone === 'modes' && k === mi ? 'cur' : ''}">${esc(Journeys.NAMES[m])}</span>`).join('');
+    const list = (videos[mode] || []).filter(v => v !== playing).slice(0, 4);
+    $('next').innerHTML = `<div class="lab">Up next<br>in ${esc(place.name.split(',')[0])}</div>` + list.map((v, k) => `<div class="n ${zone === 'next' && k === ni ? 'f' : ''}"><div class="i" style="background-image:url('${esc(v.thumb)}')"></div><div class="t">${esc(v.title)}${v.live ? '' : ' · ' + (v.minutes >= 60 ? Math.floor(v.minutes / 60) + ' h ' + (v.minutes % 60) + ' min' : v.minutes + ' min')}</div></div>`).join('');
+  }
+  function loved() { const h = hkey() ? store.get(hkey(), []) : []; const l = h.find(e => e.loved && e.id !== place.id && (e.place.tags || []).some(t => (place.tags || []).includes(t) && t !== 'home')); return l ? l.place.name.split(',')[0] : ''; }
+
+  function load(m) {
+    if (videos[m]) { if (!playing || playing.mode !== m) startMode(m); return; }
+    msg('Finding the best ' + Journeys.NAMES[m].toLowerCase() + '…');
+    const q = m === 'live' ? Journeys.liveQuery(place) : null;
+    Shell.journey(Object.assign({ op: 'videos', name: Journeys.searchName(place), mode: m }, q ? { query: q } : {})).then(r => {
+      if (!r.ok) { msg(r.error === 'quota' ? 'Travel search is resting until tomorrow' : r.error === 'nokey' ? 'Travel search needs the YouTube key' : 'Could not reach YouTube right now'); render(); return; }
+      const list = Journeys.forMode(r.videos.map(v => Object.assign(v, { mode: m })).filter(v => Journeys.isOf(v, place, COUNTRIES)), m);   // footage of this place (not a namesake), of the mode's kind
+      videos[m] = list; empty[m] = !list.length;
+      if (!list.length) { msg(`No ${Journeys.NAMES[m].toLowerCase()} found for ${place.name.split(',')[0]} yet`); render(); return; }
+      msg(''); if (m === mode) startMode(m); render();
+    });
+  }
+  function startMode(m) { const list = videos[m] || []; if (J0.video && m === (J0.mode || 'walk')) { const v = list.find(x => x.id === J0.video); J0.video = null; if (v) { play(v); render(); return; } } if (list[0]) play(list[0]); ni = 0; render(); }
+  function remember() { const k = hkey(); if (!playing || !startedAt || !k) return; store.set(k, Journeys.remember(store.get(k, []), place, mode, (Date.now() - startedAt) / 60000, Date.now())); }
+  function leave() { remember(); stop(); try { Android.page('atlas', window.__orbitToken || ''); } catch (e) {} }
+
+  Shell.on('key', (k) => {
+    const wasHidden = $('ov').classList.contains('hide'); showOverlay(); if (wasHidden) return;   // the first key only brings the overlay back
+    if (k === 'ArrowUp' || k === 'ArrowDown') { zone = 'modes'; mi = (mi + (k === 'ArrowDown' ? 1 : -1) + Journeys.MODES.length) % Journeys.MODES.length; render(); return; }
+    if (zone === 'modes' && k === 'Enter') { remember(); mode = Journeys.MODES[mi]; zone = 'next'; ni = 0; load(mode); render(); return; }
+    const list = (videos[mode] || []).filter(v => v !== playing).slice(0, 4);
+    if (k === 'ArrowLeft') { zone = 'next'; ni = Math.max(0, ni - 1); } else if (k === 'ArrowRight') { zone = 'next'; ni = Math.min(list.length - 1, ni + 1); }
+    else if (k === 'Enter' && list[ni]) { remember(); play(list[ni]); ni = 0; }
+    render();
+  });
+  Shell.on('back', leave);
+  Shell.on('pause', () => { paused = true; remember(); stop(); playing = null; });   // Menu, launching, sleep, screensaver: nothing keeps playing
+  const wakeUp = () => { if (paused) { paused = false; startMode(mode); } };   // back from an app, the screensaver or sleep
+  Shell.on('returned', wakeUp); Shell.on('resume', wakeUp);
+  Shell.on('tick', render);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) { paused = true; remember(); stop(); playing = null; } });
+
+  render();
+  Shell.journey({ op: 'place', name: place.name, lat: place.lat, lon: place.lon, tz: place.tz }).then(r => { if (r.ok) { info = r.place; if (info.image && !playing) $('still').style.backgroundImage = `url('${esc(info.image)}')`; render(); } });
+  // country names for telling Lagos, Nigeria from Lagos, Portugal; footage is asked for once they are known (or failed to load)
+  let COUNTRIES = [];
+  fetch('data/countries.json').then(r => r.json()).then(cs => { COUNTRIES = cs.map(c => c.name); }).catch(e => Shell.log('journey countries failed: ' + e)).then(() => load(mode));
+})();
+</script>
+</body></html>

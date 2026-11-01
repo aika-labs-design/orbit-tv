@@ -1,0 +1,70 @@
+{
+  "kind": "youtube#videoListResponse",
+  "items": [
+    {
+      "id": "jzv0000001a",
+      "snippet": {
+        "title": "Live at the Village Vanguard",
+        "description": "A full set from the room where so many classic records were made. Piano trio, standards and two originals.",
+        "channelTitle": "Blue Room Sessions",
+        "tags": ["piano trio", "live recording", "standards"],
+        "liveBroadcastContent": "none"
+      },
+      "contentDetails": { "duration": "PT52M10S", "definition": "hd" },
+      "status": { "embeddable": true },
+      "statistics": { "viewCount": "412000" }
+    },
+    {
+      "id": "jzv0000002b",
+      "snippet": {
+        "title": "John Coltrane Quartet, Live in Antibes 1965",
+        "description": "The classic quartet on stage, filmed for French television.",
+        "channelTitle": "Jazz Archive",
+        "tags": ["coltrane", "saxophone", "1965"],
+        "liveBroadcastContent": "none"
+      },
+      "contentDetails": { "duration": "PT38M02S", "definition": "hd" },
+      "status": { "embeddable": true },
+      "statistics": { "viewCount": "980000" }
+    },
+    {
+      "id": "jzv0000003c",
+      "snippet": {
+        "title": "The all-new Civic Type R | Official advert",
+        "description": "Meet the new Civic. Book a test drive at your local dealer. Terms and conditions apply. Music licensed from a stock library.",
+        "channelTitle": "Honda UK",
+        "tags": ["honda", "civic", "car advert", "hatchback"],
+        "liveBroadcastContent": "none"
+      },
+      "contentDetails": { "duration": "PT1M01S", "definition": "hd" },
+      "status": { "embeddable": true },
+      "statistics": { "viewCount": "2100000" }
+    },
+    {
+      "id": "jzv0000004d",
+      "snippet": {
+        "title": "Smooth Jazz for Work and Study, 3 hours",
+        "description": "Relaxing instrumental jazz to focus.",
+        "channelTitle": "Cafe Notes",
+        "tags": ["jazz", "study music"],
+        "liveBroadcastContent": "none"
+      },
+      "contentDetails": { "duration": "PT3H0M0S", "definition": "hd" },
+      "status": { "embeddable": true },
+      "statistics": { "viewCount": "5300000" }
+    },
+    {
+      "id": "jzv0000005e",
+      "snippet": {
+        "title": "JAZZ DRUMMER REACTS: YOU WON'T BELIEVE this solo!!!",
+        "description": "Reaction video. Like and subscribe!",
+        "channelTitle": "Hype Beats",
+        "tags": ["jazz", "reaction"],
+        "liveBroadcastContent": "none"
+      },
+      "contentDetails": { "duration": "PT9M30S", "definition": "hd" },
+      "status": { "embeddable": true },
+      "statistics": { "viewCount": "88000" }
+    }
+  ]
+}

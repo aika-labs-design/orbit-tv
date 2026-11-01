@@ -1,0 +1,9 @@
+# Copy this file to local.properties (git-ignored) and fill in your own values.
+# Path to your Android SDK
+sdk.dir=/path/to/android-sdk
+# Free personal key from https://www.themoviedb.org/settings/api (films, series, trailers)
+tmdb.apiKey=
+# Free key for the YouTube Data API v3 from https://console.cloud.google.com (Journeys footage)
+youtube.apiKey=
+# Optional: an email for the User-Agent of feed requests, so services such as Wikimedia can reach you. Empty: the project page.
+contact.email=

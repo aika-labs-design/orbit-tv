@@ -1,0 +1,26 @@
+{
+  "note": "Public holidays for India, used because Nager.Date has no India data. national: everyone with an Indian home; languages: regional days for people who speak that language. Only dates that calendarlabs.com, publicholidays.in and officeholidays.com agree on (checked 2026-10-31); add the next year when the official lists are out.",
+  "national": [
+    { "date": "2026-12-25", "name": "Christmas Day" },
+    { "date": "2027-01-26", "name": "Republic Day" },
+    { "date": "2027-08-15", "name": "Independence Day" },
+    { "date": "2027-10-02", "name": "Gandhi Jayanti" },
+    { "date": "2027-12-25", "name": "Christmas Day" }
+  ],
+  "languages": {
+    "kn": [
+      { "date": "2026-11-01", "name": "Kannada Rajyotsava", "local": "ಕನ್ನಡ ರಾಜ್ಯೋತ್ಸವ" },
+      { "date": "2026-11-08", "name": "Deepavali", "local": "ದೀಪಾವಳಿ" },
+      { "date": "2026-11-27", "name": "Kanakadasa Jayanthi", "local": "ಕನಕದಾಸ ಜಯಂತಿ" },
+      { "date": "2027-09-04", "name": "Ganesha Chaturthi", "local": "ಗಣೇಶ ಚತುರ್ಥಿ" },
+      { "date": "2027-10-29", "name": "Deepavali", "local": "ದೀಪಾವಳಿ" },
+      { "date": "2027-11-01", "name": "Kannada Rajyotsava", "local": "ಕನ್ನಡ ರಾಜ್ಯೋತ್ಸವ" },
+      { "date": "2027-11-16", "name": "Kanakadasa Jayanthi", "local": "ಕನಕದಾಸ ಜಯಂತಿ" }
+    ],
+    "te": [
+      { "date": "2026-11-08", "name": "Deepavali", "local": "దీపావళి" },
+      { "date": "2027-09-04", "name": "Vinayaka Chavithi", "local": "వినాయక చవితి" },
+      { "date": "2027-10-29", "name": "Deepavali", "local": "దీపావళి" }
+    ]
+  }
+}

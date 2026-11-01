@@ -1,0 +1,107 @@
+{
+ "page": 1,
+ "results": [
+  {
+   "adult": false,
+   "backdrop_path": "/bd101.jpg",
+   "genre_ids": [
+    99
+   ],
+   "id": 101,
+   "origin_country": [
+    "NG"
+   ],
+   "original_language": "en",
+   "original_name": "Chef's Table: Home Kitchens",
+   "overview": "Chefs open their home kitchens and share the cooking that raised them, one recipe at a time.",
+   "popularity": 88.1,
+   "poster_path": "/p101.jpg",
+   "first_air_date": "2021-03-02",
+   "name": "Chef's Table: Home Kitchens",
+   "vote_average": 8.1,
+   "vote_count": 120
+  },
+  {
+   "adult": false,
+   "backdrop_path": "/bd102.jpg",
+   "genre_ids": [
+    99
+   ],
+   "id": 102,
+   "origin_country": [
+    "NG"
+   ],
+   "original_language": "en",
+   "original_name": "Jollof Wars",
+   "overview": "Two Lagos families compete over the perfect pot of rice with competing recipes and ingredients.",
+   "popularity": 41.7,
+   "poster_path": "/p102.jpg",
+   "first_air_date": "2023-06-10",
+   "name": "Jollof Wars",
+   "vote_average": 7.4,
+   "vote_count": 120
+  },
+  {
+   "adult": false,
+   "backdrop_path": "/bd103.jpg",
+   "genre_ids": [
+    99
+   ],
+   "id": 103,
+   "origin_country": [
+    "NG"
+   ],
+   "original_language": "en",
+   "original_name": "Dark Harbour",
+   "overview": "A detective returns to a fishing town to solve a decades old disappearance.",
+   "popularity": 120.5,
+   "poster_path": "/p103.jpg",
+   "first_air_date": "2020-09-01",
+   "name": "Dark Harbour",
+   "vote_average": 7.9,
+   "vote_count": 120
+  },
+  {
+   "adult": false,
+   "backdrop_path": "/bd104.jpg",
+   "genre_ids": [
+    99
+   ],
+   "id": 104,
+   "origin_country": [
+    "NG"
+   ],
+   "original_language": "en",
+   "original_name": "Bake Off Naija",
+   "overview": "Home cooks across Nigeria bake for a chance at the cake of the year.",
+   "popularity": 30.2,
+   "poster_path": "/p104.jpg",
+   "first_air_date": "2022-01-15",
+   "name": "Bake Off Naija",
+   "vote_average": 7.0,
+   "vote_count": 120
+  },
+  {
+   "adult": false,
+   "backdrop_path": "/bd105.jpg",
+   "genre_ids": [
+    99
+   ],
+   "id": 105,
+   "origin_country": [
+    "KR"
+   ],
+   "original_language": "ko",
+   "original_name": "Kimchi Kitchen",
+   "overview": "A Seoul grandmother teaches home cooking and family recipes.",
+   "popularity": 20.0,
+   "poster_path": "/p105.jpg",
+   "first_air_date": "2022-05-05",
+   "name": "Kimchi Kitchen",
+   "vote_average": 7.2,
+   "vote_count": 80
+  }
+ ],
+ "total_pages": 1,
+ "total_results": 5
+}

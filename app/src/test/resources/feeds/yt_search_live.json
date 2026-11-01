@@ -1,0 +1,237 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "G6btSQ9OgvaxEvJ2l8X6Ah_OYZc",
+  "nextPageToken": "CAUQAA",
+  "regionCode": "IE",
+  "pageInfo": {
+    "totalResults": 298,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "y3x6H1_ukDQH0sKr4-R_wjq3sXo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "KHy_n-EMWY8"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-24T21:14:00Z",
+        "channelId": "UC6qrG3W8SMK0jior2olka3g",
+        "title": "EarthCam Live:  Times Square Crossroads (New York City, NY)",
+        "description": "Experience the energy of Times Square live with EarthCam's high-definition streaming camera overlooking the heart of New York ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KHy_n-EMWY8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KHy_n-EMWY8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KHy_n-EMWY8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/KHy_n-EMWY8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/KHy_n-EMWY8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "EarthCam",
+        "liveBroadcastContent": "live",
+        "publishTime": "2026-09-24T21:14:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "zpQtbXFB4YXOczD7LihUlS1aPaE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "VGnFLdQW39A"
+      },
+      "snippet": {
+        "publishedAt": "2025-09-29T20:18:55Z",
+        "channelId": "UCIjSUWHWp6KohfnR5OQTXnQ",
+        "title": "🔴 24/7 NYC Live Cam | Times Square, skyline, streets, more",
+        "description": "Take a live look at New York City! Our webcams show the live hustle and bustle of Times Square, skyline views of the World Trade ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VGnFLdQW39A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VGnFLdQW39A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VGnFLdQW39A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/VGnFLdQW39A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/VGnFLdQW39A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "FOX 5 New York",
+        "liveBroadcastContent": "live",
+        "publishTime": "2025-09-29T20:18:55Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4_tqOJVQ2gLOb4NO0baxhjOzFmw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "VXo0VqVcbK4"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-06T20:24:14Z",
+        "channelId": "UC1Rp_0bp86QEUt9TlMN5tlQ",
+        "title": "Times Square: 1560 Broadway View Live",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VXo0VqVcbK4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VXo0VqVcbK4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VXo0VqVcbK4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/VXo0VqVcbK4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/VXo0VqVcbK4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "AE Signage",
+        "liveBroadcastContent": "live",
+        "publishTime": "2026-07-06T20:24:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "TWEPnTWeXE3yAvBeo3UAb5kTzJU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "dD5BV_lH-0w"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-26T04:10:13Z",
+        "channelId": "UCpb8WxAsZPIwaAsNbbKLzmg",
+        "title": "NYC Live Stream 24/7 🔴 New York City Live Cams | Times Square, Brooklyn Bridge, Sunrises and Sunsets",
+        "description": "NYC LIVE: a 24/7 New York City live stream rotating through 21 live cams, including Times Square, the Brooklyn Bridge, the ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dD5BV_lH-0w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dD5BV_lH-0w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dD5BV_lH-0w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dD5BV_lH-0w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/dD5BV_lH-0w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/dD5BV_lH-0w/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "ms36K",
+        "liveBroadcastContent": "live",
+        "publishTime": "2026-07-26T04:10:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3mA89XfnynxFI7gbFfG57_0DM2M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pv-2pVViNwc"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-09T20:51:02Z",
+        "channelId": "UC1Rp_0bp86QEUt9TlMN5tlQ",
+        "title": "Times Square: Duffy Square 4K View Live",
+        "description": "Live View of Duffy Square in Times Square, NY from the camera located on American Eagle LED Billboard.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pv-2pVViNwc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pv-2pVViNwc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pv-2pVViNwc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pv-2pVViNwc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pv-2pVViNwc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "AE Signage",
+        "liveBroadcastContent": "live",
+        "publishTime": "2026-07-09T20:51:02Z"
+      }
+    }
+  ]
+}

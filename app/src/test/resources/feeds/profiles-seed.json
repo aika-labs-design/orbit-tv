@@ -1,0 +1,12 @@
+[
+  { "id": "p-ann", "name": "Ann", "created": 1760000000000,
+    "home": { "country": "IN", "places": [ { "name": "Placeville", "lat": 19.0, "lon": 72.8, "tz": "Asia/Kolkata" }, { "name": "Otherton", "lat": 18.5, "lon": 73.9, "tz": "Asia/Kolkata" } ] },
+    "languages": ["kn", "en"],
+    "living": { "name": "Berlin", "lat": 52.52, "lon": 13.405, "tz": "Europe/Berlin", "country": "DE" },
+    "loves": [ { "id": "cricket", "refine": ["India"], "weight": 3 }, { "id": "f1", "refine": [] } ] },
+  { "id": "p-bo", "name": "Bo", "created": 1760000000001,
+    "home": { "country": "IN", "places": [ { "name": "Sampletown", "lat": 13.1, "lon": 80.3, "tz": "Asia/Kolkata" } ] },
+    "languages": ["te"],
+    "living": { "name": "Berlin", "lat": 52.52, "lon": 13.405, "tz": "Europe/Berlin", "country": "DE" },
+    "loves": [ { "id": "tennis", "refine": [], "custom": "clay courts" } ] }
+]

@@ -1,0 +1,17 @@
+<!doctype html><html><body style="margin:0;background:#05060a"><canvas id="c" width="900" height="900"></canvas>
+<script src="../../app/src/main/assets/web/lib/three.min.js"></script><script>
+// Renders one Atlas globe frame: centre longitude = frame * 5 degrees, seen from 20 degrees north, orthographic,
+// radius 0.9 of half the frame (web/journeys.js uses the same R and TILT for the gold pins).
+const f = +(location.hash.slice(1) || 0), lon0 = f * 5, TILT = 20, R = 0.9, d = Math.PI / 180;
+const r = new THREE.WebGLRenderer({ canvas: document.getElementById('c'), antialias: true, preserveDrawingBuffer: true }); r.setClearColor(0x05060a, 1);
+const s = new THREE.Scene(), cam = new THREE.OrthographicCamera(-1 / R, 1 / R, 1 / R, -1 / R, 0.1, 10); cam.position.set(0, 0, 5); cam.lookAt(0, 0, 0);
+const tex = new THREE.TextureLoader().load('../../app/src/main/assets/web/world/earth_day.jpg', () => {
+  tex.anisotropy = 4;
+  const m = new THREE.ShaderMaterial({ uniforms: { t: { value: tex }, sun: { value: new THREE.Vector3(-0.45, 0.35, 0.82).normalize() } },
+    vertexShader: 'varying vec2 vUv; varying vec3 n; void main(){ vUv=uv; n=normalize(mat3(modelMatrix)*normal); gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.); }',
+    fragmentShader: 'uniform sampler2D t; uniform vec3 sun; varying vec2 vUv; varying vec3 n; void main(){ float l=max(dot(n,sun),0.); vec3 c=texture2D(t,vUv).rgb*(.42+.78*l); float rim=pow(1.-max(n.z,0.),2.5); c=mix(c,vec3(.36,.58,1.),rim*.55); gl_FragColor=vec4(c,1.); }' });
+  const g = new THREE.Mesh(new THREE.SphereGeometry(1, 160, 120), m);
+  g.rotation.order = 'XYZ'; g.rotation.y = -Math.PI / 2 - lon0 * d; g.rotation.x = TILT * d;
+  s.add(g); r.render(s, cam); document.title = 'done';
+});
+</script></body></html>

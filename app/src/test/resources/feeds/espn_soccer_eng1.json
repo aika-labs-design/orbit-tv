@@ -1,0 +1,135 @@
+{
+ "leagues": [
+  {
+   "name": "English Premier League"
+  }
+ ],
+ "events": [
+  {
+   "id": "1",
+   "name": "Fulham at Arsenal",
+   "date": "2026-10-31T15:00Z",
+   "competitions": [
+    {
+     "id": "1",
+     "date": "2026-10-31T15:00Z",
+     "venue": {
+      "fullName": "Emirates Stadium"
+     },
+     "status": {
+      "type": {
+       "state": "in",
+       "shortDetail": "63'"
+      }
+     },
+     "competitors": [
+      {
+       "id": "1",
+       "homeAway": "home",
+       "winner": false,
+       "team": {
+        "displayName": "Arsenal",
+        "abbreviation": "ARS"
+       },
+       "score": "2"
+      },
+      {
+       "id": "1",
+       "homeAway": "home",
+       "winner": false,
+       "team": {
+        "displayName": "Fulham",
+        "abbreviation": "FUL"
+       },
+       "score": "0"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2",
+   "name": "Chelsea at Burnley",
+   "date": "2026-11-01T14:00Z",
+   "competitions": [
+    {
+     "id": "2",
+     "date": "2026-11-01T14:00Z",
+     "venue": {
+      "fullName": "Emirates Stadium"
+     },
+     "status": {
+      "type": {
+       "state": "pre",
+       "shortDetail": "Sun 14:00"
+      }
+     },
+     "competitors": [
+      {
+       "id": "1",
+       "homeAway": "home",
+       "winner": false,
+       "team": {
+        "displayName": "Burnley",
+        "abbreviation": "BUR"
+       },
+       "score": "0"
+      },
+      {
+       "id": "1",
+       "homeAway": "home",
+       "winner": false,
+       "team": {
+        "displayName": "Chelsea",
+        "abbreviation": "CHE"
+       },
+       "score": "0"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3",
+   "name": "Everton at Brentford",
+   "date": "2026-10-31T12:30Z",
+   "competitions": [
+    {
+     "id": "3",
+     "date": "2026-10-31T12:30Z",
+     "venue": {
+      "fullName": "Emirates Stadium"
+     },
+     "status": {
+      "type": {
+       "state": "post",
+       "shortDetail": "FT"
+      }
+     },
+     "competitors": [
+      {
+       "id": "1",
+       "homeAway": "home",
+       "winner": false,
+       "team": {
+        "displayName": "Brentford",
+        "abbreviation": "BRE"
+       },
+       "score": "1"
+      },
+      {
+       "id": "1",
+       "homeAway": "home",
+       "winner": false,
+       "team": {
+        "displayName": "Everton",
+        "abbreviation": "EVE"
+       },
+       "score": "1"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

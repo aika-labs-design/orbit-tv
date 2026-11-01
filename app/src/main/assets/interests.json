@@ -1,0 +1,9202 @@
+[
+ {
+  "id": "football",
+  "name": "Football",
+  "theme": "popular",
+  "also": [
+   "sport"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Football_in_Bloomington%2C_Indiana%2C_1995.jpg/500px-Football_in_Bloomington%2C_Indiana%2C_1995.jpg",
+  "terms": [
+   "soccer",
+   "premier league",
+   "champions league",
+   "la liga",
+   "bundesliga",
+   "serie a",
+   "afcon",
+   "football club",
+   "football match",
+   "football league",
+   "football transfer",
+   "football highlights",
+   "football fans",
+   "arsenal",
+   "chelsea",
+   "liverpool",
+   "manchester united",
+   "man utd",
+   "manchester city",
+   "man city",
+   "tottenham",
+   "real madrid",
+   "fc barcelona",
+   "barca",
+   "bayern munich",
+   "bayern",
+   "psg",
+   "paris saint-germain",
+   "juventus",
+   "inter milan",
+   "ac milan",
+   "atletico madrid",
+   "borussia dortmund",
+   "messi",
+   "ronaldo",
+   "mbappe",
+   "haaland",
+   "salah",
+   "vinicius",
+   "bellingham",
+   "fa cup",
+   "carabao cup",
+   "uefa",
+   "fifa world cup",
+   "world cup qualifier",
+   "european championship",
+   "copa america",
+   "africa cup of nations",
+   "super eagles",
+   "black stars",
+   "bafana bafana",
+   "three lions",
+   "lionesses"
+  ],
+  "shows": {
+   "keywords": [
+    13042
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "football OR soccer match report"
+  },
+  "videos": {
+   "query": "football match highlights full match",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "espn",
+   "league": "soccer/eng.1,soccer/esp.1,soccer/ger.1,soccer/ita.1,soccer/fra.1,soccer/uefa.champions",
+   "startWord": "kick-off times"
+  },
+  "refine": {
+   "label": "Who do you follow?",
+   "options": [
+    {
+     "id": "arsenal",
+     "name": "Arsenal",
+     "terms": [
+      "Arsenal"
+     ],
+     "espnTeam": "359",
+     "league": "soccer/eng.1"
+    },
+    {
+     "id": "super-eagles",
+     "name": "Super Eagles",
+     "terms": [
+      "Super Eagles",
+      "Nigeria"
+     ],
+     "espnTeam": "657",
+     "league": "soccer/caf.nations"
+    },
+    {
+     "id": "premier-league",
+     "name": "Premier League",
+     "terms": [
+      "Premier League",
+      "EPL"
+     ],
+     "league": "soccer/eng.1"
+    },
+    {
+     "id": "bundesliga",
+     "name": "Bundesliga",
+     "terms": [
+      "Bundesliga"
+     ],
+     "league": "soccer/ger.1"
+    },
+    {
+     "id": "afcon",
+     "name": "AFCON",
+     "terms": [
+      "AFCON",
+      "Africa Cup of Nations"
+     ],
+     "league": "soccer/caf.nations"
+    },
+    {
+     "id": "champions-league",
+     "name": "Champions League",
+     "terms": [
+      "Champions League",
+      "UEFA"
+     ],
+     "league": "soccer/uefa.champions"
+    },
+    {
+     "id": "la-liga",
+     "name": "La Liga",
+     "terms": [
+      "La Liga",
+      "LaLiga"
+     ],
+     "league": "soccer/esp.1"
+    },
+    {
+     "id": "serie-a",
+     "name": "Serie A",
+     "terms": [
+      "Serie A"
+     ],
+     "league": "soccer/ita.1"
+    },
+    {
+     "id": "ligue-1",
+     "name": "Ligue 1",
+     "terms": [
+      "Ligue 1"
+     ],
+     "league": "soccer/fra.1"
+    },
+    {
+     "id": "mls",
+     "name": "MLS",
+     "terms": [
+      "MLS",
+      "Major League Soccer"
+     ],
+     "league": "soccer/usa.1"
+    },
+    {
+     "id": "world-cup",
+     "name": "World Cup",
+     "terms": [
+      "World Cup",
+      "FIFA"
+     ],
+     "league": "soccer/fifa.world"
+    },
+    {
+     "id": "europa-league",
+     "name": "Europa League",
+     "terms": [
+      "Europa League"
+     ],
+     "league": "soccer/uefa.europa"
+    },
+    {
+     "id": "liverpool",
+     "name": "Liverpool",
+     "terms": [
+      "Liverpool"
+     ],
+     "espnTeam": "364",
+     "league": "soccer/eng.1"
+    },
+    {
+     "id": "man-city",
+     "name": "Manchester City",
+     "terms": [
+      "Manchester City",
+      "Man City"
+     ],
+     "espnTeam": "382",
+     "league": "soccer/eng.1"
+    },
+    {
+     "id": "man-united",
+     "name": "Manchester United",
+     "terms": [
+      "Manchester United",
+      "Man United",
+      "Man Utd"
+     ],
+     "espnTeam": "360",
+     "league": "soccer/eng.1"
+    },
+    {
+     "id": "chelsea",
+     "name": "Chelsea",
+     "terms": [
+      "Chelsea"
+     ],
+     "espnTeam": "363",
+     "league": "soccer/eng.1"
+    },
+    {
+     "id": "tottenham",
+     "name": "Tottenham",
+     "terms": [
+      "Tottenham",
+      "Spurs"
+     ],
+     "espnTeam": "367",
+     "league": "soccer/eng.1"
+    },
+    {
+     "id": "real-madrid",
+     "name": "Real Madrid",
+     "terms": [
+      "Real Madrid"
+     ],
+     "espnTeam": "86",
+     "league": "soccer/esp.1"
+    },
+    {
+     "id": "barcelona",
+     "name": "Barcelona",
+     "terms": [
+      "Barcelona",
+      "Barca"
+     ],
+     "espnTeam": "83",
+     "league": "soccer/esp.1"
+    },
+    {
+     "id": "bayern",
+     "name": "Bayern Munich",
+     "terms": [
+      "Bayern Munich",
+      "Bayern"
+     ],
+     "espnTeam": "132",
+     "league": "soccer/ger.1"
+    },
+    {
+     "id": "psg",
+     "name": "Paris Saint-Germain",
+     "terms": [
+      "Paris Saint-Germain",
+      "PSG"
+     ],
+     "espnTeam": "160",
+     "league": "soccer/fra.1"
+    },
+    {
+     "id": "juventus",
+     "name": "Juventus",
+     "terms": [
+      "Juventus"
+     ],
+     "espnTeam": "111",
+     "league": "soccer/ita.1"
+    },
+    {
+     "id": "ac-milan",
+     "name": "AC Milan",
+     "terms": [
+      "AC Milan",
+      "Milan"
+     ],
+     "espnTeam": "103",
+     "league": "soccer/ita.1"
+    },
+    {
+     "id": "kaizer-chiefs",
+     "name": "Kaizer Chiefs",
+     "terms": [
+      "Kaizer Chiefs"
+     ],
+     "espnTeam": "7081",
+     "league": "soccer/rsa.1"
+    },
+    {
+     "id": "bengaluru-fc",
+     "name": "Bengaluru FC",
+     "terms": [
+      "Bengaluru FC"
+     ],
+     "espnTeam": "18851",
+     "league": "soccer/ind.1"
+    },
+    {
+     "id": "brazil",
+     "name": "Brazil",
+     "terms": [
+      "Brazil",
+      "Selecao"
+     ],
+     "espnTeam": "205",
+     "league": "soccer/fifa.world"
+    },
+    {
+     "id": "argentina",
+     "name": "Argentina",
+     "terms": [
+      "Argentina"
+     ],
+     "espnTeam": "202",
+     "league": "soccer/fifa.world"
+    },
+    {
+     "id": "england",
+     "name": "England",
+     "terms": [
+      "England",
+      "Three Lions"
+     ],
+     "espnTeam": "448",
+     "league": "soccer/fifa.world"
+    },
+    {
+     "id": "ghana",
+     "name": "Black Stars",
+     "terms": [
+      "Black Stars",
+      "Ghana"
+     ],
+     "espnTeam": "4469",
+     "league": "soccer/fifa.world"
+    }
+   ]
+  }
+ },
+ {
+  "id": "afrobeats",
+  "name": "Afrobeats",
+  "theme": "popular",
+  "also": [
+   "music"
+  ],
+  "countries": [
+   "NG",
+   "GH"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Untold_2024_-Burna_Boy_%2853926047977%29_%28cropped%29.jpg/500px-Untold_2024_-Burna_Boy_%2853926047977%29_%28cropped%29.jpg",
+  "terms": [
+   "afrobeats",
+   "afrobeat",
+   "amapiano",
+   "burna boy",
+   "wizkid",
+   "davido",
+   "tems",
+   "rema",
+   "asake",
+   "tiwa savage",
+   "fela kuti"
+  ],
+  "shows": {
+   "keywords": [
+    218096
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "Afrobeats OR Burna Boy OR Wizkid OR Davido OR Tems"
+  },
+  "videos": {
+   "query": "Afrobeats live session",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "afrobeats"
+  }
+ },
+ {
+  "id": "west-african-cooking",
+  "name": "West African cooking",
+  "theme": "popular",
+  "also": [
+   "food"
+  ],
+  "countries": [
+   "NG",
+   "GH",
+   "SN",
+   "CI",
+   "CM"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Yassapoulet.JPG/500px-Yassapoulet.JPG",
+  "terms": [
+   "jollof",
+   "egusi",
+   "suya",
+   "fufu",
+   "pounded yam",
+   "plantain",
+   "waakye",
+   "thieboudienne",
+   "west african food",
+   "west african cuisine",
+   "west african cooking",
+   "west african recipe",
+   "nigerian food",
+   "nigerian cuisine",
+   "nigerian cooking",
+   "nigerian recipe",
+   "ghanaian food",
+   "ghanaian cuisine",
+   "ghanaian cooking",
+   "ghanaian recipe",
+   "senegalese food",
+   "senegalese cuisine",
+   "senegalese cooking",
+   "senegalese recipe"
+  ],
+  "shows": {
+   "keywords": [
+    220943
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "West African cooking OR jollof OR Nigerian food OR Ghanaian food"
+  },
+  "videos": {
+   "query": "West African cooking recipe",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "formula-1",
+  "name": "Formula 1",
+  "theme": "popular",
+  "also": [
+   "sport"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/2010_Malaysian_GP_opening_lap.jpg/500px-2010_Malaysian_GP_opening_lap.jpg",
+  "terms": [
+   "formula 1",
+   "formula one",
+   "f1",
+   "grand prix",
+   "verstappen",
+   "leclerc",
+   "ferrari",
+   "mclaren",
+   "red bull racing",
+   "lewis hamilton",
+   "lando norris"
+  ],
+  "shows": {
+   "keywords": [
+    233981
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "Formula 1 OR F1 grand prix"
+  },
+  "videos": {
+   "query": "Formula 1 race highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "jolpica",
+   "startWord": "race times"
+  },
+  "refine": {
+   "label": "Which team?",
+   "options": [
+    {
+     "id": "ferrari",
+     "name": "Ferrari",
+     "terms": [
+      "Ferrari"
+     ],
+     "query": "Ferrari F1"
+    },
+    {
+     "id": "mercedes",
+     "name": "Mercedes",
+     "terms": [
+      "Mercedes"
+     ],
+     "query": "Mercedes F1"
+    },
+    {
+     "id": "red-bull",
+     "name": "Red Bull",
+     "terms": [
+      "Red Bull",
+      "Verstappen"
+     ],
+     "query": "Red Bull F1"
+    },
+    {
+     "id": "mclaren",
+     "name": "McLaren",
+     "terms": [
+      "McLaren"
+     ],
+     "query": "McLaren F1"
+    },
+    {
+     "id": "aston-martin",
+     "name": "Aston Martin",
+     "terms": [
+      "Aston Martin"
+     ],
+     "query": "Aston Martin F1"
+    },
+    {
+     "id": "alpine",
+     "name": "Alpine",
+     "terms": [
+      "Alpine"
+     ],
+     "query": "Alpine F1"
+    },
+    {
+     "id": "williams",
+     "name": "Williams",
+     "terms": [
+      "Williams"
+     ],
+     "query": "Williams F1"
+    },
+    {
+     "id": "audi",
+     "name": "Audi",
+     "terms": [
+      "Audi"
+     ],
+     "query": "Audi F1"
+    },
+    {
+     "id": "cadillac",
+     "name": "Cadillac",
+     "terms": [
+      "Cadillac"
+     ],
+     "query": "Cadillac F1"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fashion",
+  "name": "Fashion",
+  "theme": "popular",
+  "also": [
+   "style"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Carolina_Herrera_AW14_12.jpg/500px-Carolina_Herrera_AW14_12.jpg",
+  "terms": [
+   "fashion",
+   "runway",
+   "couture",
+   "fashion week",
+   "vogue",
+   "style icon",
+   "tailoring"
+  ],
+  "shows": {
+   "keywords": [
+    15479
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "fashion week OR runway OR couture"
+  },
+  "videos": {
+   "query": "fashion week runway highlights",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "jazz",
+  "name": "Jazz",
+  "theme": "popular",
+  "also": [
+   "music"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Eight_saxophone_sizes_smaller.png/500px-Eight_saxophone_sizes_smaller.png",
+  "terms": [
+   "jazz",
+   "bebop",
+   "saxophone",
+   "trumpet",
+   "coltrane",
+   "miles davis",
+   "ella fitzgerald",
+   "blue note",
+   "village vanguard",
+   "big band"
+  ],
+  "shows": {
+   "keywords": [
+    1416
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "jazz festival OR jazz album review"
+  },
+  "videos": {
+   "query": "jazz live concert",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "jazz"
+  },
+  "refine": {
+   "label": "Which jazz?",
+   "options": [
+    {
+     "id": "bebop",
+     "name": "Bebop",
+     "terms": [
+      "bebop",
+      "Charlie Parker",
+      "Dizzy Gillespie"
+     ],
+     "query": "bebop jazz"
+    },
+    {
+     "id": "latin-jazz",
+     "name": "Latin jazz",
+     "terms": [
+      "Latin jazz"
+     ],
+     "query": "Latin jazz",
+     "tag": "latin jazz"
+    },
+    {
+     "id": "afro-jazz",
+     "name": "Afro jazz",
+     "terms": [
+      "Afro jazz",
+      "Afrojazz",
+      "Fela",
+      "Hugh Masekela"
+     ],
+     "query": "Afro jazz"
+    },
+    {
+     "id": "vocal-jazz",
+     "name": "Vocal jazz",
+     "terms": [
+      "Vocal jazz"
+     ],
+     "query": "vocal jazz",
+     "tag": "vocal jazz"
+    },
+    {
+     "id": "modern-jazz",
+     "name": "Modern jazz",
+     "terms": [
+      "Modern jazz"
+     ],
+     "query": "contemporary jazz"
+    },
+    {
+     "id": "smooth-jazz",
+     "name": "Smooth jazz",
+     "terms": [
+      "Smooth jazz"
+     ],
+     "query": "smooth jazz",
+     "tag": "smooth jazz"
+    }
+   ]
+  }
+ },
+ {
+  "id": "space",
+  "name": "Space",
+  "theme": "popular",
+  "also": [
+   "ideas"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Webb%27s_First_Deep_Field.jpg/500px-Webb%27s_First_Deep_Field.jpg",
+  "terms": [
+   "space",
+   "nasa",
+   "astronomy",
+   "telescope",
+   "rocket",
+   "galaxy",
+   "cosmos",
+   "esa",
+   "isro",
+   "black hole",
+   "astronaut",
+   "spacex",
+   "james webb",
+   "moon landing",
+   "lunar",
+   "moon mission",
+   "mars rover",
+   "mars mission",
+   "mars exploration",
+   "exoplanet",
+   "solar system"
+  ],
+  "shows": {
+   "keywords": [
+    9882
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "NASA OR ISRO OR astronomy OR space exploration"
+  },
+  "videos": {
+   "query": "space documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "street-food",
+  "name": "Street food",
+  "theme": "popular",
+  "also": [
+   "food"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/StreetfoodNY.jpg/500px-StreetfoodNY.jpg",
+  "terms": [
+   "street food",
+   "hawker",
+   "food stall",
+   "food truck",
+   "night market",
+   "chaat",
+   "tacos",
+   "kebab",
+   "satay",
+   "banh mi"
+  ],
+  "shows": {
+   "keywords": [
+    308676
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "street food"
+  },
+  "videos": {
+   "query": "street food tour",
+   "minMinutes": 4
+  },
+  "refine": {
+   "label": "Where in the world?",
+   "options": [
+    {
+     "id": "sf-asia",
+     "name": "Asia",
+     "terms": [
+      "Asia",
+      "Thai",
+      "Vietnam",
+      "Indian",
+      "Chinese",
+      "Japanese",
+      "Korean",
+      "Indonesian"
+     ],
+     "query": "Asian street food"
+    },
+    {
+     "id": "sf-africa",
+     "name": "Africa",
+     "terms": [
+      "Africa",
+      "Nigerian",
+      "Ghanaian",
+      "Ethiopian",
+      "Moroccan",
+      "Egyptian",
+      "Kenyan"
+     ],
+     "query": "African street food"
+    },
+    {
+     "id": "sf-latin",
+     "name": "Latin America",
+     "terms": [
+      "Mexico",
+      "Mexican",
+      "Peru",
+      "Brazil",
+      "Colombia",
+      "Argentina",
+      "Latin"
+     ],
+     "query": "Latin American street food"
+    },
+    {
+     "id": "sf-middle-east",
+     "name": "Middle East",
+     "terms": [
+      "Turkey",
+      "Turkish",
+      "Lebanon",
+      "Lebanese",
+      "Israel",
+      "Iran",
+      "Arab",
+      "Middle East"
+     ],
+     "query": "Middle East street food"
+    },
+    {
+     "id": "sf-europe",
+     "name": "Europe",
+     "terms": [
+      "Europe",
+      "Italian",
+      "Spanish",
+      "Greek",
+      "Portuguese",
+      "German",
+      "French"
+     ],
+     "query": "European street food"
+    },
+    {
+     "id": "sf-india",
+     "name": "India",
+     "terms": [
+      "India",
+      "Indian",
+      "Mumbai",
+      "Delhi",
+      "Kolkata",
+      "Bengaluru",
+      "Chennai"
+     ],
+     "query": "Indian street food"
+    }
+   ]
+  }
+ },
+ {
+  "id": "hiking",
+  "name": "Hiking",
+  "theme": "popular",
+  "also": [
+   "outdoors"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg/500px-Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg",
+  "terms": [
+   "hiking",
+   "trail",
+   "trek",
+   "trekking",
+   "backpacking",
+   "national park"
+  ],
+  "shows": {
+   "keywords": [
+    5827
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "hiking trails OR trekking"
+  },
+  "videos": {
+   "query": "hiking trail documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "chess",
+  "name": "Chess",
+  "theme": "popular",
+  "also": [
+   "ideas"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/ChessSet.jpg/500px-ChessSet.jpg",
+  "terms": [
+   "chess",
+   "grandmaster",
+   "gukesh",
+   "carlsen",
+   "magnus carlsen",
+   "fide",
+   "checkmate",
+   "viswanathan anand",
+   "candidates tournament"
+  ],
+  "shows": {
+   "keywords": [
+    316
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "chess OR grandmaster OR FIDE"
+  },
+  "videos": {
+   "query": "chess grandmaster game analysis",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "chess live tournament"
+  }
+ },
+ {
+  "id": "baking",
+  "name": "Baking",
+  "theme": "popular",
+  "also": [
+   "food"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Freshly_baked_bread_loaves.jpg/500px-Freshly_baked_bread_loaves.jpg",
+  "terms": [
+   "baking",
+   "bread",
+   "sourdough",
+   "pastry",
+   "cake",
+   "patisserie",
+   "baker",
+   "dough",
+   "croissant",
+   "oven",
+   "bake"
+  ],
+  "shows": {
+   "keywords": [
+    182282
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "baking OR sourdough OR pastry"
+  },
+  "videos": {
+   "query": "baking bread pastry recipe",
+   "minMinutes": 4
+  },
+  "refine": {
+   "label": "What do you bake?",
+   "options": [
+    {
+     "id": "bake-bread",
+     "name": "Bread",
+     "terms": [
+      "bread",
+      "sourdough",
+      "loaf",
+      "dough"
+     ],
+     "query": "bread baking"
+    },
+    {
+     "id": "bake-cakes",
+     "name": "Cakes",
+     "terms": [
+      "cake",
+      "sponge",
+      "frosting",
+      "cheesecake"
+     ],
+     "query": "cake baking"
+    },
+    {
+     "id": "bake-pastry",
+     "name": "Pastry",
+     "terms": [
+      "pastry",
+      "croissant",
+      "tart",
+      "patisserie",
+      "puff"
+     ],
+     "query": "pastry baking"
+    },
+    {
+     "id": "bake-biscuits",
+     "name": "Biscuits and cookies",
+     "terms": [
+      "biscuit",
+      "cookie",
+      "shortbread"
+     ],
+     "query": "cookie baking"
+    }
+   ]
+  }
+ },
+ {
+  "id": "boxing",
+  "name": "Boxing",
+  "theme": "popular",
+  "also": [
+   "sport"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Boxing_Tournament_in_Aid_of_King_George%27s_Fund_For_Sailors_at_the_Royal_Naval_Air_Station%2C_Henstridge%2C_Somerset%2C_July_1945_A29806.jpg/500px-Boxing_Tournament_in_Aid_of_King_George%27s_Fund_For_Sailors_at_the_Royal_Naval_Air_Station%2C_Henstridge%2C_Somerset%2C_July_1945_A29806.jpg",
+  "terms": [
+   "boxing",
+   "boxer",
+   "heavyweight",
+   "knockout",
+   "wbc",
+   "wba",
+   "ibf",
+   "wbo",
+   "title fight",
+   "usyk",
+   "fury",
+   "canelo",
+   "joshua"
+  ],
+  "shows": {
+   "keywords": [
+    209476
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "boxing fight OR heavyweight title"
+  },
+  "videos": {
+   "query": "boxing fight highlights",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "cricket",
+  "name": "Cricket",
+  "theme": "popular",
+  "also": [
+   "sport"
+  ],
+  "countries": [
+   "IN",
+   "PK",
+   "LK",
+   "BD",
+   "AF",
+   "AU",
+   "NZ",
+   "GB",
+   "ZA",
+   "JM",
+   "TT",
+   "BB"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Pollock_to_Hussey.jpg/500px-Pollock_to_Hussey.jpg",
+  "terms": [
+   "cricket",
+   "ipl",
+   "test match",
+   "odi",
+   "t20",
+   "wicket",
+   "innings",
+   "bcci",
+   "icc",
+   "rcb",
+   "virat kohli",
+   "rohit sharma",
+   "bumrah",
+   "ashes",
+   "cricinfo",
+   "cricket world cup"
+  ],
+  "shows": {
+   "keywords": [
+    5719
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "cricket"
+  },
+  "videos": {
+   "query": "cricket match highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "cricinfo"
+  },
+  "refine": {
+   "label": "What do you follow?",
+   "options": [
+    {
+     "id": "ipl",
+     "name": "IPL",
+     "terms": [
+      "IPL",
+      "Indian Premier League"
+     ]
+    },
+    {
+     "id": "rcb",
+     "name": "RCB",
+     "terms": [
+      "RCB",
+      "Royal Challengers"
+     ]
+    },
+    {
+     "id": "india-cricket",
+     "name": "India",
+     "terms": [
+      "India",
+      "Team India",
+      "BCCI"
+     ]
+    },
+    {
+     "id": "test-cricket",
+     "name": "Test cricket",
+     "terms": [
+      "Test",
+      "Ashes",
+      "Test match"
+     ]
+    },
+    {
+     "id": "cricket-world-cup",
+     "name": "World Cup",
+     "terms": [
+      "World Cup",
+      "ICC"
+     ]
+    },
+    {
+     "id": "womens-cricket",
+     "name": "Women's cricket",
+     "terms": [
+      "women",
+      "WPL",
+      "women's"
+     ]
+    },
+    {
+     "id": "big-bash",
+     "name": "Big Bash",
+     "terms": [
+      "Big Bash",
+      "BBL"
+     ]
+    },
+    {
+     "id": "psl",
+     "name": "PSL",
+     "terms": [
+      "PSL",
+      "Pakistan Super League"
+     ]
+    },
+    {
+     "id": "the-hundred",
+     "name": "The Hundred",
+     "terms": [
+      "The Hundred"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "tennis",
+  "name": "Tennis",
+  "theme": "popular",
+  "also": [
+   "sport"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/2013_Australian_Open_-_Guillaume_Rufin.jpg/500px-2013_Australian_Open_-_Guillaume_Rufin.jpg",
+  "terms": [
+   "tennis",
+   "wimbledon",
+   "roland garros",
+   "australian open",
+   "atp",
+   "wta",
+   "grand slam",
+   "djokovic",
+   "alcaraz",
+   "sinner",
+   "swiatek",
+   "sabalenka",
+   "gauff"
+  ],
+  "shows": {
+   "keywords": [
+    1488
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "tennis grand slam OR ATP OR WTA"
+  },
+  "videos": {
+   "query": "tennis match highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "espn",
+   "league": "tennis/atp,tennis/wta",
+   "startWord": "match times",
+   "scoreStyle": "sets"
+  },
+  "refine": {
+   "label": "What do you follow?",
+   "options": [
+    {
+     "id": "slams",
+     "name": "Grand Slams",
+     "terms": [
+      "Wimbledon",
+      "Roland Garros",
+      "French Open",
+      "US Open",
+      "Australian Open",
+      "Grand Slam"
+     ],
+     "query": "grand slam tennis"
+    },
+    {
+     "id": "atp",
+     "name": "ATP",
+     "terms": [
+      "ATP"
+     ],
+     "league": "tennis/atp"
+    },
+    {
+     "id": "wta",
+     "name": "WTA",
+     "terms": [
+      "WTA"
+     ],
+     "league": "tennis/wta"
+    },
+    {
+     "id": "wimbledon",
+     "name": "Wimbledon",
+     "terms": [
+      "Wimbledon"
+     ],
+     "query": "Wimbledon"
+    },
+    {
+     "id": "top-players",
+     "name": "Top players",
+     "terms": [
+      "Sinner",
+      "Alcaraz",
+      "Djokovic",
+      "Zverev",
+      "Fritz",
+      "Sabalenka",
+      "Swiatek",
+      "Gauff",
+      "Rybakina",
+      "Pegula"
+     ],
+     "query": "top tennis players"
+    },
+    {
+     "id": "indian-tennis",
+     "name": "Indian players",
+     "terms": [
+      "Bopanna",
+      "Nagal",
+      "Balaji",
+      "Bhambri",
+      "Mirza",
+      "India"
+     ],
+     "query": "India tennis",
+     "countries": [
+      "IN"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "world-news",
+  "name": "World news",
+  "theme": "popular",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Land_on_the_Moon_7_21_1969-repair.jpg/500px-Land_on_the_Moon_7_21_1969-repair.jpg",
+  "terms": [
+   "president",
+   "parliament",
+   "diplomacy",
+   "world news",
+   "breaking news",
+   "prime minister",
+   "election results",
+   "ceasefire",
+   "united nations",
+   "world leaders"
+  ],
+  "shows": {
+   "keywords": [
+    917
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "world news"
+  },
+  "videos": {
+   "query": "world news analysis explained",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "world news live"
+  }
+ },
+ {
+  "id": "technology",
+  "name": "Technology",
+  "theme": "popular",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Dampfturbine_Montage01.jpg/500px-Dampfturbine_Montage01.jpg",
+  "terms": [
+   "technology",
+   "tech",
+   "gadget",
+   "smartphone",
+   "semiconductor",
+   "software",
+   "startup",
+   "google",
+   "microsoft",
+   "nvidia",
+   "innovation",
+   "robot",
+   "chipmaker",
+   "computer chip",
+   "iphone",
+   "macbook"
+  ],
+  "shows": {
+   "keywords": [
+    1576
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "technology news OR gadgets"
+  },
+  "videos": {
+   "query": "technology explained review",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "nature",
+  "name": "Nature and wildlife",
+  "theme": "popular",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Wildlife_at_Maasai_Mara_%28Lion%29.jpg/500px-Wildlife_at_Maasai_Mara_%28Lion%29.jpg",
+  "terms": [
+   "wildlife",
+   "nature",
+   "animals",
+   "safari",
+   "ocean",
+   "rainforest",
+   "birds",
+   "predator",
+   "ecosystem",
+   "conservation",
+   "serengeti",
+   "reef"
+  ],
+  "shows": {
+   "keywords": [
+    9902
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "wildlife OR nature conservation"
+  },
+  "videos": {
+   "query": "nature wildlife documentary",
+   "minMinutes": 10
+  }
+ },
+ {
+  "id": "travel",
+  "name": "Travel",
+  "theme": "popular",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Cross_Harbour_Tunnel_%281%29.JPG/500px-Cross_Harbour_Tunnel_%281%29.JPG",
+  "terms": [
+   "travel",
+   "journey",
+   "destination",
+   "tourism",
+   "city guide",
+   "itinerary",
+   "island",
+   "beach",
+   "backpacker",
+   "passport"
+  ],
+  "shows": {
+   "keywords": [
+    9935
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "travel destinations OR travel guide"
+  },
+  "videos": {
+   "query": "travel documentary city guide",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "history",
+  "name": "History",
+  "theme": "popular",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Carstian_Luyckx_-_Still_life_with_a_globe%2C_books%2C_shells_and_corals_resting_on_a_stone_ledge.jpg/500px-Carstian_Luyckx_-_Still_life_with_a_globe%2C_books%2C_shells_and_corals_resting_on_a_stone_ledge.jpg",
+  "terms": [
+   "history",
+   "historical",
+   "ancient",
+   "empire",
+   "medieval",
+   "archaeology",
+   "dynasty",
+   "civilisation",
+   "civilization"
+  ],
+  "shows": {
+   "keywords": [
+    282633
+   ],
+   "genres": [
+    99,
+    36
+   ]
+  },
+  "news": {
+   "query": "history OR archaeology discovery"
+  },
+  "videos": {
+   "query": "history documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "true-crime",
+  "name": "True crime",
+  "theme": "popular",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/True_Detective_magazine_cover_October_1961_issue.jpg/500px-True_Detective_magazine_cover_October_1961_issue.jpg",
+  "terms": [
+   "true crime",
+   "detective",
+   "murder",
+   "forensic",
+   "cold case",
+   "heist"
+  ],
+  "shows": {
+   "keywords": [
+    33722
+   ],
+   "genres": [
+    99,
+    80
+   ]
+  },
+  "news": {
+   "query": "true crime investigation"
+  },
+  "videos": {
+   "query": "true crime documentary investigation",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "comedy",
+  "name": "Comedy",
+  "theme": "popular",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Jesus_is_coming.._Look_Busy_%28George_Carlin%29.jpg/500px-Jesus_is_coming.._Look_Busy_%28George_Carlin%29.jpg",
+  "terms": [
+   "comedy",
+   "stand-up",
+   "standup",
+   "comedian",
+   "sketch",
+   "sitcom",
+   "satire",
+   "improv",
+   "roast"
+  ],
+  "shows": {
+   "keywords": [
+    9716
+   ],
+   "genres": [
+    35
+   ]
+  },
+  "news": {
+   "query": "stand-up comedy OR comedian"
+  },
+  "videos": {
+   "query": "stand-up comedy special",
+   "minMinutes": 10
+  }
+ },
+ {
+  "id": "gaming",
+  "name": "Gaming",
+  "theme": "popular",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Universum_TV_Multispiel_2006.jpg/500px-Universum_TV_Multispiel_2006.jpg",
+  "terms": [
+   "gaming",
+   "video game",
+   "playstation",
+   "xbox",
+   "nintendo",
+   "steam",
+   "esports",
+   "speedrun",
+   "game review",
+   "indie game"
+  ],
+  "shows": {
+   "keywords": [
+    282
+   ],
+   "genres": [
+    16
+   ]
+  },
+  "news": {
+   "query": "video games OR gaming news"
+  },
+  "videos": {
+   "query": "video game review",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "cooking",
+  "name": "Home cooking",
+  "theme": "popular",
+  "also": [
+   "food"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Agdz-rosino-05.jpg/500px-Agdz-rosino-05.jpg",
+  "terms": [
+   "cooking",
+   "recipe",
+   "chef",
+   "cuisine",
+   "ingredients",
+   "simmer",
+   "home cook",
+   "how to cook",
+   "cooking tips"
+  ],
+  "shows": {
+   "keywords": [
+    1918
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "home cooking OR recipes OR chef"
+  },
+  "videos": {
+   "query": "home cooking recipe",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "cinema",
+  "name": "Cinema",
+  "theme": "popular",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Le_Voyage_dans_la_Lune_%281902%29.webm/500px--Le_Voyage_dans_la_Lune_%281902%29.webm.jpg",
+  "terms": [
+   "film",
+   "cinema",
+   "movie",
+   "oscars",
+   "cannes",
+   "screenplay",
+   "box office",
+   "cinematography",
+   "film director"
+  ],
+  "shows": {
+   "keywords": [
+    33490
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "cinema OR film festival OR box office"
+  },
+  "videos": {
+   "query": "film analysis director interview",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "nigerian-food",
+  "name": "Nigerian food",
+  "theme": "food",
+  "countries": [
+   "NG"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/SuyavarietiesTX.JPG/500px-SuyavarietiesTX.JPG",
+  "terms": [
+   "jollof",
+   "egusi",
+   "suya",
+   "pounded yam",
+   "moi moi",
+   "ofada",
+   "afang",
+   "puff puff",
+   "nigerian food",
+   "nigerian cuisine",
+   "nigerian cooking",
+   "nigerian recipe"
+  ],
+  "shows": {
+   "keywords": [
+    7587
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "Nigerian food OR jollof OR egusi"
+  },
+  "videos": {
+   "query": "Nigerian food recipe",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "ghanaian-food",
+  "name": "Ghanaian food",
+  "theme": "food",
+  "countries": [
+   "GH"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Waakye_2.jpg/500px-Waakye_2.jpg",
+  "terms": [
+   "waakye",
+   "kenkey",
+   "banku",
+   "fufu",
+   "kelewele",
+   "light soup",
+   "jollof",
+   "ghanaian food",
+   "ghanaian cuisine",
+   "ghanaian cooking",
+   "ghanaian recipe"
+  ],
+  "news": {
+   "query": "Ghanaian food OR waakye OR banku"
+  },
+  "videos": {
+   "query": "Ghanaian food recipe",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "ethiopian-food",
+  "name": "Ethiopian food",
+  "theme": "food",
+  "countries": [
+   "ET",
+   "ER"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Injera_with_eight_kinds_of_stew.jpg/500px-Injera_with_eight_kinds_of_stew.jpg",
+  "terms": [
+   "injera",
+   "doro wat",
+   "berbere",
+   "tibs",
+   "kitfo",
+   "coffee ceremony",
+   "ethiopian food",
+   "ethiopian cuisine",
+   "ethiopian cooking",
+   "ethiopian recipe"
+  ],
+  "news": {
+   "query": "Ethiopian food OR injera"
+  },
+  "videos": {
+   "query": "Ethiopian food injera",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "north-african-food",
+  "name": "North African cooking",
+  "theme": "food",
+  "countries": [
+   "MA",
+   "DZ",
+   "TN",
+   "LY",
+   "EG"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/MoroccanCouscous.jpg/500px-MoroccanCouscous.jpg",
+  "terms": [
+   "tagine",
+   "couscous",
+   "harissa",
+   "shakshuka",
+   "koshari",
+   "moroccan food",
+   "moroccan cuisine",
+   "moroccan cooking",
+   "moroccan recipe",
+   "tunisian food",
+   "tunisian cuisine",
+   "tunisian cooking",
+   "tunisian recipe",
+   "algerian food",
+   "algerian cuisine",
+   "algerian cooking",
+   "algerian recipe",
+   "egyptian food",
+   "egyptian cuisine",
+   "egyptian cooking",
+   "egyptian recipe",
+   "north african food",
+   "north african cuisine",
+   "north african cooking",
+   "north african recipe"
+  ],
+  "news": {
+   "query": "Moroccan food OR tagine OR couscous"
+  },
+  "videos": {
+   "query": "Moroccan tagine couscous cooking",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "south-african-food",
+  "name": "South African food",
+  "theme": "food",
+  "countries": [
+   "ZA"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/The_Potjie_is_ready.JPG/500px-The_Potjie_is_ready.JPG",
+  "terms": [
+   "braai",
+   "biltong",
+   "bunny chow",
+   "bobotie",
+   "boerewors",
+   "potjie",
+   "chakalaka",
+   "south african food",
+   "south african cuisine",
+   "south african cooking",
+   "south african recipe",
+   "mielie pap",
+   "pap and vleis"
+  ],
+  "news": {
+   "query": "braai OR South African food"
+  },
+  "videos": {
+   "query": "South African braai recipe",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "east-african-food",
+  "name": "East African food",
+  "theme": "food",
+  "countries": [
+   "KE",
+   "TZ",
+   "UG",
+   "RW"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/ACK_Mombasa_Memorial_Cathedral%2C_2025_%2801%29.jpg/500px-ACK_Mombasa_Memorial_Cathedral%2C_2025_%2801%29.jpg",
+  "terms": [
+   "ugali",
+   "nyama choma",
+   "chapati",
+   "pilau",
+   "sukuma wiki",
+   "mandazi",
+   "kenyan food",
+   "kenyan cuisine",
+   "kenyan cooking",
+   "kenyan recipe",
+   "tanzanian food",
+   "tanzanian cuisine",
+   "tanzanian cooking",
+   "tanzanian recipe",
+   "swahili food",
+   "swahili cuisine",
+   "swahili cooking",
+   "swahili recipe",
+   "east african food",
+   "east african cuisine",
+   "east african cooking",
+   "east african recipe"
+  ],
+  "news": {
+   "query": "Kenyan food OR nyama choma OR ugali"
+  },
+  "videos": {
+   "query": "Kenyan food recipe",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "indian-food",
+  "name": "Indian food",
+  "theme": "food",
+  "countries": [
+   "IN"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Tradtional_Thali.jpg/500px-Tradtional_Thali.jpg",
+  "terms": [
+   "curry",
+   "biryani",
+   "dosa",
+   "masala",
+   "tandoori",
+   "paneer",
+   "thali",
+   "chaat",
+   "idli",
+   "sambar",
+   "indian food",
+   "indian cuisine",
+   "indian cooking",
+   "indian recipe"
+  ],
+  "shows": {
+   "keywords": [
+    155951
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "Indian food OR biryani OR dosa"
+  },
+  "videos": {
+   "query": "Indian recipe",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "karnataka-food",
+  "name": "Karnataka cuisine",
+  "theme": "food",
+  "countries": [
+   "IN"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Masala_Dosa_2023.jpg/500px-Masala_Dosa_2023.jpg",
+  "terms": [
+   "bisi bele bath",
+   "mysore pak",
+   "masala dosa",
+   "udupi",
+   "ragi mudde",
+   "neer dosa",
+   "filter coffee",
+   "karnataka food",
+   "karnataka cuisine",
+   "karnataka cooking",
+   "karnataka recipe",
+   "udupi food",
+   "udupi cuisine",
+   "udupi cooking",
+   "udupi recipe",
+   "mangalorean food",
+   "mangalorean cuisine",
+   "mangalorean cooking",
+   "mangalorean recipe"
+  ],
+  "news": {
+   "query": "Karnataka food OR Udupi cuisine OR Mysore pak"
+  },
+  "videos": {
+   "query": "Karnataka food recipe Udupi",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "chinese-food",
+  "name": "Chinese cooking",
+  "theme": "food",
+  "countries": [
+   "CN",
+   "TW",
+   "HK",
+   "SG"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Collage_Chinese_Cuisine_by_User-EME.png/500px-Collage_Chinese_Cuisine_by_User-EME.png",
+  "terms": [
+   "wok",
+   "dim sum",
+   "sichuan",
+   "cantonese",
+   "noodles",
+   "dumplings",
+   "hot pot",
+   "peking duck",
+   "mapo tofu",
+   "chinese food",
+   "chinese cuisine",
+   "chinese cooking",
+   "chinese recipe"
+  ],
+  "shows": {
+   "keywords": [
+    163607
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "Chinese food OR dim sum OR Sichuan"
+  },
+  "videos": {
+   "query": "Chinese cooking recipe",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "japanese-food",
+  "name": "Japanese food",
+  "theme": "food",
+  "countries": [
+   "JP"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Oseti.jpg/500px-Oseti.jpg",
+  "terms": [
+   "sushi",
+   "ramen",
+   "izakaya",
+   "tempura",
+   "miso",
+   "wagyu",
+   "bento",
+   "kaiseki",
+   "udon",
+   "washoku",
+   "japanese food",
+   "japanese cuisine",
+   "japanese cooking",
+   "japanese recipe"
+  ],
+  "shows": {
+   "keywords": [
+    258082
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "Japanese food OR sushi OR ramen"
+  },
+  "videos": {
+   "query": "Japanese cooking sushi ramen",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "korean-food",
+  "name": "Korean food",
+  "theme": "food",
+  "countries": [
+   "KR"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Han-jeongsik.jpg/500px-Han-jeongsik.jpg",
+  "terms": [
+   "kimchi",
+   "bibimbap",
+   "bulgogi",
+   "tteokbokki",
+   "korean bbq",
+   "gochujang",
+   "banchan",
+   "jjigae",
+   "korean food",
+   "korean cuisine",
+   "korean cooking",
+   "korean recipe"
+  ],
+  "news": {
+   "query": "Korean food OR kimchi OR bibimbap"
+  },
+  "videos": {
+   "query": "Korean food recipe",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "thai-food",
+  "name": "Thai food",
+  "theme": "food",
+  "countries": [
+   "TH"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/500px-Phat_Thai_kung_Chang_Khien_street_stall.jpg",
+  "terms": [
+   "pad thai",
+   "tom yum",
+   "green curry",
+   "som tam",
+   "mango sticky rice",
+   "thai food",
+   "thai cuisine",
+   "thai cooking",
+   "thai recipe"
+  ],
+  "news": {
+   "query": "Thai food OR tom yum OR pad thai"
+  },
+  "videos": {
+   "query": "Thai cooking recipe",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "vietnamese-food",
+  "name": "Vietnamese food",
+  "theme": "food",
+  "countries": [
+   "VN"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/2023-07-28_Cuisine_of_Hanoi_%E4%B8%80%E8%88%AC%E5%AE%B6%E5%BA%AD%E3%83%99%E3%83%88%E3%83%8A%E3%83%A0%E6%96%99%E7%90%86DSCF0706.jpg/500px-2023-07-28_Cuisine_of_Hanoi_%E4%B8%80%E8%88%AC%E5%AE%B6%E5%BA%AD%E3%83%99%E3%83%88%E3%83%8A%E3%83%A0%E6%96%99%E7%90%86DSCF0706.jpg",
+  "terms": [
+   "pho",
+   "banh mi",
+   "bun cha",
+   "spring rolls",
+   "bun bo hue",
+   "vietnamese food",
+   "vietnamese cuisine",
+   "vietnamese cooking",
+   "vietnamese recipe"
+  ],
+  "news": {
+   "query": "Vietnamese food OR pho OR banh mi"
+  },
+  "videos": {
+   "query": "Vietnamese food pho banh mi",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "indonesian-food",
+  "name": "Indonesian food",
+  "theme": "food",
+  "countries": [
+   "ID"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Food_Sundanese_Restaurant%2C_Jakarta.jpg/500px-Food_Sundanese_Restaurant%2C_Jakarta.jpg",
+  "terms": [
+   "nasi goreng",
+   "rendang",
+   "satay",
+   "gado-gado",
+   "sambal",
+   "soto",
+   "tempeh",
+   "indonesian food",
+   "indonesian cuisine",
+   "indonesian cooking",
+   "indonesian recipe"
+  ],
+  "news": {
+   "query": "Indonesian food OR rendang OR nasi goreng"
+  },
+  "videos": {
+   "query": "Indonesian food rendang",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "filipino-food",
+  "name": "Filipino food",
+  "theme": "food",
+  "countries": [
+   "PH"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Philippine_Food.jpg/500px-Philippine_Food.jpg",
+  "terms": [
+   "adobo",
+   "sinigang",
+   "lechon",
+   "halo-halo",
+   "kare-kare",
+   "pancit",
+   "filipino food",
+   "filipino cuisine",
+   "filipino cooking",
+   "filipino recipe"
+  ],
+  "news": {
+   "query": "Filipino food OR adobo OR lechon"
+  },
+  "videos": {
+   "query": "Filipino food recipe",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "pakistani-food",
+  "name": "Pakistani and Bangladeshi food",
+  "theme": "food",
+  "countries": [
+   "PK"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Pakistani_Food_Karahi_Beef.jpg/500px-Pakistani_Food_Karahi_Beef.jpg",
+  "terms": [
+   "nihari",
+   "haleem",
+   "karahi",
+   "biryani",
+   "hilsa",
+   "kebab",
+   "lahori",
+   "pakistani food",
+   "pakistani cuisine",
+   "pakistani cooking",
+   "pakistani recipe",
+   "bangladeshi food",
+   "bangladeshi cuisine",
+   "bangladeshi cooking",
+   "bangladeshi recipe"
+  ],
+  "news": {
+   "query": "Pakistani food OR nihari OR karahi"
+  },
+  "videos": {
+   "query": "Pakistani food recipe",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "italian-food",
+  "name": "Italian cooking",
+  "theme": "food",
+  "countries": [
+   "IT"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Italian_food.JPG/500px-Italian_food.JPG",
+  "terms": [
+   "pasta",
+   "risotto",
+   "pizza",
+   "tiramisu",
+   "ragu",
+   "gnocchi",
+   "carbonara",
+   "nonna",
+   "trattoria",
+   "italian food",
+   "italian cuisine",
+   "italian cooking",
+   "italian recipe"
+  ],
+  "shows": {
+   "keywords": [
+    206755
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "Italian food OR pasta OR pizza"
+  },
+  "videos": {
+   "query": "Italian cooking pasta",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "french-food",
+  "name": "French cuisine",
+  "theme": "food",
+  "countries": [
+   "FR"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Jacques_Lameloise%2C_escab%C3%A8che_d%27%C3%A9crevisses_sur_gaspacho_d%27asperge_et_cresson.jpg/500px-Jacques_Lameloise%2C_escab%C3%A8che_d%27%C3%A9crevisses_sur_gaspacho_d%27asperge_et_cresson.jpg",
+  "terms": [
+   "bistro",
+   "croissant",
+   "coq au vin",
+   "ratatouille",
+   "sauce",
+   "brasserie",
+   "michelin",
+   "cassoulet",
+   "patisserie",
+   "french food",
+   "french cuisine",
+   "french cooking",
+   "french recipe"
+  ],
+  "news": {
+   "query": "French cuisine OR bistro OR Michelin"
+  },
+  "videos": {
+   "query": "French cooking technique",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "spanish-food",
+  "name": "Spanish food",
+  "theme": "food",
+  "countries": [
+   "ES"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Gran_paella.jpg/500px-Gran_paella.jpg",
+  "terms": [
+   "paella",
+   "tapas",
+   "jamon",
+   "gazpacho",
+   "tortilla",
+   "pintxos",
+   "churros",
+   "spanish food",
+   "spanish cuisine",
+   "spanish cooking",
+   "spanish recipe",
+   "basque food",
+   "basque cuisine",
+   "basque cooking",
+   "basque recipe"
+  ],
+  "news": {
+   "query": "Spanish food OR paella OR tapas"
+  },
+  "videos": {
+   "query": "Spanish cooking paella tapas",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "greek-food",
+  "name": "Greek and Mediterranean food",
+  "theme": "food",
+  "countries": [
+   "GR",
+   "CY"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Grk2020.jpg/500px-Grk2020.jpg",
+  "terms": [
+   "moussaka",
+   "souvlaki",
+   "feta",
+   "olive oil",
+   "mezze",
+   "gyros",
+   "tzatziki",
+   "greek food",
+   "greek cuisine",
+   "greek cooking",
+   "greek recipe",
+   "mediterranean food",
+   "mediterranean cuisine",
+   "mediterranean cooking",
+   "mediterranean recipe"
+  ],
+  "news": {
+   "query": "Greek food OR Mediterranean diet"
+  },
+  "videos": {
+   "query": "Greek Mediterranean cooking",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "turkish-food",
+  "name": "Turkish food",
+  "theme": "food",
+  "countries": [
+   "TR"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Sigara_B%C3%B6rek.jpg/500px-Sigara_B%C3%B6rek.jpg",
+  "terms": [
+   "kebab",
+   "baklava",
+   "meze",
+   "pide",
+   "lahmacun",
+   "turkish delight",
+   "istanbul",
+   "borek",
+   "turkish food",
+   "turkish cuisine",
+   "turkish cooking",
+   "turkish recipe"
+  ],
+  "news": {
+   "query": "Turkish food OR kebab OR baklava"
+  },
+  "videos": {
+   "query": "Turkish food kebab baklava",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "lebanese-food",
+  "name": "Lebanese and Levantine food",
+  "theme": "food",
+  "countries": [
+   "LB",
+   "SY"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Mixed_Plate_%283186676853%29.jpg/500px-Mixed_Plate_%283186676853%29.jpg",
+  "terms": [
+   "hummus",
+   "falafel",
+   "shawarma",
+   "tabbouleh",
+   "manakish",
+   "mezze",
+   "fattoush",
+   "lebanese food",
+   "lebanese cuisine",
+   "lebanese cooking",
+   "lebanese recipe",
+   "levantine food",
+   "levantine cuisine",
+   "levantine cooking",
+   "levantine recipe"
+  ],
+  "news": {
+   "query": "Lebanese food OR hummus OR falafel"
+  },
+  "videos": {
+   "query": "Lebanese food hummus falafel",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "persian-food",
+  "name": "Persian food",
+  "theme": "food",
+  "countries": [
+   "IR"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Kebab_Bakhtyari.jpg/500px-Kebab_Bakhtyari.jpg",
+  "terms": [
+   "saffron",
+   "tahdig",
+   "kebab koobideh",
+   "ghormeh sabzi",
+   "fesenjan",
+   "persian food",
+   "persian cuisine",
+   "persian cooking",
+   "persian recipe",
+   "iranian food",
+   "iranian cuisine",
+   "iranian cooking",
+   "iranian recipe"
+  ],
+  "news": {
+   "query": "Persian food OR saffron OR tahdig"
+  },
+  "videos": {
+   "query": "Persian food recipe",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "mexican-food",
+  "name": "Mexican food",
+  "theme": "food",
+  "countries": [
+   "MX"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Collage_Mexican_Cuisine_by_User-EME.png/500px-Collage_Mexican_Cuisine_by_User-EME.png",
+  "terms": [
+   "taco",
+   "mole",
+   "tamales",
+   "salsa",
+   "pozole",
+   "enchiladas",
+   "guacamole",
+   "al pastor",
+   "masa",
+   "mexican food",
+   "mexican cuisine",
+   "mexican cooking",
+   "mexican recipe"
+  ],
+  "shows": {
+   "keywords": [
+    193238
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "Mexican food OR tacos OR mole"
+  },
+  "videos": {
+   "query": "Mexican cooking tacos mole",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "peruvian-food",
+  "name": "Peruvian food",
+  "theme": "food",
+  "countries": [
+   "PE"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Cebiche_de_corvina.JPG/500px-Cebiche_de_corvina.JPG",
+  "terms": [
+   "ceviche",
+   "lomo saltado",
+   "aji",
+   "pisco",
+   "causa",
+   "anticuchos",
+   "peruvian food",
+   "peruvian cuisine",
+   "peruvian cooking",
+   "peruvian recipe",
+   "nikkei food",
+   "nikkei cuisine",
+   "nikkei cooking",
+   "nikkei recipe"
+  ],
+  "news": {
+   "query": "Peruvian food OR ceviche"
+  },
+  "videos": {
+   "query": "Peruvian ceviche cooking",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "brazilian-food",
+  "name": "Brazilian food",
+  "theme": "food",
+  "countries": [
+   "BR"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Feijoada_%C3%A0_brasileira_-02.jpg/500px-Feijoada_%C3%A0_brasileira_-02.jpg",
+  "terms": [
+   "feijoada",
+   "churrasco",
+   "pao de queijo",
+   "acai",
+   "moqueca",
+   "brigadeiro",
+   "caipirinha",
+   "brazilian food",
+   "brazilian cuisine",
+   "brazilian cooking",
+   "brazilian recipe"
+  ],
+  "news": {
+   "query": "Brazilian food OR feijoada OR churrasco"
+  },
+  "videos": {
+   "query": "Brazilian food feijoada churrasco",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "caribbean-food",
+  "name": "Caribbean food",
+  "theme": "food",
+  "countries": [
+   "JM",
+   "TT",
+   "BB",
+   "CU",
+   "DO",
+   "HT",
+   "PR"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Mang%C3%BA_with_Veggie_Meat.JPG/500px-Mang%C3%BA_with_Veggie_Meat.JPG",
+  "terms": [
+   "jerk",
+   "plantain",
+   "callaloo",
+   "roti",
+   "ackee",
+   "rice and peas",
+   "doubles",
+   "caribbean food",
+   "caribbean cuisine",
+   "caribbean cooking",
+   "caribbean recipe",
+   "jamaican food",
+   "jamaican cuisine",
+   "jamaican cooking",
+   "jamaican recipe",
+   "trinidadian food",
+   "trinidadian cuisine",
+   "trinidadian cooking",
+   "trinidadian recipe"
+  ],
+  "news": {
+   "query": "Caribbean food OR jerk chicken OR Jamaican food"
+  },
+  "videos": {
+   "query": "Caribbean jerk cooking",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "southern-bbq",
+  "name": "Barbecue and smoking",
+  "theme": "food",
+  "countries": [
+   "US"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Barbecued_meats.jpg/500px-Barbecued_meats.jpg",
+  "terms": [
+   "barbecue",
+   "bbq",
+   "smoked",
+   "smoker",
+   "brisket",
+   "ribs",
+   "pitmaster",
+   "grill",
+   "pulled pork",
+   "charcoal",
+   "braai"
+  ],
+  "shows": {
+   "keywords": [
+    5731
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "barbecue OR smoked brisket OR pitmaster"
+  },
+  "videos": {
+   "query": "barbecue brisket smoker",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "vegetarian",
+  "name": "Vegetarian and vegan cooking",
+  "theme": "food",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Soy-whey-protein-diet.jpg/500px-Soy-whey-protein-diet.jpg",
+  "terms": [
+   "vegetarian",
+   "vegan",
+   "plant-based",
+   "meatless",
+   "tofu",
+   "lentil",
+   "chickpea",
+   "legumes",
+   "plant based"
+  ],
+  "shows": {
+   "keywords": [
+    175322
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "vegetarian OR vegan recipes"
+  },
+  "videos": {
+   "query": "vegetarian vegan cooking",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "seafood",
+  "name": "Seafood",
+  "theme": "food",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Plateau_van_zeevruchten.jpg/500px-Plateau_van_zeevruchten.jpg",
+  "terms": [
+   "seafood",
+   "fish",
+   "prawn",
+   "shrimp",
+   "lobster",
+   "oyster",
+   "crab",
+   "sushi",
+   "fishmonger",
+   "grilled fish"
+  ],
+  "news": {
+   "query": "seafood cooking OR fish recipes"
+  },
+  "videos": {
+   "query": "seafood cooking recipe",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "desserts",
+  "name": "Desserts and sweets",
+  "theme": "food",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Desserts.jpg/500px-Desserts.jpg",
+  "terms": [
+   "dessert",
+   "mithai",
+   "ice cream",
+   "chocolate",
+   "custard",
+   "pudding",
+   "gelato",
+   "halwa",
+   "pastry"
+  ],
+  "shows": {
+   "keywords": [
+    173267
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "desserts OR mithai OR chocolate"
+  },
+  "videos": {
+   "query": "dessert recipe",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "coffee",
+  "name": "Coffee",
+  "theme": "food",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Latte_and_dark_coffee.jpg/500px-Latte_and_dark_coffee.jpg",
+  "terms": [
+   "coffee",
+   "espresso",
+   "barista",
+   "latte",
+   "filter coffee",
+   "cold brew",
+   "brewing",
+   "pour over"
+  ],
+  "shows": {
+   "keywords": [
+    2439
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "coffee OR specialty coffee OR barista"
+  },
+  "videos": {
+   "query": "coffee brewing barista",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "tea",
+  "name": "Tea",
+  "theme": "food",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Longjing_tea_steeping_in_gaiwan.jpg/500px-Longjing_tea_steeping_in_gaiwan.jpg",
+  "terms": [
+   "tea",
+   "chai",
+   "matcha",
+   "oolong",
+   "darjeeling",
+   "assam",
+   "teapot",
+   "green tea",
+   "tea ceremony",
+   "kombucha"
+  ],
+  "news": {
+   "query": "tea OR chai OR matcha"
+  },
+  "videos": {
+   "query": "tea chai ceremony",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "wine",
+  "name": "Wine",
+  "theme": "food",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Red_and_white_wine_in_glass.jpg/500px-Red_and_white_wine_in_glass.jpg",
+  "terms": [
+   "wine",
+   "vineyard",
+   "sommelier",
+   "winery",
+   "cabernet",
+   "pinot",
+   "champagne",
+   "terroir"
+  ],
+  "shows": {
+   "keywords": [
+    6563
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "wine OR vineyard OR sommelier"
+  },
+  "videos": {
+   "query": "wine tasting sommelier",
+   "minMinutes": 6
+  }
+ },
+ {
+  "id": "cocktails",
+  "name": "Cocktails and mixology",
+  "theme": "food",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/15-09-26-RalfR-WLC-0084.jpg/500px-15-09-26-RalfR-WLC-0084.jpg",
+  "terms": [
+   "cocktail",
+   "mixology",
+   "bartender",
+   "negroni",
+   "whisky",
+   "whiskey",
+   "gin",
+   "mocktail",
+   "old fashioned",
+   "spirits"
+  ],
+  "shows": {
+   "keywords": [
+    9227
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "cocktails OR mixology OR whisky"
+  },
+  "videos": {
+   "query": "cocktail making bartender",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "fermentation",
+  "name": "Fermentation and pickling",
+  "theme": "food",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Tomb_of_Nakht_%2813%29.jpg/500px-Tomb_of_Nakht_%2813%29.jpg",
+  "terms": [
+   "fermentation",
+   "ferment",
+   "pickle",
+   "kimchi",
+   "sauerkraut",
+   "kombucha",
+   "miso",
+   "sourdough",
+   "koji",
+   "preserve"
+  ],
+  "news": {
+   "query": "fermentation OR pickling OR kimchi"
+  },
+  "videos": {
+   "query": "fermentation pickling how to",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "baking-bread",
+  "name": "Bread of the world",
+  "theme": "food",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Korb_mit_Br%C3%B6tchen.JPG/500px-Korb_mit_Br%C3%B6tchen.JPG",
+  "terms": [
+   "bread",
+   "naan",
+   "focaccia",
+   "baguette",
+   "injera",
+   "roti",
+   "flatbread",
+   "sourdough",
+   "loaf",
+   "pita",
+   "bun"
+  ],
+  "news": {
+   "query": "bread baking OR naan OR focaccia"
+  },
+  "videos": {
+   "query": "traditional bread baking around the world",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "chocolate",
+  "name": "Chocolate",
+  "theme": "food",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Three_Bars_%281%29.jpg/500px-Three_Bars_%281%29.jpg",
+  "terms": [
+   "chocolate",
+   "cacao",
+   "cocoa",
+   "chocolatier",
+   "truffle",
+   "bean to bar",
+   "praline"
+  ],
+  "news": {
+   "query": "chocolate OR cacao OR chocolatier"
+  },
+  "videos": {
+   "query": "chocolate making chocolatier",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "spices",
+  "name": "Spices and masalas",
+  "theme": "food",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Spices1.jpg/500px-Spices1.jpg",
+  "terms": [
+   "spice",
+   "masala",
+   "cardamom",
+   "saffron",
+   "turmeric",
+   "pepper",
+   "cumin",
+   "cinnamon",
+   "spice trade",
+   "garam masala"
+  ],
+  "news": {
+   "query": "spices OR masala OR saffron"
+  },
+  "videos": {
+   "query": "spices explained cooking",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "weeknight-meals",
+  "name": "Quick weeknight meals",
+  "theme": "food",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Harry_S._Truman_Lunch_Box.jpg/500px-Harry_S._Truman_Lunch_Box.jpg",
+  "terms": [
+   "weeknight",
+   "quick meal",
+   "meal prep",
+   "one pot",
+   "easy dinner",
+   "15 minute",
+   "lunchbox",
+   "budget meal",
+   "leftovers"
+  ],
+  "news": {
+   "query": "easy dinner recipes OR meal prep"
+  },
+  "videos": {
+   "query": "quick weeknight dinner recipes",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "food-science",
+  "name": "Food science",
+  "theme": "food",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/CSIRO_ScienceImage_1319_Food_Science_Australia.jpg/500px-CSIRO_ScienceImage_1319_Food_Science_Australia.jpg",
+  "terms": [
+   "food science",
+   "maillard",
+   "emulsion",
+   "umami",
+   "kitchen science",
+   "nutrition",
+   "gluten"
+  ],
+  "news": {
+   "query": "food science OR kitchen science"
+  },
+  "videos": {
+   "query": "food science explained kitchen",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "chefs-restaurants",
+  "name": "Chefs and restaurants",
+  "theme": "food",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Ribot_Theodule_The_Cook_And_The_Cat-1.jpg/500px-Ribot_Theodule_The_Cook_And_The_Cat-1.jpg",
+  "terms": [
+   "chef",
+   "restaurant",
+   "michelin",
+   "tasting menu",
+   "sous chef",
+   "fine dining",
+   "culinary"
+  ],
+  "shows": {
+   "keywords": [
+    18293
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "restaurant OR Michelin OR chef profile"
+  },
+  "videos": {
+   "query": "chef restaurant documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "amapiano",
+  "name": "Amapiano",
+  "theme": "music",
+  "countries": [
+   "ZA"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Tyla_at_2026_Montreux_Jazz_Festival_2_%28cropped%29.jpg/500px-Tyla_at_2026_Montreux_Jazz_Festival_2_%28cropped%29.jpg",
+  "terms": [
+   "amapiano",
+   "log drum",
+   "kabza de small",
+   "dj maphorisa",
+   "major league djz",
+   "tyla",
+   "south african house"
+  ],
+  "news": {
+   "query": "Amapiano"
+  },
+  "videos": {
+   "query": "Amapiano mix live set",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "amapiano"
+  }
+ },
+ {
+  "id": "highlife",
+  "name": "Highlife and juju",
+  "theme": "music",
+  "countries": [
+   "GH",
+   "NG"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Osibisa.jpg/500px-Osibisa.jpg",
+  "terms": [
+   "highlife",
+   "juju",
+   "king sunny ade",
+   "osibisa",
+   "fuji",
+   "palm wine",
+   "ebenezer obey",
+   "sir victor uwaifo",
+   "e.t. mensah"
+  ],
+  "news": {
+   "query": "highlife music OR juju music"
+  },
+  "videos": {
+   "query": "highlife classics live",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "highlife"
+  }
+ },
+ {
+  "id": "afro-pop",
+  "name": "African pop",
+  "theme": "music",
+  "countries": [
+   "NG",
+   "GH",
+   "KE",
+   "ZA"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Solomon_Linda%27s_Original_Evening_Birds_%281941%29.jpeg/500px-Solomon_Linda%27s_Original_Evening_Birds_%281941%29.jpeg",
+  "terms": [
+   "african pop",
+   "afropop",
+   "afro pop",
+   "coupe-decale",
+   "bongo flava",
+   "gqom",
+   "ndombolo",
+   "soukous",
+   "mbalax",
+   "rumba congolaise"
+  ],
+  "news": {
+   "query": "African pop music OR bongo flava OR gqom"
+  },
+  "videos": {
+   "query": "African pop music live",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "african music"
+  }
+ },
+ {
+  "id": "reggae",
+  "name": "Reggae",
+  "theme": "music",
+  "countries": [
+   "JM"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Bob_Marley_circa_1976_%28cropped%29.jpg/500px-Bob_Marley_circa_1976_%28cropped%29.jpg",
+  "terms": [
+   "reggae",
+   "dancehall",
+   "bob marley",
+   "rastafari",
+   "roots reggae",
+   "burning spear",
+   "sound system"
+  ],
+  "shows": {
+   "keywords": [
+    4307
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "reggae OR dancehall OR Bob Marley"
+  },
+  "videos": {
+   "query": "reggae live concert",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "reggae"
+  }
+ },
+ {
+  "id": "hip-hop",
+  "name": "Hip hop",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Kool_Herc_%28cropped%29.jpg/500px-Kool_Herc_%28cropped%29.jpg",
+  "terms": [
+   "hip hop",
+   "hip-hop",
+   "rapper",
+   "cypher",
+   "kendrick lamar",
+   "drake",
+   "j. cole",
+   "lyricist",
+   "boom bap",
+   "rap music",
+   "rap album",
+   "rap verse"
+  ],
+  "shows": {
+   "keywords": [
+    898
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "hip hop OR rap album"
+  },
+  "videos": {
+   "query": "hip hop live performance",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "hiphop"
+  }
+ },
+ {
+  "id": "rnb-soul",
+  "name": "R&B and soul",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Aretha_Franklin_1968.jpg/500px-Aretha_Franklin_1968.jpg",
+  "terms": [
+   "r&b",
+   "rnb",
+   "motown",
+   "neo-soul",
+   "stax",
+   "aretha",
+   "marvin gaye",
+   "otis redding",
+   "erykah badu",
+   "soul music",
+   "soul singer"
+  ],
+  "shows": {
+   "keywords": [
+    254106
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "soul music OR R&B album"
+  },
+  "videos": {
+   "query": "soul R&B live session",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "soul"
+  }
+ },
+ {
+  "id": "gospel",
+  "name": "Gospel music",
+  "theme": "music",
+  "also": [
+   "faith"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Dartmouth_Gospel_Choir_at_the_Gospel_Brunch_%283232282945%29.jpg/500px-Dartmouth_Gospel_Choir_at_the_Gospel_Brunch_%283232282945%29.jpg",
+  "terms": [
+   "gospel",
+   "choir",
+   "hymn",
+   "kirk franklin",
+   "gospel choir",
+   "hallelujah",
+   "praise and worship"
+  ],
+  "news": {
+   "query": "gospel music OR gospel choir"
+  },
+  "videos": {
+   "query": "gospel choir live",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "gospel"
+  }
+ },
+ {
+  "id": "blues",
+  "name": "Blues",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Bbking.jpg/500px-Bbking.jpg",
+  "terms": [
+   "blues",
+   "delta blues",
+   "bb king",
+   "muddy waters",
+   "howlin wolf",
+   "slide guitar",
+   "twelve bar",
+   "chicago blues",
+   "john lee hooker"
+  ],
+  "shows": {
+   "keywords": [
+    2636
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "blues music OR blues festival"
+  },
+  "videos": {
+   "query": "blues live concert",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "blues"
+  }
+ },
+ {
+  "id": "rock",
+  "name": "Rock music",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Led_Zeppelin_-_promotional_image_%281971%29.jpg/500px-Led_Zeppelin_-_promotional_image_%281971%29.jpg",
+  "terms": [
+   "hard rock",
+   "led zeppelin",
+   "pink floyd",
+   "the rolling stones",
+   "rock band",
+   "rock music",
+   "rock star"
+  ],
+  "shows": {
+   "keywords": [
+    18001
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "rock music OR rock band tour"
+  },
+  "videos": {
+   "query": "rock band live concert",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "rock"
+  }
+ },
+ {
+  "id": "classic-rock",
+  "name": "Classic rock",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Fleetwood_Mac_Billboard_1977.jpg/500px-Fleetwood_Mac_Billboard_1977.jpg",
+  "terms": [
+   "classic rock",
+   "led zeppelin",
+   "the who",
+   "fleetwood mac",
+   "the beatles",
+   "pink floyd",
+   "deep purple"
+  ],
+  "news": {
+   "query": "classic rock"
+  },
+  "videos": {
+   "query": "classic rock live concert",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "classic rock"
+  }
+ },
+ {
+  "id": "metal",
+  "name": "Heavy metal",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Sabs.jpg/500px-Sabs.jpg",
+  "terms": [
+   "heavy metal",
+   "thrash",
+   "black sabbath",
+   "metallica",
+   "iron maiden",
+   "death metal",
+   "headbanger"
+  ],
+  "shows": {
+   "keywords": [
+    5540
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "heavy metal OR metal band"
+  },
+  "videos": {
+   "query": "heavy metal live concert",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "metal"
+  }
+ },
+ {
+  "id": "punk-indie",
+  "name": "Punk and indie",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Ramones_rocket_to_russia_photo.jpg/500px-Ramones_rocket_to_russia_photo.jpg",
+  "terms": [
+   "punk",
+   "indie",
+   "post-punk",
+   "garage rock",
+   "shoegaze",
+   "lo-fi",
+   "the smiths",
+   "joy division"
+  ],
+  "news": {
+   "query": "indie music OR punk band"
+  },
+  "videos": {
+   "query": "indie punk live session",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "indie"
+  }
+ },
+ {
+  "id": "pop",
+  "name": "Pop music",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Michael_Jackson_1983_%283x4_cropped%29_%28contrast%29.jpg/500px-Michael_Jackson_1983_%283x4_cropped%29_%28contrast%29.jpg",
+  "terms": [
+   "hit single",
+   "pop star",
+   "billboard",
+   "taylor swift",
+   "dua lipa",
+   "ariana grande",
+   "the weeknd",
+   "pop album",
+   "pop music"
+  ],
+  "shows": {
+   "keywords": [
+    33922
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "pop music OR Billboard chart"
+  },
+  "videos": {
+   "query": "pop music live performance",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "pop"
+  }
+ },
+ {
+  "id": "electronic",
+  "name": "Electronic music",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Armin_van_Buuren_2014.jpg/500px-Armin_van_Buuren_2014.jpg",
+  "terms": [
+   "edm",
+   "techno",
+   "house music",
+   "dj",
+   "rave",
+   "trance",
+   "drum and bass",
+   "festival set",
+   "boiler room",
+   "electronic music"
+  ],
+  "shows": {
+   "keywords": [
+    207379
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "electronic music OR techno OR house music"
+  },
+  "videos": {
+   "query": "DJ set live techno house",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "electronic"
+  }
+ },
+ {
+  "id": "classical",
+  "name": "Classical music",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/BJO_Konzert_Phil_MR_098.jpg/500px-BJO_Konzert_Phil_MR_098.jpg",
+  "terms": [
+   "symphony",
+   "orchestra",
+   "concerto",
+   "opera",
+   "beethoven",
+   "mozart",
+   "bach",
+   "conductor",
+   "sonata",
+   "philharmonic",
+   "classical music"
+  ],
+  "shows": {
+   "keywords": [
+    5783
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "classical music OR orchestra OR symphony"
+  },
+  "videos": {
+   "query": "symphony orchestra full concert",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "classical"
+  }
+ },
+ {
+  "id": "opera",
+  "name": "Opera",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Macbeth_applause_at_Savonlinna_Opera_festival_in_2007_-_panoramio.jpg/500px-Macbeth_applause_at_Savonlinna_Opera_festival_in_2007_-_panoramio.jpg",
+  "terms": [
+   "opera",
+   "aria",
+   "soprano",
+   "tenor",
+   "libretto",
+   "la scala",
+   "metropolitan opera",
+   "puccini",
+   "verdi",
+   "bel canto"
+  ],
+  "shows": {
+   "keywords": [
+    2199
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "opera OR soprano OR La Scala"
+  },
+  "videos": {
+   "query": "opera full performance",
+   "minMinutes": 10
+  }
+ },
+ {
+  "id": "piano",
+  "name": "Piano",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Steinway_Vienna_002.JPG/500px-Steinway_Vienna_002.JPG",
+  "terms": [
+   "piano",
+   "pianist",
+   "steinway",
+   "sonata",
+   "recital",
+   "chopin",
+   "liszt",
+   "grand piano"
+  ],
+  "news": {
+   "query": "pianist OR piano recital"
+  },
+  "videos": {
+   "query": "piano concert recital",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "guitar",
+  "name": "Guitar",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/GuitareClassique5.png/500px-GuitareClassique5.png",
+  "terms": [
+   "guitar",
+   "guitarist",
+   "riff",
+   "fingerstyle",
+   "electric guitar",
+   "fretboard",
+   "flamenco guitar"
+  ],
+  "news": {
+   "query": "guitarist OR guitar"
+  },
+  "videos": {
+   "query": "guitar performance lesson",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "carnatic",
+  "name": "Carnatic music",
+  "theme": "music",
+  "countries": [
+   "IN"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Tanjore-style_Carnatic_tambura.JPG/500px-Tanjore-style_Carnatic_tambura.JPG",
+  "terms": [
+   "carnatic",
+   "veena",
+   "mridangam",
+   "kriti",
+   "raga",
+   "ms subbulakshmi",
+   "thyagaraja",
+   "kutcheri",
+   "thyagaraja aradhana"
+  ],
+  "news": {
+   "query": "Carnatic music OR Carnatic concert"
+  },
+  "videos": {
+   "query": "Carnatic music concert",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "Carnatic music live concert"
+  }
+ },
+ {
+  "id": "hindustani",
+  "name": "Hindustani classical",
+  "theme": "music",
+  "countries": [
+   "IN"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Sitar%2C_late_19th_Century.jpg/500px-Sitar%2C_late_19th_Century.jpg",
+  "terms": [
+   "hindustani",
+   "sitar",
+   "tabla",
+   "sarod",
+   "raga",
+   "khayal",
+   "ravi shankar",
+   "zakir hussain",
+   "bansuri",
+   "dhrupad",
+   "ustad"
+  ],
+  "news": {
+   "query": "Hindustani classical OR sitar OR tabla"
+  },
+  "videos": {
+   "query": "Hindustani classical concert raga",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "Hindustani classical live concert"
+  }
+ },
+ {
+  "id": "bollywood-music",
+  "name": "Bollywood music",
+  "theme": "music",
+  "countries": [
+   "IN"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/AR_Rahman_at_Premier_Futsal_Press_Meet_%28cropped%29.jpg/500px-AR_Rahman_at_Premier_Futsal_Press_Meet_%28cropped%29.jpg",
+  "terms": [
+   "bollywood",
+   "filmi",
+   "playback",
+   "a. r. rahman",
+   "arijit singh",
+   "lata mangeshkar",
+   "kishore kumar",
+   "shreya ghoshal",
+   "hindi film song"
+  ],
+  "news": {
+   "query": "Bollywood music OR A. R. Rahman OR Arijit Singh"
+  },
+  "videos": {
+   "query": "Bollywood songs live concert",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "bollywood"
+  }
+ },
+ {
+  "id": "kannada-music",
+  "name": "Kannada music",
+  "theme": "music",
+  "countries": [
+   "IN"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/India_film_clapperboard_%28variant%29.svg/500px-India_film_clapperboard_%28variant%29.svg.png",
+  "terms": [
+   "kannada",
+   "sandalwood",
+   "dr rajkumar",
+   "rajkumar",
+   "kannada song",
+   "vijay prakash",
+   "sonu nigam",
+   "anup bhandari",
+   "janapada",
+   "sugama sangeetha"
+  ],
+  "news": {
+   "query": "Kannada music OR Sandalwood songs"
+  },
+  "videos": {
+   "query": "Kannada songs",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "Kannada music live"
+  }
+ },
+ {
+  "id": "sufi-qawwali",
+  "name": "Qawwali and Sufi music",
+  "theme": "music",
+  "countries": [
+   "PK",
+   "IN"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Qawalli_at_Ajmer_Sharif_dargah.jpg/500px-Qawalli_at_Ajmer_Sharif_dargah.jpg",
+  "terms": [
+   "qawwali",
+   "sufi",
+   "nusrat fateh ali khan",
+   "rahat fateh ali khan",
+   "sabri brothers",
+   "ghazal",
+   "harmonium",
+   "dargah",
+   "coke studio"
+  ],
+  "news": {
+   "query": "Qawwali OR Sufi music OR ghazal"
+  },
+  "videos": {
+   "query": "qawwali live performance",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "qawwali live"
+  }
+ },
+ {
+  "id": "k-pop",
+  "name": "K-pop",
+  "theme": "music",
+  "countries": [
+   "KR"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/BTS_during_a_White_House_press_conference_May_31%2C_2022_%28cropped%29.jpg/500px-BTS_during_a_White_House_press_conference_May_31%2C_2022_%28cropped%29.jpg",
+  "terms": [
+   "k-pop",
+   "kpop",
+   "bts",
+   "blackpink",
+   "newjeans",
+   "stray kids",
+   "hybe"
+  ],
+  "shows": {
+   "keywords": [
+    225273
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "K-pop OR BTS OR Blackpink"
+  },
+  "videos": {
+   "query": "K-pop live performance",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "kpop"
+  }
+ },
+ {
+  "id": "j-pop",
+  "name": "J-pop and city pop",
+  "theme": "music",
+  "countries": [
+   "JP"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Hikaru_Utada_at_Spotify_Tokyo.png/500px-Hikaru_Utada_at_Spotify_Tokyo.png",
+  "terms": [
+   "j-pop",
+   "jpop",
+   "city pop",
+   "anime song",
+   "yoasobi",
+   "utada hikaru",
+   "tatsuro yamashita",
+   "japanese pop",
+   "vocaloid"
+  ],
+  "news": {
+   "query": "J-pop OR city pop"
+  },
+  "videos": {
+   "query": "J-pop city pop live",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "jpop"
+  }
+ },
+ {
+  "id": "latin-music",
+  "name": "Latin music",
+  "theme": "music",
+  "countries": [
+   "MX",
+   "CO",
+   "PR",
+   "DO",
+   "CU",
+   "VE",
+   "AR",
+   "CL",
+   "PE",
+   "EC"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Salsaband2.jpg/500px-Salsaband2.jpg",
+  "terms": [
+   "reggaeton",
+   "salsa",
+   "bachata",
+   "cumbia",
+   "bad bunny",
+   "shakira",
+   "merengue",
+   "vallenato",
+   "latin pop",
+   "latin music"
+  ],
+  "shows": {
+   "keywords": [
+    224995
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "Latin music OR reggaeton OR salsa"
+  },
+  "videos": {
+   "query": "Latin music live concert",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "latin"
+  }
+ },
+ {
+  "id": "flamenco",
+  "name": "Flamenco",
+  "theme": "music",
+  "countries": [
+   "ES"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Belen_maya.jpg/500px-Belen_maya.jpg",
+  "terms": [
+   "flamenco",
+   "cante jondo",
+   "paco de lucia",
+   "guitarra",
+   "duende",
+   "tablao",
+   "andalusia",
+   "palmas",
+   "bailaor"
+  ],
+  "shows": {
+   "keywords": [
+    9075
+   ],
+   "genres": []
+  },
+  "news": {
+   "query": "flamenco"
+  },
+  "videos": {
+   "query": "flamenco performance",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "bossa-nova",
+  "name": "Bossa nova and MPB",
+  "theme": "music",
+  "countries": [
+   "BR"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Ant%C3%B4nio_Carlos_Jobim_%28cropped%29.jpg/500px-Ant%C3%B4nio_Carlos_Jobim_%28cropped%29.jpg",
+  "terms": [
+   "bossa nova",
+   "mpb",
+   "joao gilberto",
+   "tom jobim",
+   "gilberto gil",
+   "caetano veloso",
+   "samba",
+   "tropicalia",
+   "girl from ipanema",
+   "brazilian music"
+  ],
+  "news": {
+   "query": "bossa nova OR MPB OR samba"
+  },
+  "videos": {
+   "query": "bossa nova live",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "bossa nova"
+  }
+ },
+ {
+  "id": "tango",
+  "name": "Tango",
+  "theme": "music",
+  "countries": [
+   "AR",
+   "UY"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Tango_dancers_in_Montevideo.png/500px-Tango_dancers_in_Montevideo.png",
+  "terms": [
+   "tango",
+   "bandoneon",
+   "piazzolla",
+   "milonga",
+   "buenos aires",
+   "argentine tango",
+   "carlos gardel"
+  ],
+  "news": {
+   "query": "tango OR Piazzolla"
+  },
+  "videos": {
+   "query": "tango performance",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "arabic-music",
+  "name": "Arabic music",
+  "theme": "music",
+  "countries": [
+   "EG",
+   "LB",
+   "SY",
+   "JO",
+   "IQ",
+   "SA",
+   "AE"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/%C5%AAd_MET_DP340079.jpg/500px-%C5%AAd_MET_DP340079.jpg",
+  "terms": [
+   "oud",
+   "umm kulthum",
+   "fairuz",
+   "maqam",
+   "khaleeji",
+   "tarab",
+   "cheb khaled",
+   "nancy ajram",
+   "arabic music"
+  ],
+  "news": {
+   "query": "Arabic music OR Fairuz OR Umm Kulthum"
+  },
+  "videos": {
+   "query": "Arabic music concert oud",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "arabic"
+  }
+ },
+ {
+  "id": "turkish-music",
+  "name": "Turkish music",
+  "theme": "music",
+  "countries": [
+   "TR"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Bursa_B%C3%B6lge_Devlet_Senfoni_Orkestras%C4%B1.jpg/500px-Bursa_B%C3%B6lge_Devlet_Senfoni_Orkestras%C4%B1.jpg",
+  "terms": [
+   "turkish music",
+   "saz",
+   "baglama",
+   "arabesk",
+   "sezen aksu",
+   "tarkan",
+   "anatolian rock",
+   "turkish folk"
+  ],
+  "news": {
+   "query": "Turkish music OR Sezen Aksu"
+  },
+  "videos": {
+   "query": "Turkish music live saz",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "turkish"
+  }
+ },
+ {
+  "id": "gnawa-maghreb",
+  "name": "Gnawa and Maghreb sounds",
+  "theme": "music",
+  "countries": [
+   "MA",
+   "DZ"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/%D9%85%D8%B9%D9%84%D9%85_%D8%A7%D9%84%DA%AF%D9%86%D8%A7%D9%88%D8%A9.jpg/500px-%D9%85%D8%B9%D9%84%D9%85_%D8%A7%D9%84%DA%AF%D9%86%D8%A7%D9%88%D8%A9.jpg",
+  "terms": [
+   "gnawa",
+   "maghreb",
+   "amazigh",
+   "tuareg",
+   "tinariwen",
+   "andalusi",
+   "guembri",
+   "desert blues",
+   "essaouira"
+  ],
+  "news": {
+   "query": "Gnawa OR Tinariwen OR Maghreb music"
+  },
+  "videos": {
+   "query": "Gnawa Tinariwen live",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "celtic-folk",
+  "name": "Folk and Celtic",
+  "theme": "music",
+  "countries": [
+   "IE",
+   "GB"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Morris_fiddler_-_Festivals_of_Winds%2C_2012.jpg/500px-Morris_fiddler_-_Festivals_of_Winds%2C_2012.jpg",
+  "terms": [
+   "celtic",
+   "fiddle",
+   "ceilidh",
+   "irish music",
+   "bagpipes",
+   "traditional music",
+   "bluegrass",
+   "banjo",
+   "sea shanty",
+   "folk music",
+   "folk song",
+   "folk festival"
+  ],
+  "shows": {
+   "keywords": [
+    6382
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "folk music OR Celtic music OR traditional Irish music"
+  },
+  "videos": {
+   "query": "folk Celtic live session",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "folk"
+  }
+ },
+ {
+  "id": "country-music",
+  "name": "Country music",
+  "theme": "music",
+  "countries": [
+   "US"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Johnny_Cash_1977.jpg/500px-Johnny_Cash_1977.jpg",
+  "terms": [
+   "nashville",
+   "honky-tonk",
+   "dolly parton",
+   "johnny cash",
+   "americana",
+   "grand ole opry",
+   "outlaw country",
+   "steel guitar",
+   "country music"
+  ],
+  "shows": {
+   "keywords": [
+    727
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "country music OR Nashville"
+  },
+  "videos": {
+   "query": "country music live concert",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "country"
+  }
+ },
+ {
+  "id": "musicals",
+  "name": "Musicals",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Crookfinale.jpg/500px-Crookfinale.jpg",
+  "terms": [
+   "musical",
+   "broadway",
+   "west end",
+   "show tune",
+   "stage musical",
+   "les miserables",
+   "lyricist",
+   "musical theatre"
+  ],
+  "shows": {
+   "keywords": [
+    4344
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "Broadway OR West End musical"
+  },
+  "videos": {
+   "query": "musical theatre performance",
+   "minMinutes": 6
+  }
+ },
+ {
+  "id": "film-scores",
+  "name": "Film scores",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Javier_Bayon_7.jpg/500px-Javier_Bayon_7.jpg",
+  "terms": [
+   "film score",
+   "hans zimmer",
+   "john williams",
+   "ennio morricone",
+   "ilaiyaraaja",
+   "orchestral score"
+  ],
+  "news": {
+   "query": "film score OR soundtrack composer"
+  },
+  "videos": {
+   "query": "film score concert composer",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "soundtrack"
+  }
+ },
+ {
+  "id": "lofi",
+  "name": "Lo-fi and chill",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Will_this_lo-fi_studio_work%3F.jpg/500px-Will_this_lo-fi_studio_work%3F.jpg",
+  "terms": [
+   "lo-fi",
+   "lofi",
+   "study beats",
+   "downtempo",
+   "chillhop"
+  ],
+  "news": {
+   "query": "lo-fi OR ambient music"
+  },
+  "videos": {
+   "query": "lofi chill beats",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "lofi hip hop radio"
+  }
+ },
+ {
+  "id": "choral",
+  "name": "Choral music",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Evensong_in_York_Minster.jpg/500px-Evensong_in_York_Minster.jpg",
+  "terms": [
+   "choir",
+   "choral",
+   "a cappella",
+   "cantata",
+   "gregorian",
+   "vocal ensemble",
+   "gospel choir"
+  ],
+  "news": {
+   "query": "choir OR choral music OR a cappella"
+  },
+  "videos": {
+   "query": "choir choral concert",
+   "minMinutes": 4
+  }
+ },
+ {
+  "id": "music-docs",
+  "name": "Music documentaries",
+  "theme": "music",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Woodstock_poster.jpg/500px-Woodstock_poster.jpg",
+  "terms": [
+   "recording sessions",
+   "music documentary",
+   "music documentaries",
+   "concert film",
+   "rockumentary",
+   "band documentary"
+  ],
+  "shows": {
+   "keywords": [
+    283297
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "music documentary"
+  },
+  "videos": {
+   "query": "music documentary full",
+   "minMinutes": 15
+  }
+ },
+ {
+  "id": "motogp",
+  "name": "MotoGP",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Marc_M%C3%A1rquez_at_the_pit_lane_during_the_2025_Italian_motorcycle_Grand_Prix_%28front_view%2C_cropped%29.jpg/500px-Marc_M%C3%A1rquez_at_the_pit_lane_during_the_2025_Italian_motorcycle_Grand_Prix_%28front_view%2C_cropped%29.jpg",
+  "terms": [
+   "motogp",
+   "moto2",
+   "moto3",
+   "marquez",
+   "bagnaia",
+   "ducati",
+   "aprilia",
+   "motorcycle racing"
+  ],
+  "news": {
+   "query": "MotoGP"
+  },
+  "videos": {
+   "query": "MotoGP race highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "motogp",
+   "startWord": "race times"
+  }
+ },
+ {
+  "id": "basketball",
+  "name": "Basketball",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/USA_vs._China_Mens_Basketball_-_Beijing_2008_Olympic_Games_%282751923597%29.jpg/500px-USA_vs._China_Mens_Basketball_-_Beijing_2008_Olympic_Games_%282751923597%29.jpg",
+  "terms": [
+   "basketball",
+   "nba",
+   "wnba",
+   "dunk",
+   "lakers",
+   "warriors",
+   "celtics",
+   "lebron",
+   "slam dunk",
+   "fiba"
+  ],
+  "shows": {
+   "keywords": [
+    6496
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "NBA OR basketball"
+  },
+  "videos": {
+   "query": "basketball game highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "espn",
+   "league": "basketball/nba,basketball/wnba"
+  },
+  "refine": {
+   "label": "Who do you follow?",
+   "options": [
+    {
+     "id": "nba",
+     "name": "NBA",
+     "terms": [
+      "NBA"
+     ],
+     "league": "basketball/nba"
+    },
+    {
+     "id": "wnba",
+     "name": "WNBA",
+     "terms": [
+      "WNBA"
+     ],
+     "league": "basketball/wnba"
+    },
+    {
+     "id": "lakers",
+     "name": "Lakers",
+     "terms": [
+      "Lakers",
+      "Los Angeles Lakers"
+     ],
+     "espnTeam": "13",
+     "league": "basketball/nba"
+    },
+    {
+     "id": "warriors",
+     "name": "Warriors",
+     "terms": [
+      "Warriors",
+      "Golden State"
+     ],
+     "espnTeam": "9",
+     "league": "basketball/nba"
+    },
+    {
+     "id": "celtics",
+     "name": "Celtics",
+     "terms": [
+      "Celtics"
+     ],
+     "espnTeam": "2",
+     "league": "basketball/nba"
+    },
+    {
+     "id": "knicks",
+     "name": "Knicks",
+     "terms": [
+      "Knicks"
+     ],
+     "espnTeam": "18",
+     "league": "basketball/nba"
+    },
+    {
+     "id": "raptors",
+     "name": "Raptors",
+     "terms": [
+      "Raptors"
+     ],
+     "espnTeam": "28",
+     "league": "basketball/nba"
+    },
+    {
+     "id": "bulls",
+     "name": "Bulls",
+     "terms": [
+      "Bulls"
+     ],
+     "espnTeam": "4",
+     "league": "basketball/nba"
+    }
+   ]
+  }
+ },
+ {
+  "id": "nfl",
+  "name": "American football",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Larry_Fitzgerald_catches_TD_at_2009_Pro_Bowl.jpg/500px-Larry_Fitzgerald_catches_TD_at_2009_Pro_Bowl.jpg",
+  "terms": [
+   "nfl",
+   "american football",
+   "quarterback",
+   "touchdown",
+   "super bowl",
+   "gridiron",
+   "college football"
+  ],
+  "shows": {
+   "keywords": [
+    579
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "NFL OR American football"
+  },
+  "videos": {
+   "query": "NFL game highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "espn",
+   "league": "football/nfl,football/college-football",
+   "startWord": "kick-off times"
+  }
+ },
+ {
+  "id": "baseball",
+  "name": "Baseball",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Tommy_Milone_gives_up_a_home_run_to_Mike_Trout_on_May_21%2C_2017.jpg/500px-Tommy_Milone_gives_up_a_home_run_to_Mike_Trout_on_May_21%2C_2017.jpg",
+  "terms": [
+   "baseball",
+   "mlb",
+   "pitcher",
+   "home run",
+   "world series",
+   "yankees",
+   "dodgers",
+   "bullpen",
+   "npb",
+   "shohei ohtani"
+  ],
+  "shows": {
+   "keywords": [
+    1480
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "MLB OR baseball"
+  },
+  "videos": {
+   "query": "baseball game highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "espn",
+   "league": "baseball/mlb"
+  }
+ },
+ {
+  "id": "college-basketball",
+  "name": "College basketball",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Defense.gov_photo_essay_120112-D-VO565-015.jpg/500px-Defense.gov_photo_essay_120112-D-VO565-015.jpg",
+  "terms": [
+   "college basketball",
+   "ncaa",
+   "march madness",
+   "final four",
+   "big ten",
+   "ncaa tournament",
+   "tar heels"
+  ],
+  "news": {
+   "query": "college basketball OR March Madness"
+  },
+  "videos": {
+   "query": "college basketball highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "espn",
+   "league": "basketball/mens-college-basketball"
+  }
+ },
+ {
+  "id": "lacrosse",
+  "name": "Lacrosse",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/UNC_Lacrosse.jpg/500px-UNC_Lacrosse.jpg",
+  "terms": [
+   "lacrosse",
+   "pll",
+   "premier lacrosse league",
+   "ncaa lacrosse",
+   "box lacrosse"
+  ],
+  "news": {
+   "query": "lacrosse"
+  },
+  "videos": {
+   "query": "lacrosse highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "espn",
+   "league": "lacrosse/pll"
+  }
+ },
+ {
+  "id": "ice-hockey",
+  "name": "Ice hockey",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Pittsburgh_Penguins%2C_Washington_Capitals%2C_Bryan_Rust_%2833744033514%29.jpg/500px-Pittsburgh_Penguins%2C_Washington_Capitals%2C_Bryan_Rust_%2833744033514%29.jpg",
+  "terms": [
+   "ice hockey",
+   "nhl",
+   "stanley cup",
+   "puck",
+   "goaltender",
+   "power play",
+   "khl"
+  ],
+  "shows": {
+   "keywords": [
+    6483
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "NHL OR ice hockey"
+  },
+  "videos": {
+   "query": "NHL game highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "espn",
+   "league": "hockey/nhl"
+  }
+ },
+ {
+  "id": "rugby-union",
+  "name": "Rugby union",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/2014_Women%27s_Six_Nations_Championship_-_France_Italy_%2851%29.jpg/500px-2014_Women%27s_Six_Nations_Championship_-_France_Italy_%2851%29.jpg",
+  "terms": [
+   "rugby",
+   "six nations",
+   "springboks",
+   "all blacks",
+   "scrum",
+   "rugby union",
+   "lions tour",
+   "premiership rugby",
+   "wallabies"
+  ],
+  "shows": {
+   "keywords": [
+    7912
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "rugby union OR Six Nations OR Springboks"
+  },
+  "videos": {
+   "query": "rugby match highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "espn",
+   "league": "rugby/267979,rugby/271937",
+   "startWord": "kick-off times"
+  },
+  "refine": {
+   "label": "What do you follow?",
+   "options": [
+    {
+     "id": "six-nations",
+     "name": "Six Nations",
+     "terms": [
+      "Six Nations"
+     ],
+     "query": "Six Nations rugby"
+    },
+    {
+     "id": "premiership-rugby",
+     "name": "Premiership",
+     "terms": [
+      "Premiership"
+     ],
+     "league": "rugby/267979"
+    },
+    {
+     "id": "champions-cup",
+     "name": "Champions Cup",
+     "terms": [
+      "Champions Cup"
+     ],
+     "league": "rugby/271937"
+    },
+    {
+     "id": "springboks",
+     "name": "Springboks",
+     "terms": [
+      "Springboks"
+     ],
+     "query": "Springboks"
+    },
+    {
+     "id": "all-blacks",
+     "name": "All Blacks",
+     "terms": [
+      "All Blacks"
+     ],
+     "query": "All Blacks"
+    }
+   ]
+  }
+ },
+ {
+  "id": "rugby-league",
+  "name": "Rugby league",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Fraus04rugby13.jpg/500px-Fraus04rugby13.jpg",
+  "terms": [
+   "rugby league",
+   "nrl",
+   "super league",
+   "state of origin",
+   "challenge cup",
+   "rugby league world cup"
+  ],
+  "news": {
+   "query": "rugby league OR NRL OR Super League"
+  },
+  "videos": {
+   "query": "rugby league highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "espn",
+   "league": "rugby-league/3",
+   "startWord": "kick-off times"
+  }
+ },
+ {
+  "id": "golf",
+  "name": "Golf",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Golfer_swing.jpg/500px-Golfer_swing.jpg",
+  "terms": [
+   "golf",
+   "pga",
+   "open championship",
+   "ryder cup",
+   "fairway",
+   "birdie",
+   "scottie scheffler",
+   "rory mcilroy",
+   "lpga",
+   "masters tournament",
+   "augusta national"
+  ],
+  "shows": {
+   "keywords": [
+    2702
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "golf OR PGA Tour OR Masters"
+  },
+  "videos": {
+   "query": "golf tournament highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "espn",
+   "league": "golf/pga,golf/lpga",
+   "startWord": "tee times"
+  }
+ },
+ {
+  "id": "mma",
+  "name": "MMA and UFC",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/UFC_131_Carwin_vs._JDS.jpg/500px-UFC_131_Carwin_vs._JDS.jpg",
+  "terms": [
+   "mma",
+   "ufc",
+   "octagon",
+   "mixed martial arts",
+   "pfl",
+   "cage fighting",
+   "jiu-jitsu"
+  ],
+  "shows": {
+   "keywords": [
+    384605
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "UFC fight news OR MMA"
+  },
+  "videos": {
+   "query": "UFC fight highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "espn",
+   "league": "mma/ufc"
+  }
+ },
+ {
+  "id": "pro-wrestling",
+  "name": "Pro wrestling",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Christopher_Daniels_1.jpg/500px-Christopher_Daniels_1.jpg",
+  "terms": [
+   "wrestling",
+   "wwe",
+   "aew",
+   "wrestlemania",
+   "royal rumble",
+   "championship belt",
+   "tag team"
+  ],
+  "shows": {
+   "keywords": [
+    331674
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "WWE OR pro wrestling OR AEW"
+  },
+  "videos": {
+   "query": "pro wrestling best matches",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "athletics",
+  "name": "Athletics",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/MNSTATE.jpg/500px-MNSTATE.jpg",
+  "terms": [
+   "athletics",
+   "track and field",
+   "diamond league",
+   "100m",
+   "high jump",
+   "relay",
+   "world athletics",
+   "javelin",
+   "neeraj chopra"
+  ],
+  "shows": {
+   "keywords": [
+    206206
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "athletics OR track and field OR Diamond League"
+  },
+  "videos": {
+   "query": "athletics race highlights",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "marathon",
+  "name": "Marathons",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/BSK_CSOB_MARATON046_%2833791445325%29.jpg/500px-BSK_CSOB_MARATON046_%2833791445325%29.jpg",
+  "terms": [
+   "marathon",
+   "half marathon",
+   "trail running",
+   "kipchoge",
+   "parkrun",
+   "race pace",
+   "road running"
+  ],
+  "shows": {
+   "keywords": [
+    7248
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "marathon OR running"
+  },
+  "videos": {
+   "query": "marathon race running documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "swimming",
+  "name": "Swimming",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Depart4x100.jpg/500px-Depart4x100.jpg",
+  "terms": [
+   "swimming",
+   "swimmer",
+   "backstroke",
+   "world aquatics",
+   "water polo",
+   "michael phelps"
+  ],
+  "shows": {
+   "keywords": [
+    15058
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "swimming championship OR world aquatics"
+  },
+  "videos": {
+   "query": "swimming race highlights",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "cycling",
+  "name": "Cycling",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/%C3%89preuve_Cyclisme_Route_Course_Ligne_Masculine_Jeux_Olympiques_2024_Rue_Saint_%C3%89leuth%C3%A8re_-_Paris_XVIII_%28FR75%29_-_2024-08-03_-_51.jpg/500px-%C3%89preuve_Cyclisme_Route_Course_Ligne_Masculine_Jeux_Olympiques_2024_Rue_Saint_%C3%89leuth%C3%A8re_-_Paris_XVIII_%28FR75%29_-_2024-08-03_-_51.jpg",
+  "terms": [
+   "cycling",
+   "tour de france",
+   "giro",
+   "vuelta",
+   "peloton",
+   "cyclist",
+   "stage race",
+   "velodrome",
+   "pogacar",
+   "vingegaard",
+   "road race"
+  ],
+  "shows": {
+   "keywords": [
+    180491
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "cycling OR Tour de France"
+  },
+  "videos": {
+   "query": "cycling race highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "cycling race live"
+  }
+ },
+ {
+  "id": "volleyball",
+  "name": "Volleyball",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Brasil_vence_a_Fran%C3%A7a_no_v%C3%B4lei_masculino_1037987-15.08.2016_ffz-6369.jpg/500px-Brasil_vence_a_Fran%C3%A7a_no_v%C3%B4lei_masculino_1037987-15.08.2016_ffz-6369.jpg",
+  "terms": [
+   "volleyball",
+   "libero",
+   "beach volleyball",
+   "vnl",
+   "nations league volleyball"
+  ],
+  "news": {
+   "query": "volleyball OR beach volleyball"
+  },
+  "videos": {
+   "query": "volleyball match highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "espn",
+   "league": "volleyball/womens-college-volleyball"
+  }
+ },
+ {
+  "id": "badminton",
+  "name": "Badminton",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Olympics_2012_Mixed_Doubles_Final.jpg/500px-Olympics_2012_Mixed_Doubles_Final.jpg",
+  "terms": [
+   "badminton",
+   "shuttlecock",
+   "bwf",
+   "sindhu",
+   "lakshya sen",
+   "satwik",
+   "chirag",
+   "all england",
+   "thomas cup"
+  ],
+  "news": {
+   "query": "badminton OR BWF OR PV Sindhu"
+  },
+  "videos": {
+   "query": "badminton match highlights",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "table-tennis",
+  "name": "Table tennis",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Mondial_Ping_-_Men%27s_Singles_-_Round_4_-_Kenta_Matsudaira-Vladimir_Samsonov_-_57.jpg/500px-Mondial_Ping_-_Men%27s_Singles_-_Round_4_-_Kenta_Matsudaira-Vladimir_Samsonov_-_57.jpg",
+  "terms": [
+   "table tennis",
+   "ping pong",
+   "wtt",
+   "manika batra",
+   "fan zhendong",
+   "ittf"
+  ],
+  "news": {
+   "query": "table tennis OR WTT"
+  },
+  "videos": {
+   "query": "table tennis match highlights",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "kabaddi",
+  "name": "Kabaddi",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Iran_men%27s_national_kabaddi_team_13970602000432636707284535394012_98208.jpg/500px-Iran_men%27s_national_kabaddi_team_13970602000432636707284535394012_98208.jpg",
+  "terms": [
+   "kabaddi",
+   "pro kabaddi",
+   "pkl",
+   "raider",
+   "bengaluru bulls",
+   "kabaddi league"
+  ],
+  "news": {
+   "query": "Pro Kabaddi OR kabaddi"
+  },
+  "videos": {
+   "query": "Pro Kabaddi highlights",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "field-hockey",
+  "name": "Field hockey",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Match_Hockey_Grande_Bretagne_x_Espagne_Jeux_Olympiques_2024_Terrain_1_Stade_Yves_Manoir_-_Colombes_%28FR92%29_-_2024-07-27_-_28.jpg/500px-Match_Hockey_Grande_Bretagne_x_Espagne_Jeux_Olympiques_2024_Terrain_1_Stade_Yves_Manoir_-_Colombes_%28FR92%29_-_2024-07-27_-_28.jpg",
+  "terms": [
+   "field hockey",
+   "hockey india",
+   "fih",
+   "hockey world cup",
+   "penalty corner",
+   "sreejesh",
+   "olympic hockey",
+   "pro league"
+  ],
+  "news": {
+   "query": "field hockey OR FIH OR Hockey India"
+  },
+  "videos": {
+   "query": "field hockey match highlights",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "esports",
+  "name": "Esports",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/LGD_Gaming_at_the_2015_LPL_Summer_Finals.jpg/500px-LGD_Gaming_at_the_2015_LPL_Summer_Finals.jpg",
+  "terms": [
+   "esports",
+   "league of legends",
+   "valorant",
+   "dota",
+   "counter-strike",
+   "pro gamer"
+  ],
+  "news": {
+   "query": "esports tournament"
+  },
+  "videos": {
+   "query": "esports tournament finals highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "esports live tournament"
+  }
+ },
+ {
+  "id": "gymnastics",
+  "name": "Gymnastics",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/ESTADOS_UNIDOS_LEVAM_OURO_NA_GIN%C3%81STICA_FEMININA_POR_EQUIPES_DOS_JOGOS_OL%C3%8DMPICOS_RIO_2016_%2828849586476%29.jpg/500px-ESTADOS_UNIDOS_LEVAM_OURO_NA_GIN%C3%81STICA_FEMININA_POR_EQUIPES_DOS_JOGOS_OL%C3%8DMPICOS_RIO_2016_%2828849586476%29.jpg",
+  "terms": [
+   "gymnastics",
+   "simone biles",
+   "balance beam",
+   "floor routine",
+   "artistic gymnastics",
+   "uneven bars"
+  ],
+  "shows": {
+   "keywords": [
+    650
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "gymnastics OR Simone Biles"
+  },
+  "videos": {
+   "query": "gymnastics routines",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "skiing",
+  "name": "Skiing and snowboarding",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Alpine_skiing_pictogram.svg/500px-Alpine_skiing_pictogram.svg.png",
+  "terms": [
+   "skiing",
+   "ski",
+   "snowboard",
+   "slalom",
+   "downhill",
+   "world cup ski",
+   "biathlon",
+   "winter olympics",
+   "freestyle skiing",
+   "piste"
+  ],
+  "shows": {
+   "keywords": [
+    248915
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "skiing OR snowboarding OR winter sports"
+  },
+  "videos": {
+   "query": "skiing snowboarding highlights",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "surfing",
+  "name": "Surfing",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Mavericks_Surf_Contest_2010b.jpg/500px-Mavericks_Surf_Contest_2010b.jpg",
+  "terms": [
+   "surfing",
+   "surf",
+   "big wave",
+   "wsl",
+   "nazare",
+   "surfer",
+   "longboard",
+   "big waves"
+  ],
+  "shows": {
+   "keywords": [
+    5349
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "surfing OR big wave"
+  },
+  "videos": {
+   "query": "surfing big waves",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "skateboarding",
+  "name": "Skateboarding",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/BackSmithGrind.jpg/500px-BackSmithGrind.jpg",
+  "terms": [
+   "skateboarding",
+   "skate",
+   "skater",
+   "tony hawk",
+   "street skating",
+   "kickflip",
+   "x games",
+   "park skating"
+  ],
+  "shows": {
+   "keywords": [
+    390
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "skateboarding"
+  },
+  "videos": {
+   "query": "skateboarding street video",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "climbing",
+  "name": "Climbing",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/01ElCaballo_copy.jpg/500px-01ElCaballo_copy.jpg",
+  "terms": [
+   "climbing",
+   "climber",
+   "bouldering",
+   "free solo",
+   "alex honnold",
+   "el capitan",
+   "sport climbing",
+   "adam ondra",
+   "crag",
+   "alpine climbing"
+  ],
+  "shows": {
+   "keywords": [
+    159212
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "rock climbing OR bouldering"
+  },
+  "videos": {
+   "query": "climbing documentary free solo",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "sailing",
+  "name": "Sailing",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Regattafeld_vor_Laboe.jpg/500px-Regattafeld_vor_Laboe.jpg",
+  "terms": [
+   "sailing",
+   "sailor",
+   "regatta",
+   "america's cup",
+   "yacht",
+   "vendee globe",
+   "ocean race",
+   "catamaran",
+   "sail",
+   "round the world"
+  ],
+  "shows": {
+   "keywords": [
+    3180
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "sailing OR America's Cup OR Vendee Globe"
+  },
+  "videos": {
+   "query": "sailing regatta ocean race",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "rowing",
+  "name": "Rowing and canoeing",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Portland_Pudgy_safety_dinghy%2C_rowing.JPG/500px-Portland_Pudgy_safety_dinghy%2C_rowing.JPG",
+  "terms": [
+   "rowing",
+   "rower",
+   "oar",
+   "boat race",
+   "henley",
+   "sculling",
+   "canoe",
+   "kayak",
+   "paddling",
+   "regatta"
+  ],
+  "news": {
+   "query": "rowing OR canoe OR kayak"
+  },
+  "videos": {
+   "query": "rowing race highlights",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "gaelic-games",
+  "name": "Gaelic games",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/David_Collins_and_Eoin_Kelly_%28Tipperary%29.jpg/500px-David_Collins_and_Eoin_Kelly_%28Tipperary%29.jpg",
+  "terms": [
+   "gaelic football",
+   "hurling",
+   "gaa",
+   "camogie",
+   "all-ireland",
+   "croke park",
+   "sliotar",
+   "gaelic"
+  ],
+  "news": {
+   "query": "GAA OR hurling OR Gaelic football"
+  },
+  "videos": {
+   "query": "GAA hurling highlights",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "afl",
+  "name": "Australian rules football",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Archie_Smith.jpg/500px-Archie_Smith.jpg",
+  "terms": [
+   "afl",
+   "aussie rules",
+   "australian rules",
+   "grand final",
+   "collingwood",
+   "mcg",
+   "footy",
+   "brownlow"
+  ],
+  "news": {
+   "query": "AFL OR Australian rules football"
+  },
+  "videos": {
+   "query": "AFL match highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "espn",
+   "league": "australian-football/afl",
+   "startWord": "kick-off times"
+  }
+ },
+ {
+  "id": "womens-football",
+  "name": "Women's football",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/FIFA_Women%27s_World_Cup_2019_Final_-_Alex_Morgan_and_Stefanie_van_der_Gragt.jpg/500px-FIFA_Women%27s_World_Cup_2019_Final_-_Alex_Morgan_and_Stefanie_van_der_Gragt.jpg",
+  "terms": [
+   "women's football",
+   "womens football",
+   "wsl",
+   "lionesses",
+   "nwsl",
+   "women's world cup",
+   "women's euros",
+   "uefa women"
+  ],
+  "news": {
+   "query": "women's football OR Lionesses OR WSL"
+  },
+  "videos": {
+   "query": "women's football highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "espn",
+   "league": "soccer/eng.w.1,soccer/usa.nwsl",
+   "startWord": "kick-off times"
+  }
+ },
+ {
+  "id": "indycar-nascar",
+  "name": "IndyCar, NASCAR and endurance",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/83/NTT_INDYCAR_Series_logo.svg/500px-NTT_INDYCAR_Series_logo.svg.png",
+  "terms": [
+   "indycar",
+   "nascar",
+   "indy 500",
+   "le mans",
+   "daytona",
+   "endurance racing",
+   "imsa",
+   "wec",
+   "24 hours"
+  ],
+  "shows": {
+   "keywords": [
+    10039
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "IndyCar OR NASCAR OR Le Mans"
+  },
+  "videos": {
+   "query": "IndyCar NASCAR Le Mans highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "espn",
+   "league": "racing/irl,racing/nascar-premier",
+   "startWord": "race times"
+  }
+ },
+ {
+  "id": "rally",
+  "name": "Rally racing",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/WRC.svg/500px-WRC.svg.png",
+  "terms": [
+   "wrc",
+   "dakar",
+   "rally car",
+   "co-driver",
+   "safari rally",
+   "rallycross",
+   "loeb",
+   "monte carlo rally",
+   "rally racing",
+   "dakar rally"
+  ],
+  "news": {
+   "query": "WRC OR rally OR Dakar"
+  },
+  "videos": {
+   "query": "WRC rally highlights",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "darts-snooker",
+  "name": "Darts and snooker",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Snooker_table_selby.JPG/500px-Snooker_table_selby.JPG",
+  "terms": [
+   "darts",
+   "snooker",
+   "luke littler",
+   "pdc",
+   "crucible",
+   "ronnie o'sullivan",
+   "oche",
+   "maximum break"
+  ],
+  "news": {
+   "query": "darts OR snooker"
+  },
+  "videos": {
+   "query": "darts snooker highlights",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "handball",
+  "name": "Handball",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/SAP_Arena_Handball_ausverkauft.jpg/500px-SAP_Arena_Handball_ausverkauft.jpg",
+  "terms": [
+   "handball",
+   "ehf",
+   "world handball",
+   "bundesliga handball",
+   "team handball"
+  ],
+  "news": {
+   "query": "handball"
+  },
+  "videos": {
+   "query": "handball match highlights",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "martial-arts",
+  "name": "Martial arts",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Jigoro_Kano_and_Kyuzo_Mifune_%28restoration%29.jpg/500px-Jigoro_Kano_and_Kyuzo_Mifune_%28restoration%29.jpg",
+  "terms": [
+   "martial arts",
+   "karate",
+   "judo",
+   "taekwondo",
+   "kung fu",
+   "muay thai",
+   "kickboxing",
+   "aikido",
+   "kendo",
+   "jiu-jitsu"
+  ],
+  "shows": {
+   "keywords": [
+    779
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "martial arts OR judo OR karate"
+  },
+  "videos": {
+   "query": "martial arts documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "olympics",
+  "name": "The Olympic Games",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Olympic_rings_without_rims.svg/500px-Olympic_rings_without_rims.svg.png",
+  "terms": [
+   "olympics",
+   "olympic",
+   "paralympics",
+   "olympian",
+   "ioc",
+   "gold medal",
+   "olympic village"
+  ],
+  "shows": {
+   "keywords": [
+    2070
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "Olympics OR Paralympics"
+  },
+  "videos": {
+   "query": "Olympic games best moments",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "horse-racing",
+  "name": "Horse racing",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/GGF_Race5.jpg/500px-GGF_Race5.jpg",
+  "terms": [
+   "horse racing",
+   "jockey",
+   "grand national",
+   "melbourne cup",
+   "kentucky derby",
+   "royal ascot",
+   "thoroughbred",
+   "racecourse",
+   "furlong"
+  ],
+  "shows": {
+   "keywords": [
+    155759
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "horse racing OR Grand National OR Derby"
+  },
+  "videos": {
+   "query": "horse race highlights",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "horse racing live"
+  }
+ },
+ {
+  "id": "fencing-archery",
+  "name": "Fencing and archery",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/ArcheryGermanyEarly1980s-2.jpg/500px-ArcheryGermanyEarly1980s-2.jpg",
+  "terms": [
+   "fencing",
+   "archery",
+   "epee",
+   "sabre",
+   "recurve",
+   "olympic archery"
+  ],
+  "news": {
+   "query": "archery OR fencing"
+  },
+  "videos": {
+   "query": "archery fencing highlights",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "padel-pickleball",
+  "name": "Padel and pickleball",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Sanchez-Casal_Paddle_Tennis_Game.jpg/500px-Sanchez-Casal_Paddle_Tennis_Game.jpg",
+  "terms": [
+   "padel",
+   "pickleball",
+   "premier padel",
+   "paddle tennis"
+  ],
+  "news": {
+   "query": "padel OR pickleball"
+  },
+  "videos": {
+   "query": "padel pickleball highlights",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "fitness",
+  "name": "Fitness and strength",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/USMC-Rich_Froning_Jr.jpg/500px-USMC-Rich_Froning_Jr.jpg",
+  "terms": [
+   "fitness",
+   "workout",
+   "gym",
+   "weightlifting",
+   "powerlifting",
+   "crossfit",
+   "calisthenics",
+   "strength training"
+  ],
+  "shows": {
+   "keywords": [
+    155861
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "fitness OR strength training"
+  },
+  "videos": {
+   "query": "strength training workout",
+   "minMinutes": 10
+  }
+ },
+ {
+  "id": "yoga",
+  "name": "Yoga",
+  "theme": "sport",
+  "also": [
+   "faith"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Shiva_Bangalore.jpg/500px-Shiva_Bangalore.jpg",
+  "terms": [
+   "yoga",
+   "asana",
+   "vinyasa",
+   "pranayama",
+   "yogi",
+   "hatha",
+   "iyengar",
+   "ashtanga"
+  ],
+  "shows": {
+   "keywords": [
+    5828
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "yoga OR meditation"
+  },
+  "videos": {
+   "query": "yoga practice flow",
+   "minMinutes": 10
+  }
+ },
+ {
+  "id": "sport-science",
+  "name": "Sports science and rehabilitation",
+  "theme": "sport",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Les_secouristes_transportant_un_jouer_bless%C3%A9_sur_uns_civi%C3%A8re.jpg/500px-Les_secouristes_transportant_un_jouer_bless%C3%A9_sur_uns_civi%C3%A8re.jpg",
+  "terms": [
+   "sports science",
+   "rehabilitation",
+   "injury",
+   "physiotherapy",
+   "biomechanics",
+   "sports medicine",
+   "training load"
+  ],
+  "news": {
+   "query": "sports science OR sports physiotherapy OR injury rehabilitation"
+  },
+  "videos": {
+   "query": "sports rehabilitation physiotherapy explained",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "ai",
+  "name": "Artificial intelligence",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/OpenAI_logo_2025_%28symbol%29.svg/500px-OpenAI_logo_2025_%28symbol%29.svg.png",
+  "terms": [
+   "artificial intelligence",
+   "ai",
+   "machine learning",
+   "openai",
+   "anthropic",
+   "deepmind",
+   "llm",
+   "neural network",
+   "chatgpt",
+   "generative ai"
+  ],
+  "shows": {
+   "keywords": [
+    310
+   ],
+   "genres": [
+    99,
+    878
+   ]
+  },
+  "news": {
+   "query": "artificial intelligence OR OpenAI OR Anthropic OR Google DeepMind"
+  },
+  "videos": {
+   "query": "artificial intelligence explained",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "robotics",
+  "name": "Robotics",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Puma_Robotic_Arm_-_GPN-2000-001817.jpg/500px-Puma_Robotic_Arm_-_GPN-2000-001817.jpg",
+  "terms": [
+   "robot",
+   "robotics",
+   "humanoid",
+   "boston dynamics",
+   "actuator",
+   "exoskeleton"
+  ],
+  "shows": {
+   "keywords": [
+    14544
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "robotics OR humanoid robot"
+  },
+  "videos": {
+   "query": "robotics documentary humanoid",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "marketing",
+  "name": "Marketing and brands",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Steve_Jobs_and_Macintosh_computer%2C_January_1984%2C_by_Bernard_Gotfryd_-_edited.jpg/500px-Steve_Jobs_and_Macintosh_computer%2C_January_1984%2C_by_Bernard_Gotfryd_-_edited.jpg",
+  "terms": [
+   "marketing",
+   "advertising",
+   "copywriting",
+   "seo",
+   "social media marketing",
+   "ad agency",
+   "branding",
+   "brand strategy",
+   "brand campaign",
+   "ad campaign",
+   "advertising campaign"
+  ],
+  "news": {
+   "query": "marketing OR brand campaign OR advertising industry"
+  },
+  "videos": {
+   "query": "marketing strategy brand case study",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "ecommerce",
+  "name": "Ecommerce and DTC",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Shopping_online_with_bank_card.jpg/500px-Shopping_online_with_bank_card.jpg",
+  "terms": [
+   "ecommerce",
+   "e-commerce",
+   "shopify",
+   "amazon sellers",
+   "dtc",
+   "online store",
+   "fulfilment",
+   "conversion rate",
+   "amazon seller"
+  ],
+  "news": {
+   "query": "ecommerce OR Shopify OR Amazon sellers OR DTC brands"
+  },
+  "videos": {
+   "query": "ecommerce business case study",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "startups",
+  "name": "Startups and founders",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Y_Combinator_logo.svg/500px-Y_Combinator_logo.svg.png",
+  "terms": [
+   "startup",
+   "founder",
+   "venture capital",
+   "funding round",
+   "y combinator",
+   "entrepreneur",
+   "seed round",
+   "scale-up"
+  ],
+  "shows": {
+   "keywords": [
+    185507
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "startups OR founders OR venture capital"
+  },
+  "videos": {
+   "query": "founder story startup",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "investing",
+  "name": "Investing and markets",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/New_York_Stock_Exchange_Facade_2015.jpg/500px-New_York_Stock_Exchange_Facade_2015.jpg",
+  "terms": [
+   "investing",
+   "stock market",
+   "index fund",
+   "sensex",
+   "nifty",
+   "nasdaq",
+   "dividend",
+   "bond yield",
+   "mutual fund"
+  ],
+  "shows": {
+   "keywords": [
+    177493
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "stock market OR investing OR Sensex"
+  },
+  "videos": {
+   "query": "investing explained markets",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "economics",
+  "name": "Economics",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Adam_Smith_The_Muir_portrait.jpg/500px-Adam_Smith_The_Muir_portrait.jpg",
+  "terms": [
+   "economics",
+   "economy",
+   "inflation",
+   "gdp",
+   "central bank",
+   "interest rates",
+   "recession",
+   "rbi",
+   "trade deficit",
+   "trade war",
+   "tariffs"
+  ],
+  "news": {
+   "query": "economy OR inflation OR RBI"
+  },
+  "videos": {
+   "query": "economics explained",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "physiotherapy",
+  "name": "Physiotherapy",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Physical_Therapists_at_work.jpg/500px-Physical_Therapists_at_work.jpg",
+  "terms": [
+   "physiotherapy",
+   "physical therapy",
+   "rehabilitation",
+   "physio",
+   "mobility",
+   "musculoskeletal",
+   "exercise therapy",
+   "back pain",
+   "manual therapy"
+  ],
+  "news": {
+   "query": "physiotherapy research OR rehabilitation study OR sports physiotherapy"
+  },
+  "videos": {
+   "query": "physiotherapy exercises explained",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "health-science",
+  "name": "Health and medicine",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/The_Doctor_Luke_Fildes_crop.jpg/500px-The_Doctor_Luke_Fildes_crop.jpg",
+  "terms": [
+   "health",
+   "medicine",
+   "medical",
+   "doctor",
+   "clinical",
+   "disease",
+   "vaccine",
+   "nutrition",
+   "longevity"
+  ],
+  "shows": {
+   "keywords": [
+    1279
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "medical research OR health study"
+  },
+  "videos": {
+   "query": "medicine explained health science",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "psychology",
+  "name": "Psychology and the mind",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Greek_uc_psi_icon.svg/500px-Greek_uc_psi_icon.svg.png",
+  "terms": [
+   "psychology",
+   "psychologist",
+   "cognition",
+   "mental health",
+   "neuroscience",
+   "cognitive"
+  ],
+  "shows": {
+   "keywords": [
+    2800
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "psychology OR neuroscience"
+  },
+  "videos": {
+   "query": "psychology explained brain",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "physics",
+  "name": "Physics",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Albert_Einstein_Head_cleaned.jpg/500px-Albert_Einstein_Head_cleaned.jpg",
+  "terms": [
+   "physics",
+   "quantum",
+   "relativity",
+   "particle",
+   "cern",
+   "higgs",
+   "einstein",
+   "thermodynamics",
+   "cosmology",
+   "string theory"
+  ],
+  "shows": {
+   "keywords": [
+    6012
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "physics discovery OR quantum"
+  },
+  "videos": {
+   "query": "physics explained",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "mathematics",
+  "name": "Mathematics",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Woman_teaching_geometry.jpg/500px-Woman_teaching_geometry.jpg",
+  "terms": [
+   "mathematics",
+   "maths",
+   "math",
+   "theorem",
+   "geometry",
+   "calculus",
+   "ramanujan",
+   "algebra",
+   "topology"
+  ],
+  "shows": {
+   "keywords": [
+    6009
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "mathematics OR mathematician"
+  },
+  "videos": {
+   "query": "mathematics explained",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "chemistry",
+  "name": "Chemistry",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Reaction_Coordinate_Diagram.svg/500px-Reaction_Coordinate_Diagram.svg.png",
+  "terms": [
+   "chemistry",
+   "chemical",
+   "molecule",
+   "periodic table"
+  ],
+  "news": {
+   "query": "chemistry discovery"
+  },
+  "videos": {
+   "query": "chemistry explained experiments",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "biology",
+  "name": "Biology and evolution",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/DNA_simple_horizontal.svg/500px-DNA_simple_horizontal.svg.png",
+  "terms": [
+   "biology",
+   "evolution",
+   "genetics",
+   "dna",
+   "species",
+   "crispr",
+   "microbiome",
+   "fossil",
+   "darwin"
+  ],
+  "shows": {
+   "keywords": [
+    34152
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "biology OR evolution OR genetics"
+  },
+  "videos": {
+   "query": "biology evolution documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "geology",
+  "name": "Earth and geology",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Grand_canyon_march_2013.jpg/500px-Grand_canyon_march_2013.jpg",
+  "terms": [
+   "geology",
+   "volcano",
+   "earthquake",
+   "tectonic",
+   "glacier",
+   "fossil",
+   "rock formation",
+   "erosion"
+  ],
+  "shows": {
+   "keywords": [
+    3347
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "geology OR volcano OR earthquake"
+  },
+  "videos": {
+   "query": "geology documentary volcano",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "climate",
+  "name": "Climate and energy",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Change_in_Average_Temperature_With_Fahrenheit.svg/500px-Change_in_Average_Temperature_With_Fahrenheit.svg.png",
+  "terms": [
+   "climate",
+   "climate change",
+   "renewable",
+   "solar",
+   "wind power",
+   "emissions",
+   "net zero",
+   "energy transition"
+  ],
+  "shows": {
+   "keywords": [
+    2210
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "climate change OR renewable energy"
+  },
+  "videos": {
+   "query": "climate change explained renewable energy",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "oceans",
+  "name": "Oceans and marine life",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Pacific_Ocean_as_viewed_from_GOES-18_on_September_23%2C_2023.jpg/500px-Pacific_Ocean_as_viewed_from_GOES-18_on_September_23%2C_2023.jpg",
+  "terms": [
+   "ocean",
+   "marine",
+   "deep sea",
+   "whale",
+   "coral",
+   "shark",
+   "dolphin",
+   "reef",
+   "submarine",
+   "tides"
+  ],
+  "shows": {
+   "keywords": [
+    270
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "ocean OR marine biology OR deep sea"
+  },
+  "videos": {
+   "query": "ocean deep sea documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "stargazing",
+  "name": "Stargazing",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Astronomy_Amateur_3_V2.jpg/500px-Astronomy_Amateur_3_V2.jpg",
+  "terms": [
+   "stargazing",
+   "constellation",
+   "night sky",
+   "telescope",
+   "meteor shower",
+   "eclipse",
+   "aurora",
+   "milky way",
+   "observatory",
+   "comet"
+  ],
+  "news": {
+   "query": "stargazing OR eclipse OR meteor shower"
+  },
+  "videos": {
+   "query": "stargazing night sky guide",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "engineering",
+  "name": "Engineering and how things work",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Maquina_vapor_Watt_ETSIIM.jpg/500px-Maquina_vapor_Watt_ETSIIM.jpg",
+  "terms": [
+   "engineering",
+   "engineer",
+   "tunnel",
+   "skyscraper",
+   "how it works",
+   "infrastructure",
+   "turbine"
+  ],
+  "shows": {
+   "keywords": [
+    10160
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "engineering marvel OR infrastructure project"
+  },
+  "videos": {
+   "query": "engineering explained how it works",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "architecture",
+  "name": "Architecture",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/View_of_Santa_Maria_del_Fiore_in_Florence.jpg/500px-View_of_Santa_Maria_del_Fiore_in_Florence.jpg",
+  "terms": [
+   "architecture",
+   "architect",
+   "pritzker",
+   "skyscraper",
+   "brutalism",
+   "heritage building",
+   "urban design"
+  ],
+  "shows": {
+   "keywords": [
+    12436
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "architecture OR architect"
+  },
+  "videos": {
+   "query": "architecture documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "design",
+  "name": "Design and craft",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Braun_ABW30_%28schwarz%29.jpg/500px-Braun_ABW30_%28schwarz%29.jpg",
+  "terms": [
+   "design",
+   "designer",
+   "industrial design",
+   "typography",
+   "graphic design",
+   "furniture",
+   "product design",
+   "ux",
+   "bauhaus"
+  ],
+  "shows": {
+   "keywords": [
+    160077
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "design OR product design OR graphic design"
+  },
+  "videos": {
+   "query": "design documentary designer",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "photography",
+  "name": "Photography",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Photographer_Photographing_Nevada_Mountains.jpg/500px-Photographer_Photographing_Nevada_Mountains.jpg",
+  "terms": [
+   "photography",
+   "photographer",
+   "street photography",
+   "darkroom",
+   "camera lens",
+   "camera review",
+   "mirrorless",
+   "dslr",
+   "magnum photos"
+  ],
+  "shows": {
+   "keywords": [
+    6025
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "photography OR photographer"
+  },
+  "videos": {
+   "query": "photography masterclass photographer",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "literature",
+  "name": "Books and writers",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Biblioth%C3%A8que_de_l%27Assembl%C3%A9e_Nationale_%28Lunon%29.jpg/500px-Biblioth%C3%A8que_de_l%27Assembl%C3%A9e_Nationale_%28Lunon%29.jpg",
+  "terms": [
+   "novel",
+   "author",
+   "writer",
+   "literature",
+   "poetry",
+   "booker",
+   "nobel",
+   "bestseller",
+   "literary",
+   "books",
+   "bookshop",
+   "book review",
+   "booker prize"
+  ],
+  "shows": {
+   "keywords": [
+    275599
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "books OR novel OR literary prize"
+  },
+  "videos": {
+   "query": "author interview books",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "philosophy",
+  "name": "Philosophy",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Le_Penseur_by_Rodin_%28Kunsthalle_Bielefeld%29_2014-04-10.JPG/500px-Le_Penseur_by_Rodin_%28Kunsthalle_Bielefeld%29_2014-04-10.JPG",
+  "terms": [
+   "philosophy",
+   "philosopher",
+   "ethics",
+   "stoicism",
+   "existentialism",
+   "plato",
+   "aristotle",
+   "metaphysics"
+  ],
+  "shows": {
+   "keywords": [
+    490
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "philosophy OR philosopher"
+  },
+  "videos": {
+   "query": "philosophy explained",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "languages",
+  "name": "Languages and linguistics",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Rosetta_Stone.JPG/500px-Rosetta_Stone.JPG",
+  "terms": [
+   "linguistics",
+   "linguist",
+   "translation",
+   "dialect",
+   "etymology",
+   "polyglot",
+   "grammar",
+   "multilingual",
+   "languages",
+   "language learning"
+  ],
+  "news": {
+   "query": "languages OR linguistics"
+  },
+  "videos": {
+   "query": "language learning linguistics explained",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "geopolitics",
+  "name": "Geopolitics",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Theatrum_Orbis_Terrarum%2C_by_Abraham_Ortelius%2C_World%2C_1572.jpg/500px-Theatrum_Orbis_Terrarum%2C_by_Abraham_Ortelius%2C_World%2C_1572.jpg",
+  "terms": [
+   "geopolitics",
+   "foreign policy",
+   "diplomacy",
+   "sanctions",
+   "nato",
+   "brics",
+   "un security council",
+   "trade war",
+   "indo-pacific"
+  ],
+  "shows": {
+   "keywords": [
+    6078
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "geopolitics OR India foreign policy OR India China OR Indian Ocean"
+  },
+  "videos": {
+   "query": "geopolitics explained",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "india-news",
+  "name": "India news",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/500px-Flag_of_India.svg.png",
+  "terms": [
+   "india",
+   "indian",
+   "delhi",
+   "lok sabha",
+   "modi",
+   "rbi",
+   "mumbai",
+   "supreme court",
+   "bengaluru",
+   "chennai",
+   "kolkata"
+  ],
+  "news": {
+   "query": "India news"
+  },
+  "videos": {
+   "query": "India news analysis",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "India news live"
+  }
+ },
+ {
+  "id": "karnataka-news",
+  "name": "Karnataka news",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Hampi_virupaksha_temple.jpg/500px-Hampi_virupaksha_temple.jpg",
+  "terms": [
+   "karnataka",
+   "bengaluru",
+   "bangalore",
+   "mysuru",
+   "mysore",
+   "hubballi",
+   "mangaluru",
+   "kannadiga",
+   "vidhana soudha",
+   "siddaramaiah"
+  ],
+  "news": {
+   "query": "Karnataka OR Bengaluru"
+  },
+  "videos": {
+   "query": "Karnataka news",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "Karnataka news live"
+  }
+ },
+ {
+  "id": "africa-news",
+  "name": "Africa news",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Africa_%28orthographic_projection%29.svg/500px-Africa_%28orthographic_projection%29.svg.png",
+  "terms": [
+   "africa",
+   "african",
+   "nigeria",
+   "kenya",
+   "south africa",
+   "ghana",
+   "ethiopia",
+   "african union",
+   "lagos",
+   "nairobi",
+   "accra"
+  ],
+  "news": {
+   "query": "Africa news"
+  },
+  "videos": {
+   "query": "Africa news analysis",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "Africa news live"
+  }
+ },
+ {
+  "id": "europe-news",
+  "name": "Europe news",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Europe_orthographic_Caucasus_Urals_boundary_%28with_borders%29.svg/500px-Europe_orthographic_Caucasus_Urals_boundary_%28with_borders%29.svg.png",
+  "terms": [
+   "europe",
+   "european",
+   "eu",
+   "brussels",
+   "european union",
+   "eurozone",
+   "schengen",
+   "european commission",
+   "berlin",
+   "paris"
+  ],
+  "news": {
+   "query": "Europe news OR European Union"
+  },
+  "videos": {
+   "query": "Europe news analysis",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "Europe news live"
+  }
+ },
+ {
+  "id": "middle-east-news",
+  "name": "Middle East news",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Middle_East_%28orthographic_projection%29.svg/500px-Middle_East_%28orthographic_projection%29.svg.png",
+  "terms": [
+   "middle east",
+   "gulf",
+   "saudi arabia",
+   "uae",
+   "iran",
+   "israel",
+   "egypt",
+   "qatar",
+   "levant",
+   "arab"
+  ],
+  "news": {
+   "query": "Middle East news"
+  },
+  "videos": {
+   "query": "Middle East news analysis",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "Middle East news live"
+  }
+ },
+ {
+  "id": "americas-news",
+  "name": "Americas news",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Americas_%28orthographic_projection%29.svg/500px-Americas_%28orthographic_projection%29.svg.png",
+  "terms": [
+   "united states",
+   "canada",
+   "brazil",
+   "mexico",
+   "argentina",
+   "latin america",
+   "washington",
+   "congress",
+   "white house",
+   "americas"
+  ],
+  "news": {
+   "query": "Americas news OR Latin America news"
+  },
+  "videos": {
+   "query": "Americas news analysis",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "Americas news live"
+  }
+ },
+ {
+  "id": "asia-pacific-news",
+  "name": "Asia Pacific news",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Asia_and_the_Pacific.png/500px-Asia_and_the_Pacific.png",
+  "terms": [
+   "asia",
+   "china",
+   "japan",
+   "korea",
+   "southeast asia",
+   "asean",
+   "australia",
+   "indonesia",
+   "singapore",
+   "pacific"
+  ],
+  "news": {
+   "query": "Asia Pacific news"
+  },
+  "videos": {
+   "query": "Asia Pacific news analysis",
+   "minMinutes": 8
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "Asia Pacific news live"
+  }
+ },
+ {
+  "id": "business-news",
+  "name": "Business and industry",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Norwich_Market_-_geograph.org.uk_-_2224675.jpg/500px-Norwich_Market_-_geograph.org.uk_-_2224675.jpg",
+  "terms": [
+   "business",
+   "earnings",
+   "merger",
+   "ceo",
+   "supply chain",
+   "manufacturing",
+   "corporate"
+  ],
+  "news": {
+   "query": "business news OR industry"
+  },
+  "videos": {
+   "query": "business documentary industry explained",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "law-justice",
+  "name": "Law and justice",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Justice_scale_silhouette%2C_medium.svg/500px-Justice_scale_silhouette%2C_medium.svg.png",
+  "terms": [
+   "law",
+   "judge",
+   "constitution",
+   "supreme court",
+   "justice",
+   "legal",
+   "verdict",
+   "legislation"
+  ],
+  "shows": {
+   "keywords": [
+    33519
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "law OR court ruling OR constitution"
+  },
+  "videos": {
+   "query": "law explained court case",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "education",
+  "name": "Learning and education",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Schoolgirls_in_Bamozai.JPG/500px-Schoolgirls_in_Bamozai.JPG",
+  "terms": [
+   "education",
+   "school",
+   "university",
+   "teacher",
+   "student",
+   "exam",
+   "curriculum",
+   "scholarship"
+  ],
+  "news": {
+   "query": "education OR university OR learning"
+  },
+  "videos": {
+   "query": "learning how to learn education",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "cities-urbanism",
+  "name": "Cities and urbanism",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Partizanske4.jpg/500px-Partizanske4.jpg",
+  "terms": [
+   "urban",
+   "urbanism",
+   "metro",
+   "transit",
+   "urban planning",
+   "smart city",
+   "public transport",
+   "cities"
+  ],
+  "news": {
+   "query": "urban planning OR metro rail OR cities"
+  },
+  "videos": {
+   "query": "cities urbanism documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "transport",
+  "name": "Trains, planes and ships",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Alaska_Railroad_oil_train_at_Nenna.jpg/500px-Alaska_Railroad_oil_train_at_Nenna.jpg",
+  "terms": [
+   "train",
+   "railway",
+   "locomotive",
+   "aviation",
+   "airline",
+   "aircraft",
+   "airport",
+   "ship",
+   "metro",
+   "rail",
+   "plane"
+  ],
+  "shows": {
+   "keywords": [
+    13008
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "railways OR aviation OR shipping"
+  },
+  "videos": {
+   "query": "train journey aviation documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "cars",
+  "name": "Cars",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/1925_Ford_Model_T_touring.jpg/500px-1925_Ford_Model_T_touring.jpg",
+  "terms": [
+   "car",
+   "cars",
+   "automotive",
+   "electric vehicle",
+   "supercar",
+   "tesla",
+   "porsche",
+   "classic car",
+   "hatchback"
+  ],
+  "shows": {
+   "keywords": [
+    310324
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "cars OR electric vehicles OR automotive"
+  },
+  "videos": {
+   "query": "car review test drive",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "motorcycles",
+  "name": "Motorcycles",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Istockphoto-114285168-612x612.jpg/500px-Istockphoto-114285168-612x612.jpg",
+  "terms": [
+   "motorcycle",
+   "motorbike",
+   "royal enfield",
+   "ducati",
+   "biker",
+   "superbike",
+   "scooter"
+  ],
+  "shows": {
+   "keywords": [
+    14735
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "motorcycles OR Royal Enfield OR biking"
+  },
+  "videos": {
+   "query": "motorcycle review ride",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "aviation",
+  "name": "Aviation",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Pan_Am_Boeing_747-121_N732PA_Bidini.jpg/500px-Pan_Am_Boeing_747-121_N732PA_Bidini.jpg",
+  "terms": [
+   "aviation",
+   "aircraft",
+   "pilot",
+   "airline",
+   "airbus",
+   "boeing",
+   "cockpit",
+   "airliner",
+   "air show",
+   "fighter jet"
+  ],
+  "shows": {
+   "keywords": [
+    3800
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "aviation OR aircraft OR airline"
+  },
+  "videos": {
+   "query": "aviation documentary cockpit",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "military-history",
+  "name": "Military history",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Bronze_statue_of_dancing_warrior_480_bC_lower_italy.jpg/500px-Bronze_statue_of_dancing_warrior_480_bC_lower_italy.jpg",
+  "terms": [
+   "military",
+   "army",
+   "navy",
+   "air force",
+   "world war",
+   "weapons",
+   "regiment",
+   "veterans"
+  ],
+  "shows": {
+   "keywords": [
+    1956
+   ],
+   "genres": [
+    99,
+    10752
+   ]
+  },
+  "news": {
+   "query": "military history OR defence"
+  },
+  "videos": {
+   "query": "military history documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "mythology",
+  "name": "Myth and legend",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Hotherus_and_wood_maidens_by_Froelich.jpg/500px-Hotherus_and_wood_maidens_by_Froelich.jpg",
+  "terms": [
+   "mythology",
+   "myth",
+   "legend",
+   "folklore",
+   "gods",
+   "ramayana",
+   "mahabharata",
+   "norse",
+   "greek myth",
+   "anansi"
+  ],
+  "shows": {
+   "keywords": [
+    2035
+   ],
+   "genres": [
+    14
+   ]
+  },
+  "news": {
+   "query": "mythology OR folklore"
+  },
+  "videos": {
+   "query": "mythology explained legends",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "archaeology",
+  "name": "Archaeology",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Dolina-Pano-3_%28cropped%29.jpg/500px-Dolina-Pano-3_%28cropped%29.jpg",
+  "terms": [
+   "archaeology",
+   "archaeologist",
+   "excavation",
+   "ruins",
+   "artefact",
+   "pharaoh",
+   "fossil",
+   "tomb"
+  ],
+  "shows": {
+   "keywords": [
+    383073
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "archaeology OR excavation OR ancient ruins"
+  },
+  "videos": {
+   "query": "archaeology documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "ancient-civilisations",
+  "name": "Ancient civilisations",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Denis_Bourez_-_British_Museum%2C_London_%288747049029%29_%282%29.jpg/500px-Denis_Bourez_-_British_Museum%2C_London_%288747049029%29_%282%29.jpg",
+  "terms": [
+   "indus valley",
+   "mesopotamia",
+   "maya",
+   "inca",
+   "ancient india",
+   "ancient civilisation",
+   "ancient rome",
+   "ancient egypt",
+   "ancient greece",
+   "ancient persia",
+   "ancient history"
+  ],
+  "news": {
+   "query": "ancient civilisations OR ancient history"
+  },
+  "videos": {
+   "query": "ancient civilisations documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "art",
+  "name": "Art and painters",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Art-portrait-collage_2.jpg/500px-Art-portrait-collage_2.jpg",
+  "terms": [
+   "painting",
+   "painter",
+   "sculpture",
+   "impressionism",
+   "biennale",
+   "art history",
+   "contemporary art",
+   "art exhibition",
+   "art museum",
+   "art gallery",
+   "modern art",
+   "fine art"
+  ],
+  "shows": {
+   "keywords": [
+    5918
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "art exhibition OR painting OR museum"
+  },
+  "videos": {
+   "query": "art history documentary painter",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "puzzles",
+  "name": "Puzzles and mind games",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Set_of_various_puzzles.jpg/500px-Set_of_various_puzzles.jpg",
+  "terms": [
+   "puzzle",
+   "sudoku",
+   "rubik's cube",
+   "riddle",
+   "crossword",
+   "logic puzzle",
+   "brain teaser",
+   "mind game"
+  ],
+  "news": {
+   "query": "puzzles OR sudoku OR Rubik's cube"
+  },
+  "videos": {
+   "query": "puzzle solving logic",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "board-games",
+  "name": "Board games and cards",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/US_Navy_110713-N-NT881-124_Personnel_Specialist_2nd_Class_James_Vail%2C_left%2C_and_Boatswain%27s_Mate_2nd_Class_Nathaniel_Eaton_play_board_games_with_ch.jpg/500px-US_Navy_110713-N-NT881-124_Personnel_Specialist_2nd_Class_James_Vail%2C_left%2C_and_Boatswain%27s_Mate_2nd_Class_Nathaniel_Eaton_play_board_games_with_ch.jpg",
+  "terms": [
+   "board game",
+   "boardgame",
+   "tabletop",
+   "catan",
+   "card game",
+   "carrom",
+   "ludo",
+   "backgammon",
+   "contract bridge"
+  ],
+  "shows": {
+   "keywords": [
+    10090
+   ],
+   "genres": []
+  },
+  "news": {
+   "query": "board games OR tabletop OR bridge card game"
+  },
+  "videos": {
+   "query": "board games tabletop review",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "making",
+  "name": "Electronics and making",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Makerspace_at_Republica_2023_03.jpg/500px-Makerspace_at_Republica_2023_03.jpg",
+  "terms": [
+   "electronics",
+   "arduino",
+   "raspberry pi",
+   "maker",
+   "3d printing",
+   "diy",
+   "soldering",
+   "circuit",
+   "woodworking"
+  ],
+  "news": {
+   "query": "maker OR Raspberry Pi OR 3D printing"
+  },
+  "videos": {
+   "query": "electronics maker project diy",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "cybersecurity",
+  "name": "Cybersecurity",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Operating_system_placement.svg/500px-Operating_system_placement.svg.png",
+  "terms": [
+   "cybersecurity",
+   "hacker",
+   "ransomware",
+   "encryption",
+   "phishing",
+   "infosec"
+  ],
+  "shows": {
+   "keywords": [
+    2157
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "cybersecurity OR data breach"
+  },
+  "videos": {
+   "query": "cybersecurity explained hacking",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "programming",
+  "name": "Programming",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/500px-Python-logo-notext.svg.png",
+  "terms": [
+   "programming",
+   "coding",
+   "developer",
+   "software engineer",
+   "python",
+   "javascript",
+   "kotlin",
+   "open source",
+   "algorithm",
+   "github"
+  ],
+  "news": {
+   "query": "programming OR open source OR software development"
+  },
+  "videos": {
+   "query": "programming tutorial software engineering",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "space-exploration",
+  "name": "Space missions",
+  "theme": "ideas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/AS11-40-5964_%2821037459754%29.jpg/500px-AS11-40-5964_%2821037459754%29.jpg",
+  "terms": [
+   "space missions",
+   "space mission",
+   "rocket",
+   "mars rover",
+   "isro",
+   "chandrayaan",
+   "artemis",
+   "spacex",
+   "starship",
+   "gaganyaan"
+  ],
+  "news": {
+   "query": "ISRO OR Artemis OR SpaceX OR Mars mission"
+  },
+  "videos": {
+   "query": "space mission launch documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "camping",
+  "name": "Camping",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Tent_camping_along_the_Sulayr_trail_in_La_Taha%2C_Sierra_Nevada_National_Park_%28DSCF5147%29.jpg/500px-Tent_camping_along_the_Sulayr_trail_in_La_Taha%2C_Sierra_Nevada_National_Park_%28DSCF5147%29.jpg",
+  "terms": [
+   "camping",
+   "campfire",
+   "campsite",
+   "glamping",
+   "bushcraft",
+   "overlanding",
+   "van life",
+   "wild camping"
+  ],
+  "shows": {
+   "keywords": [
+    1890
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "camping OR overlanding"
+  },
+  "videos": {
+   "query": "camping trip documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "fishing",
+  "name": "Fishing",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Stilts_fishermen_Sri_Lanka_02.jpg/500px-Stilts_fishermen_Sri_Lanka_02.jpg",
+  "terms": [
+   "fishing",
+   "angler",
+   "fly fishing",
+   "lure",
+   "trout",
+   "angling",
+   "tackle"
+  ],
+  "shows": {
+   "keywords": [
+    1495
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "fishing OR fly fishing"
+  },
+  "videos": {
+   "query": "fishing adventure",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "gardening",
+  "name": "Gardening",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Cementerio%2C_Tulc%C3%A1n%2C_Ecuador%2C_2015-07-21%2C_DD_60.JPG/500px-Cementerio%2C_Tulc%C3%A1n%2C_Ecuador%2C_2015-07-21%2C_DD_60.JPG",
+  "terms": [
+   "gardening",
+   "garden",
+   "vegetable garden",
+   "compost",
+   "pruning",
+   "allotment",
+   "horticulture",
+   "bonsai"
+  ],
+  "shows": {
+   "keywords": [
+    2105
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "gardening OR garden design"
+  },
+  "videos": {
+   "query": "gardening how to",
+   "minMinutes": 6
+  }
+ },
+ {
+  "id": "birdwatching",
+  "name": "Birdwatching",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/NMAAHC_Bird_Walk.jpg/500px-NMAAHC_Bird_Walk.jpg",
+  "terms": [
+   "birdwatching",
+   "bird watching",
+   "birding",
+   "ornithology",
+   "hornbill",
+   "raptor",
+   "binoculars"
+  ],
+  "shows": {
+   "keywords": [
+    240242
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "birdwatching OR birds migration"
+  },
+  "videos": {
+   "query": "birdwatching bird documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "safari",
+  "name": "Safari and big game",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Sabi_sabi_game_drive.jpg/500px-Sabi_sabi_game_drive.jpg",
+  "terms": [
+   "safari",
+   "big five",
+   "lion",
+   "elephant",
+   "serengeti",
+   "masai mara",
+   "kruger",
+   "game reserve",
+   "rhino",
+   "tiger reserve",
+   "wildlife park"
+  ],
+  "shows": {
+   "keywords": [
+    3513
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "safari OR national park OR tiger reserve"
+  },
+  "videos": {
+   "query": "safari wildlife documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "diving",
+  "name": "Scuba and freediving",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Underwater_photograph_of_a_recreational_scuba_diver_in_Playa_del_Carmen_2006.jpg/500px-Underwater_photograph_of_a_recreational_scuba_diver_in_Playa_del_Carmen_2006.jpg",
+  "terms": [
+   "scuba",
+   "diving",
+   "freediving",
+   "snorkel",
+   "shipwreck",
+   "padi"
+  ],
+  "shows": {
+   "keywords": [
+    10503
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "scuba diving OR freediving"
+  },
+  "videos": {
+   "query": "scuba diving underwater documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "mountaineering",
+  "name": "Mountaineering",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/M_Rainier.jpg/500px-M_Rainier.jpg",
+  "terms": [
+   "mountaineering",
+   "everest",
+   "k2",
+   "himalaya",
+   "alpine",
+   "sherpa",
+   "base camp",
+   "alpinist"
+  ],
+  "shows": {
+   "keywords": [
+    160177
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "mountaineering OR Everest OR Himalaya"
+  },
+  "videos": {
+   "query": "mountaineering expedition documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "cycling-touring",
+  "name": "Bikepacking and touring",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/027_Cycling_Torres_del_Paine.jpg/500px-027_Cycling_Torres_del_Paine.jpg",
+  "terms": [
+   "bikepacking",
+   "cycle touring",
+   "cycling trip",
+   "mountain biking",
+   "mtb",
+   "bike tour",
+   "cycle route",
+   "trail riding"
+  ],
+  "news": {
+   "query": "bikepacking OR mountain biking OR cycle touring"
+  },
+  "videos": {
+   "query": "bikepacking cycle touring",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "road-trips",
+  "name": "Road trips",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/US_66.svg/500px-US_66.svg.png",
+  "terms": [
+   "road trip",
+   "scenic route",
+   "roadtrip",
+   "route 66",
+   "coastal drive",
+   "motorhome"
+  ],
+  "shows": {
+   "keywords": [
+    7312
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "road trip OR scenic drive"
+  },
+  "videos": {
+   "query": "road trip documentary scenic drive",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "beaches-islands",
+  "name": "Beaches and islands",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Hawaje-NoRedLine.jpg/500px-Hawaje-NoRedLine.jpg",
+  "terms": [
+   "beach",
+   "island",
+   "lagoon",
+   "archipelago",
+   "seaside",
+   "maldives",
+   "bali",
+   "zanzibar"
+  ],
+  "shows": {
+   "keywords": [
+    2041
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "islands OR beach destinations"
+  },
+  "videos": {
+   "query": "island beach travel documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "national-parks",
+  "name": "National parks",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Bogdkhan_Uul_Strictly_Protected_Area%2C_Mongolia_%28149199747%29.jpg/500px-Bogdkhan_Uul_Strictly_Protected_Area%2C_Mongolia_%28149199747%29.jpg",
+  "terms": [
+   "national park",
+   "yosemite",
+   "yellowstone",
+   "park ranger",
+   "nagarhole",
+   "bandipur",
+   "kruger"
+  ],
+  "shows": {
+   "keywords": [
+    6310
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "national park OR wildlife sanctuary"
+  },
+  "videos": {
+   "query": "national park documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "forests-trees",
+  "name": "Forests and trees",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Aerial_view_of_the_Amazon_Rainforest.jpg/500px-Aerial_view_of_the_Amazon_Rainforest.jpg",
+  "terms": [
+   "forest",
+   "trees",
+   "woodland",
+   "rainforest",
+   "old growth",
+   "canopy",
+   "western ghats",
+   "jungle"
+  ],
+  "shows": {
+   "keywords": [
+    5774
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "forests OR rainforest OR Western Ghats"
+  },
+  "videos": {
+   "query": "forest documentary trees",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "rivers-waterfalls",
+  "name": "Rivers and waterfalls",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Pirogue_running_on_the_Mekong_at_golden_hour_between_Don_Det_and_Don_Khon_Laos.jpg/500px-Pirogue_running_on_the_Mekong_at_golden_hour_between_Don_Det_and_Don_Khon_Laos.jpg",
+  "terms": [
+   "river",
+   "waterfall",
+   "rapids",
+   "rafting",
+   "kayaking",
+   "gorge",
+   "nile",
+   "ganges",
+   "amazon river"
+  ],
+  "shows": {
+   "keywords": [
+    1261
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "rivers OR waterfalls OR rafting"
+  },
+  "videos": {
+   "query": "river waterfall documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "deserts",
+  "name": "Deserts",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Rub_al_Khali_002.JPG/500px-Rub_al_Khali_002.JPG",
+  "terms": [
+   "desert",
+   "dunes",
+   "sahara",
+   "thar",
+   "namib",
+   "atacama",
+   "gobi"
+  ],
+  "shows": {
+   "keywords": [
+    18034
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "desert OR Sahara OR Thar"
+  },
+  "videos": {
+   "query": "desert documentary journey",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "polar",
+  "name": "Polar and arctic",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Pulse_of_Snow_and_Sea_Ice.ogv/500px--Pulse_of_Snow_and_Sea_Ice.ogv.jpg",
+  "terms": [
+   "polar",
+   "arctic",
+   "antarctic",
+   "penguin",
+   "polar bear"
+  ],
+  "shows": {
+   "keywords": [
+    14728
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "Arctic OR Antarctic OR polar expedition"
+  },
+  "videos": {
+   "query": "polar antarctic arctic documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "trail-running",
+  "name": "Trail running",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Kilian.jpg/500px-Kilian.jpg",
+  "terms": [
+   "trail running",
+   "ultra",
+   "utmb",
+   "fell running",
+   "ultramarathon",
+   "western states",
+   "mountain running",
+   "skyrunning"
+  ],
+  "news": {
+   "query": "trail running OR ultramarathon"
+  },
+  "videos": {
+   "query": "trail running ultramarathon",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "astrophotography",
+  "name": "Dark skies",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Orion_Belt.jpg/500px-Orion_Belt.jpg",
+  "terms": [
+   "dark sky",
+   "dark skies",
+   "astrophotography",
+   "milky way",
+   "night sky",
+   "aurora",
+   "star trails",
+   "telescope",
+   "bortle",
+   "meteor"
+  ],
+  "news": {
+   "query": "dark sky OR astrophotography OR aurora"
+  },
+  "videos": {
+   "query": "astrophotography night sky timelapse",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "boating",
+  "name": "Boats and the water",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Octopus-yacht.jpg/500px-Octopus-yacht.jpg",
+  "terms": [
+   "boat",
+   "boating",
+   "yacht",
+   "sailing holiday",
+   "houseboat",
+   "narrowboat"
+  ],
+  "news": {
+   "query": "boating OR yacht OR houseboat"
+  },
+  "videos": {
+   "query": "boating sailing adventure",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "dogs",
+  "name": "Dogs",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Huskiesatrest.jpg/500px-Huskiesatrest.jpg",
+  "terms": [
+   "dog",
+   "dogs",
+   "puppy",
+   "dog training",
+   "rescue dog",
+   "canine"
+  ],
+  "shows": {
+   "keywords": [
+    15162
+   ],
+   "genres": [
+    99,
+    10751
+   ]
+  },
+  "news": {
+   "query": "dogs OR dog training"
+  },
+  "videos": {
+   "query": "dog training behaviour",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "cats",
+  "name": "Cats",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Siam_lilacpoint.jpg/500px-Siam_lilacpoint.jpg",
+  "terms": [
+   "cat",
+   "cats",
+   "kitten",
+   "feline",
+   "cat behaviour",
+   "tabby",
+   "rescue cat",
+   "big cat"
+  ],
+  "shows": {
+   "keywords": [
+    977
+   ],
+   "genres": [
+    99,
+    10751
+   ]
+  },
+  "news": {
+   "query": "cats OR cat behaviour"
+  },
+  "videos": {
+   "query": "cat behaviour documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "horses",
+  "name": "Horses and riding",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Nokota_Horses_cropped.jpg/500px-Nokota_Horses_cropped.jpg",
+  "terms": [
+   "horse",
+   "horses",
+   "equestrian",
+   "dressage",
+   "showjumping",
+   "polo",
+   "pony",
+   "eventing"
+  ],
+  "shows": {
+   "keywords": [
+    2673
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "equestrian OR horse riding OR polo"
+  },
+  "videos": {
+   "query": "horse riding equestrian",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "farming",
+  "name": "Farming and rural life",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/PivotWithDrops.JPG/500px-PivotWithDrops.JPG",
+  "terms": [
+   "farming",
+   "farm",
+   "farmer",
+   "agriculture",
+   "harvest",
+   "crop",
+   "tractor",
+   "organic farming",
+   "dairy",
+   "rural life",
+   "smallholder"
+  ],
+  "shows": {
+   "keywords": [
+    4932
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "farming OR agriculture OR organic farming"
+  },
+  "videos": {
+   "query": "farming documentary rural life",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "walking",
+  "name": "Walking and slow travel",
+  "theme": "outdoors",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Women_walking_in_Hyderabad_street.jpg/500px-Women_walking_in_Hyderabad_street.jpg",
+  "terms": [
+   "walking",
+   "pilgrimage trail",
+   "camino",
+   "slow travel",
+   "rambling",
+   "long walk"
+  ],
+  "news": {
+   "query": "long distance walking OR Camino de Santiago OR slow travel"
+  },
+  "videos": {
+   "query": "long walk trail documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "streetwear",
+  "name": "Streetwear and sneakers",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Air_Jordan_1_Banned.jpg/500px-Air_Jordan_1_Banned.jpg",
+  "terms": [
+   "streetwear",
+   "sneakers",
+   "sneaker",
+   "nike",
+   "adidas",
+   "air jordan"
+  ],
+  "news": {
+   "query": "streetwear OR sneakers"
+  },
+  "videos": {
+   "query": "streetwear sneakers collection",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "menswear",
+  "name": "Menswear and tailoring",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Carolina_Herrera_AW14_12.jpg/500px-Carolina_Herrera_AW14_12.jpg",
+  "terms": [
+   "menswear",
+   "tailoring",
+   "savile row",
+   "bespoke",
+   "blazer",
+   "loafers",
+   "pitti uomo",
+   "sartorial"
+  ],
+  "news": {
+   "query": "menswear OR tailoring OR Pitti Uomo"
+  },
+  "videos": {
+   "query": "menswear tailoring style guide",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "womenswear",
+  "name": "Womenswear and couture",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Pierre_Balmain_and_Ruth_Ford%2C_photographed_by_Carl_Van_Vechten%2C_November_9%2C_1947.jpg/500px-Pierre_Balmain_and_Ruth_Ford%2C_photographed_by_Carl_Van_Vechten%2C_November_9%2C_1947.jpg",
+  "terms": [
+   "couture",
+   "womenswear",
+   "evening gown",
+   "atelier",
+   "dior",
+   "chanel",
+   "gucci",
+   "valentino",
+   "fashion house",
+   "runway"
+  ],
+  "news": {
+   "query": "haute couture OR womenswear"
+  },
+  "videos": {
+   "query": "haute couture atelier",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "african-fashion",
+  "name": "African fashion",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/KangaSiyu1.jpg/500px-KangaSiyu1.jpg",
+  "terms": [
+   "african fashion",
+   "ankara",
+   "kente",
+   "aso ebi",
+   "adire",
+   "lagos fashion week",
+   "dashiki",
+   "african print",
+   "agbada",
+   "gele"
+  ],
+  "news": {
+   "query": "African fashion OR Lagos Fashion Week OR Ankara"
+  },
+  "videos": {
+   "query": "African fashion week runway",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "indian-fashion",
+  "name": "Indian fashion and weaves",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Sari_on_mannequin_for_demo.jpg/500px-Sari_on_mannequin_for_demo.jpg",
+  "terms": [
+   "saree",
+   "sari",
+   "lehenga",
+   "sabyasachi",
+   "handloom",
+   "kanchipuram",
+   "banarasi",
+   "indian fashion",
+   "khadi",
+   "ikat",
+   "lakme fashion week"
+  ],
+  "news": {
+   "query": "saree OR handloom OR Indian fashion"
+  },
+  "videos": {
+   "query": "saree handloom weaving India",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "japanese-fashion",
+  "name": "Japanese and Korean fashion",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/JRE-Harajuku-Station-07.jpg/500px-JRE-Harajuku-Station-07.jpg",
+  "terms": [
+   "harajuku",
+   "comme des garcons",
+   "issey miyake",
+   "korean fashion",
+   "seoul fashion week",
+   "yohji yamamoto",
+   "kimono",
+   "tokyo fashion",
+   "k-fashion"
+  ],
+  "news": {
+   "query": "Tokyo fashion OR Seoul Fashion Week OR Comme des Garcons"
+  },
+  "videos": {
+   "query": "Japanese Korean fashion",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "vintage",
+  "name": "Vintage and thrift",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Vintage_shops%2C_Dublin.jpg/500px-Vintage_shops%2C_Dublin.jpg",
+  "terms": [
+   "vintage",
+   "thrift",
+   "second-hand",
+   "secondhand",
+   "pre-loved",
+   "flea market",
+   "upcycle",
+   "charity shop"
+  ],
+  "news": {
+   "query": "vintage fashion OR thrift OR second-hand"
+  },
+  "videos": {
+   "query": "vintage thrift haul",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "sustainable-fashion",
+  "name": "Sustainable fashion",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/WANNER_18.jpg/500px-WANNER_18.jpg",
+  "terms": [
+   "sustainable fashion",
+   "slow fashion",
+   "fast fashion",
+   "ethical fashion",
+   "organic cotton",
+   "circular fashion"
+  ],
+  "news": {
+   "query": "sustainable fashion OR slow fashion"
+  },
+  "videos": {
+   "query": "sustainable fashion documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "jewellery",
+  "name": "Jewellery and watches",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Pectoral_and_Necklace_of_Sithathoryunet_with_the_Name_of_Senwosret_II_MET_DT531.jpg/500px-Pectoral_and_Necklace_of_Sithathoryunet_with_the_Name_of_Senwosret_II_MET_DT531.jpg",
+  "terms": [
+   "jewellery",
+   "jewelry",
+   "gemstone",
+   "necklace"
+  ],
+  "news": {
+   "query": "jewellery OR watches OR horology"
+  },
+  "videos": {
+   "query": "jewellery watchmaking craft",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "beauty",
+  "name": "Beauty and skincare",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Cosmetics.JPG/500px-Cosmetics.JPG",
+  "terms": [
+   "beauty",
+   "skincare",
+   "makeup",
+   "cosmetics",
+   "dermatology",
+   "serum",
+   "fragrance",
+   "perfume"
+  ],
+  "news": {
+   "query": "beauty OR skincare OR makeup"
+  },
+  "videos": {
+   "query": "skincare makeup routine explained",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "hair-care",
+  "name": "Hair and grooming",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Old_Chinese_woman_with_elaborate_hair_style._John_Thomson._China%2C_1869._The_Wellcome_Collection%2C_London.jpg/500px-Old_Chinese_woman_with_elaborate_hair_style._John_Thomson._China%2C_1869._The_Wellcome_Collection%2C_London.jpg",
+  "terms": [
+   "hair",
+   "hairstyle",
+   "hairdresser",
+   "barber",
+   "braids",
+   "grooming",
+   "haircut",
+   "salon",
+   "locs",
+   "natural hair",
+   "beard"
+  ],
+  "news": {
+   "query": "hairstyle OR barber OR hair care"
+  },
+  "videos": {
+   "query": "hairstyle barber technique",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "textiles",
+  "name": "Textiles and craft",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Warp_in_Progress.jpg/500px-Warp_in_Progress.jpg",
+  "terms": [
+   "textile",
+   "weaving",
+   "loom",
+   "embroidery",
+   "dyeing",
+   "indigo",
+   "batik",
+   "fabric",
+   "knitting",
+   "quilt"
+  ],
+  "news": {
+   "query": "textiles OR weaving OR embroidery"
+  },
+  "videos": {
+   "query": "weaving embroidery craft textile",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "interiors",
+  "name": "Interiors and home",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/30th_Street_Station_concourse_looking_west_July_2026.jpeg/500px-30th_Street_Station_concourse_looking_west_July_2026.jpeg",
+  "terms": [
+   "interior design",
+   "interiors",
+   "home decor",
+   "decor",
+   "scandinavian",
+   "mid-century"
+  ],
+  "shows": {
+   "keywords": [
+    203925
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "interior design OR home decor"
+  },
+  "videos": {
+   "query": "interior design home tour",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "diy-home",
+  "name": "DIY and renovation",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Arthur_Rothstein%2C_Boy_building_a_model_airplane_as_girl_watches%2C_FSA_camp%2C_Robstown%2C_Texas%2C_1942.jpg/500px-Arthur_Rothstein%2C_Boy_building_a_model_airplane_as_girl_watches%2C_FSA_camp%2C_Robstown%2C_Texas%2C_1942.jpg",
+  "terms": [
+   "diy",
+   "renovation",
+   "restoration",
+   "woodworking",
+   "carpentry",
+   "home improvement"
+  ],
+  "shows": {
+   "keywords": [
+    197340
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "DIY OR home renovation OR woodworking"
+  },
+  "videos": {
+   "query": "diy renovation woodworking project",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "luxury",
+  "name": "Luxury and craftsmanship",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Foie_gras_with_sauternes.jpg/500px-Foie_gras_with_sauternes.jpg",
+  "terms": [
+   "luxury",
+   "maison",
+   "craftsmanship",
+   "atelier",
+   "hermes"
+  ],
+  "news": {
+   "query": "luxury craftsmanship OR heritage brand"
+  },
+  "videos": {
+   "query": "luxury craftsmanship atelier",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "wedding",
+  "name": "Weddings and celebrations",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Hindu_wedding_rituals_b_%28cropped%29.jpg/500px-Hindu_wedding_rituals_b_%28cropped%29.jpg",
+  "terms": [
+   "wedding",
+   "bride",
+   "groom",
+   "bridal",
+   "festival of colours",
+   "traditional wedding"
+  ],
+  "news": {
+   "query": "weddings OR bridal fashion"
+  },
+  "videos": {
+   "query": "traditional wedding ceremony around the world",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "tattoos",
+  "name": "Tattoo art",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Anchor_tattoo_and_sketch.jpg/500px-Anchor_tattoo_and_sketch.jpg",
+  "terms": [
+   "tattoo",
+   "tattooing",
+   "tattoo artist",
+   "body art",
+   "irezumi",
+   "piercing"
+  ],
+  "news": {
+   "query": "tattoo art OR tattooing"
+  },
+  "videos": {
+   "query": "tattoo artist documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "dance",
+  "name": "Dance",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Two_dancers.jpg/500px-Two_dancers.jpg",
+  "terms": [
+   "dance",
+   "dancer",
+   "choreography",
+   "ballet",
+   "contemporary dance",
+   "bharatanatyam",
+   "kathak",
+   "hip hop dance",
+   "flamenco",
+   "afrobeats dance"
+  ],
+  "shows": {
+   "keywords": [
+    1691
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "dance OR ballet OR choreography"
+  },
+  "videos": {
+   "query": "dance performance choreography",
+   "minMinutes": 5
+  }
+ },
+ {
+  "id": "ballet",
+  "name": "Ballet",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Edgar_Degas_-_La_Classe_de_danse.jpg/500px-Edgar_Degas_-_La_Classe_de_danse.jpg",
+  "terms": [
+   "ballet",
+   "ballerina",
+   "pointe",
+   "swan lake",
+   "nutcracker",
+   "royal ballet",
+   "bolshoi",
+   "pas de deux",
+   "corps de ballet"
+  ],
+  "shows": {
+   "keywords": [
+    10551
+   ],
+   "genres": [
+    10402
+   ]
+  },
+  "news": {
+   "query": "ballet OR ballerina"
+  },
+  "videos": {
+   "query": "ballet full performance",
+   "minMinutes": 10
+  }
+ },
+ {
+  "id": "indian-classical-dance",
+  "name": "Indian classical dance",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Stamp_of_Armenia_-_2018_-_Colnect_806145_-_Indian_Dance_Manipuri.jpeg/500px-Stamp_of_Armenia_-_2018_-_Colnect_806145_-_Indian_Dance_Manipuri.jpeg",
+  "terms": [
+   "bharatanatyam",
+   "kathak",
+   "kuchipudi",
+   "odissi",
+   "mohiniyattam",
+   "yakshagana",
+   "kathakali",
+   "classical dance",
+   "natyashastra",
+   "arangetram"
+  ],
+  "news": {
+   "query": "Bharatanatyam OR Kathak OR Yakshagana"
+  },
+  "videos": {
+   "query": "Indian classical dance performance",
+   "minMinutes": 5
+  }
+ },
+ {
+  "id": "theatre",
+  "name": "Theatre",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Bernhardt_Hamlet2.jpg/500px-Bernhardt_Hamlet2.jpg",
+  "terms": [
+   "theatre",
+   "theater",
+   "playwright",
+   "shakespeare",
+   "rsc",
+   "national theatre"
+  ],
+  "shows": {
+   "keywords": [
+    285695
+   ],
+   "genres": [
+    18
+   ]
+  },
+  "news": {
+   "query": "theatre OR playwright OR Shakespeare"
+  },
+  "videos": {
+   "query": "theatre performance full play",
+   "minMinutes": 10
+  }
+ },
+ {
+  "id": "anime",
+  "name": "Anime and manga",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/TV%E3%82%A2%E3%83%8B%E3%83%A1%E3%80%8C%E3%83%92%E3%83%AD%E3%82%A4%E3%83%B3%E3%81%9F%E3%82%8B%E3%82%82%E3%81%AE%EF%BC%81%EF%BD%9E%E5%AB%8C%E3%82%8F%E3%82%8C%E3%83%92%E3%83%AD%E3%82%A4%E3%83%B3%E3%81%A8%E5%86%85%E7%B7%92%E3%81%AE%E3%81%8A%E4%BB%95%E4%BA%8B%EF%BD%9E%E3%80%8D%E7%AC%AC2%E5%BC%BEPV_-_4%E6%9C%887%E6%97%A5%EF%BC%88%E6%9C%A8%EF%BC%89%E6%94%BE%E9%80%81%E9%96%8B%E5%A7%8B.webm/500px--TV%E3%82%A2%E3%83%8B%E3%83%A1%E3%80%8C%E3%83%92%E3%83%AD%E3%82%A4%E3%83%B3%E3%81%9F%E3%82%8B%E3%82%82%E3%81%AE%EF%BC%81%EF%BD%9E%E5%AB%8C%E3%82%8F%E3%82%8C%E3%83%92%E3%83%AD%E3%82%A4%E3%83%B3%E3%81%A8%E5%86%85%E7%B7%92%E3%81%AE%E3%81%8A%E4%BB%95%E4%BA%8B%EF%BD%9E%E3%80%8D%E7%AC%AC2%E5%BC%BEPV_-_4%E6%9C%887%E6%97%A5%EF%BC%88%E6%9C%A8%EF%BC%89%E6%94%BE%E9%80%81%E9%96%8B%E5%A7%8B.webm.jpg",
+  "terms": [
+   "anime",
+   "manga",
+   "studio ghibli",
+   "ghibli",
+   "miyazaki",
+   "otaku",
+   "shonen",
+   "crunchyroll",
+   "one piece",
+   "naruto",
+   "cosplay"
+  ],
+  "shows": {
+   "keywords": [
+    210024
+   ],
+   "genres": [
+    16
+   ]
+  },
+  "news": {
+   "query": "anime OR manga OR Studio Ghibli"
+  },
+  "videos": {
+   "query": "anime analysis review",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "comics",
+  "name": "Comics and graphic novels",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Little_Nemo_1906-08-19.jpg/500px-Little_Nemo_1906-08-19.jpg",
+  "terms": [
+   "comics",
+   "comic book",
+   "graphic novel",
+   "marvel",
+   "superhero",
+   "cartoonist",
+   "webtoon",
+   "amar chitra katha",
+   "illustrator"
+  ],
+  "shows": {
+   "keywords": [
+    9715
+   ],
+   "genres": [
+    16,
+    28
+   ]
+  },
+  "news": {
+   "query": "comics OR graphic novels OR Marvel"
+  },
+  "videos": {
+   "query": "comics graphic novel history",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "illustration",
+  "name": "Illustration and drawing",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Dolceacqua43_-_Artista_locale_mentre_dipinge_un_acquarello.jpg/500px-Dolceacqua43_-_Artista_locale_mentre_dipinge_un_acquarello.jpg",
+  "terms": [
+   "illustration",
+   "drawing",
+   "illustrator",
+   "watercolour",
+   "watercolor",
+   "calligraphy",
+   "ink drawing",
+   "sketchbook",
+   "painting tutorial"
+  ],
+  "news": {
+   "query": "illustration OR calligraphy OR drawing"
+  },
+  "videos": {
+   "query": "drawing illustration tutorial",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "ceramics",
+  "name": "Ceramics and pottery",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Traditional_pottery_in_Nigeria_%28Ikpu_ite%29_19.jpg/500px-Traditional_pottery_in_Nigeria_%28Ikpu_ite%29_19.jpg",
+  "terms": [
+   "pottery",
+   "ceramics",
+   "ceramic",
+   "potter",
+   "kiln",
+   "glaze",
+   "wheel throwing",
+   "stoneware",
+   "porcelain",
+   "raku",
+   "clay pottery",
+   "pottery clay"
+  ],
+  "shows": {
+   "keywords": [
+    1553
+   ],
+   "genres": []
+  },
+  "news": {
+   "query": "pottery OR ceramics OR kiln"
+  },
+  "videos": {
+   "query": "pottery ceramics making",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "watch-making",
+  "name": "Watchmaking and horology",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Rolex_Oyster_Perpetual_with_a_%22Jubliee%22_dial.jpg/500px-Rolex_Oyster_Perpetual_with_a_%22Jubliee%22_dial.jpg",
+  "terms": [
+   "watchmaking",
+   "horology",
+   "movement",
+   "tourbillon",
+   "seiko",
+   "patek philippe",
+   "chronograph",
+   "clockmaker",
+   "complication",
+   "watches"
+  ],
+  "news": {
+   "query": "watchmaking OR horology OR Seiko"
+  },
+  "videos": {
+   "query": "watchmaking craft horology",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "perfume",
+  "name": "Fragrance",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Perfume_Organ%2C_Grasse.jpg/500px-Perfume_Organ%2C_Grasse.jpg",
+  "terms": [
+   "perfume",
+   "fragrance",
+   "perfumer",
+   "oud",
+   "attar",
+   "eau de parfum",
+   "grasse",
+   "cologne"
+  ],
+  "news": {
+   "query": "perfume OR fragrance OR attar"
+  },
+  "videos": {
+   "query": "perfumer fragrance making",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "modest-fashion",
+  "name": "Modest fashion",
+  "theme": "style",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Orthodox_pilgrim.jpg/500px-Orthodox_pilgrim.jpg",
+  "terms": [
+   "modest fashion",
+   "abaya",
+   "hijab",
+   "kaftan",
+   "jilbab",
+   "modest wear",
+   "dubai fashion",
+   "lengha"
+  ],
+  "news": {
+   "query": "modest fashion OR abaya OR hijab fashion"
+  },
+  "videos": {
+   "query": "modest fashion runway",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "christian-worship",
+  "name": "Christian worship and teaching",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Church_of_the_Holy_Sepulchre_by_Gerd_Eichmann_%28cropped%29.jpg/500px-Church_of_the_Holy_Sepulchre_by_Gerd_Eichmann_%28cropped%29.jpg",
+  "terms": [
+   "church",
+   "christian",
+   "sermon",
+   "bible",
+   "pastor",
+   "worship",
+   "gospel",
+   "hymn",
+   "christianity",
+   "jesus"
+  ],
+  "shows": {
+   "keywords": [
+    186
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "Christianity OR church OR Bible"
+  },
+  "videos": {
+   "query": "sermon Christian teaching",
+   "minMinutes": 15
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "church service live"
+  }
+ },
+ {
+  "id": "catholic",
+  "name": "Catholic and the Vatican",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Saint_Peter%27s_Basilica_facade%2C_Rome%2C_Italy.jpg/500px-Saint_Peter%27s_Basilica_facade%2C_Rome%2C_Italy.jpg",
+  "terms": [
+   "catholic",
+   "pope",
+   "vatican",
+   "rosary",
+   "basilica",
+   "eucharist",
+   "pontiff",
+   "holy mass"
+  ],
+  "news": {
+   "query": "Vatican OR Pope OR Catholic Church"
+  },
+  "videos": {
+   "query": "Catholic mass Vatican",
+   "minMinutes": 15
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "Vatican live mass"
+  }
+ },
+ {
+  "id": "pentecostal",
+  "name": "Pentecostal and charismatic",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Pentecost_icon.jpg/500px-Pentecost_icon.jpg",
+  "terms": [
+   "pentecostal",
+   "charismatic",
+   "anointing",
+   "miracle service",
+   "winners chapel",
+   "rccg",
+   "deliverance",
+   "holy spirit"
+  ],
+  "news": {
+   "query": "Pentecostal OR revival OR RCCG"
+  },
+  "videos": {
+   "query": "Pentecostal worship service",
+   "minMinutes": 15
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "Pentecostal worship live"
+  }
+ },
+ {
+  "id": "orthodox",
+  "name": "Orthodox Christianity",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/St._George%27s_Cathedral_2022_%286%29.jpg/500px-St._George%27s_Cathedral_2022_%286%29.jpg",
+  "terms": [
+   "orthodox",
+   "patriarch",
+   "liturgy",
+   "coptic",
+   "ethiopian orthodox",
+   "tewahedo",
+   "monastery",
+   "athos",
+   "byzantine"
+  ],
+  "news": {
+   "query": "Orthodox Church OR Coptic OR Ethiopian Orthodox"
+  },
+  "videos": {
+   "query": "Orthodox liturgy chant",
+   "minMinutes": 15
+  }
+ },
+ {
+  "id": "islam",
+  "name": "Islam and the Quran",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/The_Kaaba_during_Hajj_-_edited.jpg/500px-The_Kaaba_during_Hajj_-_edited.jpg",
+  "terms": [
+   "islam",
+   "islamic",
+   "quran",
+   "muslim",
+   "ramadan",
+   "hajj",
+   "mosque",
+   "imam",
+   "sunnah",
+   "eid",
+   "sharia"
+  ],
+  "shows": {
+   "keywords": [
+    187
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "Islam OR Ramadan OR Hajj"
+  },
+  "videos": {
+   "query": "Quran recitation Islamic lecture",
+   "minMinutes": 10
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "Makkah live"
+  }
+ },
+ {
+  "id": "quran-recitation",
+  "name": "Quran recitation",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Quran-Mus%27haf_Al_Tajweed.jpg/500px-Quran-Mus%27haf_Al_Tajweed.jpg",
+  "terms": [
+   "quran",
+   "tilawat",
+   "recitation",
+   "qari",
+   "tajweed",
+   "surah",
+   "makkah",
+   "madinah",
+   "taraweeh",
+   "hafiz"
+  ],
+  "news": {
+   "query": "Quran recitation OR Taraweeh"
+  },
+  "videos": {
+   "query": "Quran recitation beautiful voice",
+   "minMinutes": 10
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "Makkah Madinah live"
+  }
+ },
+ {
+  "id": "sufism",
+  "name": "Sufism",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Mainard-1890-Livre_d%27Or_des_voyages-Asie-23.jpg/500px-Mainard-1890-Livre_d%27Or_des_voyages-Asie-23.jpg",
+  "terms": [
+   "sufi",
+   "sufism",
+   "dervish",
+   "rumi",
+   "whirling",
+   "dargah",
+   "zikr",
+   "khanqah",
+   "mystic",
+   "tariqa"
+  ],
+  "news": {
+   "query": "Sufism OR Rumi OR dargah"
+  },
+  "videos": {
+   "query": "Sufi poetry whirling dervishes",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "hindu-devotion",
+  "name": "Hindu devotion and temples",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Icon-religion.svg/500px-Icon-religion.svg.png",
+  "terms": [
+   "hindu",
+   "hinduism",
+   "temple",
+   "aarti",
+   "bhajan",
+   "puja",
+   "darshan",
+   "diwali",
+   "kumbh",
+   "vedic",
+   "mantra",
+   "ganesh"
+  ],
+  "shows": {
+   "keywords": [
+    6194
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "Hindu temple OR Diwali OR Kumbh Mela"
+  },
+  "videos": {
+   "query": "Hindu temple aarti bhajan",
+   "minMinutes": 10
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "temple live darshan"
+  }
+ },
+ {
+  "id": "vedanta",
+  "name": "Vedanta and the Upanishads",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Swami_Vivekananda-1893-09-signed.jpg/500px-Swami_Vivekananda-1893-09-signed.jpg",
+  "terms": [
+   "vedanta",
+   "upanishad",
+   "bhagavad gita",
+   "gita",
+   "advaita",
+   "shankaracharya",
+   "vivekananda",
+   "ramana maharshi",
+   "vedic",
+   "self-inquiry"
+  ],
+  "news": {
+   "query": "Vedanta OR Bhagavad Gita OR Upanishads"
+  },
+  "videos": {
+   "query": "Bhagavad Gita Vedanta talk",
+   "minMinutes": 15
+  }
+ },
+ {
+  "id": "buddhism",
+  "name": "Buddhism",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Kamakura_Budda_Daibutsu_front_1885.jpg/500px-Kamakura_Budda_Daibutsu_front_1885.jpg",
+  "terms": [
+   "buddhism",
+   "buddhist",
+   "dharma",
+   "monk",
+   "zen",
+   "dalai lama",
+   "mindfulness",
+   "theravada",
+   "vipassana"
+  ],
+  "shows": {
+   "keywords": [
+    188
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "Buddhism OR Dalai Lama OR Zen"
+  },
+  "videos": {
+   "query": "Buddhism dharma talk",
+   "minMinutes": 10
+  }
+ },
+ {
+  "id": "sikhism",
+  "name": "Sikhism",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Hamandir_Sahib_%28Golden_Temple%29.jpg/500px-Hamandir_Sahib_%28Golden_Temple%29.jpg",
+  "terms": [
+   "sikh",
+   "sikhism",
+   "gurdwara",
+   "guru nanak",
+   "kirtan",
+   "golden temple",
+   "harmandir sahib",
+   "langar",
+   "gurbani",
+   "khalsa"
+  ],
+  "news": {
+   "query": "Sikhism OR Golden Temple OR kirtan"
+  },
+  "videos": {
+   "query": "Gurbani kirtan Golden Temple",
+   "minMinutes": 10
+  },
+  "live": {
+   "kind": "ytlive",
+   "query": "Golden Temple live kirtan"
+  }
+ },
+ {
+  "id": "jainism",
+  "name": "Jainism",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Palitana.jpg/500px-Palitana.jpg",
+  "terms": [
+   "jain",
+   "jainism",
+   "mahavira",
+   "ahimsa",
+   "tirthankara",
+   "paryushan",
+   "shravanabelagola",
+   "digambara",
+   "svetambara",
+   "jain temple"
+  ],
+  "news": {
+   "query": "Jainism OR Mahavira OR Shravanabelagola"
+  },
+  "videos": {
+   "query": "Jainism ahimsa documentary",
+   "minMinutes": 10
+  }
+ },
+ {
+  "id": "judaism",
+  "name": "Judaism",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Judaica.jpg/500px-Judaica.jpg",
+  "terms": [
+   "jewish",
+   "judaism",
+   "torah",
+   "synagogue",
+   "rabbi",
+   "shabbat",
+   "passover",
+   "hanukkah",
+   "talmud",
+   "kosher",
+   "yom kippur"
+  ],
+  "shows": {
+   "keywords": [
+    11704
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "Judaism OR Jewish culture OR Passover"
+  },
+  "videos": {
+   "query": "Judaism Torah explained",
+   "minMinutes": 10
+  }
+ },
+ {
+  "id": "world-faiths",
+  "name": "World faiths",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Icon-religion.svg/500px-Icon-religion.svg.png",
+  "terms": [
+   "religion",
+   "comparative religion",
+   "interfaith",
+   "world faiths",
+   "world religions"
+  ],
+  "shows": {
+   "keywords": [
+    11001
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "world religions OR interfaith"
+  },
+  "videos": {
+   "query": "world religions documentary",
+   "minMinutes": 15
+  }
+ },
+ {
+  "id": "indigenous-spirituality",
+  "name": "Indigenous spirituality",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Khagdaev1.JPG/500px-Khagdaev1.JPG",
+  "terms": [
+   "indigenous spirituality",
+   "indigenous religion",
+   "traditional religion",
+   "shaman",
+   "orisha",
+   "yoruba religion",
+   "animism",
+   "dreamtime",
+   "sacred land",
+   "ifa divination"
+  ],
+  "news": {
+   "query": "Indigenous spirituality OR Yoruba religion OR shamanism"
+  },
+  "videos": {
+   "query": "indigenous spirituality ceremonies documentary",
+   "minMinutes": 10
+  }
+ },
+ {
+  "id": "shinto-taoism",
+  "name": "Shinto and Taoism",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Itsukushima_Gate.jpg/500px-Itsukushima_Gate.jpg",
+  "terms": [
+   "shinto",
+   "taoism",
+   "tao",
+   "shrine",
+   "kami",
+   "daoist",
+   "torii",
+   "tao te ching",
+   "lao tzu",
+   "feng shui"
+  ],
+  "news": {
+   "query": "Shinto OR Taoism OR Daoist"
+  },
+  "videos": {
+   "query": "Shinto shrine Taoism documentary",
+   "minMinutes": 8
+  }
+ },
+ {
+  "id": "meditation",
+  "name": "Meditation and mindfulness",
+  "theme": "faith",
+  "also": [
+   "outdoors"
+  ],
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Padmasana_-_Yoga_Class_-_Chamrail_-_Howrah_2013-08-24_2027.JPG/500px-Padmasana_-_Yoga_Class_-_Chamrail_-_Howrah_2013-08-24_2027.JPG",
+  "terms": [
+   "meditation",
+   "mindfulness",
+   "breathwork",
+   "vipassana",
+   "guided meditation",
+   "sleep meditation",
+   "inner peace"
+  ],
+  "shows": {
+   "keywords": [
+    1532
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "meditation OR mindfulness"
+  },
+  "videos": {
+   "query": "guided meditation",
+   "minMinutes": 10
+  }
+ },
+ {
+  "id": "sacred-music",
+  "name": "Sacred and devotional music",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Psautier_de_Paris%2C_MSS._gr._139%2C_fol._1v.jpg/500px-Psautier_de_Paris%2C_MSS._gr._139%2C_fol._1v.jpg",
+  "terms": [
+   "sacred music",
+   "devotional",
+   "hymns",
+   "chant",
+   "gregorian",
+   "kirtan",
+   "nasheed",
+   "bhajan",
+   "qawwali",
+   "gospel",
+   "worship songs"
+  ],
+  "news": {
+   "query": "sacred music OR devotional music OR gregorian chant"
+  },
+  "videos": {
+   "query": "sacred devotional music chant",
+   "minMinutes": 4
+  },
+  "live": {
+   "kind": "radio",
+   "tag": "spiritual"
+  }
+ },
+ {
+  "id": "pilgrimage",
+  "name": "Pilgrimage and holy places",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Gheorghe_Tattarescu_-_Pelerin.jpg/500px-Gheorghe_Tattarescu_-_Pelerin.jpg",
+  "terms": [
+   "pilgrimage",
+   "pilgrim",
+   "hajj",
+   "kumbh",
+   "camino",
+   "varanasi",
+   "jerusalem",
+   "lourdes",
+   "mecca",
+   "holy city",
+   "kailash"
+  ],
+  "news": {
+   "query": "pilgrimage OR Camino OR Hajj OR Kumbh Mela"
+  },
+  "videos": {
+   "query": "pilgrimage documentary holy places",
+   "minMinutes": 10
+  }
+ },
+ {
+  "id": "festivals",
+  "name": "Cultural festivals",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Holi_Festival_of_Colors_Utah%2C_United_States_2013.jpg/500px-Holi_Festival_of_Colors_Utah%2C_United_States_2013.jpg",
+  "terms": [
+   "diwali",
+   "eid",
+   "christmas",
+   "holi",
+   "lunar new year",
+   "carnival",
+   "onam",
+   "ugadi",
+   "dussehra",
+   "navratri",
+   "easter",
+   "cultural festival"
+  ],
+  "shows": {
+   "keywords": [
+    160213
+   ],
+   "genres": [
+    99
+   ]
+  },
+  "news": {
+   "query": "festivals OR Diwali OR Eid OR carnival"
+  },
+  "videos": {
+   "query": "festival celebrations around the world",
+   "minMinutes": 6
+  }
+ },
+ {
+  "id": "faith-ethics",
+  "name": "Wisdom and ethics",
+  "theme": "faith",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Confucius%2C_fresco_from_a_Western_Han_tomb_of_Dongping_County%2C_Shandong_province%2C_China_%28cropped%29.jpg/500px-Confucius%2C_fresco_from_a_Western_Han_tomb_of_Dongping_County%2C_Shandong_province%2C_China_%28cropped%29.jpg",
+  "terms": [
+   "wisdom",
+   "ethics",
+   "virtue",
+   "compassion",
+   "stoic",
+   "proverb",
+   "parable",
+   "philosophy of life"
+  ],
+  "news": {
+   "query": "ethics OR wisdom teachings OR stoicism"
+  },
+  "videos": {
+   "query": "wisdom teachings talk",
+   "minMinutes": 10
+  }
+ }
+]

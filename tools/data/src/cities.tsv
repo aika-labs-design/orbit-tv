@@ -1,0 +1,994 @@
+code	name	lat	lon	tz
+AD	Andorra la Vella	42.51	1.52	Europe/Andorra
+AD	les Escaldes	42.51	1.53	Europe/Andorra
+AE	Dubai	25.08	55.31	Asia/Dubai
+AE	Abu Dhabi	24.45	54.4	Asia/Dubai
+AE	Sharjah	25.33	55.41	Asia/Dubai
+AE	Al Ain City	24.19	55.76	Asia/Dubai
+AE	Ajman	25.4	55.48	Asia/Dubai
+AF	Kabul	34.53	69.17	Asia/Kabul
+AF	Herat	34.35	62.2	Asia/Kabul
+AF	Mazar-e Sharif	36.71	67.11	Asia/Kabul
+AF	Kandahar	31.61	65.71	Asia/Kabul
+AF	Jalalabad	34.43	70.45	Asia/Kabul
+AG	Saint John's	17.12	-61.84	America/Antigua
+AI	The Valley	18.22	-63.06	America/Anguilla
+AL	Tirana	41.33	19.82	Europe/Tirane
+AL	Durres	41.32	19.45	Europe/Tirane
+AL	Vlore	40.47	19.48	Europe/Tirane
+AL	Elbasan	41.11	20.08	Europe/Tirane
+AL	Shkoder	42.07	19.51	Europe/Tirane
+AM	Yerevan	40.18	44.51	Asia/Yerevan
+AM	Malatia-Sebastia	40.17	44.45	Asia/Yerevan
+AM	Shengavit	40.16	44.48	Asia/Yerevan
+AM	Nor Nork	40.2	44.57	Asia/Yerevan
+AM	Kentron	40.18	44.51	Asia/Yerevan
+AO	Luanda	-8.84	13.23	Africa/Luanda
+AO	Mulenvos	-8.87	13.33	Africa/Luanda
+AO	Viana	-8.91	13.37	Africa/Luanda
+AO	Kikolo	-8.78	13.33	Africa/Luanda
+AO	Maianga	-8.85	13.24	Africa/Luanda
+AR	Buenos Aires	-34.61	-58.38	America/Argentina/Buenos_Aires
+AR	Cordoba	-31.41	-64.19	America/Argentina/Cordoba
+AR	Rosario	-32.95	-60.64	America/Argentina/Cordoba
+AR	Mar del Plata	-38.0	-57.56	America/Argentina/Buenos_Aires
+AR	San Miguel de Tucuman	-26.82	-65.21	America/Argentina/Tucuman
+AS	Pago Pago	-14.28	-170.7	Pacific/Pago_Pago
+AT	Vienna	48.21	16.37	Europe/Vienna
+AT	Graz	47.07	15.44	Europe/Vienna
+AT	Linz	48.31	14.29	Europe/Vienna
+AT	Favoriten	48.16	16.38	Europe/Vienna
+AT	Donaustadt	48.23	16.46	Europe/Vienna
+AU	Sydney	-33.87	151.21	Australia/Sydney
+AU	Melbourne	-37.81	144.96	Australia/Melbourne
+AU	Brisbane	-27.47	153.03	Australia/Brisbane
+AU	Perth	-31.95	115.86	Australia/Perth
+AU	Adelaide	-34.93	138.6	Australia/Adelaide
+AU	Canberra	-35.28	149.13	Australia/Sydney
+AW	Oranjestad	12.52	-70.03	America/Aruba
+AW	Noord	12.57	-70.03	America/Aruba
+AW	Tanki Leendert	12.54	-70.02	America/Aruba
+AW	Santa Cruz	12.51	-69.98	America/Aruba
+AX	Mariehamn	60.1	19.93	Europe/Mariehamn
+AZ	Baku	40.38	49.89	Asia/Baku
+AZ	Sumgayit	40.59	49.67	Asia/Baku
+AZ	Ganja	40.68	46.36	Asia/Baku
+AZ	Khirdalan	40.45	49.76	Asia/Baku
+AZ	Yevlakh	40.62	47.15	Asia/Baku
+BA	Sarajevo	43.85	18.36	Europe/Sarajevo
+BA	Banja Luka	44.78	17.21	Europe/Sarajevo
+BA	Zenica	44.2	17.9	Europe/Sarajevo
+BA	Tuzla	44.54	18.67	Europe/Sarajevo
+BA	Mostar	43.34	17.81	Europe/Sarajevo
+BB	Bridgetown	13.11	-59.62	America/Barbados
+BD	Dhaka	23.71	90.41	Asia/Dhaka
+BD	Chattogram	22.34	91.83	Asia/Dhaka
+BD	Gazipur	24.0	90.42	Asia/Dhaka
+BD	Khulna	22.81	89.56	Asia/Dhaka
+BD	Rangpur	25.75	89.25	Asia/Dhaka
+BE	Brussels	50.85	4.35	Europe/Brussels
+BE	Antwerp	51.22	4.4	Europe/Brussels
+BE	Gent	51.05	3.72	Europe/Brussels
+BE	Charleroi	50.41	4.44	Europe/Brussels
+BE	Liege	50.63	5.57	Europe/Brussels
+BF	Ouagadougou	12.37	-1.53	Africa/Ouagadougou
+BF	Bobo-Dioulasso	11.18	-4.29	Africa/Ouagadougou
+BF	Koudougou	12.25	-2.37	Africa/Ouagadougou
+BF	Saaba	12.37	-1.41	Africa/Ouagadougou
+BF	Ouahigouya	13.58	-2.42	Africa/Ouagadougou
+BG	Sofia	42.7	23.32	Europe/Sofia
+BG	Plovdiv	42.15	24.75	Europe/Sofia
+BG	Varna	43.22	27.91	Europe/Sofia
+BG	Burgas	42.51	27.47	Europe/Sofia
+BG	Stara Zagora	42.43	25.64	Europe/Sofia
+BH	Al Muharraq	26.26	50.61	Asia/Bahrain
+BH	Manama	26.23	50.59	Asia/Bahrain
+BH	Madinat Hamad	26.12	50.51	Asia/Bahrain
+BH	Ar Rifa'	26.13	50.55	Asia/Bahrain
+BH	Sitrah	26.15	50.62	Asia/Bahrain
+BI	Bujumbura	-3.38	29.36	Africa/Bujumbura
+BI	Gitega	-3.43	29.92	Africa/Bujumbura
+BI	Ngozi	-2.91	29.83	Africa/Bujumbura
+BI	Mpanda	-3.17	29.4	Africa/Bujumbura
+BI	Rumonge	-3.97	29.44	Africa/Bujumbura
+BJ	Cotonou	6.37	2.42	Africa/Porto-Novo
+BJ	Abomey-Calavi	6.45	2.36	Africa/Porto-Novo
+BJ	Porto-Novo	6.5	2.6	Africa/Porto-Novo
+BJ	Parakou	9.34	2.63	Africa/Porto-Novo
+BJ	Godome	6.39	2.35	Africa/Porto-Novo
+BL	Gustavia	17.9	-62.85	America/St_Barthelemy
+BM	Hamilton	32.29	-64.78	Atlantic/Bermuda
+BN	Bandar Seri Begawan	4.89	114.94	Asia/Brunei
+BN	Sengkurong	4.88	114.83	Asia/Brunei
+BN	Mentiri	4.97	115.02	Asia/Brunei
+BN	Kuala Belait	4.58	114.23	Asia/Brunei
+BN	Tutong	4.8	114.65	Asia/Brunei
+BO	La Paz	-16.5	-68.15	America/La_Paz
+BO	Santa Cruz de la Sierra	-17.79	-63.18	America/La_Paz
+BO	Cochabamba	-17.38	-66.16	America/La_Paz
+BO	Sucre	-19.03	-65.26	America/La_Paz
+BO	Oruro	-17.97	-67.09	America/La_Paz
+BQ	Kralendijk	12.15	-68.27	America/Kralendijk
+BR	Sao Paulo	-23.55	-46.64	America/Sao_Paulo
+BR	Rio de Janeiro	-22.91	-43.18	America/Sao_Paulo
+BR	Belo Horizonte	-19.92	-43.94	America/Sao_Paulo
+BR	Salvador	-12.98	-38.49	America/Bahia
+BR	Fortaleza	-3.72	-38.54	America/Fortaleza
+BR	Brasilia	-15.78	-47.93	America/Sao_Paulo
+BS	Nassau	25.06	-77.34	America/Nassau
+BS	Lucaya	26.53	-78.67	America/Nassau
+BS	Freeport	26.53	-78.7	America/Nassau
+BS	Killarney	25.05	-77.42	America/Nassau
+BT	Thimphu	27.47	89.64	Asia/Thimphu
+BT	Phuntsholing	26.85	89.39	Asia/Thimphu
+BT	Tsirang	27.02	90.12	Asia/Thimphu
+BT	Punakha	27.59	89.88	Asia/Thimphu
+BW	Gaborone	-24.65	25.91	Africa/Gaborone
+BW	Francistown	-21.17	27.51	Africa/Gaborone
+BW	Mogoditshane	-24.63	25.87	Africa/Gaborone
+BW	Maun	-19.98	23.42	Africa/Gaborone
+BW	Molepolole	-24.41	25.5	Africa/Gaborone
+BY	Minsk	53.9	27.57	Europe/Minsk
+BY	Homyel'	52.43	30.98	Europe/Minsk
+BY	Hrodna	53.68	23.83	Europe/Minsk
+BY	Vitebsk	55.19	30.2	Europe/Minsk
+BY	Mahilyow	53.91	30.34	Europe/Minsk
+BZ	Belize City	17.5	-88.2	America/Belize
+BZ	San Ignacio	17.16	-89.07	America/Belize
+BZ	San Pedro	17.92	-87.97	America/Belize
+BZ	Orange Walk	18.08	-88.56	America/Belize
+BZ	Belmopan	17.25	-88.76	America/Belize
+CA	Toronto	43.71	-79.4	America/Toronto
+CA	Montreal	45.51	-73.59	America/Toronto
+CA	Calgary	51.05	-114.09	America/Edmonton
+CA	Ottawa	45.41	-75.7	America/Toronto
+CA	Edmonton	53.55	-113.47	America/Edmonton
+CC	West Island	-12.16	96.82	Indian/Cocos
+CD	Kinshasa	-4.33	15.31	Africa/Kinshasa
+CD	Lubumbashi	-11.66	27.48	Africa/Lubumbashi
+CD	Mbuji-Mayi	-6.14	23.59	Africa/Lubumbashi
+CD	Kisangani	0.52	25.19	Africa/Lubumbashi
+CD	Kananga	-5.9	22.42	Africa/Lubumbashi
+CF	Bangui	4.36	18.55	Africa/Bangui
+CF	Bimbo	4.26	18.42	Africa/Bangui
+CF	Begoua	4.45	18.53	Africa/Bangui
+CF	Carnot	4.94	15.88	Africa/Bangui
+CF	Berberati	4.26	15.79	Africa/Bangui
+CG	Brazzaville	-4.27	15.28	Africa/Brazzaville
+CG	Pointe-Noire	-4.78	11.86	Africa/Brazzaville
+CG	Dolisie	-4.2	12.67	Africa/Brazzaville
+CG	Nkayi	-4.18	13.29	Africa/Brazzaville
+CG	Kayes	-4.2	13.29	Africa/Brazzaville
+CH	Zuerich	47.37	8.55	Europe/Zurich
+CH	Geneva	46.2	6.15	Europe/Zurich
+CH	Basel	47.56	7.57	Europe/Zurich
+CH	Lausanne	46.52	6.63	Europe/Zurich
+CH	Bern	46.95	7.45	Europe/Zurich
+CI	Abidjan	5.35	-4.0	Africa/Abidjan
+CI	Abobo	5.42	-4.02	Africa/Abidjan
+CI	Bouake	7.69	-5.03	Africa/Abidjan
+CI	Korhogo	9.46	-5.63	Africa/Abidjan
+CI	Daloa	6.88	-6.45	Africa/Abidjan
+CI	Yamoussoukro	6.82	-5.28	Africa/Abidjan
+CK	Avarua	-21.21	-159.78	Pacific/Rarotonga
+CL	Santiago	-33.46	-70.65	America/Santiago
+CL	Puente Alto	-33.61	-70.58	America/Santiago
+CL	Maipu	-33.51	-70.77	America/Santiago
+CL	Antofagasta	-23.65	-70.4	America/Santiago
+CL	Vina del Mar	-33.02	-71.55	America/Santiago
+CM	Douala	4.05	9.7	Africa/Douala
+CM	Yaounde	3.87	11.52	Africa/Douala
+CM	Bamenda	5.96	10.15	Africa/Douala
+CM	Bafoussam	5.48	10.42	Africa/Douala
+CM	Maroua	10.59	14.32	Africa/Douala
+CN	Shanghai	31.22	121.46	Asia/Shanghai
+CN	Chongqing	29.56	106.56	Asia/Shanghai
+CN	Chengdu	30.67	104.07	Asia/Shanghai
+CN	Beijing	39.91	116.4	Asia/Shanghai
+CN	Guangzhou	23.12	113.25	Asia/Shanghai
+CO	Bogota	4.61	-74.08	America/Bogota
+CO	Cali	3.43	-76.52	America/Bogota
+CO	Medellin	6.25	-75.57	America/Bogota
+CO	Barranquilla	10.97	-74.78	America/Bogota
+CO	Kennedy	4.62	-74.15	America/Bogota
+CR	San Jose	9.93	-84.08	America/Costa_Rica
+CR	Limon	9.99	-83.04	America/Costa_Rica
+CR	San Francisco	9.99	-84.13	America/Costa_Rica
+CR	Alajuela	10.02	-84.21	America/Costa_Rica
+CR	Liberia	10.64	-85.44	America/Costa_Rica
+CU	Havana	23.13	-82.38	America/Havana
+CU	Santiago de Cuba	20.02	-75.82	America/Havana
+CU	Camagueey	21.38	-77.92	America/Havana
+CU	Holguin	20.89	-76.26	America/Havana
+CU	Guantanamo	20.14	-75.21	America/Havana
+CV	Praia	14.93	-23.51	Atlantic/Cape_Verde
+CV	Mindelo	16.89	-24.98	Atlantic/Cape_Verde
+CV	Espargos	16.76	-22.94	Atlantic/Cape_Verde
+CV	Assomada	15.1	-23.68	Atlantic/Cape_Verde
+CW	Willemstad	12.12	-68.89	America/Curacao
+CW	Bandariba	12.09	-68.83	America/Curacao
+CX	Flying Fish Cove	-10.42	105.68	Indian/Christmas
+CY	Nicosia	35.17	33.35	Asia/Nicosia
+CY	Limassol	34.68	33.04	Asia/Nicosia
+CY	Larnaca	34.92	33.63	Asia/Nicosia
+CY	Strovolos	35.15	33.33	Asia/Nicosia
+CY	Famagusta	35.12	33.94	Asia/Famagusta
+CZ	Prague	50.09	14.42	Europe/Prague
+CZ	Brno	49.2	16.61	Europe/Prague
+CZ	Ostrava	49.83	18.28	Europe/Prague
+CZ	Pilsen	49.75	13.38	Europe/Prague
+CZ	Liberec	50.77	15.06	Europe/Prague
+DE	Berlin	52.52	13.41	Europe/Berlin
+DE	Hamburg	53.55	9.99	Europe/Berlin
+DE	Munich	48.14	11.58	Europe/Berlin
+DE	Koeln	50.93	6.95	Europe/Berlin
+DE	Frankfurt am Main	50.12	8.68	Europe/Berlin
+DJ	Djibouti	11.59	43.15	Africa/Djibouti
+DJ	Balbala	11.56	43.11	Africa/Djibouti
+DJ	Ali Sabih	11.16	42.71	Africa/Djibouti
+DJ	Dikhil	11.1	42.37	Africa/Djibouti
+DJ	Tadjoura	11.79	42.88	Africa/Djibouti
+DK	Copenhagen	55.68	12.57	Europe/Copenhagen
+DK	Arhus	56.16	10.21	Europe/Copenhagen
+DK	Odense	55.4	10.39	Europe/Copenhagen
+DK	Aalborg	57.05	9.92	Europe/Copenhagen
+DK	Frederiksberg	55.68	12.53	Europe/Copenhagen
+DM	Roseau	15.3	-61.39	America/Dominica
+DO	Santo Domingo	18.47	-69.89	America/Santo_Domingo
+DO	Santiago de los Caballeros	19.45	-70.69	America/Santo_Domingo
+DO	Santo Domingo Oeste	18.5	-70.0	America/Santo_Domingo
+DO	Santo Domingo Este	18.49	-69.85	America/Santo_Domingo
+DO	San Pedro de Macoris	18.45	-69.31	America/Santo_Domingo
+DZ	Algiers	36.73	3.09	Africa/Algiers
+DZ	Oran	35.7	-0.64	Africa/Algiers
+DZ	Constantine	36.37	6.61	Africa/Algiers
+DZ	Annaba	36.9	7.77	Africa/Algiers
+DZ	Blida	36.47	2.83	Africa/Algiers
+EC	Quito	-0.23	-78.52	America/Guayaquil
+EC	Guayaquil	-2.2	-79.89	America/Guayaquil
+EC	Cuenca	-2.9	-79.0	America/Guayaquil
+EC	Santo Domingo de los Colorados	-0.25	-79.18	America/Guayaquil
+EC	Ambato	-1.25	-78.62	America/Guayaquil
+EE	Tallinn	59.44	24.75	Europe/Tallinn
+EE	Lasnamaee	59.43	24.86	Europe/Tallinn
+EE	Tartu	58.38	26.73	Europe/Tallinn
+EE	Mustamaee	59.4	24.68	Europe/Tallinn
+EE	Kesklinn	59.44	24.76	Europe/Tallinn
+EG	Cairo	30.06	31.25	Africa/Cairo
+EG	Alexandria	31.2	29.92	Africa/Cairo
+EG	Giza	30.01	31.21	Africa/Cairo
+EG	Shubra al Khaymah	30.13	31.25	Africa/Cairo
+EG	Port Said	31.27	32.3	Africa/Cairo
+EH	Laayoune	27.14	-13.19	Africa/El_Aaiun
+EH	Dakhla	23.68	-15.96	Africa/El_Aaiun
+EH	Boujdour	26.13	-14.49	Africa/El_Aaiun
+EH	El Marsa	27.1	-13.42	Africa/El_Aaiun
+ER	Asmara	15.34	38.93	Africa/Asmara
+ER	Keren	15.78	38.45	Africa/Asmara
+ER	Himora	14.3	36.61	Africa/Asmara
+ER	Af'abet	16.19	38.69	Africa/Asmara
+ER	Massawa	15.61	39.47	Africa/Asmara
+ES	Madrid	40.42	-3.7	Europe/Madrid
+ES	Barcelona	41.39	2.16	Europe/Madrid
+ES	Valencia	39.47	-0.38	Europe/Madrid
+ES	Zaragoza	41.66	-0.88	Europe/Madrid
+ES	Sevilla	37.38	-5.97	Europe/Madrid
+ET	Addis Ababa	9.02	38.75	Africa/Addis_Ababa
+ET	Jijiga	9.35	42.8	Africa/Addis_Ababa
+ET	Gonder	12.6	37.47	Africa/Addis_Ababa
+ET	Mek'ele	13.5	39.48	Africa/Addis_Ababa
+ET	Nazret	8.55	39.27	Africa/Addis_Ababa
+FI	Helsinki	60.17	24.94	Europe/Helsinki
+FI	Espoo	60.21	24.65	Europe/Helsinki
+FI	Tampere	61.5	23.79	Europe/Helsinki
+FI	Vantaa	60.29	25.04	Europe/Helsinki
+FI	Oulu	65.01	25.47	Europe/Helsinki
+FJ	Nasinu	-18.07	178.51	Pacific/Fiji
+FJ	Suva	-18.14	178.43	Pacific/Fiji
+FJ	Lautoka	-17.62	177.45	Pacific/Fiji
+FJ	Nadi	-17.8	177.42	Pacific/Fiji
+FJ	Labasa	-16.43	179.36	Pacific/Fiji
+FK	Stanley	-51.69	-57.86	Atlantic/Stanley
+FM	Palikir	6.92	158.16	Pacific/Pohnpei
+FO	Torshavn	62.01	-6.77	Atlantic/Faroe
+FR	Paris	48.85	2.35	Europe/Paris
+FR	Marseille	43.3	5.38	Europe/Paris
+FR	Lyon	45.75	4.85	Europe/Paris
+FR	Toulouse	43.6	1.44	Europe/Paris
+FR	Nice	43.7	7.27	Europe/Paris
+GA	Libreville	0.39	9.45	Africa/Libreville
+GA	Port-Gentil	-0.72	8.78	Africa/Libreville
+GA	Franceville	-1.63	13.58	Africa/Libreville
+GA	Owendo	0.29	9.5	Africa/Libreville
+GA	Oyem	1.6	11.58	Africa/Libreville
+GB	London	51.51	-0.13	Europe/London
+GB	Birmingham	52.48	-1.9	Europe/London
+GB	Glasgow	55.87	-4.26	Europe/London
+GB	Manchester	53.48	-2.24	Europe/London
+GB	Sheffield	53.38	-1.47	Europe/London
+GD	Saint George's	12.05	-61.75	America/Grenada
+GE	Tbilisi	41.69	44.83	Asia/Tbilisi
+GE	Batumi	41.64	41.63	Asia/Tbilisi
+GE	Kutaisi	42.27	42.69	Asia/Tbilisi
+GE	Rustavi	41.56	44.98	Asia/Tbilisi
+GE	Sokhumi	43.01	40.99	Europe/Moscow
+GF	Cayenne	4.94	-52.33	America/Cayenne
+GF	Matoury	4.85	-52.32	America/Cayenne
+GF	Saint-Laurent-du-Maroni	5.5	-54.03	America/Cayenne
+GF	Kourou	5.16	-52.64	America/Cayenne
+GF	Remire-Montjoly	4.92	-52.27	America/Cayenne
+GG	Saint Peter Port	49.46	-2.54	Europe/Guernsey
+GH	Kumasi	6.69	-1.62	Africa/Accra
+GH	Accra	5.56	-0.2	Africa/Accra
+GH	Tamale	9.4	-0.84	Africa/Accra
+GH	Takoradi	4.9	-1.76	Africa/Accra
+GH	Sekondi	4.93	-1.71	Africa/Accra
+GI	Gibraltar	36.14	-5.35	Europe/Gibraltar
+GL	Nuuk	64.18	-51.72	America/Nuuk
+GM	Serekunda	13.44	-16.68	Africa/Banjul
+GM	Brikama	13.27	-16.65	Africa/Banjul
+GM	Bununka Kunda	13.43	-16.69	Africa/Banjul
+GM	Sukuta	13.41	-16.71	Africa/Banjul
+GM	Talinding	13.43	-16.67	Africa/Banjul
+GM	Banjul	13.45	-16.58	Africa/Banjul
+GN	Conakry	9.54	-13.68	Africa/Conakry
+GN	Camayenne	9.54	-13.69	Africa/Conakry
+GN	Nzerekore	7.76	-8.82	Africa/Conakry
+GN	Kankan	10.39	-9.31	Africa/Conakry
+GN	Maneah	9.73	-13.42	Africa/Conakry
+GP	Les Abymes	16.27	-61.51	America/Guadeloupe
+GP	Baie-Mahault	16.27	-61.59	America/Guadeloupe
+GP	Le Gosier	16.21	-61.49	America/Guadeloupe
+GP	Petit-Bourg	16.19	-61.59	America/Guadeloupe
+GP	Sainte-Anne	16.23	-61.38	America/Guadeloupe
+GP	Basse-Terre	16.0	-61.73	America/Guadeloupe
+GQ	Bata	1.86	9.77	Africa/Malabo
+GQ	Malabo	3.76	8.78	Africa/Malabo
+GQ	Ebebiyin	2.15	11.33	Africa/Malabo
+GQ	Anisoc	1.87	10.77	Africa/Malabo
+GQ	Aconibe	1.3	10.94	Africa/Malabo
+GQ	Ciudad de la Paz	1.59	10.82	Africa/Malabo
+GR	Athens	37.98	23.73	Europe/Athens
+GR	Thessaloniki	40.64	22.93	Europe/Athens
+GR	Patra	38.25	21.74	Europe/Athens
+GR	Piraeus	37.94	23.65	Europe/Athens
+GR	Larisa	39.63	22.42	Europe/Athens
+GS	Grytviken	-54.28	-36.51	Atlantic/South_Georgia
+GT	Guatemala City	14.64	-90.51	America/Guatemala
+GT	Villa Nueva	14.53	-90.59	America/Guatemala
+GT	Mixco	14.63	-90.61	America/Guatemala
+GT	Coban	15.47	-90.37	America/Guatemala
+GT	Quetzaltenango	14.84	-91.52	America/Guatemala
+GU	Dededo Village	13.52	144.84	Pacific/Guam
+GU	Yigo Village	13.54	144.89	Pacific/Guam
+GU	Tamuning-Tumon-Harmon Village	13.49	144.78	Pacific/Guam
+GU	Tamuning	13.49	144.78	Pacific/Guam
+GU	Mangilao Village	13.45	144.8	Pacific/Guam
+GU	Hagatna	13.48	144.75	Pacific/Guam
+GW	Bissau	11.86	-15.6	Africa/Bissau
+GW	Bairro Militar	11.87	-15.62	Africa/Bissau
+GW	Gabu	12.28	-14.22	Africa/Bissau
+GW	Contumo	11.85	-15.62	Africa/Bissau
+GW	Reino de Bandim	11.85	-15.6	Africa/Bissau
+GY	Georgetown	6.8	-58.16	America/Guyana
+GY	Linden	6.01	-58.31	America/Guyana
+GY	New Amsterdam	6.25	-57.52	America/Guyana
+HK	Hong Kong	22.28	114.17	Asia/Hong_Kong
+HK	New Territories	22.42	114.11	Asia/Hong_Kong
+HK	Kowloon	22.32	114.18	Asia/Hong_Kong
+HK	Hong Kong Island	22.26	114.18	Asia/Hong_Kong
+HK	Victoria	22.29	114.14	Asia/Hong_Kong
+HN	Tegucigalpa	14.08	-87.21	America/Tegucigalpa
+HN	San Pedro Sula	15.51	-88.03	America/Tegucigalpa
+HN	Danli	14.03	-86.58	America/Tegucigalpa
+HN	La Ceiba	15.76	-86.78	America/Tegucigalpa
+HN	La Ceiba	15.77	-86.83	America/Tegucigalpa
+HR	Zagreb	45.81	15.98	Europe/Zagreb
+HR	Split	43.51	16.44	Europe/Zagreb
+HR	Rijeka	45.33	14.44	Europe/Zagreb
+HR	Osijek	45.55	18.69	Europe/Zagreb
+HR	Zadar	44.12	15.23	Europe/Zagreb
+HT	Port-au-Prince	18.54	-72.34	America/Port-au-Prince
+HT	Carrefour	18.53	-72.4	America/Port-au-Prince
+HT	Delmas	18.54	-72.3	America/Port-au-Prince
+HT	Petionville	18.51	-72.29	America/Port-au-Prince
+HT	Port-de-Paix	19.94	-72.83	America/Port-au-Prince
+HU	Budapest	47.5	19.04	Europe/Budapest
+HU	Pest	47.5	19.08	Europe/Budapest
+HU	Buda	47.5	19.03	Europe/Budapest
+HU	Debrecen	47.53	21.62	Europe/Budapest
+HU	Szeged	46.25	20.15	Europe/Budapest
+ID	Jakarta	-6.21	106.85	Asia/Jakarta
+ID	Surabaya	-7.25	112.75	Asia/Jakarta
+ID	Bekasi	-6.23	106.99	Asia/Jakarta
+ID	Bandung	-6.92	107.61	Asia/Jakarta
+ID	Medan	3.58	98.67	Asia/Jakarta
+IE	Dublin	53.33	-6.25	Europe/Dublin
+IE	South Dublin	53.29	-6.34	Europe/Dublin
+IE	Cork	51.9	-8.47	Europe/Dublin
+IE	Limerick	52.66	-8.62	Europe/Dublin
+IE	Galway	53.27	-9.05	Europe/Dublin
+IL	Jerusalem	31.77	35.22	Asia/Jerusalem
+IL	Tel Aviv	32.08	34.78	Asia/Jerusalem
+IL	West Jerusalem	31.78	35.22	Asia/Jerusalem
+IL	Haifa	32.81	35.0	Asia/Jerusalem
+IL	Rishon LeTsiyyon	31.97	34.79	Asia/Jerusalem
+IM	Douglas	54.15	-4.48	Europe/Isle_of_Man
+IN	Mumbai	19.07	72.88	Asia/Kolkata
+IN	Delhi	28.65	77.23	Asia/Kolkata
+IN	Bengaluru	12.97	77.59	Asia/Kolkata
+IN	Hyderabad	17.38	78.46	Asia/Kolkata
+IN	Ahmedabad	23.03	72.59	Asia/Kolkata
+IN	New Delhi	28.62	77.21	Asia/Kolkata
+IQ	Baghdad	33.34	44.4	Asia/Baghdad
+IQ	Al Mawsil al Jadidah	36.33	43.11	Asia/Baghdad
+IQ	Mosul	36.34	43.12	Asia/Baghdad
+IQ	Erbil	36.19	44.01	Asia/Baghdad
+IQ	Basrah	30.51	47.78	Asia/Baghdad
+IR	Tehran	35.69	51.42	Asia/Tehran
+IR	Mashhad	36.3	59.61	Asia/Tehran
+IR	Isfahan	32.65	51.67	Asia/Tehran
+IR	Karaj	35.83	50.99	Asia/Tehran
+IR	Tabriz	38.08	46.29	Asia/Tehran
+IS	Reykjavik	64.14	-21.9	Atlantic/Reykjavik
+IS	Kopavogur	64.11	-21.91	Atlantic/Reykjavik
+IS	Hafnarfjoerdur	64.07	-21.94	Atlantic/Reykjavik
+IS	Reykjanesbaer	64.0	-22.56	Atlantic/Reykjavik
+IS	Akureyri	65.68	-18.09	Atlantic/Reykjavik
+IT	Rome	41.89	12.51	Europe/Rome
+IT	Milan	45.46	9.19	Europe/Rome
+IT	Naples	40.85	14.27	Europe/Rome
+IT	Turin	45.07	7.69	Europe/Rome
+IT	Palermo	38.12	13.36	Europe/Rome
+JE	Saint Helier	49.19	-2.1	Europe/Jersey
+JM	Kingston	18.0	-76.79	America/Jamaica
+JM	New Kingston	18.01	-76.78	America/Jamaica
+JM	Spanish Town	17.99	-76.96	America/Jamaica
+JM	Portmore	17.97	-76.89	America/Jamaica
+JM	Montego Bay	18.47	-77.92	America/Jamaica
+JO	Amman	31.96	35.95	Asia/Amman
+JO	Zarqa	32.07	36.09	Asia/Amman
+JO	Irbid	32.56	35.85	Asia/Amman
+JO	Russeifa	32.02	36.05	Asia/Amman
+JO	Hayy Khilda	31.99	35.84	Asia/Amman
+JP	Tokyo	35.69	139.69	Asia/Tokyo
+JP	Yokohama	35.43	139.65	Asia/Tokyo
+JP	Osaka	34.69	135.5	Asia/Tokyo
+JP	Nagoya	35.18	136.91	Asia/Tokyo
+JP	Sapporo	43.07	141.35	Asia/Tokyo
+KE	Nairobi	-1.28	36.82	Africa/Nairobi
+KE	Kakamega	0.28	34.75	Africa/Nairobi
+KE	Mombasa	-4.05	39.66	Africa/Nairobi
+KE	Nakuru	-0.31	36.07	Africa/Nairobi
+KE	Ruiru	-1.15	36.96	Africa/Nairobi
+KG	Bishkek	42.87	74.59	Asia/Bishkek
+KG	Osh	40.53	72.8	Asia/Bishkek
+KG	Manas	40.94	72.99	Asia/Bishkek
+KG	Karakol	42.49	78.39	Asia/Bishkek
+KG	Tokmok	42.84	75.3	Asia/Bishkek
+KH	Phnom Penh	11.56	104.92	Asia/Phnom_Penh
+KH	Takeo	10.99	104.78	Asia/Phnom_Penh
+KH	Siem Reap	13.36	103.86	Asia/Phnom_Penh
+KH	Battambang	13.1	103.2	Asia/Phnom_Penh
+KH	Paoy Paet	13.66	102.56	Asia/Phnom_Penh
+KI	Tarawa	1.33	172.98	Pacific/Tarawa
+KM	Moroni	-11.7	43.26	Indian/Comoro
+KM	Moutsamoudou	-12.17	44.4	Indian/Comoro
+KM	Fomboni	-12.29	43.74	Indian/Comoro
+KN	Basseterre	17.3	-62.72	America/St_Kitts
+KP	Pyongyang	39.03	125.75	Asia/Pyongyang
+KP	Hamhung	39.92	127.54	Asia/Pyongyang
+KP	Namp'o	38.74	125.41	Asia/Pyongyang
+KP	Sunch'on	39.43	125.93	Asia/Pyongyang
+KP	Hungnam	39.84	127.63	Asia/Pyongyang
+KR	Seoul	37.57	126.98	Asia/Seoul
+KR	Busan	35.1	129.03	Asia/Seoul
+KR	Incheon	37.46	126.71	Asia/Seoul
+KR	Daegu	35.87	128.6	Asia/Seoul
+KR	Daejeon	36.35	127.38	Asia/Seoul
+KW	Al Ahmadi	29.08	48.08	Asia/Kuwait
+KW	Hawalli	29.33	48.03	Asia/Kuwait
+KW	As Salimiyah	29.33	48.08	Asia/Kuwait
+KW	Sabah as Salim	29.26	48.06	Asia/Kuwait
+KW	Al Farwaniyah	29.28	47.96	Asia/Kuwait
+KW	Kuwait City	29.37	47.97	Asia/Kuwait
+KY	George Town	19.29	-81.37	America/Cayman
+KY	West Bay	19.38	-81.39	America/Cayman
+KZ	Almaty	43.25	76.91	Asia/Almaty
+KZ	Astana	51.18	71.45	Asia/Almaty
+KZ	Shymkent	42.31	69.6	Asia/Almaty
+KZ	Aktobe	50.28	57.21	Asia/Aqtobe
+KZ	Karagandy	49.8	73.1	Asia/Almaty
+LA	Vientiane	17.97	102.6	Asia/Vientiane
+LA	Savannakhet	16.57	104.76	Asia/Vientiane
+LA	Thakhek	17.41	104.83	Asia/Vientiane
+LA	Pakse	15.12	105.8	Asia/Vientiane
+LA	Ban Khoan	20.35	100.09	Asia/Vientiane
+LB	Beirut	33.89	35.5	Asia/Beirut
+LB	Ra's Bayrut	33.9	35.48	Asia/Beirut
+LB	Tripoli	34.43	35.84	Asia/Beirut
+LB	Sidon	33.56	35.37	Asia/Beirut
+LB	Tyre	33.27	35.19	Asia/Beirut
+LC	Gros Islet	14.07	-60.95	America/St_Lucia
+LC	Castries	14.0	-61.01	America/St_Lucia
+LI	Vaduz	47.14	9.52	Europe/Vaduz
+LK	Colombo	6.94	79.85	Asia/Colombo
+LK	Dehiwala-Mount Lavinia	6.84	79.87	Asia/Colombo
+LK	Maharagama	6.85	79.93	Asia/Colombo
+LK	Jaffna	9.67	80.01	Asia/Colombo
+LK	Moratuwa	6.77	79.88	Asia/Colombo
+LR	Monrovia	6.3	-10.8	Africa/Monrovia
+LR	Gbarnga	7.0	-9.47	Africa/Monrovia
+LR	Buchanan	5.88	-10.05	Africa/Monrovia
+LR	Ganta	7.24	-8.98	Africa/Monrovia
+LR	Kakata	6.53	-10.35	Africa/Monrovia
+LS	Maseru	-29.32	27.48	Africa/Maseru
+LS	Maputsoe	-28.89	27.9	Africa/Maseru
+LS	Mohale's Hoek	-30.15	27.48	Africa/Maseru
+LS	Mafeteng	-29.82	27.24	Africa/Maseru
+LS	Hlotse	-28.87	28.05	Africa/Maseru
+LT	Vilnius	54.69	25.28	Europe/Vilnius
+LT	Kaunas	54.9	23.91	Europe/Vilnius
+LT	Klaipeda	55.71	21.14	Europe/Vilnius
+LT	Siauliai	55.93	23.32	Europe/Vilnius
+LT	Panevezys	55.73	24.36	Europe/Vilnius
+LU	Luxembourg	49.61	6.13	Europe/Luxembourg
+LU	Esch-sur-Alzette	49.5	5.98	Europe/Luxembourg
+LU	Dudelange	49.48	6.09	Europe/Luxembourg
+LV	Riga	56.95	24.11	Europe/Riga
+LV	Daugavpils	55.88	26.53	Europe/Riga
+LV	Liepaja	56.5	21.01	Europe/Riga
+LV	Jelgava	56.65	23.71	Europe/Riga
+LV	Jurmala	56.97	23.77	Europe/Riga
+LY	Tripoli	32.89	13.19	Africa/Tripoli
+LY	Benghazi	32.11	20.07	Africa/Tripoli
+LY	Misratah	32.38	15.09	Africa/Tripoli
+LY	Zliten	32.47	14.57	Africa/Tripoli
+LY	Al Khums	32.65	14.26	Africa/Tripoli
+MA	Casablanca	33.59	-7.61	Africa/Casablanca
+MA	Rabat	34.01	-6.83	Africa/Casablanca
+MA	Fes	34.03	-5.0	Africa/Casablanca
+MA	Tangier	35.77	-5.8	Africa/Casablanca
+MA	Marrakesh	31.63	-8.0	Africa/Casablanca
+MC	Monaco	43.74	7.42	Europe/Monaco
+MC	Monte-Carlo	43.74	7.43	Europe/Monaco
+MD	Chisinau	47.01	28.86	Europe/Chisinau
+MD	Tiraspol	46.84	29.63	Europe/Chisinau
+MD	Balti	47.76	27.93	Europe/Chisinau
+MD	Bender	46.83	29.48	Europe/Chisinau
+MD	Ribnita	47.77	29.01	Europe/Chisinau
+ME	Podgorica	42.44	19.26	Europe/Podgorica
+ME	Niksic	42.77	18.94	Europe/Podgorica
+ME	Herceg Novi	42.45	18.54	Europe/Podgorica
+ME	Pljevlja	43.36	19.36	Europe/Podgorica
+ME	Budva	42.29	18.84	Europe/Podgorica
+MF	Marigot	18.07	-63.08	America/Marigot
+MG	Antananarivo	-18.91	47.54	Indian/Antananarivo
+MG	Toamasina	-18.15	49.4	Indian/Antananarivo
+MG	Antsirabe	-19.87	47.03	Indian/Antananarivo
+MG	Mahajanga	-15.72	46.32	Indian/Antananarivo
+MG	Fianarantsoa	-21.45	47.09	Indian/Antananarivo
+MH	Majuro	7.09	171.38	Pacific/Majuro
+MH	Dalap-Uliga-Dorrit	7.09	171.38	Pacific/Majuro
+MK	Skopje	42.0	21.43	Europe/Skopje
+MK	Kumanovo	42.13	21.72	Europe/Skopje
+MK	Prilep	41.35	21.55	Europe/Skopje
+MK	Bitola	41.03	21.34	Europe/Skopje
+MK	Cair	42.02	21.44	Europe/Skopje
+ML	Bamako	12.61	-7.98	Africa/Bamako
+ML	Sikasso	11.32	-5.67	Africa/Bamako
+ML	Koutiala	12.39	-5.47	Africa/Bamako
+ML	Segou	13.44	-6.26	Africa/Bamako
+ML	Kayes	14.45	-11.44	Africa/Bamako
+MM	Yangon	16.81	96.16	Asia/Yangon
+MM	Mandalay	21.97	96.08	Asia/Yangon
+MM	Nay Pyi Taw	19.75	96.13	Asia/Yangon
+MM	Hlaingthaya	16.85	96.07	Asia/Yangon
+MM	Mawlamyine	16.49	97.63	Asia/Yangon
+MN	Ulan Bator	47.91	106.88	Asia/Ulaanbaatar
+MN	Erdenet	49.03	104.08	Asia/Ulaanbaatar
+MN	Darhan	49.49	105.92	Asia/Ulaanbaatar
+MN	Choibalsan	48.07	114.53	Asia/Ulaanbaatar
+MN	Nalayh	47.77	107.28	Asia/Ulaanbaatar
+MO	Macau	22.2	113.55	Asia/Macau
+MO	Taipa	22.16	113.56	Asia/Macau
+MO	Se	22.19	113.55	Asia/Macau
+MO	Luhuan	22.12	113.55	Asia/Macau
+MO	Zhuojiacun	22.16	113.56	Asia/Macau
+MP	Saipan	15.21	145.75	Pacific/Saipan
+MQ	Fort-de-France	14.6	-61.07	America/Martinique
+MQ	Le Lamentin	14.61	-61.0	America/Martinique
+MQ	Le Robert	14.68	-60.94	America/Martinique
+MQ	Sainte-Marie	14.78	-60.99	America/Martinique
+MQ	Le Francois	14.62	-60.9	America/Martinique
+MR	Nouakchott	18.09	-15.98	Africa/Nouakchott
+MR	Nouadhibou	20.94	-17.04	Africa/Nouakchott
+MR	Kiffa	16.62	-11.4	Africa/Nouakchott
+MR	Dar Naim	18.11	-15.93	Africa/Nouakchott
+MR	Nema	16.62	-7.26	Africa/Nouakchott
+MS	Brades	16.79	-62.21	America/Montserrat
+MS	Plymouth	16.71	-62.21	America/Montserrat
+MT	San Pawl il-Bahar	35.95	14.42	Europe/Malta
+MT	Birkirkara	35.9	14.46	Europe/Malta
+MT	Mosta	35.91	14.43	Europe/Malta
+MT	Sliema	35.91	14.5	Europe/Malta
+MT	Qormi	35.88	14.47	Europe/Malta
+MT	Valletta	35.9	14.51	Europe/Malta
+MU	Port Louis	-20.16	57.5	Indian/Mauritius
+MU	Vacoas	-20.3	57.48	Indian/Mauritius
+MU	Beau Bassin-Rose Hill	-20.23	57.47	Indian/Mauritius
+MU	Curepipe	-20.32	57.53	Indian/Mauritius
+MU	Quatre Bornes	-20.26	57.48	Indian/Mauritius
+MV	Male	4.18	73.51	Indian/Maldives
+MW	Lilongwe	-13.97	33.79	Africa/Blantyre
+MW	Blantyre	-15.78	35.01	Africa/Blantyre
+MW	Mzuzu	-11.47	34.02	Africa/Blantyre
+MW	Zomba	-15.39	35.32	Africa/Blantyre
+MW	Karonga	-9.93	33.93	Africa/Blantyre
+MX	Mexico City	19.43	-99.13	America/Mexico_City
+MX	Tijuana	32.5	-117.0	America/Tijuana
+MX	Iztapalapa	19.36	-99.06	America/Mexico_City
+MX	Puebla	19.05	-98.21	America/Mexico_City
+MX	Ecatepec de Morelos	19.6	-99.05	America/Mexico_City
+MY	Kuala Lumpur	3.14	101.69	Asia/Kuala_Lumpur
+MY	Johor Bahru	1.47	103.76	Asia/Kuala_Lumpur
+MY	Kampung Baru Subang	3.15	101.53	Asia/Kuala_Lumpur
+MY	Petaling Jaya	3.11	101.61	Asia/Kuala_Lumpur
+MY	Ipoh	4.58	101.08	Asia/Kuala_Lumpur
+MZ	Maputo	-25.97	32.58	Africa/Maputo
+MZ	Matola	-25.96	32.46	Africa/Maputo
+MZ	Nampula	-15.12	39.27	Africa/Maputo
+MZ	Beira	-19.84	34.84	Africa/Maputo
+MZ	Chimoio	-19.12	33.48	Africa/Maputo
+NA	Windhoek	-22.56	17.08	Africa/Windhoek
+NA	Rundu	-17.92	19.77	Africa/Windhoek
+NA	Walvis Bay	-22.96	14.51	Africa/Windhoek
+NA	Swakopmund	-22.68	14.53	Africa/Windhoek
+NA	Oshakati	-17.79	15.7	Africa/Windhoek
+NC	Noumea	-22.27	166.45	Pacific/Noumea
+NC	Mont-Dore	-22.26	166.57	Pacific/Noumea
+NC	Dumbea	-22.16	166.46	Pacific/Noumea
+NE	Niamey	13.51	2.11	Africa/Niamey
+NE	Maradi	13.5	7.1	Africa/Niamey
+NE	Zinder	13.81	8.99	Africa/Niamey
+NE	Tahoua	14.89	5.27	Africa/Niamey
+NE	Agadez	16.97	7.99	Africa/Niamey
+NF	Kingston	-29.05	167.97	Pacific/Norfolk
+NG	Lagos	6.45	3.39	Africa/Lagos
+NG	Kano	12.0	8.52	Africa/Lagos
+NG	Ibadan	7.38	3.91	Africa/Lagos
+NG	Abuja	9.06	7.5	Africa/Lagos
+NG	Port Harcourt	4.78	7.01	Africa/Lagos
+NI	Managua	12.13	-86.25	America/Managua
+NI	Leon	12.44	-86.88	America/Managua
+NI	Masaya	11.97	-86.1	America/Managua
+NI	Chinandega	12.63	-87.13	America/Managua
+NI	Matagalpa	12.93	-85.92	America/Managua
+NL	Rotterdam	51.92	4.48	Europe/Amsterdam
+NL	Amsterdam	52.37	4.89	Europe/Amsterdam
+NL	The Hague	52.08	4.3	Europe/Amsterdam
+NL	Utrecht	52.09	5.12	Europe/Amsterdam
+NL	Groningen	53.22	6.57	Europe/Amsterdam
+NO	Oslo	59.91	10.75	Europe/Oslo
+NO	Bergen	60.39	5.32	Europe/Oslo
+NO	Trondheim	63.43	10.4	Europe/Oslo
+NO	Stavanger	58.97	5.73	Europe/Oslo
+NO	Kristiansand	58.15	8.0	Europe/Oslo
+NP	Kathmandu	27.7	85.32	Asia/Kathmandu
+NP	Pokhara	28.27	83.97	Asia/Kathmandu
+NP	Bharatpur	27.68	84.44	Asia/Kathmandu
+NP	Patan	27.68	85.31	Asia/Kathmandu
+NP	Birganj	27.02	84.88	Asia/Kathmandu
+NR	Yaren	-0.55	166.93	Pacific/Nauru
+NU	Alofi	-19.05	-169.92	Pacific/Niue
+NZ	Auckland	-36.85	174.76	Pacific/Auckland
+NZ	Christchurch	-43.53	172.63	Pacific/Auckland
+NZ	Wellington	-41.29	174.78	Pacific/Auckland
+NZ	Manukau City	-36.99	174.88	Pacific/Auckland
+NZ	North Shore	-36.8	174.75	Pacific/Auckland
+OM	Muscat	23.58	58.41	Asia/Muscat
+OM	Seeb	23.67	58.19	Asia/Muscat
+OM	Bawshar	23.58	58.4	Asia/Muscat
+OM	'Ibri	23.23	56.52	Asia/Muscat
+OM	Salalah	17.02	54.09	Asia/Muscat
+PA	Panama City	8.99	-79.52	America/Panama
+PA	San Miguelito	9.05	-79.47	America/Panama
+PA	Juan Diaz	9.04	-79.44	America/Panama
+PA	David	8.43	-82.43	America/Panama
+PA	Colon	9.36	-79.9	America/Panama
+PE	Lima	-12.04	-77.03	America/Lima
+PE	Callao	-12.05	-77.13	America/Lima
+PE	Arequipa	-16.4	-71.54	America/Lima
+PE	Trujillo	-8.12	-79.03	America/Lima
+PE	Piura	-5.18	-80.66	America/Lima
+PF	Faaa	-17.56	-149.6	Pacific/Tahiti
+PF	Papeete	-17.53	-149.57	Pacific/Tahiti
+PF	Punaauia	-17.63	-149.6	Pacific/Tahiti
+PG	Port Moresby	-9.48	147.15	Pacific/Port_Moresby
+PG	Lae	-6.72	147.0	Pacific/Port_Moresby
+PG	Arawa	-6.23	155.57	Pacific/Bougainville
+PG	Mount Hagen	-5.86	144.23	Pacific/Port_Moresby
+PG	Popondetta	-8.77	148.23	Pacific/Port_Moresby
+PH	Quezon City	14.65	121.05	Asia/Manila
+PH	Davao	7.07	125.61	Asia/Manila
+PH	Caloocan	14.65	120.97	Asia/Manila
+PH	Manila	14.6	120.98	Asia/Manila
+PH	Taguig	14.52	121.08	Asia/Manila
+PK	Lahore	31.56	74.35	Asia/Karachi
+PK	Karachi	24.86	67.01	Asia/Karachi
+PK	Peshawar	34.01	71.58	Asia/Karachi
+PK	Faisalabad	31.42	73.09	Asia/Karachi
+PK	Rawalpindi	33.6	73.05	Asia/Karachi
+PK	Islamabad	33.72	73.04	Asia/Karachi
+PL	Warsaw	52.23	21.01	Europe/Warsaw
+PL	Krakow	50.06	19.94	Europe/Warsaw
+PL	Wroclaw	51.1	17.03	Europe/Warsaw
+PL	Lodz	51.77	19.47	Europe/Warsaw
+PL	Poznan	52.41	16.93	Europe/Warsaw
+PM	Saint-Pierre	46.78	-56.18	America/Miquelon
+PN	Adamstown	-25.07	-130.1	Pacific/Pitcairn
+PR	San Juan	18.47	-66.11	America/Puerto_Rico
+PR	Bayamon	18.4	-66.16	America/Puerto_Rico
+PR	Carolina	18.38	-65.96	America/Puerto_Rico
+PR	Ponce	18.01	-66.62	America/Puerto_Rico
+PR	Arecibo	18.47	-66.72	America/Puerto_Rico
+PS	East Jerusalem	31.78	35.23	Asia/Hebron
+PS	Gaza	31.5	34.47	Asia/Gaza
+PS	Khan Yunis	31.34	34.31	Asia/Gaza
+PS	Jabalya	31.53	34.48	Asia/Gaza
+PS	Hebron	31.53	35.09	Asia/Hebron
+PT	Lisbon	38.73	-9.15	Europe/Lisbon
+PT	Porto	41.15	-8.61	Europe/Lisbon
+PT	Braga	41.55	-8.42	Europe/Lisbon
+PT	Amadora	38.75	-9.23	Europe/Lisbon
+PT	Coimbra	40.21	-8.42	Europe/Lisbon
+PW	Ngerulmud	7.5	134.62	Pacific/Palau
+PY	Asuncion	-25.29	-57.65	America/Asuncion
+PY	Ciudad del Este	-25.5	-54.65	America/Asuncion
+PY	San Lorenzo	-25.34	-57.51	America/Asuncion
+PY	Capiata	-25.36	-57.45	America/Asuncion
+PY	Lambare	-25.35	-57.61	America/Asuncion
+QA	Doha	25.29	51.53	Asia/Qatar
+QA	Ar Rayyan	25.29	51.42	Asia/Qatar
+QA	Lusail	25.42	51.51	Asia/Qatar
+QA	Al Matar al 'Atiq	25.25	51.56	Asia/Qatar
+QA	Al Mansurah	25.27	51.53	Asia/Qatar
+RE	Saint-Denis	-20.88	55.45	Indian/Reunion
+RE	Saint-Paul	-21.01	55.27	Indian/Reunion
+RE	Saint-Pierre	-21.34	55.48	Indian/Reunion
+RE	Le Tampon	-21.28	55.52	Indian/Reunion
+RE	Saint-Andre	-20.96	55.65	Indian/Reunion
+RO	Bucharest	44.43	26.11	Europe/Bucharest
+RO	Sector 3	44.42	26.17	Europe/Bucharest
+RO	Iasi	47.17	27.6	Europe/Bucharest
+RO	Sector 6	44.44	26.02	Europe/Bucharest
+RO	Constanta	44.18	28.63	Europe/Bucharest
+RS	Belgrade	44.8	20.47	Europe/Belgrade
+RS	Nis	43.32	21.9	Europe/Belgrade
+RS	Novi Sad	45.25	19.84	Europe/Belgrade
+RS	Novi Beograd	44.81	20.42	Europe/Belgrade
+RS	Zemun	44.85	20.4	Europe/Belgrade
+RU	Moscow	55.75	37.62	Europe/Moscow
+RU	Saint Petersburg	59.94	30.31	Europe/Moscow
+RU	Novosibirsk	55.02	82.93	Asia/Novosibirsk
+RU	Yekaterinburg	56.86	60.62	Asia/Yekaterinburg
+RU	Nizhniy Novgorod	56.33	44.0	Europe/Moscow
+RW	Kigali	-1.95	30.06	Africa/Kigali
+RW	Gisenyi	-1.7	29.26	Africa/Kigali
+RW	Musanze	-1.5	29.63	Africa/Kigali
+RW	Nyagatare	-1.3	30.32	Africa/Kigali
+RW	Gitarama	-2.07	29.76	Africa/Kigali
+SA	Jeddah	21.49	39.19	Asia/Riyadh
+SA	Riyadh	24.69	46.72	Asia/Riyadh
+SA	Makkah	21.43	39.83	Asia/Riyadh
+SA	Madinah	24.47	39.61	Asia/Riyadh
+SA	Dammam	26.43	50.1	Asia/Riyadh
+SB	Honiara	-9.43	159.95	Pacific/Guadalcanal
+SB	Panatina	-9.43	160.01	Pacific/Guadalcanal
+SB	Nggosi	-9.43	159.92	Pacific/Guadalcanal
+SB	Tandai	-9.45	159.95	Pacific/Guadalcanal
+SB	Kola'a	-9.44	159.97	Pacific/Guadalcanal
+SC	Victoria	-4.62	55.46	Indian/Mahe
+SD	Khartoum	15.55	32.53	Africa/Khartoum
+SD	Omdurman	15.64	32.48	Africa/Khartoum
+SD	Khartoum North	15.65	32.53	Africa/Khartoum
+SD	Nyala	12.05	24.88	Africa/Khartoum
+SD	Port Sudan	19.62	37.22	Africa/Khartoum
+SE	Stockholm	59.33	18.07	Europe/Stockholm
+SE	Gothenburg	57.71	11.97	Europe/Stockholm
+SE	Malmoe	55.61	13.0	Europe/Stockholm
+SE	Uppsala	59.86	17.64	Europe/Stockholm
+SE	Linkoeping	58.41	15.62	Europe/Stockholm
+SG	Singapore	1.29	103.85	Asia/Singapore
+SG	Ulu Bedok	1.33	103.93	Asia/Singapore
+SG	Bedok New Town	1.33	103.94	Asia/Singapore
+SG	Sengkang New Town	1.39	103.89	Asia/Singapore
+SG	Tampines Estate	1.36	103.94	Asia/Singapore
+SH	Jamestown	-15.92	-5.72	Atlantic/St_Helena
+SI	Ljubljana	46.05	14.51	Europe/Ljubljana
+SI	Maribor	46.56	15.65	Europe/Ljubljana
+SI	Celje	46.23	15.26	Europe/Ljubljana
+SI	Kranj	46.24	14.36	Europe/Ljubljana
+SI	Koper	45.55	13.73	Europe/Ljubljana
+SJ	Longyearbyen	78.22	15.65	Arctic/Longyearbyen
+SK	Bratislava	48.15	17.11	Europe/Bratislava
+SK	Kosice	48.71	21.26	Europe/Bratislava
+SK	Petrzalka	48.12	17.13	Europe/Bratislava
+SK	Nitra	48.31	18.08	Europe/Bratislava
+SK	Presov	49.0	21.24	Europe/Bratislava
+SL	Freetown	8.49	-13.24	Africa/Freetown
+SL	Kenema	7.88	-11.19	Africa/Freetown
+SL	Bo	7.96	-11.74	Africa/Freetown
+SL	Koidu	8.64	-10.97	Africa/Freetown
+SL	Makeni	8.89	-12.04	Africa/Freetown
+SM	San Marino	43.94	12.45	Europe/San_Marino
+SN	Dakar	14.69	-17.44	Africa/Dakar
+SN	Pikine	14.76	-17.39	Africa/Dakar
+SN	Touba	14.86	-15.88	Africa/Dakar
+SN	Guediawaye	14.77	-17.4	Africa/Dakar
+SN	Thies	14.79	-16.93	Africa/Dakar
+SO	Mogadishu	2.04	45.34	Africa/Mogadishu
+SO	Borama	9.94	43.18	Africa/Mogadishu
+SO	Hargeysa	9.56	44.06	Africa/Mogadishu
+SO	Berbera	10.44	45.01	Africa/Mogadishu
+SO	Kismayo	-0.36	42.55	Africa/Mogadishu
+SR	Paramaribo	5.87	-55.17	America/Paramaribo
+SR	Blauwgrond	5.84	-55.12	America/Paramaribo
+SR	Latour	5.8	-55.21	America/Paramaribo
+SR	Pontbuiten	5.79	-55.21	America/Paramaribo
+SR	Rainville	5.83	-55.14	America/Paramaribo
+SS	Juba	4.85	31.58	Africa/Juba
+SS	Winejok	9.01	27.57	Africa/Juba
+SS	Yei	4.09	30.68	Africa/Juba
+SS	Malakal	9.53	31.66	Africa/Juba
+SS	Wau	7.7	27.99	Africa/Juba
+ST	Sao Tome	0.34	6.73	Africa/Sao_Tome
+SV	San Salvador	13.69	-89.19	America/El_Salvador
+SV	Soyapango	13.71	-89.14	America/El_Salvador
+SV	San Miguel	13.48	-88.18	America/El_Salvador
+SV	Santa Ana	13.99	-89.56	America/El_Salvador
+SV	Mejicanos	13.72	-89.19	America/El_Salvador
+SX	Philipsburg	18.03	-63.05	America/Lower_Princes
+SY	Aleppo	36.2	37.16	Asia/Damascus
+SY	Damascus	33.51	36.29	Asia/Damascus
+SY	Homs	34.72	36.73	Asia/Damascus
+SY	Latakia	35.53	35.79	Asia/Damascus
+SY	Ar Raqqah	35.95	39.01	Asia/Damascus
+SZ	Manzini	-26.5	31.38	Africa/Mbabane
+SZ	Mbabane	-26.32	31.13	Africa/Mbabane
+SZ	Lobamba	-26.47	31.2	Africa/Mbabane
+TC	Providenciales	21.78	-72.25	America/Grand_Turk
+TC	Cockburn Town	21.46	-71.14	America/Grand_Turk
+TD	N'Djamena	12.11	15.04	Africa/Ndjamena
+TD	Moundou	8.57	16.08	Africa/Ndjamena
+TD	Abeche	13.83	20.83	Africa/Ndjamena
+TD	Sarh	9.15	18.38	Africa/Ndjamena
+TD	Kelo	9.31	15.81	Africa/Ndjamena
+TF	Port-aux-Francais	-49.35	70.22	Indian/Kerguelen
+TG	Lome	6.13	1.22	Africa/Lome
+TG	Sokode	8.98	1.13	Africa/Lome
+TG	Kara	9.55	1.19	Africa/Lome
+TG	Atakpame	7.53	1.13	Africa/Lome
+TG	Kpalime	6.9	0.63	Africa/Lome
+TH	Bangkok	13.75	100.5	Asia/Bangkok
+TH	Samut Prakan	13.6	100.6	Asia/Bangkok
+TH	Mueang Nonthaburi	13.86	100.51	Asia/Bangkok
+TH	Chon Buri	13.36	100.98	Asia/Bangkok
+TH	Phra Pradaeng	13.66	100.53	Asia/Bangkok
+TJ	Dushanbe	38.54	68.78	Asia/Dushanbe
+TJ	Isfara	40.13	70.63	Asia/Dushanbe
+TJ	Istaravshan	39.91	69.0	Asia/Dushanbe
+TJ	Kulob	37.91	69.78	Asia/Dushanbe
+TJ	Konibodom	40.29	70.43	Asia/Dushanbe
+TL	Dili	-8.56	125.57	Asia/Dili
+TL	Maliana	-8.99	125.22	Asia/Dili
+TL	Suai	-9.31	125.26	Asia/Dili
+TL	Likisa	-8.59	125.34	Asia/Dili
+TL	Aileu	-8.73	125.57	Asia/Dili
+TM	Ashgabat	37.95	58.38	Asia/Ashgabat
+TM	Tuerkmenabat	39.07	63.58	Asia/Ashgabat
+TM	Dasoguz	41.84	59.97	Asia/Ashgabat
+TM	Mary	37.59	61.83	Asia/Ashgabat
+TM	Tuerkmenbasy	40.02	52.96	Asia/Ashgabat
+TN	Tunis	36.82	10.17	Africa/Tunis
+TN	Sfax	34.74	10.76	Africa/Tunis
+TN	Sousse	35.83	10.64	Africa/Tunis
+TN	Sukrah	36.88	10.25	Africa/Tunis
+TN	Kairouan	35.68	10.1	Africa/Tunis
+TO	Nuku'alofa	-21.14	-175.2	Pacific/Tongatapu
+TR	Istanbul	41.01	28.95	Europe/Istanbul
+TR	Ankara	39.92	32.85	Europe/Istanbul
+TR	Bursa	40.2	29.06	Europe/Istanbul
+TR	Izmir	38.41	27.14	Europe/Istanbul
+TR	Gaziantep	37.06	37.38	Europe/Istanbul
+TT	Chaguanas	10.52	-61.42	America/Port_of_Spain
+TT	Mon Repos	10.28	-61.45	America/Port_of_Spain
+TT	San Fernando	10.28	-61.47	America/Port_of_Spain
+TT	Port of Spain	10.67	-61.52	America/Port_of_Spain
+TT	Rio Claro	10.31	-61.18	America/Port_of_Spain
+TV	Funafuti	-8.52	179.19	Pacific/Funafuti
+TW	Taipei	25.05	121.53	Asia/Taipei
+TW	New Taipei City	25.06	121.46	Asia/Taipei
+TW	Taichung	24.15	120.68	Asia/Taipei
+TW	Kaohsiung	22.62	120.31	Asia/Taipei
+TW	Tainan	22.99	120.21	Asia/Taipei
+TZ	Dar es Salaam	-6.82	39.27	Africa/Dar_es_Salaam
+TZ	Mwanza	-2.52	32.9	Africa/Dar_es_Salaam
+TZ	Dodoma	-6.17	35.74	Africa/Dar_es_Salaam
+TZ	Zanzibar	-6.16	39.2	Africa/Dar_es_Salaam
+TZ	Arusha	-3.37	36.68	Africa/Dar_es_Salaam
+UA	Kyiv	50.45	30.52	Europe/Kyiv
+UA	Kharkiv	49.98	36.25	Europe/Kyiv
+UA	Odesa	46.49	30.74	Europe/Kyiv
+UA	Dnipro	48.47	35.04	Europe/Kyiv
+UA	Donetsk	48.02	37.8	Europe/Kyiv
+UG	Kampala	0.32	32.58	Africa/Kampala
+UG	Nansana	0.36	32.53	Africa/Kampala
+UG	Kira	0.4	32.63	Africa/Kampala
+UG	Bunamwaya	0.25	32.56	Africa/Kampala
+UG	Kyengera	0.3	32.5	Africa/Kampala
+US	New York City	40.71	-74.01	America/New_York
+US	Los Angeles	34.05	-118.24	America/Los_Angeles
+US	Brooklyn	40.65	-73.95	America/New_York
+US	Chicago	41.85	-87.65	America/Chicago
+US	Queens	40.68	-73.84	America/New_York
+US	Washington	38.9	-77.04	America/New_York
+UY	Montevideo	-34.9	-56.19	America/Montevideo
+UY	Salto	-31.39	-57.96	America/Montevideo
+UY	Maldonado	-34.9	-54.95	America/Montevideo
+UY	Rivera	-30.91	-55.55	America/Montevideo
+UY	Paysandu	-32.32	-58.08	America/Montevideo
+UZ	Tashkent	41.26	69.22	Asia/Tashkent
+UZ	Andijon	40.78	72.35	Asia/Tashkent
+UZ	Namangan	41.0	71.67	Asia/Tashkent
+UZ	Samarkand	39.65	66.96	Asia/Samarkand
+UZ	Yunusobod	41.37	69.28	Asia/Tashkent
+VA	Vatican City	41.9	12.45	Europe/Vatican
+VC	Kingstown	13.16	-61.23	America/St_Vincent
+VC	Calliaqua	13.13	-61.19	America/St_Vincent
+VE	Caracas	10.49	-66.88	America/Caracas
+VE	Maracaibo	10.64	-71.61	America/Caracas
+VE	Valencia	10.16	-68.0	America/Caracas
+VE	Barquisimeto	10.06	-69.36	America/Caracas
+VE	Ciudad Guayana	8.35	-62.64	America/Caracas
+VG	Road Town	18.43	-64.62	America/Tortola
+VI	Saint Croix	17.73	-64.75	America/St_Thomas
+VI	Charlotte Amalie	18.34	-64.93	America/St_Thomas
+VN	Ho Chi Minh City	10.82	106.63	Asia/Ho_Chi_Minh
+VN	Hanoi	21.02	105.84	Asia/Bangkok
+VN	Haiphong	20.86	106.68	Asia/Bangkok
+VN	Can Tho	10.04	105.79	Asia/Ho_Chi_Minh
+VN	Hue	16.46	107.6	Asia/Bangkok
+VU	Port-Vila	-17.74	168.31	Pacific/Efate
+WF	Mata-Utu	-13.28	-176.17	Pacific/Wallis
+WS	Apia	-13.83	-171.77	Pacific/Apia
+XK	Pristina	42.67	21.17	Europe/Belgrade
+XK	Prizren	42.21	20.74	Europe/Belgrade
+XK	Mitrovice	42.88	20.87	Europe/Belgrade
+XK	Gjakove	42.38	20.43	Europe/Belgrade
+XK	Suva Reka	42.36	20.82	Europe/Belgrade
+YE	Sanaa	15.35	44.21	Asia/Aden
+YE	Aden	12.78	45.04	Asia/Aden
+YE	Taiz	13.58	44.02	Asia/Aden
+YE	Ibb	13.97	44.18	Asia/Aden
+YE	Al Hudaydah	14.8	42.95	Asia/Aden
+YT	Mamoudzou	-12.78	45.23	Indian/Mayotte
+YT	Koungou	-12.73	45.2	Indian/Mayotte
+YT	Labattoir	-12.78	45.28	Indian/Mayotte
+YT	Kaoueni	-12.77	45.22	Indian/Mayotte
+YT	Mtsapere	-12.79	45.22	Indian/Mayotte
+ZA	Johannesburg	-26.2	28.04	Africa/Johannesburg
+ZA	Cape Town	-33.93	18.42	Africa/Johannesburg
+ZA	Durban	-29.86	31.03	Africa/Johannesburg
+ZA	Pretoria	-25.74	28.19	Africa/Johannesburg
+ZA	Soweto	-26.27	27.86	Africa/Johannesburg
+ZM	Lusaka	-15.41	28.29	Africa/Lusaka
+ZM	Kitwe	-12.8	28.21	Africa/Lusaka
+ZM	Ndola	-12.96	28.64	Africa/Lusaka
+ZM	Chipata	-13.63	32.65	Africa/Lusaka
+ZM	Solwezi	-12.17	26.39	Africa/Lusaka
+ZW	Harare	-17.83	31.05	Africa/Harare
+ZW	Bulawayo	-20.15	28.58	Africa/Harare
+ZW	Chitungwiza	-18.01	31.08	Africa/Harare
+ZW	Mutare	-18.97	32.67	Africa/Harare
+ZW	Epworth	-17.89	31.15	Africa/Harare

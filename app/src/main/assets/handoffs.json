@@ -1,0 +1,16 @@
+{
+  "note": "Sport hand-offs by country (ISO code), then by key: an ESPN league path (soccer/eng.1), a sport (cricket, f1, motogp, tennis) or a narrower key (cricket.ipl, cricket.icc, cricket.home, cricket.away, tennis.wimbledon). The most specific key wins. A country with no entry shows the score without an app button.",
+  "IE": {
+    "cricket.home": { "pkg": "com.discoveryplus.tv.fire", "label": "discovery+ (TNT Sports)" },
+    "cricket.ipl": { "pkg": null, "label": "On Sky Sports / NOW" },
+    "cricket.icc": { "pkg": null, "label": "On Sky Sports / NOW" },
+    "cricket.away": { "pkg": null, "label": "Check SonyLIV or discovery+" },
+    "f1": { "pkg": null, "label": "On Sky Sports / NOW" },
+    "motogp": { "pkg": "com.discoveryplus.tv.fire", "label": "discovery+ (TNT Sports)" },
+    "tennis": { "pkg": "com.discoveryplus.tv.fire", "label": "discovery+ (TNT Sports)" },
+    "tennis.wimbledon": { "pkg": null, "label": "On Sky Sports / NOW" }
+  },
+  "IN": {
+    "cricket": { "pkg": "in.startv.hotstar", "label": "JioHotstar" }
+  }
+}

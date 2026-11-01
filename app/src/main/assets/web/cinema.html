@@ -1,0 +1,455 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Orbit</title>
+<link rel="stylesheet" href="cinema.css">
+</head>
+<body>
+<div id="root">
+  <canvas class="bd" id="bdA" width="1280" height="720"></canvas><canvas class="bd" id="bdB" width="1280" height="720"></canvas>
+  <div id="trailer"><div id="yt"></div><div class="tscrim"></div></div>
+  <div class="wm">ORBIT</div>
+  <nav id="tabs"></nav>
+  <div class="me"><div class="t" id="me"></div><div class="av" id="av"></div></div>
+  <div class="hero" id="hero">
+    <div class="why" id="why"></div>
+    <img class="logo" id="logo" alt=""><div class="name" id="name"></div>
+    <div class="kn" id="kn"></div>
+    <div class="meta" id="meta"></div>
+    <div class="ov" id="ov"></div>
+    <div class="btns" id="btns"></div>
+  </div>
+  <div class="learn" id="learn"><b>Orbit noticed</b><div id="learnT"></div><span id="learnB"></span></div>
+  <div class="shelf" id="shelf"><h3 id="sh"></h3><div class="row" id="row"></div></div>
+  <div class="menu" id="menu"></div>
+  <div class="credit"><img class="tmdb" src="tmdb-logo.svg" alt="TMDB"> This product uses the TMDB API but is not endorsed or certified by TMDB. Streaming data from JustWatch.</div>
+  <div class="hint" id="hint"></div>
+  <div id="veil"></div>
+</div>
+<script src="ytframe.js"></script><script src="journeys.js"></script><script src="home.js"></script><script src="taste.js"></script><script src="cinema-rows.js"></script><script src="world-data.js"></script><script src="profiles.js"></script>
+<script src="sky.js"></script><script src="personal.js"></script><script src="wellbeing.js"></script><script src="feeds.js"></script><script src="common.js"></script>
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id); const S = Shell.state, esc = Shell.esc;
+  const store = { get: (k, d) => { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } }, set: (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
+  const html = (el, h) => { if (el.__h !== h) { el.__h = h; el.innerHTML = h; } };   // only touch the DOM when it changed
+  const HOUR = 3600000;
+
+  // ---------- world data: language and country names, film tab names, the love catalogue ----------
+  let INTERESTS = [], LANG = {}, COUNTRY = {};
+  const langName = (c) => { const l = LANG[c]; if (!l) return c; const n = (l.native || l.name).replace(/^Èdè\s+/, ''); return n.charAt(0).toUpperCase() + n.slice(1); };
+  const countryName = (c) => (COUNTRY[c] && COUNTRY[c].name) || c;
+  const world = { filmTab: (c) => WorldData.filmTab(c), langName, countryName };
+
+  // ---------- the person watching: everything below is keyed by their profile id ----------
+  let prof = null;
+  const pid = () => prof ? prof.id : 'none';
+  const tasteOf = () => Taste.decay(store.get('orbit.taste.' + pid(), Taste.empty()), Date.now());
+  const history = (id) => store.get('orbit.history.' + (id || pid()), []);
+  const catalogue = () => (prof && S.catalog && S.catalog[prof.id]) || [];
+  const weightsNow = () => prof ? Taste.loveWeights(history(), prof.loves, Date.now(), INTERESTS, prof.created) : {};
+  const seed = () => Math.floor(Date.now() / 86400000);
+
+  // Measurement switches, set over ADB with --es perf <flags> (notrailer, nobd, noshadow, nohero), debug builds only.
+  const PERF = new Set(location.hash.slice(1).split(',').filter(Boolean));
+  if (PERF.has('noshadow')) document.body.classList.add('noshadow');
+  // A tab asked for from Atlas waits until a build has the profile (and, for the film tab, its catalogue), then is applied once.
+  let wanted = (() => { const t = store.get('orbit.cinema.tab', null); return t && t !== 'journeys' && t !== 'foryou' ? t : null; })(), tab = 'foryou';
+  let zone = 'shelf', ti = 0, shelves = [], ri = 0, lastFocusId = null, touched = false, T = CinemaRows.tabs(null), mi = 0; const ci = {};
+
+  // ---------- backdrop: two layers crossfading ----------
+  let front = 'bdA', bdKey = null;
+  // The film's art and its shading are painted once into a canvas: one full-screen picture at rest, two only while crossfading.
+  // Measured on the TV: separate image and scrim layers cost 150 ms frames; this TV affords about one full-screen layer.
+  const W = 1280, Hh = 720;
+  function shade(g, b) {
+    const lin = (x0, y0, x1, y1, stops) => { const gr = g.createLinearGradient(x0, y0, x1, y1); stops.forEach(([p, a]) => gr.addColorStop(p, `rgba(0,0,0,${a})`)); g.fillStyle = gr; g.fillRect(0, 0, W, Hh); };
+    lin(0, 0, W, 0, [[0, .9], [.3, .55], [.58, 0], [1, 0]]);
+    lin(0, Hh, 0, 0, [[0, .96], [.32, .62], [.56, 0], [1, 0]]);
+    lin(0, 0, 0, Hh, [[0, .6], [.18, 0], [1, 0]]);
+    if (b > 0) { lin(0, 0, W, 0, [[0, .92 * b], [.4, .7 * b], [.7, .15 * b], [1, 0]]); lin(0, Hh, 0, 0, [[0, .9 * b], [.5, 0], [1, 0]]); }
+  }
+  function paint(el, im, card, b) {
+    if (PERF.has('trace')) { const t0 = Date.now(); paint1(el, im, card, b); Shell.log(`cinema paint ${Date.now() - t0} ms`); } else paint1(el, im, card, b);
+  }
+  function paint1(el, im, card, b) {
+    // software canvas: each film's art is decoded and drawn on the CPU, so only the finished picture is held on the GPU
+    const g = el.getContext('2d', { willReadFrequently: true }); g.fillStyle = '#000'; g.fillRect(0, 0, W, Hh);
+    const live = card && (card.kind === 'live' || card.kind === 'fixture');
+    if (!im) { const r = g.createRadialGradient(W * .7, live ? Hh * 1.1 : Hh * .4, 0, W * .7, Hh * .5, W * .7);
+      (live ? [[0, '#1f3d26'], [.5, '#0b1510'], [1, '#000']] : [[0, '#2a2116'], [.6, '#0b0a08'], [1, '#000']]).forEach(([p, c]) => r.addColorStop(p, c)); g.fillStyle = r; g.fillRect(0, 0, W, Hh); }
+    else if (card.posterOnly) { const h = Hh * .86, w = h * im.width / im.height; g.fillStyle = '#0b0a08'; g.fillRect(0, 0, W, Hh); g.drawImage(im, W * .88 - w, (Hh - h) / 2, w, h); }   // a framed print on the right
+    else { const s = Math.max(W / im.width, Hh / im.height); g.drawImage(im, (W - im.width * s) / 2, (Hh - im.height * s) / 2, im.width * s, im.height * s); }
+    shade(g, b);
+  }
+  function backdrop(card) {
+    if (PERF.has('nobd')) return;
+    const url = card.still, key = (url || 'none:' + card.kind) + (card.posterOnly ? '#p' : ''); if (key === bdKey) return; bdKey = key;
+    const next = front === 'bdA' ? 'bdB' : 'bdA', el = $(next), old = $(front);
+    const show = () => { el.classList.add('on'); old.classList.remove('on'); front = next; };
+    if (!url) { paint(el, null, card, 0); show(); return; }
+    const im = new Image();   // drawn without CORS (display only); brightness is measured separately through the app's own origin
+    // decoded off the main thread before it is drawn, and drawn once with its shading (the brightness is usually known by then)
+    const draw = () => { if (bdKey !== key) return; sample(small(url), 0.5, (lum) => { if (bdKey !== key) return; paint(el, im, card, boostFor(lum)); show(); }); };
+    const fail = () => { if (bdKey !== key) return; paint(el, null, card, 0); show(); };
+    im.src = url; if (im.decode && !PERF.has('nodecode')) im.decode().then(draw, fail); else { im.onload = draw; im.onerror = fail; }
+  }
+
+  // Mean brightness of the opaque pixels in the left part of an image (0..1), or null when the CDN refuses cross-origin reads.
+  const lums = {};   // url|part -> brightness: each picture is read once, not on every visit
+  function sample(url, part, cb) {
+    const lk = url + '|' + part; if (lk in lums) { cb(lums[lk]); return; }
+    const done = cb; cb = (v) => { lums[lk] = v; done(v); };
+    const im = new Image();   // through the app's own origin (/img proxy), so the pixels are readable
+    im.onload = () => { try { const c = document.createElement('canvas'); c.width = 32; c.height = 18; const g = c.getContext('2d'); g.drawImage(im, 0, 0, 32, 18);
+      const d = g.getImageData(0, 0, Math.round(32 * part), 18).data; let l = 0, n = 0;
+      for (let i = 0; i < d.length; i += 4) { const a = d[i + 3] / 255; if (a < 0.3) continue; l += (0.2126 * d[i] + 0.7152 * d[i + 1] + 0.0722 * d[i + 2]) / 255; n++; }
+      cb(n ? l / n : null); } catch (e) { cb(null); } };
+    im.onerror = () => cb(null); im.src = url.startsWith('https://image.tmdb.org/') ? 'https://orbit.local/img?u=' + encodeURIComponent(url) : url;
+  }
+  // Bright art behind the text gets an extra dark layer so the type always reads; unknown brightness gets a middle value.
+  const boostFor = (lum) => lum == null ? 0.45 : Math.max(0, Math.min(1, (lum - 0.25) / 0.4));
+
+  // ---------- trailer: full-bleed behind the interface ----------
+  // A plain YouTube embed driven over postMessage (ytframe.js): no YouTube script runs in this frame, which holds the bridge token.
+  let player = null, dwell = 0, keys = [], kIdx = 0;
+  function closeTrailer() {
+    clearTimeout(dwell); $('trailer').classList.remove('on'); $('hero').classList.remove('dim'); $('shelf').classList.remove('dim');
+    if (player) { player.destroy(); player = null; }
+  }
+  function playKey() {
+    if (kIdx >= keys.length) { closeTrailer(); return; }
+    if (player) player.destroy();
+    player = YtFrame.mount($('yt'), keys[kIdx], { muted: true, captions: false }, {
+      playing: () => { $('trailer').classList.add('on'); $('hero').classList.add('dim'); $('shelf').classList.add('dim'); },
+      ended: closeTrailer,
+      error: (code) => { Shell.log('trailer error ' + code + ' on ' + keys[kIdx]); kIdx++; playKey(); },
+    });
+  }
+  function armTrailer(card) { if (PERF.has('notrailer')) return; closeTrailer(); keys = (card && card.trailers) || []; kIdx = 0; if (keys.length) dwell = setTimeout(playKey, 3000); }
+
+  // ---------- top bar: tabs built once per tab list, focus only swaps classes ----------
+  function buildTabs() {
+    html($('tabs'), T.map(t => `<span>${esc(t.label)}</span>`).join(''));
+    $('av').textContent = prof ? prof.name.charAt(0).toUpperCase() : '';
+  }
+  function tabsFocus() {
+    [...$('tabs').children].forEach((el, k) => { el.classList.toggle('on', T[k] && T[k].id === tab); el.classList.toggle('cur', zone === 'tabs' && k === ti); });
+    $('tabs').classList.toggle('focus', zone === 'tabs');
+    $('av').classList.toggle('cur', (zone === 'tabs' && ti === T.length) || zone === 'menu');
+  }
+  // Local time costs an Intl formatter per call on this TV, so each zone's answer is kept for the minute.
+  let tcache = {}, tmin = -1;
+  const local = (tz) => { const m = Math.floor(Date.now() / 60000); if (m !== tmin) { tmin = m; tcache = {}; } return tcache[tz] || (tcache[tz] = Journeys.localTime(tz, Date.now())); };
+  let livingWx = null, livingWxFor = '', livingWxAt = 0;
+  function askLivingWeather() {
+    if (!prof) return; const l = prof.living, k = l.name + '|' + l.lat;
+    if (k === livingWxFor && Date.now() - livingWxAt < 30 * 60000) return;
+    livingWxFor = k; livingWxAt = Date.now();
+    Shell.journey({ op: 'place', name: l.name, lat: l.lat, lon: l.lon, tz: l.tz }).then(r => { if (livingWxFor === k) { livingWx = r.ok ? r.place.weather : null; header(); } });
+  }
+  // The first home place's photograph (Wikipedia, through the travel service) for the Feels like card; asked once per home place.
+  let homePhoto = null, homePhotoFor = '';
+  function askHomePhoto() {
+    const h = prof && prof.home.places[0]; if (!h) return; const k = prof.id + '|' + h.name;
+    if (k === homePhotoFor) return; homePhotoFor = k; homePhoto = null;
+    Shell.journey({ op: 'place', name: h.name, lat: h.lat, lon: h.lon, tz: h.tz }).then(r => { if (homePhotoFor === k && r.ok && r.place.image) { homePhoto = Home.photoUrl(r.place.image); build(true); } });
+  }
+  // "Good evening, Tolu" (in the main language when Orbit has a checked greeting for it), the living city's clock and weather, then home's.
+  function header() {
+    if (!prof) { html($('me'), ''); return; }
+    const l = prof.living, hp = prof.home.places[0], lt = local(l.tz), hour = Math.floor(lt.hour);
+    const english = hour >= 5 && hour < 12 ? 'Good morning' : hour >= 12 && hour < 17 ? 'Good afternoon' : 'Good evening';
+    const greet = WorldData.greeting(prof.languages[0], hour) || english;
+    const h = (S.feeds.homes || {})[prof.id], hw = Home.freshWeather(h && h.weather, h && h.weatherMs, Date.now())[0];
+    const here = `${esc(l.name)} ${lt.hhmm}${livingWx ? ` · ${livingWx.tempC}° ${esc(livingWx.desc)}` : ''}`;
+    const home = hp && hp.name !== l.name ? ` &nbsp;·&nbsp; <i>${esc(hp.name)} ${local(hp.tz).hhmm}${hw ? ` · ${hw.tempC}°` : ''}</i>` : '';
+    html($('me'), `<b>${esc(greet)}, ${esc(prof.name)}</b>${here}${home}`);
+  }
+
+  // ---------- profile circle: Who's watching, Add a person, Change my setup ----------
+  const menuItems = () => Shell.profiles().map(p => ({ kind: 'person', p })).concat([{ kind: 'add' }, { kind: 'edit' }]);
+  function openMenu() {
+    const items = menuItems(); mi = Math.max(0, items.findIndex(x => x.p && prof && x.p.id === prof.id));
+    $('menu').innerHTML = `<b>Who's watching</b>` + items.map(x => x.kind === 'person'
+      ? `<div class="it"><span class="c">${esc(x.p.name.charAt(0).toUpperCase())}</span>${esc(x.p.name)}${prof && x.p.id === prof.id ? '<small>Watching</small>' : ''}</div>`
+      : `${x.kind === 'add' ? '<hr>' : ''}<div class="it"><span class="c g">${x.kind === 'add' ? '+' : '&#9998;'}</span>${x.kind === 'add' ? 'Add a person' : 'Change my setup'}</div>`).join('');
+    zone = 'menu'; menuFocus(); $('menu').classList.add('on'); tabsFocus();
+  }
+  function closeMenu() { $('menu').classList.remove('on'); zone = 'tabs'; ti = T.length; tabsFocus(); }
+  function menuFocus() { [...$('menu').querySelectorAll('.it')].forEach((el, k) => el.classList.toggle('cur', k === mi)); }
+  const go = (page) => { try { Android.page(page, window.__orbitToken || ''); } catch (e) { Shell.log('page ' + page); } };
+  function menuAct() {
+    const x = menuItems()[mi]; if (!x) return;
+    if (x.kind === 'person') { closeMenu(); if (!prof || x.p.id !== prof.id) switchTo(x.p.id); return; }
+    if (x.kind === 'add') {
+      if (Shell.profiles().length >= 6) { hint('Orbit holds six people at most'); return; }   // refused here, before the whole setup is walked
+      try { localStorage.removeItem('orbit.setup.edit'); } catch (e) {} go('setup'); return;
+    }
+    if (prof) { try { localStorage.setItem('orbit.setup.edit', prof.id); } catch (e) {} go('setup'); }
+  }
+
+  // ---------- Orbit noticed: an interest the person keeps watching but has not chosen, offered once ----------
+  let offer = null;
+  const offerKey = () => 'orbit.offer.' + pid();
+  const offerState = () => store.get(offerKey(), Taste.offerState());
+  function findOffer() {
+    if (offer || !prof || !INTERESTS.length) return;
+    const i = Taste.noticed(history(), prof.loves, INTERESTS, offerState(), Date.now()); if (!i) return;
+    offer = { i, line: CinemaRows.noticedLine(history(), i, Date.now()) };
+    store.set(offerKey(), Taste.offerShown(offerState(), i.id, Date.now()));
+  }
+  function drawOffer() {
+    const on = !!offer && tab === 'foryou';
+    $('learn').classList.toggle('on', on); $('learn').classList.toggle('cur', on && zone === 'learn');
+    if (offer) { html($('learnT'), esc(offer.line)); html($('learnB'), esc(`Add "${offer.i.name}"`)); }
+  }
+  function dropOffer() { if (!offer) return; store.set(offerKey(), Taste.offerIgnored(offerState(), offer.i.id, Date.now())); offer = null; if (zone === 'learn') zone = 'shelf'; drawOffer(); }
+  function acceptOffer() {
+    const i = offer.i, id = prof.id; offer = null; zone = 'shelf';
+    store.set(offerKey(), Taste.offerAccepted(offerState(), i.id, Date.now())); drawOffer(); refocus(false);
+    if (!Shell.profiles().some(p => p.id === id)) return;
+    hint(`Adding ${i.name}`);
+    Shell.saveProfiles(list => list.map(p => p.id === id && !p.loves.some(l => l.id === i.id) ? Object.assign({}, p, { loves: p.loves.concat([{ id: i.id, refine: [], since: Date.now() }]) }) : p))
+      .then(ok => hint(ok ? `${i.name} is one of your loves now` : 'Orbit could not save that just now'));
+  }
+
+  // ---------- learned weights go back to the profile (native refreshes the most used loves first) ----------
+  function saveWeights() {
+    if (!prof || !INTERESTS.length) return;
+    const list = Shell.profiles(), id = prof.id, w = weightsNow();
+    if (!list.some(p => p.id === id) || !CinemaRows.weightsChanged(prof, w)) return;
+    if (Date.now() - store.get('orbit.weightsAt.' + id, 0) < 12 * HOUR) return;   // a save makes the TV refresh everything: at most twice a day
+    store.set('orbit.weightsAt.' + id, Date.now());
+    Shell.saveProfiles(latest => latest.map(p => p.id === id ? Taste.withWeights(p, w) : p));   // built from the latest saved list
+  }
+
+  // ---------- hero and shelf ----------
+  // Cards and measurements use small sizes; only the full screen gets the large image (memory on a 1.5 GB TV).
+  const small = (u) => u ? u.replace('/t/p/w1280/', '/t/p/w300/').replace('/t/p/w780/', '/t/p/w300/').replace('/t/p/w342/', '/t/p/w185/').replace(/\/(maxresdefault|hqdefault|sddefault)\.jpg/, '/mqdefault.jpg') : u;
+  function stillHtml(c) {
+    let h = '';
+    if (c.kind === 'news') h += `<div class="np"><small>${esc(c.face || '')}</small><span>${esc(c.headline || c.title)}</span></div>`;
+    else if ((c.kind === 'live' || c.kind === 'fixture') && !c.still) h += `<div class="board">${esc(c.score || c.title)}</div>`;   // a scoreboard face when there is no venue photo
+    else if (!c.still) h += `<div class="face"><small>${esc(c.eyebrow || '')}</small>${esc(c.title)}</div>`;
+    else if (c.posterOnly) h += `<img class="poster" src="${esc(small(c.still))}" alt="">`;
+    if (c.live) h += '<div class="tag">LIVE</div>';
+    if (c.score && c.still) h += `<div class="score">${esc(c.score)}</div>`;
+    return h;
+  }
+  // The row is built once per shelf; moving focus only swaps one class and slides the row (no repaint of every card).
+  let rowKey = '';
+  function renderShelf() {
+    const s = shelves[ri]; if (!s) { html($('sh'), ''); html($('row'), ''); rowKey = ''; return; } const i = ci[s.id] || 0;
+    const key = s.id + '|' + s.cards.map(c => c.id + ':' + (c.score || '') + ':' + (c.sub || '')).join(',');
+    if (key !== rowKey) { rowKey = key; buildRow(s); }
+    [...$('row').querySelectorAll('.card')].forEach((el, k) => { el.classList.toggle('f', k === i && zone === 'shelf'); if (k <= i + 4 && el.__bg) { el.firstChild.style.backgroundImage = el.__bg; el.__bg = null; } });   // pictures load as focus nears them
+    const ring = $('ring'); if (ring) { ring.style.opacity = zone === 'shelf' ? 1 : 0; ring.style.transform = `translateX(${i * 396}px) scale(1.1) translateY(-10px)`; }
+    $('row').style.transform = `translateX(${-Math.max(0, i - 1) * 396}px)`;
+  }
+  function buildRow(s) {
+    if (PERF.has('trace')) { const t0 = Date.now(); buildRow1(s); const t1 = Date.now(); void $('row').offsetWidth; Shell.log(`cinema row ${Date.now() - t0} ms (html ${t1 - t0}, layout ${Date.now() - t1}) ${s.id} ${s.cards.length} cards`); } else buildRow1(s);
+  }
+  function buildRow1(s) {
+    html($('sh'), `${esc(s.title)}${s.subtitle ? `<span>${esc(s.subtitle)}</span>` : ''}`);
+    const pics = [];
+    $('row').innerHTML = s.cards.map((c, k) => {
+      const pic = c.kind === 'news' ? null : c.still ? `url('${esc(small(c.still))}')` : null; pics.push(pic);
+      const bg = c.kind === 'news' ? '' : pic ? (k < 5 || PERF.has('nolazy') ? `background-image:${pic}` : '') : (c.kind === 'live' || c.kind === 'fixture') ? 'background:radial-gradient(ellipse at 50% 120%,#1f3d26 0%,#0b1510 55%,#050806 100%)' : 'background:linear-gradient(135deg,#2a2116,#0e0d0b)';
+      return `<div class="card"><div class="i ${c.posterOnly ? 'blur' : ''} ${c.kind === 'news' ? 'news' : ''}" style="${bg}">${stillHtml(c)}</div><div class="cap"><div class="t">${esc(c.title)}</div><div class="s">${esc(c.sub || '')}</div></div></div>`;
+    }).join('') + '<div id="ring"></div>';
+    [...$('row').querySelectorAll('.card')].forEach((el, k) => { el.__bg = k >= 5 && !PERF.has('nolazy') ? pics[k] : null; });
+  }
+  function primary(c) {
+    if (c.action) return c.action;
+    if (c.kind === 'title') return c.pkg ? 'Watch on ' + c.appLabel : c.trailers.length ? 'Watch Trailer' : 'Not on your apps';
+    if (c.kind === 'radio') return radioOn === c.url ? 'Stop' : 'Listen';
+    return { live: c.pkg ? 'Watch Live' : 'Where to Watch', channel: 'Watch Live', stream: 'Watch Live', video: 'Watch on YouTube', news: 'Read', fixture: 'When it plays', app: 'Open', homemode: 'Open Home Mode', classic: 'Open' }[c.kind] || 'Open';
+  }
+  function renderHero(c) {
+    if (PERF.has('trace')) { const t0 = Date.now(); renderHero1(c); Shell.log(`cinema hero ${Date.now() - t0} ms ${c.kind}`); } else renderHero1(c);
+  }
+  function renderHero1(c) {
+    $('why').innerHTML = `${esc(c.eyebrow || '')}${c.why ? `<i>${esc(c.why)}</i>` : ''}`;
+    const logo = $('logo'), name = $('name'), text = c.headline || c.title;
+    name.classList.toggle('long', text.length > 34);
+    if (c.logo) {
+      // decoded off-screen first (Atlas technique), then shown in one step with its silhouette decided: no decode on a frame
+      const want = c.logo; logoWant = want; name.style.display = 'none'; logo.style.display = 'none';
+      const im = new Image(); im.src = want;
+      const show = (dark) => { if (logoWant !== want) return; logo.classList.remove('in'); logo.classList.toggle('dark', dark); logo.src = want; logo.style.display = 'block'; void logo.offsetWidth; logo.classList.add('in'); };
+      const fail = () => { if (logoWant !== want) return; name.style.display = 'block'; name.textContent = c.title; };
+      (im.decode && !PERF.has('nodecode') ? im.decode() : Promise.resolve()).then(() => sample(want, 1, (lum) => show(lum != null && lum < 0.3)), fail);   // a dark logo becomes a white silhouette
+    }
+    else { logoWant = null; logo.style.display = 'none'; name.style.display = 'block'; name.textContent = text; }
+    $('kn').textContent = c.localTitle && (c.logo || c.localTitle !== c.title) ? c.localTitle : '';   // never the same words twice
+    const parts = [];
+    if (c.live) parts.push('<span class="live">LIVE</span>');
+    if (c.score) parts.push(`<span>${esc(c.score)}</span>`);
+    if (c.match != null) parts.push(`<span class="match">${c.match}% your taste</span>`);
+    (c.meta || []).forEach(m => parts.push(c.kind === 'live' ? `<span class="badge">${esc(m.toUpperCase())}</span>` : `<span>${esc(m)}</span>`));
+    if (!c.meta.length && c.sub && c.kind !== 'title' && c.sub !== c.why) parts.push(`<span>${esc(c.sub)}</span>`);
+    $('meta').innerHTML = parts.join('<span class="dot"></span>');
+    $('ov').textContent = c.overview || '';
+    const nothing = c.kind === 'title' && !c.pkg && !c.trailers.length;   // honest: no button that leads nowhere
+    const b = nothing ? [`<div class="none">Not streaming on your apps in ${esc(c.country || 'your country')}</div>`] : [`<div class="btn p">${c.kind === 'title' && !c.pkg && c.trailers.length ? '<span class="tri"></span>' : ''}${esc(primary(c))}</div>`];
+    if (c.kind === 'title' && c.pkg && c.trailers.length) b.push('<div class="btn s">Trailer</div>');
+    $('btns').innerHTML = b.join('');
+    backdrop(c);
+  }
+  function focused() { const s = shelves[ri]; return s ? s.cards[ci[s.id] || 0] : null; }
+  // The shelf moves at once; the hero and the full-screen art change only once focus rests, so fast scrolling stays light.
+  let heroTimer = 0, shown = null, logoWant = null;
+  function refocus(force) {
+    if (PERF.has('trace')) { const t0 = Date.now(); refocus1(force); Shell.log(`cinema refocus ${Date.now() - t0} ms`); } else refocus1(force);
+  }
+  function refocus1(force) {
+    const c = focused(); renderShelf(); tabsFocus(); drawOffer(); if (!c) return;
+    if (!force && c.id === lastFocusId) { if (CinemaRows.heroChanged(shown, c)) { shown = c; renderHero(c); } return; }   // same card, new content (live score): refresh without restarting the trailer
+    lastFocusId = c.id; closeTrailer(); clearTimeout(heroTimer);
+    if (PERF.has('nohero')) return;
+    heroTimer = setTimeout(() => { const now = focused(); if (now && now.id === c.id) { shown = now; renderHero(now); armTrailer(now); } }, force ? 0 : 260);
+  }
+  let lastKey = '', keyCat = null, catalogN = 0;
+  // Back from Home Mode (a page of its own): focus returns to the card that opened it, once its shelf is built.
+  let backTo = (() => { const b = store.get('orbit.cinema.back', null); store.set('orbit.cinema.back', null); return b && Date.now() - b.at < 2 * 3600000 ? b : null; })();
+  function build(force, reset) {
+    const t0 = Date.now(); try { build1(force, reset); } finally { if (PERF.has('trace')) Shell.log(`cinema build ${Date.now() - t0} ms tab=${tab}`); }
+  }
+  function build1(force, reset) {
+    const was = prof && prof.id; prof = Shell.current();
+    if (was && prof && was !== prof.id) offer = null;   // another person: their own offers
+    if (prof) { S.livingName = countryName(prof.living.country); askLivingWeather(); askHomePhoto(); }
+    const cat = catalogue(), items = Shell.items(), loves = prof ? (S.feeds.loves || {})[prof.id] : null;
+    // Several pushes arrive per refresh (feeds, the loves pass, catalogue, profiles, country names): a push that changes nothing shown is not rebuilt.
+    if (cat !== keyCat) { keyCat = cat; catalogN++; }
+    const raw = (k) => { try { return localStorage.getItem(k + pid()); } catch (e) { return null; } };
+    const key = CinemaRows.inputsKey({ profile: prof, tab, catalogN, loves, home: prof ? (S.feeds.homes || {})[prof.id] : null, items, history: raw('orbit.history.'), taste: raw('orbit.taste.'),
+      nowMs: Date.now(), extra: [INTERESTS.length, wanted, homePhoto] });
+    if (!force && !reset && key === lastKey) { header(); return; }   // the header still shows the home weather that came with it
+    lastKey = key;
+    const weights = weightsNow();
+    const nt = CinemaRows.tabs(prof, weights, { filmTab: world.filmTab, catalog: cat, interests: INTERESTS, loves, sport: items.sport });
+    if (nt.map(t => t.id + t.label).join() !== T.map(t => t.id + t.label).join() || $('tabs').children.length !== nt.length) {
+      T = nt; buildTabs(); if (prof) store.set('orbit.cinema.tabs.' + prof.id, T.map(t => ({ id: t.id, label: t.label })));   // Atlas never gets a profile-less list
+    }
+    if (prof && wanted) {
+      const catalogKnown = !!(S.catalog && Object.keys(S.catalog).length);
+      if (T.some(t => t.id === wanted)) { tab = wanted; reset = true; wanted = null; store.set('orbit.cinema.tab', null); }
+      else if (wanted !== 'films' || catalogKnown) { wanted = null; store.set('orbit.cinema.tab', null); }   // gone (or no titles in that language)
+    }
+    if (prof && !T.some(t => t.id === tab)) tab = 'foryou';
+    if (tab === 'foryou') findOffer();
+    const taste = tasteOf();
+    const r = CinemaRows.build({ profile: prof, weights, catalog: cat, loves, home: prof ? (S.feeds.homes || {})[prof.id] : null,
+      interests: INTERESTS, world, items, taste, history: history(), rank: (t) => Taste.rank(t, taste, seed()), nowMs: Date.now(), tab, homePhoto });
+    const keep = shelves[ri] && shelves[ri].id, keepCard = focused() && focused().id;
+    shelves = PERF.has('lite') && tab === 'foryou' ? r.shelves.filter(x => x.id === 'tonight' || x.id.startsWith('love:')) : r.shelves;
+    let o = { keepShelf: keep, keepCard, reset: !touched || !!reset };
+    if (backTo && prof && backTo.profile === prof.id && tab === 'foryou' && shelves.some(x => x.id === backTo.shelf)) { o = { keepShelf: backTo.shelf, keepCard: backTo.card, reset: false }; backTo = null; touched = true; }
+    const at = CinemaRows.landing(r, o);
+    ri = Math.max(0, Math.min(shelves.length - 1, at.ri)); if (shelves[ri]) ci[shelves[ri].id] = at.ci;
+    header(); refocus(force);
+  }
+  function switchTo(id) {
+    dropOffer(); try { localStorage.setItem('orbit.profile', id); } catch (e) {}
+    tab = 'foryou'; zone = 'shelf'; Object.keys(ci).forEach(k => delete ci[k]); build(true, true);
+  }
+
+  // ---------- actions ----------
+  let hintT = 0;
+  function hint(text) { const h = $('hint'); h.textContent = text; h.classList.add('on'); clearTimeout(hintT); hintT = setTimeout(() => h.classList.remove('on'), 2400); }
+  const remember = (c, signal) => store.set('orbit.history.' + pid(), CinemaRows.record(history(), c, signal, Date.now()));
+  // What was launched, so the return can teach how long it was watched (and for which love).
+  try { CinemaRows.adoptOldPick(localStorage); } catch (e) {}
+  const picked = (c, pkg) => store.set(CinemaRows.PICK_KEY, { profile: pid(), home: pid(), title: c.data, love: c.love || null, pkg, at: Date.now() });
+  // Radio for a love plays through the TV's player, as in Home Mode; Select again stops it, and leaving Orbit stops it.
+  let radioOn = '';
+  function radio(url) { radioOn = url; try { Android.radio(url, window.__orbitToken || ''); } catch (e) { Shell.log('radio ' + url); } }
+  function act(c) {
+    if (!c) return; closeTrailer();
+    if (c.kind === 'radio') {
+      if (radioOn === c.url) { radio(''); hint('Radio stopped'); }
+      else { remember(c, 'pick'); radio(c.url); hint(`Playing ${c.title}. Select again to stop.`); }
+      renderHero(c); return;
+    }
+    if (radioOn && c.kind !== 'news' && c.kind !== 'fixture') radio('');
+    if (c.kind === 'title') {
+      if (CinemaRows.counts(c)) { store.set('orbit.taste.' + pid(), Taste.learn(tasteOf(), c.data, 'pick', Date.now())); remember(c, 'pick'); }   // a trailer or nothing is not opening it
+      if (c.pkg) { const h = `Search for ${c.title} in ${c.appLabel}`; hint(h); picked(c, c.pkg); setTimeout(() => { clearTimeout(hintT); $('hint').classList.remove('on'); Shell.launchItem({ kind: 'app', name: c.appLabel, pkg: c.pkg }); setTimeout(() => { try { Android.toast(h); } catch (e) {} }, 350); }, 1500); }   // one at a time: the pill fades, then the toast follows into the app
+      else if (c.trailers.length) { Shell.launchItem({ kind: 'trailer', name: c.title, url: 'https://www.youtube.com/watch?v=' + c.trailers[0], pkg: 'com.amazon.firetv.youtube' }); }
+      else hint(`Not on your apps in ${c.country || 'your country'}`);
+    } else if (c.kind === 'video' || c.kind === 'stream') { remember(c, 'pick'); picked(c, c.item.pkg); Shell.launchItem(c.item); }
+    else if (c.kind === 'news') { remember(c, 'pick'); Shell.openReader(c.reader); }
+    else if (c.kind === 'fixture' && c.live && c.pkg) { remember(c, 'pick'); picked(c, c.pkg); Shell.launchItem({ kind: 'app', name: c.appLabel, pkg: c.pkg }); }
+    else if (c.kind === 'fixture' && c.live) hint(c.handoffLabel || 'Not on an app on this TV');
+    else if (c.kind === 'fixture') hint(`${c.title}: ${c.sub}`);
+    else if (c.kind === 'homemode') { store.set('orbit.cinema.back', { profile: pid(), shelf: shelves[ri] && shelves[ri].id, card: c.id, at: Date.now() }); Shell.openHome(pid()); }
+    else if (c.kind === 'classic') go('hero');
+    else if (c.kind === 'live' && !c.pkg) hint((c.item && c.item.data && c.item.data.handoffLabel) || 'Not available on this TV');
+    else if (c.item) { if (c.love) { remember(c, 'pick'); picked(c, c.item.pkg); } Shell.launchItem(c.item); }
+  }
+
+  // ---------- keys ----------
+  let tabT = 0;
+  Shell.on('key', (k) => {
+    touched = true;
+    if (player && k !== 'Enter') closeTrailer();
+    if (zone === 'menu') {
+      const n = menuItems().length;
+      if (k === 'ArrowUp') mi = Math.max(0, mi - 1); else if (k === 'ArrowDown') mi = Math.min(n - 1, mi + 1);
+      else if (k === 'ArrowLeft') { closeMenu(); return; } else if (k === 'Enter') { menuAct(); return; }
+      menuFocus(); return;
+    }
+    if (zone === 'learn') {
+      if (k === 'Enter') acceptOffer(); else if (k === 'ArrowUp') { zone = 'tabs'; ti = Math.max(0, T.findIndex(t => t.id === tab)); refocus(false); }
+      else if (k === 'ArrowDown') { zone = 'shelf'; refocus(false); }
+      return;
+    }
+    if (zone === 'tabs') {
+      if (k === 'ArrowLeft' || k === 'ArrowRight') {
+        ti = k === 'ArrowLeft' ? Math.max(0, ti - 1) : Math.min(T.length, ti + 1);   // index T.length is the profile circle
+        // like Apple TV, resting on a tab shows it; Journeys (another page) and the circle still need Enter
+        clearTimeout(tabT); tabT = setTimeout(() => { const t = T[ti]; if (zone === 'tabs' && t && t.id !== 'journeys' && t.id !== tab) { tab = t.id; build(true, true); } }, 350);
+      }
+      else if (k === 'ArrowDown') { zone = offer && tab === 'foryou' ? 'learn' : 'shelf'; refocus(false); return; }
+      else if (k === 'Enter') { if (ti === T.length) { openMenu(); return; } if (T[ti].id === 'journeys') { go('atlas'); return; } tab = T[ti].id; zone = 'shelf'; build(true, true); return; }
+      tabsFocus(); return;
+    }
+    const s = shelves[ri]; if (!s) { if (k === 'ArrowUp') { zone = 'tabs'; tabsFocus(); } return; }
+    if (k === 'ArrowLeft' || k === 'ArrowRight') { const n = s.cards.length; ci[s.id] = Math.max(0, Math.min(n - 1, (ci[s.id] || 0) + (k === 'ArrowLeft' ? -1 : 1))); refocus(false); }
+    else if (k === 'ArrowDown') { if (ri < shelves.length - 1) { ri++; refocus(false); } }
+    else if (k === 'ArrowUp') { if (ri > 0) { ri--; refocus(false); } else { zone = offer && tab === 'foryou' ? 'learn' : 'tabs'; ti = Math.max(0, T.findIndex(t => t.id === tab)); renderShelf(); tabsFocus(); drawOffer(); } }
+    else if (k === 'Enter') act(focused());
+  });
+  Shell.on('back', () => {
+    if (player) closeTrailer();
+    else if (zone === 'menu') closeMenu();
+    else if (zone === 'learn') { dropOffer(); refocus(false); }   // dismissed: counts as ignored
+    else if (zone === 'tabs') { zone = 'shelf'; refocus(false); }
+    else if (tab !== 'foryou' || ri > 0) { tab = 'foryou'; build(true, true); }
+  });
+  Shell.on('data', () => { if (zone !== 'menu') build(false); });
+  Shell.on('tick', header);
+  Shell.on('pause', () => { closeTrailer(); dropOffer(); if (radioOn) radio(''); });   // leaving Orbit with the offer on screen counts as ignoring it
+  Shell.on('wake', () => store.set(CinemaRows.PICK_KEY, null));
+  Shell.on('launchFailed', () => store.set(CinemaRows.PICK_KEY, null));
+  Shell.on('returned', (pkg) => {
+    // How long you stayed in the launched app teaches that person's history (with the love it came from); any other return teaches nothing.
+    const last = store.get(CinemaRows.PICK_KEY, null); if (!last || !last.title) return;
+    store.set(CinemaRows.PICK_KEY, null);
+    const now = Date.now(), who = last.profile || last.home; if (last.pkg !== pkg || !(now - last.at <= 6 * HOUR)) return;
+    const minutes = (now - last.at) / 60000, sig = Taste.attribute(last, pkg, now);
+    if (sig && last.title.genres) store.set('orbit.taste.' + who, Taste.learn(store.get('orbit.taste.' + who, Taste.empty()), last.title, sig, now));
+    store.set('orbit.history.' + who, CinemaRows.record(history(who), { data: last.title, love: last.love }, sig || 'pick', now, minutes));
+    if (prof && who === prof.id) saveWeights();
+  });
+  document.addEventListener('visibilitychange', () => { if (document.hidden) closeTrailer(); });
+
+  const data = (f) => fetch('data/' + f).then(r => r.json());
+  Promise.all([data('languages.json'), data('countries.json'), data('interests.json')]).then(([languages, countries, interests]) => {
+    WorldData.load(languages); languages.forEach(l => { LANG[l.code] = l; }); countries.forEach(c => { COUNTRY[c.code] = c; }); INTERESTS = interests;
+    build(false); saveWeights();
+  }).catch(e => Shell.log('cinema data failed: ' + e));
+  build(true);
+})();
+</script>
+</body></html>

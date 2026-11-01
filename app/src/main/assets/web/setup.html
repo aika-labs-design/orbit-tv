@@ -1,0 +1,387 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Orbit setup</title>
+<link rel="stylesheet" href="setup.css">
+</head>
+<body>
+<div id="root">
+  <div class="space"></div>
+  <div class="wm">ORBIT</div>
+  <div class="steps"><span id="stepn">Step 1 of 5</span><i></i><i></i><i></i><i></i><i></i></div>
+
+  <section class="step" id="s-name">
+    <div class="l">
+      <div class="eyebrow" id="neye">Welcome to Orbit</div>
+      <h1 id="nhead">First, what should<br>we call you?</h1>
+      <div class="lede">Orbit greets you by name, and its first letter becomes your circle on the home screen.</div>
+      <div class="me"><div class="av" id="nav"></div><div><b id="nname"></b>Your circle</div></div>
+    </div>
+  </section>
+
+  <section class="step" id="s-home">
+    <div id="globe"><img id="gimg" alt=""><div class="pin" id="pin"><i></i><div><span id="pinname"></span><small id="pinline"></small></div></div></div>
+    <div class="side" id="hside">
+      <div class="eyebrow" id="hello"></div>
+      <h1>Where is home?</h1>
+      <div class="lede">The place you carry with you. Orbit will keep its time, its news, its films and its festivals close.</div>
+      <div class="pill" id="hsearch" style="margin-top:34px"><span id="hq">Search a country or a city</span></div>
+      <div id="hsub"></div>
+      <div class="list" id="hlist"></div>
+    </div>
+  </section>
+
+  <section class="step" id="s-languages">
+    <div class="l">
+      <div class="eyebrow">Your languages</div>
+      <h1>Which languages<br>feel like home?</h1>
+      <div class="chips" id="lchips"></div>
+      <div class="why" id="lwhy"></div>
+    </div>
+    <div class="card noimg" id="lcard"><div class="rc">
+      <div class="eyebrow">Where you live now</div><h2 id="lcity"></h2>
+      <div class="m" id="lline"></div>
+      <div class="q"><span id="lyes">That's right</span><span id="lno">Somewhere else</span></div>
+      <div class="res" id="lres"></div>
+    </div></div>
+  </section>
+
+  <section class="step" id="s-loves">
+    <div class="top"><div class="eyebrow">Make it yours</div><h1>What do you love?</h1></div>
+    <div class="tabs" id="vtabs"></div>
+    <div class="gridw"><div class="grid" id="vgrid"></div></div>
+    <div class="empty" id="vempty">Select to search anything: a sport, a band, a dish, a hobby.</div>
+    <div class="drill"><div class="d off" id="vpanel"><div class="eyebrow" id="vpe"></div><h3 id="vph"></h3><div class="chips" id="vpc"></div><p id="vpp"></p></div>
+      <div class="count" id="vcount"></div></div>
+  </section>
+
+  <section class="step" id="s-summary">
+    <div class="l">
+      <div class="eyebrow" id="sready">Ready when you are</div>
+      <h1 id="stitle">Here is your Orbit.</h1>
+      <ul class="lines" id="slines"></ul>
+      <div class="order"><div class="eyebrow">Your languages, in order</div><div class="chips" id="sorder"></div></div>
+    </div>
+    <div class="card noimg" id="scard"><div class="rc">
+      <div class="eyebrow">Home</div><h2 id="shome"></h2>
+      <div class="m" id="sline"></div>
+    </div></div>
+  </section>
+
+  <div class="kb" id="kb"><div class="label" id="kblabel"></div><div class="field" id="kbfield"></div><div class="note" id="kbnote"></div><div class="keys" id="kbkeys"></div><div class="acc" id="kbacc"></div></div>
+  <div class="hintbar" id="hint"></div>
+  <div class="cta hide" id="cta">Next</div>
+  <div id="veil"></div>
+</div>
+<script src="journeys.js"></script><script src="sky.js"></script><script src="personal.js"></script><script src="wellbeing.js"></script><script src="feeds.js"></script>
+<script src="profiles.js"></script><script src="keyboard.js"></script><script src="setup.js"></script><script src="common.js"></script>
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id), esc = Shell.esc;
+  // Text and classes are only written when they change: a key press must cost a few style changes, not a rebuild (p90 22 ms on the TV).
+  const txt = (el, t) => { if (el.__t !== t) { el.__t = t; el.textContent = t; } };
+  const html = (el, h) => { if (el.__h !== h) { el.__h = h; el.innerHTML = h; } };
+  const cls = (el, c, on) => { if (el.classList.contains(c) !== !!on) el.classList.toggle(c, !!on); };
+  let S = null, ready = false, saving = false, failed = false, searching = '';
+  const C = {};          // code -> country
+  const info = {};       // place name -> { weather, image } from the travel service
+  // ADB-only measuring switches (OrbitActivity --es perf a,b): noimg, noscale, notrans, noring
+  location.hash.slice(1).split(',').filter(Boolean).forEach(x => document.body.classList.add('perf-' + x));
+  const tz = (() => { try { return Intl.DateTimeFormat().resolvedOptions().timeZone; } catch (e) { return 'UTC'; } })();
+  // Journeys.localTime builds an Intl formatter per call (milliseconds each on this TV), so a key press reuses this minute's answer
+  let tcache = {}, tmin = -1;
+  const lt = (zone) => { const m = Math.floor(Date.now() / 60000); if (m !== tmin) { tmin = m; tcache = {}; } return tcache[zone] || (tcache[zone] = Journeys.localTime(zone, Date.now())); };
+  const localHhmm = (zone) => lt(zone).hhmm;
+  const localHour = (zone) => lt(zone).hour;
+
+  // ---------- places: weather and a photograph, asked once each ----------
+  function place(p, then) {
+    const k = p.name + '|' + p.lat; if (info[k]) { if (info[k].done) then(info[k]); return; }
+    info[k] = {};
+    Shell.journey({ op: 'place', name: p.name, lat: p.lat, lon: p.lon, tz: p.tz }).then(r => {
+      info[k] = { done: true, weather: r.ok ? r.place.weather : null, image: r.ok && r.place.image ? r.place.image.replace(/\/\d+px-/, '/960px-') : null };
+      then(info[k]);
+    });
+  }
+  const placeInfo = (p) => (p && info[p.name + '|' + p.lat]) || {};
+
+  // ---------- globe (Atlas technique: one swap after focus rests 300 ms, decoded off-screen) ----------
+  const pad = (n) => String(n).padStart(2, '0');
+  let frame = -1, globeT = 0, pinFor = null;
+  function globeTo(p) {
+    clearTimeout(globeT); cls($('pin'), 'on', false);
+    if (!p) return;
+    globeT = setTimeout(() => {
+      const f = Journeys.frameFor(p.lon), show = () => { if (pinFor !== p) return; frame = f; $('gimg').src = im.src; pin(p); };
+      pinFor = p;
+      const im = new Image(); im.src = `globe/f${pad(f)}.jpg`;
+      if (f === frame) { pin(p); } else (im.decode ? im.decode() : Promise.resolve()).then(show, show);
+      place(p, () => { if (pinFor === p) pin(p); });
+    }, 300);
+  }
+  function pin(p) {
+    const pr = Journeys.project(p.lat, p.lon, frame * 5), el = $('pin');
+    if (!pr.visible) { cls(el, 'on', false); return; }
+    el.style.left = (pr.x * 1000).toFixed(0) + 'px'; el.style.top = (pr.y * 1000).toFixed(0) + 'px';
+    txt($('pinname'), p.name);
+    const w = placeInfo(p).weather;
+    txt($('pinline'), localHhmm(p.tz) + (w ? ' · ' + Setup.weatherLine(w, localHour(p.tz)) : ''));
+    cls(el, 'on', true);
+  }
+
+  // ---------- keyboard ----------
+  const KB_AT = { name: 'at-name', home: 'at-left', town: 'at-left', lang: 'at-right', living: 'at-left', love: 'at-bottom' };
+  const KB_LABEL = { name: 'Your name', home: 'Search a country or a city', town: 'Any town', lang: 'Search a language', living: 'Search where you live', love: 'Search anything you love' };
+  function buildKeys() {
+    const rows = Keyboard.ROWS.map((row, r) => row.map((ch, c) => `<div class="k" id="k${r}-${c}">${esc(ch)}</div>`).join('')).join('');
+    const acts = Keyboard.ACTIONS.map(a => `<div class="k act" id="ka-${a.id}" style="grid-column:${a.from + 1} / ${a.to + 2}">${esc(a.label)}</div>`).join('');
+    $('kbkeys').innerHTML = rows + acts;
+  }
+  let kbCur = null;
+  function drawKb() {
+    const kb = S.kb, box = $('kb');
+    cls(box, 'on', !!kb); if (!kb) return;
+    Object.values(KB_AT).forEach(c => cls(box, c, c === KB_AT[kb.for]));
+    txt($('kblabel'), KB_LABEL[kb.for]);
+    const near = kb.for === 'home' && kb.text.trim() ? (Setup.matchCountry(kb.text) >= 0 ? 'Showing <b>' + esc(Setup.countryAt(S).name) + '</b> in the list' : 'Done searches towns named <b>' + esc(kb.text.trim()) + '</b>')
+      : kb.for === 'lang' ? (S.langMatch ? 'Done adds <b>' + esc(Setup.chipName(S.langMatch.code)) + '</b>' + (S.langMatch.name !== Setup.chipName(S.langMatch.code) ? ' (' + esc(S.langMatch.name) + ')' : '') : '')
+      : '';
+    html($('kbnote'), near);
+    html($('kbfield'), (kb.text ? esc(kb.text) : '') + '<i></i>');
+    const id = kb.r === Keyboard.ROWS.length ? 'ka-' + Keyboard.keyAt(kb.r, kb.c).id : `k${kb.r}-${kb.c}`;
+    if (kbCur !== id) { if (kbCur && $(kbCur)) $(kbCur).classList.remove('cur'); $(id).classList.add('cur'); kbCur = id; }
+    cls($('ka-shift'), 'on', kb.shift);
+    cls(box, 'accents', !!kb.accents);
+    if (kb.accents) html($('kbacc'), kb.accents.list.map((a, i) => `<span class="${i === kb.accents.i ? 'cur' : ''}">${esc(a)}</span>`).join(''));
+  }
+
+  // ---------- 1 name ----------
+  function drawName() {
+    const n = (S.kb && S.kb.for === 'name' ? S.kb.text : S.name).trim();
+    if (S.editing) { txt($('neye'), 'Change your setup'); txt($('nhead'), 'Change your setup'); }
+    txt($('nav'), n ? Array.from(n)[0].toUpperCase() : '');
+    txt($('nname'), n);
+  }
+
+  // ---------- 2 home ----------
+  const ROWS = 4;
+  let rowEls = [];
+  function drawHome() {
+    const f = Setup.focusOf(S, 'home'), cities = f.zone === 'cities';
+    txt($('hello'), 'Hello, ' + S.name);
+    cls($('hside'), 'cities', cities);
+    cls($('hsearch'), 'cur', f.zone === 'search' && !S.kb);
+    cls($('hsearch'), 'typed', !!S.query);
+    txt($('hq'), S.query || 'Search a country or a city');
+    const country = Setup.countryAt(S);
+    // only the four rows on screen are described
+    let row, n, cur;
+    if (cities) {
+      const all = Setup.cityRows(S), picked = (S.home.places || []).map(p => p.name);
+      html($('hsub'), S.towns ? 'Towns named <b>' + esc(S.query || '') + '</b>' : `<b>${esc(country.name)}</b> &nbsp;·&nbsp; pick your city, up to three places`);
+      row = (i) => { const r = all[i]; if (!r) return null; const mine = S.home.country === r.cc && picked.includes(r.name);
+        return r.other ? { name: r.name, right: '', other: true } : { name: r.name, right: mine ? (picked[0] === r.name ? 'Home ✓' : 'Also home ✓') : (r.sub || localHhmm(r.tz)), home: mine }; };
+      n = all.length; cur = f.ci;
+    } else {
+      const list = window.__countries;
+      row = (i) => { const c = list[i]; if (!c) return null; const mine = S.home.country === c.code && S.home.places.length;
+        return { name: c.name, right: mine ? 'Home: ' + S.home.places.map(p => p.name).join(' · ') + ' ✓' : c.cities.slice(0, 4).map(x => x.name).join(' · '), home: mine }; };
+      n = list.length; cur = f.i;
+    }
+    const start = Math.max(0, Math.min(cur - 1, n - ROWS));
+    rowEls.forEach((el, k) => {
+      const r = row(start + k), on = start + k === cur;
+      cls(el, 'hide', !r); if (!r) return;
+      cls(el, 'cur', on && (f.zone === 'list' || f.zone === 'cities')); cls(el, 'other', !!r.other);
+      html(el, `<b>${esc(r.name)}</b><span class="${r.home ? 'home' : ''}">${esc(r.right)}</span>`);
+    });
+    // the globe follows the focused country (or the focused city), and the picked place when focus is elsewhere
+    let p = null;
+    if (cities) { const r = Setup.cityRows(S)[f.ci]; p = r && !r.other ? r : null; }
+    else if (country) p = S.home.country === country.code && S.home.places[0] ? S.home.places[0] : country.cities[0];
+    if (p && (!pinFor || pinFor.name !== p.name || pinFor.lat !== p.lat)) globeTo(p);
+  }
+
+  // ---------- 3 languages and where you live ----------
+  let chipKey = '';
+  function drawLanguages() {
+    const f = Setup.focusOf(S, 'languages'), chips = Setup.chips(S), live = S.living && C[S.living.country], home = C[S.home.country];
+    const homeLangs = (home && home.languages) || [];
+    const key = chips.join(',') + '|' + (S.living && S.living.country);
+    if (key !== chipKey) {
+      chipKey = key;
+      $('lchips').innerHTML = chips.map(c => c === 'more' ? '<div class="chip">+ More</div>' : `<div class="chip">${esc(Setup.chipName(c))}${live && live.languages.includes(c) && !homeLangs.includes(c) ? ' <small>where you live</small>' : ''}</div>`).join('');
+    }
+    [...$('lchips').children].forEach((el, k) => { cls(el, 'on', S.languages.includes(chips[k])); cls(el, 'cur', f.zone === 'chips' && !S.kb && k === f.i); });
+    const L = S.languages.map(Setup.chipName);
+    txt($('lwhy'), L.length ? `Films and series in ${L[0]} come first${L.length > 1 ? ', then ' + Setup.list(L.slice(1)) : ''}. Greetings, radio and home news follow your first home language.`
+      : 'Pick every language you watch and listen in, the one that feels most like home first. It leads your films, greetings, radio and home news.');
+    const lv = S.living;
+    txt($('lcity'), lv ? lv.name : 'Somewhere');
+    const w = placeInfo(lv).weather, guessed = !S.livingSure && S.livingGuess && lv && S.livingGuess.name === lv.name;
+    html($('lline'), `${guessed ? "Guessed from your TV's clock" : 'Confirmed'} &nbsp;·&nbsp; <b>${lv ? localHhmm(lv.tz) : ''}${w ? ' · ' + esc(Setup.weatherLine(w, localHour(lv.tz))) : ''}</b><br>Streaming services and local news for ${esc(live ? live.name : '')}`);
+    cls($('lyes'), 'cur', f.zone === 'living' && f.li === 0 && !S.kb); cls($('lno'), 'cur', f.zone === 'living' && f.li === 1 && !S.kb);
+    cls($('lyes'), 'on', S.livingSure);
+    const res = S.livingResults || [];
+    cls($('lcard'), 'results', f.zone === 'results' && res.length);
+    if (f.zone === 'results') html($('lres'), res.slice(0, 5).map((r, k) => `<div class="${k === f.ri ? 'cur' : ''}">${esc(r.name)}<span>${esc(r.sub)}</span></div>`).join(''));
+    // a cached place answers at once; only a fresh answer asks for another render (no render inside render)
+    if (lv && placeInfo(lv).done) cardImage($('lcard'), placeInfo(lv).image);
+    else if (lv) place(lv, () => { if (S.living === lv) render(); });
+  }
+  function cardImage(el, url) {
+    if (!url || el.__img === url) return; el.__img = url;
+    const im = new Image(); im.src = url;
+    const show = () => { if (el.__img !== url) return; el.style.backgroundImage = `url('${url.replace(/'/g, '%27')}')`; el.classList.remove('noimg'); };
+    (im.decode ? im.decode() : Promise.resolve()).then(show, () => {});
+  }
+
+  // ---------- 4 loves ----------
+  let gridKey = '', tilesNow = [], tileEls = [], gridT = 0, panelKey = '';
+  function buildGrid() {
+    tilesNow = Setup.tiles(S); gridKey = gridKeyNow();
+    $('vgrid').innerHTML = tilesNow.map(t => `<div class="t${t.custom ? ' custom' : ''}">${t.custom ? '<em>Search</em>' : ''}<span>${esc(t.name)}</span></div>`).join('');
+    tileEls = [...$('vgrid').children]; $('vgrid').style.transform = '';
+    $('vempty').style.display = tilesNow.length ? 'none' : 'block';
+  }
+  const gridKeyNow = () => Setup.focusOf(S, 'loves').tab + '|' + S.loveQuery;
+  function drawLoves() {
+    const f = Setup.focusOf(S, 'loves');
+    if (!$('vtabs').children.length) $('vtabs').innerHTML = Setup.TABS.map(t => `<span>${esc(t.label)}</span>`).join('');
+    [...$('vtabs').children].forEach((el, k) => { cls(el, 'on', k === f.tab); cls(el, 'f', k === f.tab); });
+    cls($('vtabs'), 'focus', f.zone === 'tabs' && !S.kb);
+    // moving along the tabs only swaps the grid once the focus rests
+    if (gridKeyNow() !== gridKey) { clearTimeout(gridT); if (f.zone === 'tabs') gridT = setTimeout(() => { buildGrid(); render(); }, 250); else buildGrid(); }
+    const rows = Math.ceil(tilesNow.length / 4), row = Math.floor(f.i / 4), top = Math.max(0, Math.min(row - 1, rows - 3));
+    const ty = -top * 176 + 'px';
+    if ($('vgrid').__ty !== ty) { $('vgrid').__ty = ty; $('vgrid').style.transform = `translateY(${ty})`; }
+    tileEls.forEach((el, k) => {
+      const t = tilesNow[k], r = Math.floor(k / 4);
+      if (t.image && r >= top - 1 && r <= top + 3 && !el.__img) { el.__img = 1; el.style.backgroundImage = `url('${t.image.replace(/'/g, '%27')}')`; }   // only the rows in view load photos
+      cls(el, 'on', !!Setup.loved(S, t.id)); cls(el, 'cur', f.zone === 'grid' && !S.kb && k === f.i && gridKeyNow() === gridKey);
+    });
+    const p = Setup.panel(S), pk = p ? p.id : '';
+    if (pk !== panelKey) {
+      panelKey = pk;
+      if (p) { txt($('vpe'), p.name + ' · make it yours'); txt($('vph'), p.label || 'Say more'); $('vpc').innerHTML = p.options.map(o => `<span>${esc(o.name)}</span>`).join('');
+        txt($('vpp'), /espn|cricinfo|jolpica|motogp/.test(JSON.stringify((window.__interest[p.id] || {}).live || '')) ? `Live scores, ${Setup.startWord([p.id])}, highlights and news, for these and nothing else.` : 'Shows, videos and news narrowed to these, and nothing else.'); }
+    }
+    cls($('vpanel'), 'off', !p); cls($('vpanel'), 'focus', f.zone === 'panel');
+    if (p) [...$('vpc').children].forEach((el, k) => { cls(el, 'on', p.chosen.includes(p.options[k].id)); cls(el, 'cur', f.zone === 'panel' && k === f.pi); });
+    html($('vcount'), S.loves.length === 1 ? 'One love chosen' : S.loves.length ? `<b>${S.loves.length}</b>loves chosen` : '');   // "1" read as "I" in this face
+  }
+
+  // ---------- 5 summary ----------
+  function drawSummary() {
+    const f = Setup.focusOf(S, 'summary'), p = Setup.profile(S, { id: 'preview', now: 0 });
+    if (!p) return;
+    txt($('stitle'), `Here is your Orbit, ${S.name}.`);
+    html($('slines'), Setup.summary(p).map(l => `<li>${esc(l)}</li>`).join(''));
+    html($('sorder'), S.languages.map((c, k) => `<div class="chip on${f.zone === 'langs' && k === f.i ? ' cur' : ''}${f.grabbed && k === f.i ? ' grab' : ''}"><i>${k + 1}</i>${esc(Setup.chipName(c))}</div>`).join('') || '<div class="why" style="margin-top:0">None picked: Orbit starts with ' + esc(Setup.chipName(p.languages[0])) + '.</div>');
+    const h = p.home.places[0], hc = C[p.home.country], w = placeInfo(h).weather;
+    txt($('shome'), h.name);
+    html($('sline'), `${esc(hc ? hc.name : '')} &nbsp;·&nbsp; <b>${localHhmm(h.tz)}${w ? ' · ' + esc(Setup.weatherLine(w, localHour(h.tz))) : ''}</b><br>Living in ${esc(p.living.name)}`);
+    if (placeInfo(h).done) cardImage($('scard'), placeInfo(h).image); else place(h, () => { if (S.step === 'summary') render(); });
+  }
+
+  // ---------- chrome ----------
+  const HINTS = {
+    name: () => '<b>Select</b> to type &nbsp;·&nbsp; <b>Done</b> when it is right',
+    home: (f) => {   // the hint names what the focused thing does
+      const c = Setup.countryAt(S) || { name: '', cities: [] }, picked = S.home.places.map(p => p.name);
+      if (f.zone === 'cities') return '<b>Select</b> a city &nbsp;·&nbsp; <b>Back</b> to the countries &nbsp;·&nbsp; <b>Right</b> for Next';
+      if (f.zone === 'search') return '<b>Select</b> to search a country or a city &nbsp;·&nbsp; <b>Down</b> to the countries';
+      if (f.zone === 'next') return picked.length ? `Home: <b>${esc(picked.join(' · '))}</b> &nbsp;·&nbsp; <b>Select</b> to go on &nbsp;·&nbsp; <b>Left</b> to change it`
+        : `<b>Select</b> to make ${esc((c.cities[0] || {}).name || c.name)}, ${esc(c.name)} your home`;
+      return `<b>Up / Down</b> to choose &nbsp;·&nbsp; <b>Select</b> to pick a city in ${esc(c.name)} &nbsp;·&nbsp; <b>Left</b> to search`;
+    },
+    languages: (f) => f.zone === 'next' ? '<b>Select</b> for the next step &nbsp;·&nbsp; <b>Up</b> to the languages' : f.zone === 'living' || f.zone === 'results' ? '<b>Select</b> to confirm where you live' : '<b>Select</b> to add or remove a language',
+    loves: (f) => f.zone === 'next' ? '<b>Select</b> for the next step &nbsp;·&nbsp; <b>Up</b> to the tiles' : f.zone === 'tabs' ? '<b>Left / Right</b> to change the theme &nbsp;·&nbsp; <b>Down</b> to the tiles'
+      : f.zone === 'panel' ? '<b>Select</b> to choose &nbsp;·&nbsp; <b>Left</b> back to the tiles' : '<b>Select</b> to love it &nbsp;·&nbsp; <b>Right</b> to say more &nbsp;·&nbsp; skip anything, Orbit learns as you watch',
+    summary: (f) => f.zone === 'langs' ? (f.grabbed ? '<b>Left / Right</b> to move it &nbsp;·&nbsp; <b>Select</b> to put it down' : '<b>Select</b> a language to move it &nbsp;·&nbsp; the first leads') : (failed ? 'Orbit could not save your setup. <b>Select</b> to try again.' : '<b>Select</b> to start &nbsp;·&nbsp; <b>Back</b> to change anything'),
+  };
+  function render() {
+    if (!ready) return;
+    const k = Setup.STEPS.indexOf(S.step);
+    document.querySelectorAll('.step').forEach(el => cls(el, 'on', el.id === 's-' + S.step));
+    cls(document.body, 'on-home', S.step === 'home');
+    txt($('stepn'), `Step ${k + 1} of 5`);
+    document.querySelectorAll('.steps i').forEach((el, j) => cls(el, 'on', j <= k));
+    ({ name: drawName, home: drawHome, languages: drawLanguages, loves: drawLoves, summary: drawSummary })[S.step]();
+    drawKb();
+    const f = S.f;
+    html($('hint'), searching ? 'Searching ' + esc(searching) + '…' : S.kb ? (S.kb.accents ? '<b>Left / Right</b> to choose an accent &nbsp;·&nbsp; <b>Select</b> to type it' : '<b>Select</b> to type &nbsp;·&nbsp; hold <b>Select</b> for accents &nbsp;·&nbsp; <b>Done</b> to finish') : HINTS[S.step](f));
+    cls($('cta'), 'hide', S.step === 'name');
+    txt($('cta'), S.step !== 'summary' ? 'Next' : saving ? 'Saving…' : failed ? 'Try again' : 'Start');
+    cls($('cta'), 'cur', !S.kb && (f.zone === 'next' || f.zone === 'start'));
+    cls($('cta'), 'wait', saving);
+  }
+
+  // ---------- effects ----------
+  function effect() {
+    const e = S.effect; if (!e) return;
+    if (e.type === 'exit') { if (Shell.profiles().length) { forget(); go('cinema'); } return; }
+    if (e.type === 'geocode') {
+      searching = e.query;
+      Shell.journey({ op: 'geocode', query: e.query }).then(r => {
+        searching = '';
+        const before = S; S = Setup.found(S, e.for, r.ok ? r.results : []);
+        if (S === before) Shell.toast('No place found by that name');
+        render();
+      });
+      return;
+    }
+    if (e.type === 'save') save();
+  }
+  // Change my setup (from Cinema's profile menu) names the profile to edit; without it this is a new person.
+  const editId = (() => { try { return localStorage.getItem('orbit.setup.edit'); } catch (e) { return null; } })();
+  let was = null;
+  const forget = () => { try { localStorage.removeItem('orbit.setup.edit'); } catch (e) {} };
+  let pendingId = editId || null;   // a retry reuses the id, so a save that landed late is replaced, never doubled
+  function save() {
+    if (saving) return;
+    const id = pendingId || (pendingId = 'p-' + Date.now().toString(36)), list = Shell.profiles().filter(x => x.id !== id);
+    if (list.length >= 6) { Shell.toast('Orbit holds six people at most'); return; }
+    const p = Setup.profile(S, { id, now: Date.now(), was });
+    if (!p || Profiles.validate(p).length) { failed = true; render(); return; }
+    saving = true; failed = false; render();
+    Shell.saveProfiles(list.concat(p)).then(ok => {
+      saving = false;
+      if (!ok) { failed = true; render(); return; }
+      try { localStorage.setItem('orbit.profile', id); } catch (e) {}
+      forget();
+      $('veil').style.opacity = 1; setTimeout(() => go('cinema'), 400);
+    });
+  }
+  const go = (page) => { try { Android.page(page, window.__orbitToken || ''); } catch (e) { Shell.log('page ' + page); } };
+
+  // ---------- keys ----------
+  let held = false;
+  function key(k) { if (!ready || saving) return; S = Setup.next(S, k); effect(); render(); }
+  Shell.on('key', (k, repeat) => {
+    if (k === 'Enter' && repeat) { if (!held) { held = true; key('Hold'); } return; }   // a held Select opens the accents once
+    held = false; key(k);
+  });
+  Shell.on('back', () => key('Back'));
+  Shell.on('tick', render);
+
+  const data = (f) => fetch('data/' + f).then(r => r.json());
+  Promise.all([data('countries.json'), data('languages.json'), data('interests.json')]).then(([countries, languages, interests]) => {
+    Setup.load({ countries, languages, interests });
+    window.__countries = countries; countries.forEach(c => { C[c.code] = c; });
+    window.__interest = {}; interests.forEach(i => { window.__interest[i.id] = i; });
+    $('hlist').innerHTML = '<div class="row"></div>'.repeat(ROWS); rowEls = [...$('hlist').children];
+    buildKeys();
+    // the profile to edit arrives with the TV's push of the saved profiles; a new person starts at once
+    let started = false;
+    const start = () => {
+      if (started) return; was = editId ? Shell.profiles().find(x => x.id === editId) || null : null;
+      if (editId && !was && Shell.profiles().length === 0 && !start.late) return;
+      started = true;
+      S = Setup.init({ tz, from: was });
+      if (S.living) { const f = Journeys.frameFor(S.living.lon); frame = f; $('gimg').src = `globe/f${pad(f)}.jpg`; place(S.living, () => {}); }
+      ready = true; render();
+    };
+    Shell.on('profiles', start); setTimeout(() => { start.late = true; start(); }, 3000); start();
+  }).catch(e => Shell.log('setup data failed: ' + e));
+})();
+</script>
+</body></html>

@@ -1,0 +1,26 @@
+{
+  "cricketLeagues": [
+    { "id": "8048", "name": "IPL" },
+    { "id": "8039", "name": "World Cup" }
+  ],
+  "tennisRounds": ["Australian Open", "Roland Garros", "Wimbledon", "US Open", "Masters 1000", "WTA 1000"],
+  "venues": {
+    "M. Chinnaswamy Stadium": { "lat": 12.9788, "lon": 77.5996, "country": "IN" },
+    "Wankhede Stadium": { "lat": 18.9389, "lon": 72.8258, "country": "IN" },
+    "Eden Gardens": { "lat": 22.5646, "lon": 88.3433, "country": "IN" },
+    "Arun Jaitley Stadium": { "lat": 28.6377, "lon": 77.2432, "country": "IN" },
+    "MA Chidambaram Stadium": { "lat": 13.0627, "lon": 80.2792, "country": "IN" },
+    "Narendra Modi Stadium": { "lat": 23.0917, "lon": 72.5976, "country": "IN" },
+    "Rajiv Gandhi International Stadium": { "lat": 17.4064, "lon": 78.5506, "country": "IN" },
+    "Sawai Mansingh Stadium": { "lat": 26.8930, "lon": 75.8039, "country": "IN" },
+    "Punjab Cricket Association IS Bindra Stadium": { "lat": 30.6909, "lon": 76.7375, "country": "IN" },
+    "Himachal Pradesh Cricket Association Stadium": { "lat": 32.1974, "lon": 76.3264, "country": "IN" },
+    "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium": { "lat": 26.8097, "lon": 81.0162, "country": "IN" }
+  },
+  "motogp": [
+    { "name": "Malaysian Grand Prix", "circuit": "Sepang International Circuit", "raceUtc": "2026-11-01T07:00:00Z", "lat": 2.7608, "lon": 101.7382 },
+    { "name": "Portuguese Grand Prix", "circuit": "Autodromo Internacional do Algarve", "raceUtc": "2026-11-08T14:00:00Z", "lat": 37.2270, "lon": -8.6267 },
+    { "name": "Valencia Grand Prix", "circuit": "Circuit Ricardo Tormo", "raceUtc": "2026-11-15T13:00:00Z", "lat": 39.4858, "lon": -0.6306 }
+  ],
+  "motogpNote": "Hand-maintained: add the next season's rounds when the official calendar is published; race times in UTC."
+}

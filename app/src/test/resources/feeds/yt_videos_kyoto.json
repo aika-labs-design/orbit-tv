@@ -1,0 +1,1078 @@
+{
+  "kind": "youtube#videoListResponse",
+  "etag": "W8_uSaDQQSWXZgVavWs36Ulj1T4",
+  "items": [
+    {
+      "kind": "youtube#video",
+      "etag": "slh7wZ5anKw8iklfW976guD5qrk",
+      "id": "arOQ7slh3pM",
+      "snippet": {
+        "publishedAt": "2023-05-23T15:00:02Z",
+        "channelId": "UCV2_l3k3JuZwIhiY1H0kSxA",
+        "title": "Kyoto, Japan 4K Walking Tour - Captions & Immersive Sound [4K Ultra HD/60fps]",
+        "description": "Visit KYOTO, Japan on this 4K walking tour. 🎧 Best with headphones for an immersive experience. ⬇ LINKS (map, etc.) ⬇\n\n🗺  Google Maps of this tour 👉 https://hpst.me/WT/Kyoto\nℹ️💁\u200d♂️  Turn ON the Closed Captions (CC) for info about attractions and other interesting information. \nEnjoy! [Recorded April 2023]\n\nWatch more videos:\nTOKYO, Japan walking Tour 👉 https://youtu.be/Ze42hH2GzHc\nHANOI, Vietnam walking Tour 👉 https://youtu.be/nbQ_z-0ZO28\nITALY Walking Tour Playlist 👉https://hpst.me/WT/Italy \n\nCHAPTERS:\n0:00:00 INTRO\n0:00:28 Part I: GION (Geisha district)\n0:00:42 Yasaka Shrine\n0:07:57 Hanamikoji Street: Geisha (geiko), machiya houses\n0:25:56 Hōkan-ji Temple\n0:29:47 Ninenzaka\n0:30:23 Sanneizaka (Sannenzaka)\n0:42:49 Kiyomizu-dera Temple, View of Kyoto, Kiyomizu-dera Sanjunoto, etc.\n\n0:48:17 Part II: DOWNTOWN KYOTO (Nishiki Market, etc.)\n0:48:34 Nishiki Market\n0:53:13 Nishiki-Tenmangu Shrine\n0:54:09 Shinkyogoku Shopping Arcades\n0:56:36 Shijo-dori\n1:02:57 Shijo Bridge\n1:03:21 Kamo River\n1:04:13 Shimokorikicho\n\n#kyoto #japan #walkingtour\n________\nNo part of this video may be used or reproduced without our written permission.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/arOQ7slh3pM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/arOQ7slh3pM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/arOQ7slh3pM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/arOQ7slh3pM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/arOQ7slh3pM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "HP Walking Tours",
+        "tags": [
+          "kyoto travel guide",
+          "kyoto walk",
+          "kyoto walking tour",
+          "top 10 kyoto",
+          "kyoto 4k walk",
+          "kyoto 4k",
+          "kyoto (city/town/village)",
+          "what to do in kyoto",
+          "things to see in kyoto",
+          "tourist places in kyoto",
+          "top 10 things to see in kyoto",
+          "kyoto Top 10 Attractions",
+          "kyoto Vacation Travel Guide",
+          "Top 10 Best things to do in kyoto",
+          "things to do in kyoto",
+          "kyoto attractions",
+          "japan travel guide",
+          "kyoto"
+        ],
+        "categoryId": "19",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Kyoto, Japan 4K Walking Tour - Captions & Immersive Sound [4K Ultra HD/60fps]",
+          "description": "Visit KYOTO, Japan on this 4K walking tour. 🎧 Best with headphones for an immersive experience. ⬇ LINKS (map, etc.) ⬇\n\n🗺  Google Maps of this tour 👉 https://hpst.me/WT/Kyoto\nℹ️💁\u200d♂️  Turn ON the Closed Captions (CC) for info about attractions and other interesting information. \nEnjoy! [Recorded April 2023]\n\nWatch more videos:\nTOKYO, Japan walking Tour 👉 https://youtu.be/Ze42hH2GzHc\nHANOI, Vietnam walking Tour 👉 https://youtu.be/nbQ_z-0ZO28\nITALY Walking Tour Playlist 👉https://hpst.me/WT/Italy \n\nCHAPTERS:\n0:00:00 INTRO\n0:00:28 Part I: GION (Geisha district)\n0:00:42 Yasaka Shrine\n0:07:57 Hanamikoji Street: Geisha (geiko), machiya houses\n0:25:56 Hōkan-ji Temple\n0:29:47 Ninenzaka\n0:30:23 Sanneizaka (Sannenzaka)\n0:42:49 Kiyomizu-dera Temple, View of Kyoto, Kiyomizu-dera Sanjunoto, etc.\n\n0:48:17 Part II: DOWNTOWN KYOTO (Nishiki Market, etc.)\n0:48:34 Nishiki Market\n0:53:13 Nishiki-Tenmangu Shrine\n0:54:09 Shinkyogoku Shopping Arcades\n0:56:36 Shijo-dori\n1:02:57 Shijo Bridge\n1:03:21 Kamo River\n1:04:13 Shimokorikicho\n\n#kyoto #japan #walkingtour\n________\nNo part of this video may be used or reproduced without our written permission."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1H11M42S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "149175",
+        "likeCount": "1522",
+        "favoriteCount": "0",
+        "commentCount": "49"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "iGmkxRizMGo8JIie00cRb-TFVXs",
+      "id": "SKJG4xqdH_0",
+      "snippet": {
+        "publishedAt": "2025-04-01T11:49:00Z",
+        "channelId": "UCTwtAPLzYSrqNCtmMw0YrRQ",
+        "title": "Spring Morning Walk through Historic Higashiyama | Kyoto, Japan 4K",
+        "description": "A quiet spring morning walking along Shirakawa River and Canal with sakura cherry blossoms in early bloom. I had intended to focus on the riverside as I thought cherry trees and traditional Japanese buildings would combine nicely with the gently flowing water sounds...but I figured since Gion was right there it might be nice to take a look in the early morning while the streets were quiet and empty. From there it seemed a shame not to walk through Yasaka Shrine and see it's famous weeping cherry tree in bloom. There were a number of stalls sitting idly by waiting for the hanami crowds that I'm sure would soon arrive. There were a number of crows waiting as well.\n\nFrom there I climbed the steps to Chionin Temple, just as the monks began to chant their morning prayer. Eventually I made it back to Shirakawa River, and walked along at water's edge through a quiet neighborhood, past the large torii gate in front of Heian Shrine, up Keage Slope (an old boat ramp connecting the Kyoto - Lake Biwa Canal), and finally along the aqueduct to Nanzenji. When I was thinking about the route, I thought it would take a little over an hour of walking, but with the diversions it ended up being closer to two. I hope you enjoy this extended walk through some beautiful areas of Kyoto just as spring begins. \n\nI hope the seasons are treating you well. I've linked the walk below if you're interested .\n\nRoute Map:\nhttps://www.google.com/maps/d/edit?mid=1FIsvFIPun9WWT9ADBheRIfuK9Bewglo&usp=sharing\n\nMarch 31, 2025\n\n*Subscribe* for more dawn walks in Japan and elsewhere: https://bit.ly/3IO4oxS\n\n**Playlists**\n\n**Dawn Walks** https://www.youtube.com/playlist?list=PLvh9Rliu52xop6xDpoETQ3Yos-hYNfkU5\n\n**Japan Less Traveled**: https://www.youtube.com/playlist?list=PLvh9Rliu52xq1HdvglrnJxz7vwdqBxHV5\n\n**Japan Well Traveled:** https://www.youtube.com/playlist?list=PLvh9Rliu52xpfk_D6oRuo_m86OOVjSnjP\n\n**Relaxing Environments:** https://www.youtube.com/playlist?list=PLvh9Rliu52xq8PitzXKxwhvYA-uc_kP1N\n\n**Rain, Snow, and Weather:** https://www.youtube.com/playlist?list=PLvh9Rliu52xrwO_Iy7r6r4D0ghHM7pYb4\n\n**Cities at Night:** https://www.youtube.com/playlist?list=PLvh9Rliu52xph6UUdZhlBX0MHQtgaRkou\n\n00:00 Intro\n00:30 Shirakawa River\n09:49 Sakura street\n18:10 Tatsumi Bridge\n22:58 Shirakawa Canal\n30:36 Gion\n40:57 Yasaka Shrine\n48:04 Gion Weeping Cherry Tree\n52:04 Chionin Temple\n01:08:13 Chionin Kuromon\n01:15:12 River Terrace\n01:25:31 Heian-Jingu Shrine Grand Torii\n01:35:02 Keage Incline\n01:42:25 Keage Boat Reservoir\n01:52:50 Nanzen-ji Suirokaku\n\n#sakura #cherryblossoms #kyototravel #spring",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SKJG4xqdH_0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SKJG4xqdH_0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SKJG4xqdH_0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/SKJG4xqdH_0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/SKJG4xqdH_0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ambient Exploration",
+        "tags": [
+          "asmr",
+          "ambience",
+          "ambiance",
+          "background sounds",
+          "relaxing sounds",
+          "relaxation",
+          "soothing",
+          "serene",
+          "kyoto",
+          "kyoto sakura",
+          "kyoto cherry blossom",
+          "sakura",
+          "cherry blossoms",
+          "kyoto spring",
+          "kyoto walk",
+          "morning walk",
+          "dawn walk",
+          "relaxing walk",
+          "relaxing kyoto",
+          "relaxing japan",
+          "shirakawa",
+          "gion",
+          "kyoto morining",
+          "peaceful kyoto morning",
+          "tranquil kyoto",
+          "quiet morning",
+          "quiet morning walk",
+          "peaceful walk",
+          "tranquil walk",
+          "kyoto tourism",
+          "kyoto temple",
+          "dawn",
+          "kyoto season"
+        ],
+        "categoryId": "19",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Spring Morning Walk through Historic Higashiyama | Kyoto, Japan 4K",
+          "description": "A quiet spring morning walking along Shirakawa River and Canal with sakura cherry blossoms in early bloom. I had intended to focus on the riverside as I thought cherry trees and traditional Japanese buildings would combine nicely with the gently flowing water sounds...but I figured since Gion was right there it might be nice to take a look in the early morning while the streets were quiet and empty. From there it seemed a shame not to walk through Yasaka Shrine and see it's famous weeping cherry tree in bloom. There were a number of stalls sitting idly by waiting for the hanami crowds that I'm sure would soon arrive. There were a number of crows waiting as well.\n\nFrom there I climbed the steps to Chionin Temple, just as the monks began to chant their morning prayer. Eventually I made it back to Shirakawa River, and walked along at water's edge through a quiet neighborhood, past the large torii gate in front of Heian Shrine, up Keage Slope (an old boat ramp connecting the Kyoto - Lake Biwa Canal), and finally along the aqueduct to Nanzenji. When I was thinking about the route, I thought it would take a little over an hour of walking, but with the diversions it ended up being closer to two. I hope you enjoy this extended walk through some beautiful areas of Kyoto just as spring begins. \n\nI hope the seasons are treating you well. I've linked the walk below if you're interested .\n\nRoute Map:\nhttps://www.google.com/maps/d/edit?mid=1FIsvFIPun9WWT9ADBheRIfuK9Bewglo&usp=sharing\n\nMarch 31, 2025\n\n*Subscribe* for more dawn walks in Japan and elsewhere: https://bit.ly/3IO4oxS\n\n**Playlists**\n\n**Dawn Walks** https://www.youtube.com/playlist?list=PLvh9Rliu52xop6xDpoETQ3Yos-hYNfkU5\n\n**Japan Less Traveled**: https://www.youtube.com/playlist?list=PLvh9Rliu52xq1HdvglrnJxz7vwdqBxHV5\n\n**Japan Well Traveled:** https://www.youtube.com/playlist?list=PLvh9Rliu52xpfk_D6oRuo_m86OOVjSnjP\n\n**Relaxing Environments:** https://www.youtube.com/playlist?list=PLvh9Rliu52xq8PitzXKxwhvYA-uc_kP1N\n\n**Rain, Snow, and Weather:** https://www.youtube.com/playlist?list=PLvh9Rliu52xrwO_Iy7r6r4D0ghHM7pYb4\n\n**Cities at Night:** https://www.youtube.com/playlist?list=PLvh9Rliu52xph6UUdZhlBX0MHQtgaRkou\n\n00:00 Intro\n00:30 Shirakawa River\n09:49 Sakura street\n18:10 Tatsumi Bridge\n22:58 Shirakawa Canal\n30:36 Gion\n40:57 Yasaka Shrine\n48:04 Gion Weeping Cherry Tree\n52:04 Chionin Temple\n01:08:13 Chionin Kuromon\n01:15:12 River Terrace\n01:25:31 Heian-Jingu Shrine Grand Torii\n01:35:02 Keage Incline\n01:42:25 Keage Boat Reservoir\n01:52:50 Nanzen-ji Suirokaku\n\n#sakura #cherryblossoms #kyototravel #spring"
+        },
+        "defaultAudioLanguage": "en-US"
+      },
+      "contentDetails": {
+        "duration": "PT2H6M52S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "340242",
+        "likeCount": "4222",
+        "favoriteCount": "0",
+        "commentCount": "79"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "T0Zy5vstyPx6i2IvhmW-0QtYB0U",
+      "id": "TOt-fUMCE78",
+      "snippet": {
+        "publishedAt": "2025-04-20T10:00:42Z",
+        "channelId": "UCIUm6jYmiBYXgk2Osy9h2FQ",
+        "title": "Kyoto - 4K Walking Tour | The Cultural Heart of Japan | Japan 🇯🇵 Mar 2025 [4K HDR]",
+        "description": "Shooting Date: March 24, 2025 - 12:20 PM\nEditing Date: April 15, 2025\nWeather: Cloudy\nTemperature: 20°C / 68°F\n\n【My equipment】\nMain Camera: DJI Osmo Pocket 3\nSecondary Camera: ZV-E10 II + E PZ 10-20mm F4 G\n\n00:00 Intro\n01:37 Today's walking route\n02:42 Kiyomizu-dera（清水寺）\n31:20 Kiyomizu-zaka（清水坂）\n39:10 Sannenzaka（三年坂 / 産寧坂）\n46:09 Ninenzaka（二年坂 / 二寧坂）\n55:07 Higashioji Street（東大路通）\n01:00:45 Yasaka Shrine（八坂神社）\n01:09:58 Shijo Street（四条通）\n01:12:53 Hanamikoji Street（花見小路）\n01:26:50 Gion Shirakawa（祇園白川）\n01:37:30 Kamo River（鴨川）\n01:43:19 Pontocho（先斗町）\n01:54:08 Sanjo Bridge（三条大橋）\n02:02:07 Kiyamachi Street（木屋町通）\n02:23:57 Shinkyogoku Shopping Street（新京極商店街）\n02:33:21 Nishiki Market（錦市場）\n02:50:27 Shijo Street（四条通）\n\n【Map】\nhttps://maps.app.goo.gl/fnuQSH5VchTiXDEeA\nWalking route→01:37\n\n【Music】\nidokay - Taiyaki\nhttps://artlist.io/royalty-free-music/song/taiyaki/96919\n\n【Artlist Get 2 extra months】\nhttps://artlist.io/referral/6105797/Miki\n\n【Subscribe to my channel】\nMain Channel (traveler_HIRO)\nhttps://www.youtube.com/channel/UCIUm6jYmiBYXgk2Osy9h2FQ\nSecond Channel (HIRO's Second Channel)\nhttps://www.youtube.com/channel/UCK3EtI-p09tDE_l37xwF_pw\n\n【Support me with a coffee ☕】\nhttps://buymeacoffee.com/traveler_hiro\n\n【Playlist】\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1PtbNpNMRVMn7_YtPuioAkX\nBurundi 🇧🇮\nDjibouti 🇩🇯\nEthiopia 🇪🇹\nKenya 🇰🇪\nRwanda 🇷🇼\nTanzania 🇹🇿\nUganda 🇺🇬\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1Pz1n8Sgfq9Uldi83GWzRzv\nBotswana 🇧🇼\nEswatini 🇸🇿\nLesotho 🇱🇸\nMalawi 🇲🇼\nMozambique 🇲🇿\nSouth Africa 🇿🇦\nZambia 🇿🇲\nZimbabwe 🇿🇼\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1NgOGubmdZ8uNeynQDaI8TP\nKazakhstan 🇰🇿\nKyrgyz Republic 🇰🇬\nTajikistan 🇹🇯\nTurkmenistan 🇹🇲\nUzbekistan 🇺🇿\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1N4qPa2Qf0LMS2S5w-b5N3P\nChina 🇨🇳\nJapan 🇯🇵\nMongolia 🇲🇳\nSouth Korea 🇰🇷\nTaiwan 🇹🇼\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1M6HIs1obA_l3OXyvkL4K1D\nBangladesh 🇧🇩\nBhutan 🇧🇹\nIndia 🇮🇳\nNepal 🇳🇵\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1MrUHlJYFl9nr3pLXBL3QCJ\nCambodia 🇰🇭\nLaos 🇱🇦\nMalaysia 🇲🇾\nSingapore 🇸🇬\nThailand 🇹🇭\nVietnam 🇻🇳\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1Nipy3VhuofDbgqOSxa2CcM\nArmenia 🇦🇲\nAzerbaijan 🇦🇿\nBulgaria 🇧🇬\nEstonia 🇪🇪\nGeorgia 🇬🇪\nHungary 🇭🇺\nLatvia 🇱🇻\nLithuania 🇱🇹\nMoldova 🇲🇩\nPoland 🇵🇱\nRomania 🇷🇴\nSlovakia 🇸🇰\nTurkey 🇹🇷\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1Mdi71Dod9ruF8uE0vGrqdr\nDenmark 🇩🇰\nFinland 🇫🇮\nIreland 🇮🇪\nNetherlands 🇳🇱\nNorway 🇳🇴\nSweden 🇸🇪\nUnited Kingdom 🇬🇧\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1N8bJaWtFzi4G5LSmiJY3hJ\nKuwait 🇰🇼\nSaudi Arabia 🇸🇦\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1M7xB9cMzbWNjrjyUba9gcK\nAustralia 🇦🇺\nPalau 🇵🇼\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1ML7--6_erFhxZs0ZO1iT0r\nCanada 🇨🇦\nMexico 🇲🇽\nUnited States of America 🇺🇸\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1PiJXbsl4oBYjUICtHWM4lm\nCuraçao 🇨🇼\nVenezuela 🇻🇪\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1N3rAygS72jNC0OECQVGCcv\n\n#kyoto #gion #kiyomizudera #japan\n#walkingtour #4khdr #citytour #citywalk\n\nNo part of any video on my channel may be used for personal or private purposes.\nI forbid you to use any part of my videos for your YouTube channel, social networking sites, etc., even if it is only a small portion.\n\nContact me at : creator@example.com",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TOt-fUMCE78/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TOt-fUMCE78/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TOt-fUMCE78/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TOt-fUMCE78/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TOt-fUMCE78/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "traveler_HIRO",
+        "categoryId": "19",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "ja",
+        "localized": {
+          "title": "Kyoto - 4K Walking Tour | The Cultural Heart of Japan | Japan 🇯🇵 Mar 2025 [4K HDR]",
+          "description": "Shooting Date: March 24, 2025 - 12:20 PM\nEditing Date: April 15, 2025\nWeather: Cloudy\nTemperature: 20°C / 68°F\n\n【My equipment】\nMain Camera: DJI Osmo Pocket 3\nSecondary Camera: ZV-E10 II + E PZ 10-20mm F4 G\n\n00:00 Intro\n01:37 Today's walking route\n02:42 Kiyomizu-dera（清水寺）\n31:20 Kiyomizu-zaka（清水坂）\n39:10 Sannenzaka（三年坂 / 産寧坂）\n46:09 Ninenzaka（二年坂 / 二寧坂）\n55:07 Higashioji Street（東大路通）\n01:00:45 Yasaka Shrine（八坂神社）\n01:09:58 Shijo Street（四条通）\n01:12:53 Hanamikoji Street（花見小路）\n01:26:50 Gion Shirakawa（祇園白川）\n01:37:30 Kamo River（鴨川）\n01:43:19 Pontocho（先斗町）\n01:54:08 Sanjo Bridge（三条大橋）\n02:02:07 Kiyamachi Street（木屋町通）\n02:23:57 Shinkyogoku Shopping Street（新京極商店街）\n02:33:21 Nishiki Market（錦市場）\n02:50:27 Shijo Street（四条通）\n\n【Map】\nhttps://maps.app.goo.gl/fnuQSH5VchTiXDEeA\nWalking route→01:37\n\n【Music】\nidokay - Taiyaki\nhttps://artlist.io/royalty-free-music/song/taiyaki/96919\n\n【Artlist Get 2 extra months】\nhttps://artlist.io/referral/6105797/Miki\n\n【Subscribe to my channel】\nMain Channel (traveler_HIRO)\nhttps://www.youtube.com/channel/UCIUm6jYmiBYXgk2Osy9h2FQ\nSecond Channel (HIRO's Second Channel)\nhttps://www.youtube.com/channel/UCK3EtI-p09tDE_l37xwF_pw\n\n【Support me with a coffee ☕】\nhttps://buymeacoffee.com/traveler_hiro\n\n【Playlist】\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1PtbNpNMRVMn7_YtPuioAkX\nBurundi 🇧🇮\nDjibouti 🇩🇯\nEthiopia 🇪🇹\nKenya 🇰🇪\nRwanda 🇷🇼\nTanzania 🇹🇿\nUganda 🇺🇬\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1Pz1n8Sgfq9Uldi83GWzRzv\nBotswana 🇧🇼\nEswatini 🇸🇿\nLesotho 🇱🇸\nMalawi 🇲🇼\nMozambique 🇲🇿\nSouth Africa 🇿🇦\nZambia 🇿🇲\nZimbabwe 🇿🇼\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1NgOGubmdZ8uNeynQDaI8TP\nKazakhstan 🇰🇿\nKyrgyz Republic 🇰🇬\nTajikistan 🇹🇯\nTurkmenistan 🇹🇲\nUzbekistan 🇺🇿\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1N4qPa2Qf0LMS2S5w-b5N3P\nChina 🇨🇳\nJapan 🇯🇵\nMongolia 🇲🇳\nSouth Korea 🇰🇷\nTaiwan 🇹🇼\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1M6HIs1obA_l3OXyvkL4K1D\nBangladesh 🇧🇩\nBhutan 🇧🇹\nIndia 🇮🇳\nNepal 🇳🇵\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1MrUHlJYFl9nr3pLXBL3QCJ\nCambodia 🇰🇭\nLaos 🇱🇦\nMalaysia 🇲🇾\nSingapore 🇸🇬\nThailand 🇹🇭\nVietnam 🇻🇳\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1Nipy3VhuofDbgqOSxa2CcM\nArmenia 🇦🇲\nAzerbaijan 🇦🇿\nBulgaria 🇧🇬\nEstonia 🇪🇪\nGeorgia 🇬🇪\nHungary 🇭🇺\nLatvia 🇱🇻\nLithuania 🇱🇹\nMoldova 🇲🇩\nPoland 🇵🇱\nRomania 🇷🇴\nSlovakia 🇸🇰\nTurkey 🇹🇷\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1Mdi71Dod9ruF8uE0vGrqdr\nDenmark 🇩🇰\nFinland 🇫🇮\nIreland 🇮🇪\nNetherlands 🇳🇱\nNorway 🇳🇴\nSweden 🇸🇪\nUnited Kingdom 🇬🇧\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1N8bJaWtFzi4G5LSmiJY3hJ\nKuwait 🇰🇼\nSaudi Arabia 🇸🇦\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1M7xB9cMzbWNjrjyUba9gcK\nAustralia 🇦🇺\nPalau 🇵🇼\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1ML7--6_erFhxZs0ZO1iT0r\nCanada 🇨🇦\nMexico 🇲🇽\nUnited States of America 🇺🇸\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1PiJXbsl4oBYjUICtHWM4lm\nCuraçao 🇨🇼\nVenezuela 🇻🇪\n\nhttps://www.youtube.com/playlist?list=PLy6-lcGtPD1N3rAygS72jNC0OECQVGCcv\n\n#kyoto #gion #kiyomizudera #japan\n#walkingtour #4khdr #citytour #citywalk\n\nNo part of any video on my channel may be used for personal or private purposes.\nI forbid you to use any part of my videos for your YouTube channel, social networking sites, etc., even if it is only a small portion.\n\nContact me at : creator@example.com"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT2H55M31S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "167589",
+        "likeCount": "1092",
+        "favoriteCount": "0",
+        "commentCount": "31"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "BOFLxNSZu9CsdoZ_BtIa5Cn0hRU",
+      "id": "iBsyvhFTOgQ",
+      "snippet": {
+        "publishedAt": "2026-10-14T00:00:37Z",
+        "channelId": "UCaamGI_gFoce5WiUKhZ3UfA",
+        "title": "Kyoto’s Most Beautiful Streets – Gion to Kiyomizu-dera | Japan | 4K HDR",
+        "description": "Walk through some of Kyoto’s most beautiful streets, starting along the peaceful Shirakawa Canal before heading into Hanamikoji in Gion. The route continues through Yasaka Shrine, Maruyama Park, Ōtani Sobyō, and Nene no Michi before reaching Ninenzaka, Yasaka Pagoda, and Sannenzaka, ending at the iconic Kiyomizu-dera.\n\n#kyoto #japan #higashiyama #walkingtour #4khdr",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iBsyvhFTOgQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iBsyvhFTOgQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iBsyvhFTOgQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/iBsyvhFTOgQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/iBsyvhFTOgQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "THE JAPAN WALK",
+        "tags": [
+          "Kyoto",
+          "Japan",
+          "Higashiyama",
+          "Gion",
+          "Kiyomizudera",
+          "Kiyomizu dera",
+          "Shirakawa Canal",
+          "Hanamikoji",
+          "Yasaka Shrine",
+          "Maruyama Park",
+          "Nene no Michi",
+          "Ninenzaka",
+          "Sannenzaka",
+          "Yasaka Pagoda",
+          "Kyoto Walk",
+          "Japan Walk",
+          "Walking Tour",
+          "Virtual Tour",
+          "The Japan Walk",
+          "Kyoto Day Trip",
+          "Day Trip From Osaka",
+          "Beautiful Kyoto",
+          "Historic Kyoto",
+          "Traditional Kyoto",
+          "Kyoto Streets",
+          "Travel Japan",
+          "4K",
+          "HDR",
+          "京都",
+          "日本",
+          "東山",
+          "祇園",
+          "清水寺",
+          "白川",
+          "花見小路",
+          "八坂神社",
+          "円山公園",
+          "ねねの道",
+          "二年坂",
+          "三年坂",
+          "八坂の塔",
+          "京都散歩",
+          "京都観光",
+          "街歩き",
+          "ウォーキングツアー",
+          "60fps",
+          "60 fps",
+          "2026",
+          "Autumn",
+          "Old Kyoto"
+        ],
+        "categoryId": "19",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Kyoto’s Most Beautiful Streets – Gion to Kiyomizu-dera | Japan | 4K HDR",
+          "description": "Walk through some of Kyoto’s most beautiful streets, starting along the peaceful Shirakawa Canal before heading into Hanamikoji in Gion. The route continues through Yasaka Shrine, Maruyama Park, Ōtani Sobyō, and Nene no Michi before reaching Ninenzaka, Yasaka Pagoda, and Sannenzaka, ending at the iconic Kiyomizu-dera.\n\n#kyoto #japan #higashiyama #walkingtour #4khdr"
+        }
+      },
+      "contentDetails": {
+        "duration": "PT1H7M21S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "13452",
+        "likeCount": "160",
+        "favoriteCount": "0",
+        "commentCount": "5"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "v1c24f_HEDT7uHzLfYWiy4hO3HM",
+      "id": "qgfd-uWTVwg",
+      "snippet": {
+        "publishedAt": "2021-12-11T04:00:19Z",
+        "channelId": "UCMTv_Dg1BXFUglzWIIincpQ",
+        "title": "Walk in Kyoto Midnight Rainstorm - 4K HDR",
+        "description": "Taking a relaxing stroll in the rain at midnight through the old streets of Kyoto, Japan.\n\n👉  Click here for more HDR Japan Walks...\nhttp://bit.ly/click-here-to-subscribe-virtual-japan\n\nThis was filmed between 11:30pm and 12:30am after the livestream linked below. I wasn't planning on filming this walk, but after arriving at my hotel post-livestream, it was to beautiful of a night, and I just had to get out there and film it.\nhttps://youtu.be/Y5JRgLoTS-g\n\n📷 Follow on Instagram\nhttps://www.instagram.com/virtualjapantv/\n\n🌃 HDR Night Walks  🌙 https://bit.ly/hdr-night-walks\n🇯🇵 HDR Japan Walks ☀️ http://bit.ly/hdr-japan-walks\n\n00:00 preview\n00:41 full walk\n\nBecome a channel member to get access to exclusive 360° behind the scenes footage!\nhttps://www.youtube.com/channel/UCMTv_Dg1BXFUglzWIIincpQ/join\n\n🎥 Camera Gear 2021 📸\nCamera - http://camera.virtualjapan.tv\nWide Lens - http://lens.virtualjapan.tv\nZoom Lens - https://geni.us/vjzl1\nPortrait Lens - https://geni.us/vjpl1\nGimbal - http://gimbal.virtualjapan.tv\nAudio recorder - https://geni.us/vja1\nLivestream Camera - https://www.amazon.com/gp/product/B08L5R1CCC/ref=as_li_tl?ie=UTF8&tag=virtualjapan-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B08L5R1CCC&linkId=830e554777397235f634e0b2c8c3854a\nLivestream Gimbal - https://geni.us/vjsg1\nBikeride camera - https://geni.us/vjbc2\n360 camera - https://geni.us/vj3601 (new model, same quality)\n👉  Click the Amazon Affiliate links above when shopping for anything on Amazon\nIt costs you nothing extra, but a small percentage of the any sale goes towards supporting this channel 😄\n\n🔴  Come hang with us on Twitch\nhttps://www.twitch.tv/virtualjapan\n\n💬  Chat with us on Discord\nhttps://discord.gg/wV3rfeh\n\n🧢 MERCH STORE 👕\nhttps://store.virtualjapan.tv\n\n🤝 Support us on Patreon!\nhttps://www.patreon.com/virtualjapan\n\n#4KHDR #kyoto #ASMR #japan #rain",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qgfd-uWTVwg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qgfd-uWTVwg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qgfd-uWTVwg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qgfd-uWTVwg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qgfd-uWTVwg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "VIRTUAL JAPAN",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Walk in Kyoto Midnight Rainstorm - 4K HDR",
+          "description": "Taking a relaxing stroll in the rain at midnight through the old streets of Kyoto, Japan.\n\n👉  Click here for more HDR Japan Walks...\nhttp://bit.ly/click-here-to-subscribe-virtual-japan\n\nThis was filmed between 11:30pm and 12:30am after the livestream linked below. I wasn't planning on filming this walk, but after arriving at my hotel post-livestream, it was to beautiful of a night, and I just had to get out there and film it.\nhttps://youtu.be/Y5JRgLoTS-g\n\n📷 Follow on Instagram\nhttps://www.instagram.com/virtualjapantv/\n\n🌃 HDR Night Walks  🌙 https://bit.ly/hdr-night-walks\n🇯🇵 HDR Japan Walks ☀️ http://bit.ly/hdr-japan-walks\n\n00:00 preview\n00:41 full walk\n\nBecome a channel member to get access to exclusive 360° behind the scenes footage!\nhttps://www.youtube.com/channel/UCMTv_Dg1BXFUglzWIIincpQ/join\n\n🎥 Camera Gear 2021 📸\nCamera - http://camera.virtualjapan.tv\nWide Lens - http://lens.virtualjapan.tv\nZoom Lens - https://geni.us/vjzl1\nPortrait Lens - https://geni.us/vjpl1\nGimbal - http://gimbal.virtualjapan.tv\nAudio recorder - https://geni.us/vja1\nLivestream Camera - https://www.amazon.com/gp/product/B08L5R1CCC/ref=as_li_tl?ie=UTF8&tag=virtualjapan-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B08L5R1CCC&linkId=830e554777397235f634e0b2c8c3854a\nLivestream Gimbal - https://geni.us/vjsg1\nBikeride camera - https://geni.us/vjbc2\n360 camera - https://geni.us/vj3601 (new model, same quality)\n👉  Click the Amazon Affiliate links above when shopping for anything on Amazon\nIt costs you nothing extra, but a small percentage of the any sale goes towards supporting this channel 😄\n\n🔴  Come hang with us on Twitch\nhttps://www.twitch.tv/virtualjapan\n\n💬  Chat with us on Discord\nhttps://discord.gg/wV3rfeh\n\n🧢 MERCH STORE 👕\nhttps://store.virtualjapan.tv\n\n🤝 Support us on Patreon!\nhttps://www.patreon.com/virtualjapan\n\n#4KHDR #kyoto #ASMR #japan #rain"
+        },
+        "defaultAudioLanguage": "en-US"
+      },
+      "contentDetails": {
+        "duration": "PT58M53S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "3366157",
+        "likeCount": "58682",
+        "favoriteCount": "0",
+        "commentCount": "1286"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "ZzgGQhfqalwCigmC6ByOV7uRw7E",
+      "id": "gJ_U2gRYLRA",
+      "snippet": {
+        "publishedAt": "2026-09-19T11:00:11Z",
+        "channelId": "UCQ8ZZiluVgKO_QpEZsIKvHw",
+        "title": "KYOTO, Japan 🇯🇵 | Ancient Temples & Old Streets at Dawn | Walking Tour | 4K 60FPS",
+        "description": "KYOTO, Japan 🇯🇵 Experience a complete 4K walking tour through the heart of Japan's ancient capital, from the great wooden stage of Kiyomizu-dera and the old stone lanes of Higashiyama to the towering Yasaka Pagoda, the geisha district of Gion and the willow-lined banks of the Kamo River, all in the former imperial capital of Kyoto.\n\nFilmed at dawn, when the temples and streets are almost empty, this immersive tour winds down through the eastern hills and their centuries-old lanes, shrines and gardens that make Kyoto one of Japan's most timeless cities. Along the way, discover the history, legends and stories behind the old capital where emperors reigned for over a thousand years, all in 4K Ultra HD 60FPS.\n\n💡 Don't forget to activate subtitles to discover all the secrets and stories behind everything you see in this video.\n\n━━━━━━━━━━━━━━━━━━━━\n\n📅 Filmed on: August 2026\n🕰 Start time: 6:00 AM\n☀️ Weather: 30°C | 86°F, clear summer morning\n📍 Starting point: Kiyomizu-dera, Higashiyama\n🎟️ Official Kyoto tourism website: https://kyoto.travel/en/\n\n━━━━━━━━━━━━━━━━━━━━\n🚅 HOW TO GET TO KIYOMIZU-DERA, KYOTO\n━━━━━━━━━━━━━━━━━━━━\n\n🚅 From Tokyo:\nTōkaidō Shinkansen 🔵 - direct from \"Tokyo\" to \"Kyoto\", about 2 hours 15 minutes\n\n🚌 From Kyoto Station to the temple:\nCity Bus 100 or 206 - to \"Gojo-zaka\" or \"Kiyomizu-michi\", then a 10-minute walk uphill\n\n🚉 By Keihan Railway:\nKeihan Main Line 🔴 - stop \"Kiyomizu-Gojo\", then about a 20-minute walk\n\n💡 Tip: The whole Higashiyama route is best walked from the top down, starting at Kiyomizu-dera and ending by the Kamo River, exactly as in this video. Come early, ideally before 8 AM, to enjoy the old lanes before the crowds. A rechargeable Suica or ICOCA card, which you can add straight to your phone, works on every train and city bus.\n\n━━━━━━━━━━━━━━━━━━━━\n⏱️ TOUR TIMELINE\n━━━━━━━━━━━━━━━━━━━━\n\n0:00 Intro\n1:00 Kiyomizu-dera Main Hall\n4:40 Amida Hall and the Okunoin\n5:30 The wooden stage and the city view\n7:21 Through the temple grounds\n10:24 The Koyasu Pagoda\n13:15 The Otowa Waterfall\n17:24 The Nio-mon Gate \n18:55 Sanjunoto Pagoda\n21:22 Matsubara-dōri\n24:42 Sannenzaka\n29:30 The Yasaka Pagoda\n34:56 Ninenzaka\n36:40 Ichinenzaka\n38:15 Nene-no-michi\n40:16 Kōdai-ji \n44:10 Entoku-in \n45:15 Gesshin-in\n46:04 Toward Maruyama Park\n50:36 Maruyama Park\n54:46 The Shirakawa Canal\n56:26 Gyōja-bashi Bridge\n56:58 Gion district\n1:03:44 Shinmonzen-dōri, the antiques street\n1:07:15 The Kamo River\n1:09:55 Outro\n\n━━━━━━━━━━━━━━━━━━━━\n⛩️ ABOUT KYOTO\n━━━━━━━━━━━━━━━━━━━━\n\n🏯 Kyoto was the imperial capital of Japan for over a thousand years, from 794 until 1868, when the court finally moved east to Tokyo.\n\n⛩️ Kiyomizu-dera, founded in 778, is famous for its vast wooden stage, built out over the hillside without a single nail.\n\n🏮 The old stone lanes of Sannenzaka and Ninenzaka wind down through preserved wooden machiya, craft shops and teahouses.\n\n🗼 The five-storied Yasaka Pagoda, last remnant of Hōkan-ji temple, has risen above the district since the 15th century.\n\n🌸 Maruyama Park, Kyoto's oldest public park, is famed for the giant weeping cherry tree at its heart.\n\n👘 Gion is Kyoto's most famous geisha district, where geiko and their maiko apprentices still train in exclusive teahouses.\n\n🌊 The Kamo River runs the length of the city, its banks lined each summer with wooden dining terraces built out over the water.\n\n🕊️ Spared from bombing in the Second World War, Kyoto still keeps 17 UNESCO World Heritage sites and well over a thousand temples and shrines.\n\n━━━━━━━━━━━━━━━━━━━━\n▶ WATCH NEXT\n━━━━━━━━━━━━━━━━━━━━\n\nIf you enjoyed this walking tour, here's the full walking tour of Kamakura, from the ocean shore and its famous Enoden train to the towering Great Buddha and a hidden forest of bamboo, just an hour from Tokyo. 🌊\n\nhttps://youtu.be/ExkYdSDB_yQ\n\n━━━━━━━━━━━━━━━━━━━━\n\nDon't forget to subscribe to follow the next tours. I've got a lot more of Japan, and the world, still to explore with you.\n\n━━━━━━━━━━━━━━━━━━━━\n\n#Kyoto #Japan #JapanTravel #VisitKyoto #WalkingTour #awalktour",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gJ_U2gRYLRA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gJ_U2gRYLRA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gJ_U2gRYLRA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/gJ_U2gRYLRA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/gJ_U2gRYLRA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/gJ_U2gRYLRA/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "a.walktour",
+        "tags": [
+          "kyoto",
+          "kyoto japan",
+          "kyoto walking tour",
+          "walking tour",
+          "4k walking tour",
+          "japan walking tour",
+          "kyoto 4k",
+          "4k 60fps",
+          "japan travel",
+          "kiyomizu-dera",
+          "kiyomizu dera",
+          "higashiyama",
+          "gion kyoto",
+          "geisha district",
+          "sannenzaka",
+          "ninenzaka",
+          "yasaka pagoda",
+          "yasaka shrine",
+          "maruyama park",
+          "kamo river",
+          "nene no michi",
+          "kodai-ji",
+          "shirakawa",
+          "kyoto temples",
+          "ancient kyoto",
+          "kyoto old town",
+          "kyoto morning walk",
+          "relaxing walk japan",
+          "virtual walk japan",
+          "awalktour"
+        ],
+        "categoryId": "19",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "KYOTO, Japan 🇯🇵 | Ancient Temples & Old Streets at Dawn | Walking Tour | 4K 60FPS",
+          "description": "KYOTO, Japan 🇯🇵 Experience a complete 4K walking tour through the heart of Japan's ancient capital, from the great wooden stage of Kiyomizu-dera and the old stone lanes of Higashiyama to the towering Yasaka Pagoda, the geisha district of Gion and the willow-lined banks of the Kamo River, all in the former imperial capital of Kyoto.\n\nFilmed at dawn, when the temples and streets are almost empty, this immersive tour winds down through the eastern hills and their centuries-old lanes, shrines and gardens that make Kyoto one of Japan's most timeless cities. Along the way, discover the history, legends and stories behind the old capital where emperors reigned for over a thousand years, all in 4K Ultra HD 60FPS.\n\n💡 Don't forget to activate subtitles to discover all the secrets and stories behind everything you see in this video.\n\n━━━━━━━━━━━━━━━━━━━━\n\n📅 Filmed on: August 2026\n🕰 Start time: 6:00 AM\n☀️ Weather: 30°C | 86°F, clear summer morning\n📍 Starting point: Kiyomizu-dera, Higashiyama\n🎟️ Official Kyoto tourism website: https://kyoto.travel/en/\n\n━━━━━━━━━━━━━━━━━━━━\n🚅 HOW TO GET TO KIYOMIZU-DERA, KYOTO\n━━━━━━━━━━━━━━━━━━━━\n\n🚅 From Tokyo:\nTōkaidō Shinkansen 🔵 - direct from \"Tokyo\" to \"Kyoto\", about 2 hours 15 minutes\n\n🚌 From Kyoto Station to the temple:\nCity Bus 100 or 206 - to \"Gojo-zaka\" or \"Kiyomizu-michi\", then a 10-minute walk uphill\n\n🚉 By Keihan Railway:\nKeihan Main Line 🔴 - stop \"Kiyomizu-Gojo\", then about a 20-minute walk\n\n💡 Tip: The whole Higashiyama route is best walked from the top down, starting at Kiyomizu-dera and ending by the Kamo River, exactly as in this video. Come early, ideally before 8 AM, to enjoy the old lanes before the crowds. A rechargeable Suica or ICOCA card, which you can add straight to your phone, works on every train and city bus.\n\n━━━━━━━━━━━━━━━━━━━━\n⏱️ TOUR TIMELINE\n━━━━━━━━━━━━━━━━━━━━\n\n0:00 Intro\n1:00 Kiyomizu-dera Main Hall\n4:40 Amida Hall and the Okunoin\n5:30 The wooden stage and the city view\n7:21 Through the temple grounds\n10:24 The Koyasu Pagoda\n13:15 The Otowa Waterfall\n17:24 The Nio-mon Gate \n18:55 Sanjunoto Pagoda\n21:22 Matsubara-dōri\n24:42 Sannenzaka\n29:30 The Yasaka Pagoda\n34:56 Ninenzaka\n36:40 Ichinenzaka\n38:15 Nene-no-michi\n40:16 Kōdai-ji \n44:10 Entoku-in \n45:15 Gesshin-in\n46:04 Toward Maruyama Park\n50:36 Maruyama Park\n54:46 The Shirakawa Canal\n56:26 Gyōja-bashi Bridge\n56:58 Gion district\n1:03:44 Shinmonzen-dōri, the antiques street\n1:07:15 The Kamo River\n1:09:55 Outro\n\n━━━━━━━━━━━━━━━━━━━━\n⛩️ ABOUT KYOTO\n━━━━━━━━━━━━━━━━━━━━\n\n🏯 Kyoto was the imperial capital of Japan for over a thousand years, from 794 until 1868, when the court finally moved east to Tokyo.\n\n⛩️ Kiyomizu-dera, founded in 778, is famous for its vast wooden stage, built out over the hillside without a single nail.\n\n🏮 The old stone lanes of Sannenzaka and Ninenzaka wind down through preserved wooden machiya, craft shops and teahouses.\n\n🗼 The five-storied Yasaka Pagoda, last remnant of Hōkan-ji temple, has risen above the district since the 15th century.\n\n🌸 Maruyama Park, Kyoto's oldest public park, is famed for the giant weeping cherry tree at its heart.\n\n👘 Gion is Kyoto's most famous geisha district, where geiko and their maiko apprentices still train in exclusive teahouses.\n\n🌊 The Kamo River runs the length of the city, its banks lined each summer with wooden dining terraces built out over the water.\n\n🕊️ Spared from bombing in the Second World War, Kyoto still keeps 17 UNESCO World Heritage sites and well over a thousand temples and shrines.\n\n━━━━━━━━━━━━━━━━━━━━\n▶ WATCH NEXT\n━━━━━━━━━━━━━━━━━━━━\n\nIf you enjoyed this walking tour, here's the full walking tour of Kamakura, from the ocean shore and its famous Enoden train to the towering Great Buddha and a hidden forest of bamboo, just an hour from Tokyo. 🌊\n\nhttps://youtu.be/ExkYdSDB_yQ\n\n━━━━━━━━━━━━━━━━━━━━\n\nDon't forget to subscribe to follow the next tours. I've got a lot more of Japan, and the world, still to explore with you.\n\n━━━━━━━━━━━━━━━━━━━━\n\n#Kyoto #Japan #JapanTravel #VisitKyoto #WalkingTour #awalktour"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1H10M40S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1101",
+        "likeCount": "26",
+        "favoriteCount": "0",
+        "commentCount": "2"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "QfxwO0RiY-7sTWcNQzCi7rmJ9HY",
+      "id": "JBzzsSlwTOU",
+      "snippet": {
+        "publishedAt": "2026-07-28T08:45:07Z",
+        "channelId": "UCM9ZxqoiNMkG9QOIe9XWw0A",
+        "title": "JAPAN | Kyoto Walk | Karasuma to Kawaramachi Afternoon 4K HDR",
+        "description": "A walk from Karasuma(烏丸) to Kawaramachi(河原町) in Kyoto(京都). Decorative yamahoko used in the Gion Festival were being displayed.\n\n🔺 JAPAN | Osaka Walk | Umeda Night 4K HDR\n▶️ https://www.youtube.com/watch?v=sh-P7RmMA70\n\n🔺 JAPAN | Osaka Walk | Yodoyabashi /Nakanoshima Festival Afternoon 4K HDR\n▶️ https://www.youtube.com/watch?v=ZfaBJJGBtWc\n\n🔺 JAPAN Osaka Umeda Walk｜City Walk /4K HDR\n▶️ https://www.youtube.com/watch?v=qdxDNvu3ZJQ\n\n🔺 JAPAN | Takamatsu Walk | Shopping Arcade to Ferry Terminal, Kagawa, Shikoku 4K HDR\n▶️ https://www.youtube.com/watch?v=rlwseugbt4o&t=34s\n\n🔺 JAPAN Osaka Walk｜Kita to Fukushima City Walk 4K HDR\n▶️ https://www.youtube.com/watch?v=OuB8cV_p2E8\n\n🔺 JAPAN Osaka Namba Walk｜New Year's Day – January 1, 2026 /4K HDR\n▶️ https://www.youtube.com/watch?v=DPOwpJJU0k0\n\n🔺 JAPAN | Kyoto Cherry Blossom Walk | Gion District 4K HDR\n▶️ https://www.youtube.com/watch?v=UU8nGxSJeTg&t=975s\n\n🔺 JAPAN | Osaka Walk | Sakuranomiya Cherry Blossoms in Full Bloom 4K HDR\n▶️ https://www.youtube.com/watch?v=ohKvs-WY_lM&t=4010s\n\n#4kjapan #slowtv #4khdr #japan #japanwalk #kyoto #kyotojapan",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JBzzsSlwTOU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JBzzsSlwTOU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JBzzsSlwTOU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/JBzzsSlwTOU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/JBzzsSlwTOU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "4K JAPAN WALK",
+        "tags": [
+          "4khdr",
+          "4kjapan",
+          "japan",
+          "japanwalk",
+          "kyoto",
+          "kyotojapan",
+          "slowtv"
+        ],
+        "categoryId": "19",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "JAPAN | Kyoto Walk | Karasuma to Kawaramachi Afternoon 4K HDR",
+          "description": "A walk from Karasuma(烏丸) to Kawaramachi(河原町) in Kyoto(京都). Decorative yamahoko used in the Gion Festival were being displayed.\n\n🔺 JAPAN | Osaka Walk | Umeda Night 4K HDR\n▶️ https://www.youtube.com/watch?v=sh-P7RmMA70\n\n🔺 JAPAN | Osaka Walk | Yodoyabashi /Nakanoshima Festival Afternoon 4K HDR\n▶️ https://www.youtube.com/watch?v=ZfaBJJGBtWc\n\n🔺 JAPAN Osaka Umeda Walk｜City Walk /4K HDR\n▶️ https://www.youtube.com/watch?v=qdxDNvu3ZJQ\n\n🔺 JAPAN | Takamatsu Walk | Shopping Arcade to Ferry Terminal, Kagawa, Shikoku 4K HDR\n▶️ https://www.youtube.com/watch?v=rlwseugbt4o&t=34s\n\n🔺 JAPAN Osaka Walk｜Kita to Fukushima City Walk 4K HDR\n▶️ https://www.youtube.com/watch?v=OuB8cV_p2E8\n\n🔺 JAPAN Osaka Namba Walk｜New Year's Day – January 1, 2026 /4K HDR\n▶️ https://www.youtube.com/watch?v=DPOwpJJU0k0\n\n🔺 JAPAN | Kyoto Cherry Blossom Walk | Gion District 4K HDR\n▶️ https://www.youtube.com/watch?v=UU8nGxSJeTg&t=975s\n\n🔺 JAPAN | Osaka Walk | Sakuranomiya Cherry Blossoms in Full Bloom 4K HDR\n▶️ https://www.youtube.com/watch?v=ohKvs-WY_lM&t=4010s\n\n#4kjapan #slowtv #4khdr #japan #japanwalk #kyoto #kyotojapan"
+        },
+        "defaultAudioLanguage": "en-US"
+      },
+      "contentDetails": {
+        "duration": "PT1H16S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "972",
+        "likeCount": "17",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "b3uF_R_UhL0-WRrEYqlvWChOqdE",
+      "id": "jJUIjXqPC1k",
+      "snippet": {
+        "publishedAt": "2023-02-04T12:00:21Z",
+        "channelId": "UCx2vyFdB0HP73wHBhEWWp3A",
+        "title": "Kyoto Japan Downtown Walking Tour (4K HDR)",
+        "description": "Walking along downtown Kyoto on a weekday afternoon \n\n⭐ Join this channel to get access to perks:\nhttps://www.youtube.com/channel/UCx2vyFdB0HP73wHBhEWWp3A/join\n\n👕 Buy Merch to Support the Channel:\nhttps://discoverywalkingtourstv.myspreadshop.com/\n\n⏰ Time stamps ⏰\n00:00 Sanjo Kyoto\n17:01 Nishiki Market\n\nContacts:\nInstagram: @alanchuatravels",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jJUIjXqPC1k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jJUIjXqPC1k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jJUIjXqPC1k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jJUIjXqPC1k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jJUIjXqPC1k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Discovery Walking Tours TV",
+        "categoryId": "19",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Kyoto Japan Downtown Walking Tour (4K HDR)",
+          "description": "Walking along downtown Kyoto on a weekday afternoon \n\n⭐ Join this channel to get access to perks:\nhttps://www.youtube.com/channel/UCx2vyFdB0HP73wHBhEWWp3A/join\n\n👕 Buy Merch to Support the Channel:\nhttps://discoverywalkingtourstv.myspreadshop.com/\n\n⏰ Time stamps ⏰\n00:00 Sanjo Kyoto\n17:01 Nishiki Market\n\nContacts:\nInstagram: @alanchuatravels"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT45M25S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "5179",
+        "likeCount": "91",
+        "favoriteCount": "0",
+        "commentCount": "19"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "JPnKdsvX0fDRjrnqHfpoCrduz9k",
+      "id": "Rl_YSqygFEM",
+      "snippet": {
+        "publishedAt": "2025-05-31T14:25:27Z",
+        "channelId": "UCnrVURWNd7VYjlQQ0UDpOQQ",
+        "title": "Kyoto \"Tourists\" Are Out Of Hand...",
+        "description": "The over-tourism situation in Kyoto Japan is getting out of hand. So I spoke to the locals to hear their thoughts. Full Vid: \"Are Kyoto Locals Sick of \"Tourists\"?\"",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Rl_YSqygFEM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Rl_YSqygFEM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Rl_YSqygFEM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Rl_YSqygFEM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Rl_YSqygFEM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tokyo Lens",
+        "tags": [
+          "Japan",
+          "Tokyo",
+          "Vlog",
+          "Tokyo Lens",
+          "Tokyo Vlog",
+          "Japan Vlog",
+          "Norm Nakamura",
+          "Norm Tokyo Lens",
+          "Japanese",
+          "kyoto",
+          "overtourism",
+          "kyoto japan",
+          "kyoto tourism"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Kyoto \"Tourists\" Are Out Of Hand...",
+          "description": "The over-tourism situation in Kyoto Japan is getting out of hand. So I spoke to the locals to hear their thoughts. Full Vid: \"Are Kyoto Locals Sick of \"Tourists\"?\""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT19S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1246622",
+        "likeCount": "13354",
+        "favoriteCount": "0",
+        "commentCount": "1010"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "6DeR-r_2POXrcSI0uEiyYFMuRPQ",
+      "id": "OjHbS-_nncw",
+      "snippet": {
+        "publishedAt": "2023-06-21T13:07:31Z",
+        "channelId": "UCiVH7ncT6ghUKvSpY_e0DNQ",
+        "title": "🇯🇵 Japan Walking Tour - Discovering Kyoto’s Suburban Streets in 4K HDR 60fps",
+        "description": "Welcome to an immersive walking tour through the captivating suburbs of Ukyo, Japan. Join us as we embark on a journey of discovery, exploring the breathtaking moss gardens, enchanting bamboo forests, and awe-inspiring temples and shrines that grace this picturesque region.\n\nAs we stroll through the moss gardens, you'll be mesmerized by the delicate beauty of the lush green carpets and the tranquil ambiance they create. Feel the serenity wash over you as you immerse yourself in this natural oasis, surrounded by the gentle whispers of nature.\n\nNext, we'll venture into the mystical bamboo forests, where towering bamboo stalks sway gracefully in the breeze. Lose yourself in the mesmerizing rhythm of nature as sunlight filters through the dense canopy, creating a captivating play of light and shadow.\n\nOur journey continues as we encounter ancient temples and shrines, steeped in rich history and spiritual significance. Experience the palpable sense of reverence as you explore these sacred spaces, adorned with intricate architectural details and adorned with vibrant colors.\n\nThroughout the tour, our knowledgeable guide will provide fascinating insights into the cultural heritage and significance of each location, allowing you to deepen your understanding of Japan's traditions and customs.\n\nWhether you're a nature enthusiast, a history buff, or simply seeking a peaceful escape, this walking tour of Ukyo's suburbs promises to be a transformative experience. So put on your walking shoes and join us on this unforgettable adventure. Subscribe now and hit the notification bell to stay updated with our latest videos. Let's embark on this incredible journey together!\n\nChapters:\n0:00 Intro\n2:25 Ukyo Ward\n17:34 Japanese House\n26:52 Mossy Garden\n37:44 Sagakameyamacho\n47:50 Seiryo-ji Temple\n51:31 Bamboo Forest Walk\n56:25 Shogaku-ji Temple\n59:41 Arashiyama Bamboo Grove\n1:02:26 Kimono Forest\n\n-----------------------------------------------------------------------------------------------------------\nLet's connect: \n►Subscribe: https://www.youtube.com/c/4KWanderings\n►Facebook: https://www.facebook.com/4kWanderings\n►Twitter: https://twitter.com/17NorthNE\n►Instagram: https://instagram.com/17NNE\n►TikTok: https://www.tiktok.com/@microwalks\n-----------------------------------------------------------------------------------------------------------\n\nIntro music produced by Ryan Booth at The JamBooth Recording Studio.\nhttps://thejambooth.wixsite.com/music\nhttps://facebook.com/JamBoothMusic/\n\n#walkingtour #citywalk #travel #japan #tokyowalk #4kwalk",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OjHbS-_nncw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OjHbS-_nncw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OjHbS-_nncw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OjHbS-_nncw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OjHbS-_nncw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "World Wanderings: 4K Walking Tours",
+        "tags": [
+          "japan",
+          "kyoto",
+          "kyoto japan",
+          "4k japan",
+          "4k walking tour",
+          "japan 4k walking tour",
+          "4k hdr",
+          "japan travel",
+          "kyoto moss garden",
+          "kyoto walking tour 2023",
+          "kyoto walking tour",
+          "4k kyoto walk",
+          "ukyo ward",
+          "mossy garden",
+          "suburbs of japan",
+          "streets of japan",
+          "relaxing walk japan",
+          "relaxing walking 4k",
+          "relaxing walking tour",
+          "relaxing 4k scenery",
+          "japan walking 4k",
+          "suburbs",
+          "japan neighborhood walk",
+          "japan neighborhood tour",
+          "japan neighborhood",
+          "japanese",
+          "streets of japan 4k",
+          "japan countryside"
+        ],
+        "categoryId": "19",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "🇯🇵 Japan Walking Tour - Discovering Kyoto’s Suburban Streets in 4K HDR 60fps",
+          "description": "Welcome to an immersive walking tour through the captivating suburbs of Ukyo, Japan. Join us as we embark on a journey of discovery, exploring the breathtaking moss gardens, enchanting bamboo forests, and awe-inspiring temples and shrines that grace this picturesque region.\n\nAs we stroll through the moss gardens, you'll be mesmerized by the delicate beauty of the lush green carpets and the tranquil ambiance they create. Feel the serenity wash over you as you immerse yourself in this natural oasis, surrounded by the gentle whispers of nature.\n\nNext, we'll venture into the mystical bamboo forests, where towering bamboo stalks sway gracefully in the breeze. Lose yourself in the mesmerizing rhythm of nature as sunlight filters through the dense canopy, creating a captivating play of light and shadow.\n\nOur journey continues as we encounter ancient temples and shrines, steeped in rich history and spiritual significance. Experience the palpable sense of reverence as you explore these sacred spaces, adorned with intricate architectural details and adorned with vibrant colors.\n\nThroughout the tour, our knowledgeable guide will provide fascinating insights into the cultural heritage and significance of each location, allowing you to deepen your understanding of Japan's traditions and customs.\n\nWhether you're a nature enthusiast, a history buff, or simply seeking a peaceful escape, this walking tour of Ukyo's suburbs promises to be a transformative experience. So put on your walking shoes and join us on this unforgettable adventure. Subscribe now and hit the notification bell to stay updated with our latest videos. Let's embark on this incredible journey together!\n\nChapters:\n0:00 Intro\n2:25 Ukyo Ward\n17:34 Japanese House\n26:52 Mossy Garden\n37:44 Sagakameyamacho\n47:50 Seiryo-ji Temple\n51:31 Bamboo Forest Walk\n56:25 Shogaku-ji Temple\n59:41 Arashiyama Bamboo Grove\n1:02:26 Kimono Forest\n\n-----------------------------------------------------------------------------------------------------------\nLet's connect: \n►Subscribe: https://www.youtube.com/c/4KWanderings\n►Facebook: https://www.facebook.com/4kWanderings\n►Twitter: https://twitter.com/17NorthNE\n►Instagram: https://instagram.com/17NNE\n►TikTok: https://www.tiktok.com/@microwalks\n-----------------------------------------------------------------------------------------------------------\n\nIntro music produced by Ryan Booth at The JamBooth Recording Studio.\nhttps://thejambooth.wixsite.com/music\nhttps://facebook.com/JamBoothMusic/\n\n#walkingtour #citywalk #travel #japan #tokyowalk #4kwalk"
+        },
+        "defaultAudioLanguage": "en-CA"
+      },
+      "contentDetails": {
+        "duration": "PT1H8M10S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "3067127",
+        "likeCount": "28231",
+        "favoriteCount": "0",
+        "commentCount": "880"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "iBeKtZEPwPfHZvz0-ZH8TXmSZws",
+      "id": "3gX-umzVl9s",
+      "snippet": {
+        "publishedAt": "2020-10-28T13:48:12Z",
+        "channelId": "UCEt1Ef_TQfkaEmjRmOWiFog",
+        "title": "Kyoto Travel Guide - The Best Things to Do in Kyoto",
+        "description": "Get my 14 Days in Japan Itinerary:  https://shop.allansu.com/b/0Y5f9\n\n\n• eSIM data plan for Japan: https://affiliate.klook.com/redirect?aid=37988&aff_adid=893133&k_site=https://www.klook.com/activity/109393-japan-esim-high-speed-internet-qr-code-voucher/\n•  Buy JR Shinkansen Bullet train tickets here: https://affiliate.klook.com/redirect?aid=37988&aff_adid=1001837&k_site=https%3A%2F%2Fwww.klook.com%2Fjapan-rail%2Fshinkansen%2F\n\n• Follow me on \nhttps://instagram.com/allanwsu\nhttps://www.tiktok.com/@allanwsu\n\n• Timestamps\n00:00 - Intro\n01:27 - The best time to visit Kyoto\n01:54 - How many days do you need in Kyoto\n02:11 - Transportation\n02:42 - Overview of Kyoto\n03:51 - Explore the streets of Gion\n05:15 - Nishiki Market\n06:49 - Temples of Kyoto\n08:17 - Pontocho\n10:01 - Arashiyama\n13:24 - Kinkakuji - The Golden Pavilion\n14:23 - Fushimi Inari\n16:20 - Outtro\n\n\n• Hotel Recommendations for Kyoto\nKabin Kyoto: https://www.booking.com/hotel/jp/kabin-kyoto.en.html?aid=1435889&no_rooms=1&group_adults=2&room1=A%2CA\nThe Pocket Hotel: https://www.booking.com/hotel/jp/the-pocket-jing-du-si-tiao-wu-wan.en.html?aid=1435890&no_rooms=1&group_adults=2&room1=A,A\nHotel Granbell Kyoto: https://www.booking.com/hotel/jp/jing-du-guranberuhoteru-kyoto12.xu.html?aid=2308890&no_rooms=1&group_adults=2&room1=A,A\n\n\n• Other Kyoto information\nKansai Thru Pass: https://affiliate.klook.com/redirect?aid=37988&aff_adid=1001894&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F1329-kansai-thru-pass-osaka%2F\n\nHyperdia - What I use to route plan: https://www.hyperdia.com/\n\nHozugawa Boat Ride: https://affiliate.klook.com/redirect?aid=37988&aff_adid=1001891&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F74947-kyoto-arashiyama-hozugawa-river-boat-ride%2F\n\nSagano Romantic Train: https://affiliate.klook.com/redirect?aid=37988&aff_adid=1001893&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F17066-sagano-romantic-train-ticket-kyoto%2F\n\n\n\n• What I use to Film\nFull Gear list: https://allansu.com/gear/\n\n\n• Where I get my Music\nMusicbed: https://www.musicbed.com/invite/j7niZ\nEpidemic Sound: https://share.epidemicsound.com/CjV6D\n\n\n• Credits\nAdditional images provided by:\nhttps://unsplash.com/\n\nIcons by:\nhttps://www.flaticon.com/\nhttps://www.freepik.com/\n\n\n• Disclaimer\nThis video and description contain affiliate links. Any purchase made through the links helps support the channel and allows me to continue making videos. Thank you for the support!\n______________________________________________\n#kyoto #visitkyoto #travelkyoto #kyotoguide",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3gX-umzVl9s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3gX-umzVl9s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3gX-umzVl9s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3gX-umzVl9s/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3gX-umzVl9s/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Allan Su",
+        "tags": [
+          "kyoto",
+          "kyoto japan",
+          "things to do in kyoto",
+          "kyoto travel",
+          "kyoto travel guide",
+          "kyoto guide",
+          "japan guide",
+          "guide to kyoto",
+          "Allan Su",
+          "kyoto things to do",
+          "japan travel"
+        ],
+        "categoryId": "19",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Kyoto Travel Guide - The Best Things to Do in Kyoto",
+          "description": "Get my 14 Days in Japan Itinerary:  https://shop.allansu.com/b/0Y5f9\n\n\n• eSIM data plan for Japan: https://affiliate.klook.com/redirect?aid=37988&aff_adid=893133&k_site=https://www.klook.com/activity/109393-japan-esim-high-speed-internet-qr-code-voucher/\n•  Buy JR Shinkansen Bullet train tickets here: https://affiliate.klook.com/redirect?aid=37988&aff_adid=1001837&k_site=https%3A%2F%2Fwww.klook.com%2Fjapan-rail%2Fshinkansen%2F\n\n• Follow me on \nhttps://instagram.com/allanwsu\nhttps://www.tiktok.com/@allanwsu\n\n• Timestamps\n00:00 - Intro\n01:27 - The best time to visit Kyoto\n01:54 - How many days do you need in Kyoto\n02:11 - Transportation\n02:42 - Overview of Kyoto\n03:51 - Explore the streets of Gion\n05:15 - Nishiki Market\n06:49 - Temples of Kyoto\n08:17 - Pontocho\n10:01 - Arashiyama\n13:24 - Kinkakuji - The Golden Pavilion\n14:23 - Fushimi Inari\n16:20 - Outtro\n\n\n• Hotel Recommendations for Kyoto\nKabin Kyoto: https://www.booking.com/hotel/jp/kabin-kyoto.en.html?aid=1435889&no_rooms=1&group_adults=2&room1=A%2CA\nThe Pocket Hotel: https://www.booking.com/hotel/jp/the-pocket-jing-du-si-tiao-wu-wan.en.html?aid=1435890&no_rooms=1&group_adults=2&room1=A,A\nHotel Granbell Kyoto: https://www.booking.com/hotel/jp/jing-du-guranberuhoteru-kyoto12.xu.html?aid=2308890&no_rooms=1&group_adults=2&room1=A,A\n\n\n• Other Kyoto information\nKansai Thru Pass: https://affiliate.klook.com/redirect?aid=37988&aff_adid=1001894&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F1329-kansai-thru-pass-osaka%2F\n\nHyperdia - What I use to route plan: https://www.hyperdia.com/\n\nHozugawa Boat Ride: https://affiliate.klook.com/redirect?aid=37988&aff_adid=1001891&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F74947-kyoto-arashiyama-hozugawa-river-boat-ride%2F\n\nSagano Romantic Train: https://affiliate.klook.com/redirect?aid=37988&aff_adid=1001893&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F17066-sagano-romantic-train-ticket-kyoto%2F\n\n\n\n• What I use to Film\nFull Gear list: https://allansu.com/gear/\n\n\n• Where I get my Music\nMusicbed: https://www.musicbed.com/invite/j7niZ\nEpidemic Sound: https://share.epidemicsound.com/CjV6D\n\n\n• Credits\nAdditional images provided by:\nhttps://unsplash.com/\n\nIcons by:\nhttps://www.flaticon.com/\nhttps://www.freepik.com/\n\n\n• Disclaimer\nThis video and description contain affiliate links. Any purchase made through the links helps support the channel and allows me to continue making videos. Thank you for the support!\n______________________________________________\n#kyoto #visitkyoto #travelkyoto #kyotoguide"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT17M15S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1892727",
+        "likeCount": "32029",
+        "favoriteCount": "0",
+        "commentCount": "471"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "M680jki412wenhQ2eqnvdon1izU",
+      "id": "tJUoA0YmU-M",
+      "snippet": {
+        "publishedAt": "2026-07-19T09:35:08Z",
+        "channelId": "UCYb_583PUTDX3IH_n8ko6AA",
+        "title": "Gion Matsuri Kyoto Walk | Ambient Sound Only | 4K Japan",
+        "description": "Experience the atmosphere of Gion Matsuri in Kyoto with real ambient sound.\nNo talking, no music \u2014 ambient sound only.\n\nWatch the full 4K Gion Matsuri walk on my channel.\n\n#GionMatsuri #Kyoto #KyotoJapan #JapanTravel #KyotoWalk #WalkingTour #AmbientSound #JapanFestival #4KJapan #Shorts\n#祇園祭 #京都 #日本 #日本旅行 #京都散歩",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tJUoA0YmU-M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tJUoA0YmU-M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tJUoA0YmU-M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tJUoA0YmU-M/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tJUoA0YmU-M/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kyoto Walking Tour",
+        "tags": [
+          "Gion Matsuri",
+          "Gion Festival",
+          "Kyoto",
+          "Kyoto Japan",
+          "Kyoto Walk",
+          "Kyoto Walking Tour",
+          "Japan Travel",
+          "Japan Festival",
+          "Japanese Festival",
+          "Ambient Sound",
+          "No Music",
+          "Walking Tour",
+          "4K Japan",
+          "Kyoto 4K",
+          "Japan Shorts",
+          "Kyoto Shorts"
+        ],
+        "categoryId": "19",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "ja",
+        "localized": {
+          "title": "Gion Matsuri Kyoto Walk | Ambient Sound Only | 4K Japan",
+          "description": "Experience the atmosphere of Gion Matsuri in Kyoto with real ambient sound.\nNo talking, no music \u2014 ambient sound only.\n\nWatch the full 4K Gion Matsuri walk on my channel.\n\n#GionMatsuri #Kyoto #KyotoJapan #JapanTravel #KyotoWalk #WalkingTour #AmbientSound #JapanFestival #4KJapan #Shorts\n#祇園祭 #京都 #日本 #日本旅行 #京都散歩"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT55S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "19990",
+        "likeCount": "1199",
+        "favoriteCount": "0",
+        "commentCount": "7"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 12,
+    "resultsPerPage": 12
+  }
+}

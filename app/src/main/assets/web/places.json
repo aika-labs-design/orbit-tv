@@ -1,0 +1,567 @@
+[
+ {
+  "id": "bengaluru",
+  "name": "Bengaluru",
+  "country": "India",
+  "lat": 12.9716,
+  "lon": 77.5946,
+  "tz": "Asia/Kolkata",
+  "tags": [
+   "city",
+   "food"
+  ],
+  "aliases": [
+   "Bangalore"
+  ]
+ },
+ {
+  "id": "mysuru",
+  "name": "Mysuru",
+  "country": "India",
+  "lat": 12.2958,
+  "lon": 76.6394,
+  "tz": "Asia/Kolkata",
+  "tags": [
+   "heritage",
+   "festival",
+   "food"
+  ],
+  "aliases": [
+   "Mysore"
+  ]
+ },
+ {
+  "id": "hampi",
+  "name": "Hampi",
+  "country": "India",
+  "lat": 15.335,
+  "lon": 76.46,
+  "tz": "Asia/Kolkata",
+  "tags": [
+   "heritage",
+   "nature"
+  ]
+ },
+ {
+  "id": "hyderabad",
+  "name": "Hyderabad",
+  "country": "India",
+  "lat": 17.385,
+  "lon": 78.4867,
+  "tz": "Asia/Kolkata",
+  "tags": [
+   "city",
+   "food"
+  ]
+ },
+ {
+  "id": "mumbai",
+  "name": "Mumbai",
+  "country": "India",
+  "lat": 19.076,
+  "lon": 72.8777,
+  "tz": "Asia/Kolkata",
+  "tags": [
+   "city",
+   "food",
+   "beach"
+  ],
+  "aliases": [
+   "Bombay"
+  ]
+ },
+ {
+  "id": "delhi",
+  "name": "Delhi",
+  "country": "India",
+  "lat": 28.6139,
+  "lon": 77.209,
+  "tz": "Asia/Kolkata",
+  "tags": [
+   "city",
+   "heritage",
+   "food"
+  ]
+ },
+ {
+  "id": "agra",
+  "name": "Agra",
+  "country": "India",
+  "lat": 27.1751,
+  "lon": 78.0421,
+  "tz": "Asia/Kolkata",
+  "tags": [
+   "heritage"
+  ]
+ },
+ {
+  "id": "varanasi",
+  "name": "Varanasi",
+  "country": "India",
+  "lat": 25.3176,
+  "lon": 82.9739,
+  "tz": "Asia/Kolkata",
+  "tags": [
+   "heritage",
+   "festival"
+  ],
+  "aliases": [
+   "Benares",
+   "Banaras",
+   "Kashi"
+  ]
+ },
+ {
+  "id": "jaipur",
+  "name": "Jaipur",
+  "country": "India",
+  "lat": 26.9124,
+  "lon": 75.7873,
+  "tz": "Asia/Kolkata",
+  "tags": [
+   "heritage",
+   "city"
+  ]
+ },
+ {
+  "id": "kerala-backwaters",
+  "name": "Kerala backwaters",
+  "country": "India",
+  "lat": 9.4981,
+  "lon": 76.3388,
+  "tz": "Asia/Kolkata",
+  "tags": [
+   "nature"
+  ],
+  "aliases": [
+   "Alleppey",
+   "Alappuzha"
+  ]
+ },
+ {
+  "id": "goa",
+  "name": "Goa",
+  "country": "India",
+  "lat": 15.2993,
+  "lon": 74.124,
+  "tz": "Asia/Kolkata",
+  "tags": [
+   "beach",
+   "food"
+  ],
+  "aliases": [
+   "Panaji"
+  ]
+ },
+ {
+  "id": "ladakh",
+  "name": "Ladakh",
+  "country": "India",
+  "lat": 34.1526,
+  "lon": 77.5771,
+  "tz": "Asia/Kolkata",
+  "tags": [
+   "mountains",
+   "nature"
+  ]
+ },
+ {
+  "id": "kyoto",
+  "name": "Kyoto",
+  "country": "Japan",
+  "lat": 35.0116,
+  "lon": 135.7681,
+  "tz": "Asia/Tokyo",
+  "tags": [
+   "heritage",
+   "city",
+   "food"
+  ]
+ },
+ {
+  "id": "tokyo",
+  "name": "Tokyo",
+  "country": "Japan",
+  "lat": 35.6762,
+  "lon": 139.6503,
+  "tz": "Asia/Tokyo",
+  "tags": [
+   "city",
+   "food"
+  ]
+ },
+ {
+  "id": "seoul",
+  "name": "Seoul",
+  "country": "South Korea",
+  "lat": 37.5665,
+  "lon": 126.978,
+  "tz": "Asia/Seoul",
+  "tags": [
+   "city",
+   "food"
+  ]
+ },
+ {
+  "id": "bangkok",
+  "name": "Bangkok",
+  "country": "Thailand",
+  "lat": 13.7563,
+  "lon": 100.5018,
+  "tz": "Asia/Bangkok",
+  "tags": [
+   "city",
+   "food"
+  ]
+ },
+ {
+  "id": "bali",
+  "name": "Bali",
+  "country": "Indonesia",
+  "lat": -8.3405,
+  "lon": 115.092,
+  "tz": "Asia/Makassar",
+  "tags": [
+   "beach",
+   "nature"
+  ]
+ },
+ {
+  "id": "singapore",
+  "name": "Singapore",
+  "country": "Singapore",
+  "lat": 1.3521,
+  "lon": 103.8198,
+  "tz": "Asia/Singapore",
+  "tags": [
+   "city",
+   "food"
+  ]
+ },
+ {
+  "id": "dubai",
+  "name": "Dubai",
+  "country": "United Arab Emirates",
+  "lat": 25.2048,
+  "lon": 55.2708,
+  "tz": "Asia/Dubai",
+  "tags": [
+   "city"
+  ]
+ },
+ {
+  "id": "kathmandu",
+  "name": "Kathmandu",
+  "country": "Nepal",
+  "lat": 27.7172,
+  "lon": 85.324,
+  "tz": "Asia/Kathmandu",
+  "tags": [
+   "heritage",
+   "mountains"
+  ]
+ },
+ {
+  "id": "istanbul",
+  "name": "Istanbul",
+  "country": "Turkey",
+  "lat": 41.0082,
+  "lon": 28.9784,
+  "tz": "Europe/Istanbul",
+  "tags": [
+   "city",
+   "heritage",
+   "food"
+  ]
+ },
+ {
+  "id": "cappadocia",
+  "name": "Cappadocia",
+  "country": "Turkey",
+  "lat": 38.6431,
+  "lon": 34.8289,
+  "tz": "Europe/Istanbul",
+  "tags": [
+   "nature"
+  ]
+ },
+ {
+  "id": "rome",
+  "name": "Rome",
+  "country": "Italy",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "tz": "Europe/Rome",
+  "tags": [
+   "heritage",
+   "city",
+   "food"
+  ]
+ },
+ {
+  "id": "venice",
+  "name": "Venice",
+  "country": "Italy",
+  "lat": 45.4408,
+  "lon": 12.3155,
+  "tz": "Europe/Rome",
+  "tags": [
+   "heritage",
+   "city"
+  ]
+ },
+ {
+  "id": "amalfi",
+  "name": "Amalfi Coast",
+  "country": "Italy",
+  "lat": 40.6333,
+  "lon": 14.6029,
+  "tz": "Europe/Rome",
+  "tags": [
+   "beach",
+   "nature"
+  ],
+  "aliases": [
+   "Positano"
+  ]
+ },
+ {
+  "id": "paris",
+  "name": "Paris",
+  "country": "France",
+  "lat": 48.8566,
+  "lon": 2.3522,
+  "tz": "Europe/Paris",
+  "tags": [
+   "city",
+   "food"
+  ]
+ },
+ {
+  "id": "london",
+  "name": "London",
+  "country": "United Kingdom",
+  "lat": 51.5074,
+  "lon": -0.1278,
+  "tz": "Europe/London",
+  "tags": [
+   "city"
+  ]
+ },
+ {
+  "id": "dublin",
+  "name": "Dublin",
+  "country": "Ireland",
+  "lat": 53.3498,
+  "lon": -6.2603,
+  "tz": "Europe/Dublin",
+  "tags": [
+   "city"
+  ]
+ },
+ {
+  "id": "edinburgh",
+  "name": "Edinburgh",
+  "country": "United Kingdom",
+  "lat": 55.9533,
+  "lon": -3.1883,
+  "tz": "Europe/London",
+  "tags": [
+   "heritage",
+   "city"
+  ]
+ },
+ {
+  "id": "santorini",
+  "name": "Santorini",
+  "country": "Greece",
+  "lat": 36.3932,
+  "lon": 25.4615,
+  "tz": "Europe/Athens",
+  "tags": [
+   "beach"
+  ]
+ },
+ {
+  "id": "swiss-alps",
+  "name": "Swiss Alps",
+  "country": "Switzerland",
+  "lat": 46.5197,
+  "lon": 7.9614,
+  "tz": "Europe/Zurich",
+  "tags": [
+   "mountains",
+   "nature"
+  ],
+  "aliases": [
+   "Switzerland"
+  ]
+ },
+ {
+  "id": "reykjavik",
+  "name": "Reykjavík",
+  "country": "Iceland",
+  "lat": 64.1466,
+  "lon": -21.9426,
+  "tz": "Atlantic/Reykjavik",
+  "tags": [
+   "nature",
+   "city"
+  ],
+  "aliases": [
+   "Reykjavik"
+  ]
+ },
+ {
+  "id": "marrakech",
+  "name": "Marrakech",
+  "country": "Morocco",
+  "lat": 31.6295,
+  "lon": -7.9811,
+  "tz": "Africa/Casablanca",
+  "tags": [
+   "heritage",
+   "food"
+  ],
+  "aliases": [
+   "Marrakesh"
+  ]
+ },
+ {
+  "id": "cairo",
+  "name": "Cairo",
+  "country": "Egypt",
+  "lat": 30.0444,
+  "lon": 31.2357,
+  "tz": "Africa/Cairo",
+  "tags": [
+   "heritage",
+   "city"
+  ]
+ },
+ {
+  "id": "cape-town",
+  "name": "Cape Town",
+  "country": "South Africa",
+  "lat": -33.9249,
+  "lon": 18.4241,
+  "tz": "Africa/Johannesburg",
+  "tags": [
+   "city",
+   "nature"
+  ]
+ },
+ {
+  "id": "times-square",
+  "name": "Times Square, New York",
+  "country": "United States",
+  "lat": 40.758,
+  "lon": -73.9855,
+  "tz": "America/New_York",
+  "tags": [
+   "city",
+   "live"
+  ],
+  "aliases": [
+   "NYC"
+  ]
+ },
+ {
+  "id": "san-francisco",
+  "name": "San Francisco",
+  "country": "United States",
+  "lat": 37.7749,
+  "lon": -122.4194,
+  "tz": "America/Los_Angeles",
+  "tags": [
+   "city"
+  ]
+ },
+ {
+  "id": "honolulu",
+  "name": "Honolulu",
+  "country": "United States",
+  "lat": 21.3069,
+  "lon": -157.8583,
+  "tz": "Pacific/Honolulu",
+  "tags": [
+   "beach"
+  ]
+ },
+ {
+  "id": "banff",
+  "name": "Banff",
+  "country": "Canada",
+  "lat": 51.1784,
+  "lon": -115.5708,
+  "tz": "America/Edmonton",
+  "tags": [
+   "mountains",
+   "nature"
+  ]
+ },
+ {
+  "id": "mexico-city",
+  "name": "Mexico City",
+  "country": "Mexico",
+  "lat": 19.4326,
+  "lon": -99.1332,
+  "tz": "America/Mexico_City",
+  "tags": [
+   "city",
+   "food"
+  ],
+  "aliases": [
+   "CDMX"
+  ]
+ },
+ {
+  "id": "rio",
+  "name": "Rio de Janeiro",
+  "country": "Brazil",
+  "lat": -22.9068,
+  "lon": -43.1729,
+  "tz": "America/Sao_Paulo",
+  "tags": [
+   "beach",
+   "festival",
+   "city"
+  ]
+ },
+ {
+  "id": "machu-picchu",
+  "name": "Machu Picchu",
+  "country": "Peru",
+  "lat": -13.1631,
+  "lon": -72.545,
+  "tz": "America/Lima",
+  "tags": [
+   "heritage",
+   "mountains"
+  ]
+ },
+ {
+  "id": "sydney",
+  "name": "Sydney",
+  "country": "Australia",
+  "lat": -33.8688,
+  "lon": 151.2093,
+  "tz": "Australia/Sydney",
+  "tags": [
+   "city",
+   "beach"
+  ]
+ },
+ {
+  "id": "queenstown",
+  "name": "Queenstown",
+  "country": "New Zealand",
+  "lat": -45.0312,
+  "lon": 168.6626,
+  "tz": "Pacific/Auckland",
+  "tags": [
+   "mountains",
+   "nature"
+  ]
+ }
+]

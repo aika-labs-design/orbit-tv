@@ -1,0 +1,545 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "kHm_M5I0FWCzqQg6JIyNAoonzv0",
+  "nextPageToken": "CAwQAA",
+  "regionCode": "IE",
+  "pageInfo": {
+    "totalResults": 1000000,
+    "resultsPerPage": 12
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "wmQRjZ7u8vFnpKlr1EnZyZ2yyKg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "arOQ7slh3pM"
+      },
+      "snippet": {
+        "publishedAt": "2023-05-23T15:00:02Z",
+        "channelId": "UCV2_l3k3JuZwIhiY1H0kSxA",
+        "title": "Kyoto, Japan 4K Walking Tour - Captions &amp; Immersive Sound [4K Ultra HD/60fps]",
+        "description": "Visit KYOTO, Japan on this 4K walking tour. Best with headphones for an immersive experience. ⬇ LINKS (map, etc.)",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/arOQ7slh3pM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/arOQ7slh3pM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/arOQ7slh3pM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/arOQ7slh3pM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/arOQ7slh3pM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "HP Walking Tours",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-05-23T15:00:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "HU_JC26desObtDAMM9ce8daoJS4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "SKJG4xqdH_0"
+      },
+      "snippet": {
+        "publishedAt": "2025-04-01T11:49:00Z",
+        "channelId": "UCTwtAPLzYSrqNCtmMw0YrRQ",
+        "title": "Spring Morning Walk through Historic Higashiyama | Kyoto, Japan 4K",
+        "description": "A quiet spring morning walking along Shirakawa River and Canal with sakura cherry blossoms in early bloom. I had intended to ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SKJG4xqdH_0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SKJG4xqdH_0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SKJG4xqdH_0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/SKJG4xqdH_0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/SKJG4xqdH_0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ambient Exploration",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-04-01T11:49:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "QzHUSswFDXYcOEBtt8uo3iHMes8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TOt-fUMCE78"
+      },
+      "snippet": {
+        "publishedAt": "2025-04-20T10:00:42Z",
+        "channelId": "UCIUm6jYmiBYXgk2Osy9h2FQ",
+        "title": "Kyoto - 4K Walking Tour | The Cultural Heart of Japan | Japan 🇯🇵 Mar 2025 [4K HDR]",
+        "description": "Shooting Date: March 24, 2025 - 12:20 PM Editing Date: April 15, 2025 Weather: Cloudy Temperature: 20°C / 68°F 【My ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TOt-fUMCE78/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TOt-fUMCE78/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TOt-fUMCE78/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TOt-fUMCE78/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TOt-fUMCE78/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "traveler_HIRO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-04-20T10:00:42Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Vw4eh_s-8tEvg2kFUVJiAP-HiPM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "iBsyvhFTOgQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-14T00:00:37Z",
+        "channelId": "UCaamGI_gFoce5WiUKhZ3UfA",
+        "title": "Kyoto’s Most Beautiful Streets – Gion to Kiyomizu-dera | Japan | 4K HDR",
+        "description": "Walk through some of Kyoto's most beautiful streets, starting along the peaceful Shirakawa Canal before heading into Hanamikoji ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iBsyvhFTOgQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iBsyvhFTOgQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iBsyvhFTOgQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/iBsyvhFTOgQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/iBsyvhFTOgQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "THE JAPAN WALK",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-14T00:00:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gB2zKmX3ju5-RHFCoUt5smNG1L4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qgfd-uWTVwg"
+      },
+      "snippet": {
+        "publishedAt": "2021-12-11T04:00:19Z",
+        "channelId": "UCMTv_Dg1BXFUglzWIIincpQ",
+        "title": "Walk in Kyoto Midnight Rainstorm - 4K HDR",
+        "description": "Taking a relaxing stroll in the rain at midnight through the old streets of Kyoto, Japan. Click here for more HDR Japan Walks...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qgfd-uWTVwg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qgfd-uWTVwg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qgfd-uWTVwg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qgfd-uWTVwg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qgfd-uWTVwg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "VIRTUAL JAPAN",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-12-11T04:00:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "zFAqPxJUJOcxkGUiS1W7OEC6luA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "gJ_U2gRYLRA"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-19T11:00:11Z",
+        "channelId": "UCQ8ZZiluVgKO_QpEZsIKvHw",
+        "title": "KYOTO, Japan 🇯🇵 | Ancient Temples &amp; Old Streets at Dawn | Walking Tour | 4K 60FPS",
+        "description": "KYOTO, Japan Experience a complete 4K walking tour through the heart of Japan's ancient capital, from the great wooden ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gJ_U2gRYLRA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gJ_U2gRYLRA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gJ_U2gRYLRA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/gJ_U2gRYLRA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/gJ_U2gRYLRA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/gJ_U2gRYLRA/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "a.walktour",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-19T11:00:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GV5gdvDLhtzylVwsAmUW_Mn9hcM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "JBzzsSlwTOU"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-28T08:45:07Z",
+        "channelId": "UCM9ZxqoiNMkG9QOIe9XWw0A",
+        "title": "JAPAN | Kyoto Walk | Karasuma to Kawaramachi Afternoon 4K HDR",
+        "description": "A walk from Karasuma(烏丸) to Kawaramachi(河原町) in Kyoto(京都). Decorative yamahoko used in the Gion Festival were being ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JBzzsSlwTOU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JBzzsSlwTOU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JBzzsSlwTOU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/JBzzsSlwTOU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/JBzzsSlwTOU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "4K JAPAN WALK",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-28T08:45:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "muJcaQEIZ84xj068V2dGJSbYAOY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "jJUIjXqPC1k"
+      },
+      "snippet": {
+        "publishedAt": "2023-02-04T12:00:21Z",
+        "channelId": "UCx2vyFdB0HP73wHBhEWWp3A",
+        "title": "Kyoto Japan Downtown Walking Tour (4K HDR)",
+        "description": "Walking along downtown Kyoto on a weekday afternoon ⭐ Join this channel to get access to perks: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jJUIjXqPC1k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jJUIjXqPC1k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jJUIjXqPC1k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jJUIjXqPC1k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jJUIjXqPC1k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Discovery Walking Tours TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-02-04T12:00:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "38Eev5T8s9k6BwNlxdo7Bt7BufE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Rl_YSqygFEM"
+      },
+      "snippet": {
+        "publishedAt": "2025-05-31T14:25:27Z",
+        "channelId": "UCnrVURWNd7VYjlQQ0UDpOQQ",
+        "title": "Kyoto &quot;Tourists&quot; Are Out Of Hand...",
+        "description": "The over-tourism situation in Kyoto Japan is getting out of hand. So I spoke to the locals to hear their thoughts. Full Vid: \"Are Kyoto ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Rl_YSqygFEM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Rl_YSqygFEM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Rl_YSqygFEM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Rl_YSqygFEM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Rl_YSqygFEM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tokyo Lens",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-05-31T14:25:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "yrOUkd5UUlB0_xYmaRg8FryQvXI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "OjHbS-_nncw"
+      },
+      "snippet": {
+        "publishedAt": "2023-06-21T13:07:31Z",
+        "channelId": "UCiVH7ncT6ghUKvSpY_e0DNQ",
+        "title": "🇯🇵 Japan Walking Tour - Discovering Kyoto’s Suburban Streets in 4K HDR 60fps",
+        "description": "Welcome to an immersive walking tour through the captivating suburbs of Ukyo, Japan. Join us as we embark on a journey of ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OjHbS-_nncw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OjHbS-_nncw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OjHbS-_nncw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OjHbS-_nncw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OjHbS-_nncw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "World Wanderings: 4K Walking Tours",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-06-21T13:07:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "LunNOmCqZ0q_Rw5vqtIa54K2upE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "3gX-umzVl9s"
+      },
+      "snippet": {
+        "publishedAt": "2020-10-28T13:48:12Z",
+        "channelId": "UCEt1Ef_TQfkaEmjRmOWiFog",
+        "title": "Kyoto Travel Guide - The Best Things to Do in Kyoto",
+        "description": "Get my 14 Days in Japan Itinerary: https://shop.allansu.com/b/0Y5f9 • eSIM data plan for Japan: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3gX-umzVl9s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3gX-umzVl9s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3gX-umzVl9s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3gX-umzVl9s/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3gX-umzVl9s/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Allan Su",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-10-28T13:48:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "RwrvjVxmVdszWposycFT3nB63tU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tJUoA0YmU-M"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-19T09:35:08Z",
+        "channelId": "UCYb_583PUTDX3IH_n8ko6AA",
+        "title": "Gion Matsuri Kyoto Walk | Ambient Sound Only | 4K Japan",
+        "description": "Experience the atmosphere of Gion Matsuri in Kyoto with real ambient sound. No talking, no music \u2014 ambient sound only.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tJUoA0YmU-M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tJUoA0YmU-M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tJUoA0YmU-M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tJUoA0YmU-M/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tJUoA0YmU-M/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kyoto Walking Tour",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-19T09:35:08Z"
+      }
+    }
+  ]
+}

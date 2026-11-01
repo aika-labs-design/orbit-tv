@@ -1,0 +1,12 @@
+{
+  "note": "TMDB watch-provider names mapped to the Fire TV apps that play them. global: apps offered across countries; then extras per country (ISO code). A provider with no entry shows its name without an app button.",
+  "global": {
+    "Netflix": "com.netflix.ninja", "Netflix Kids": "com.netflix.ninja", "Netflix basic with Ads": "com.netflix.ninja", "Netflix Standard with Ads": "com.netflix.ninja",
+    "Amazon Prime Video": "com.amazon.firebat", "Amazon Prime Video with Ads": "com.amazon.firebat",
+    "Disney Plus": "com.disney.disneyplus",
+    "Apple TV Plus": "com.apple.atve.amazon.appletv", "Apple TV+": "com.apple.atve.amazon.appletv",
+    "YouTube": "com.amazon.firetv.youtube"
+  },
+  "IE": { "Sun Nxt": "com.suntv.sunnxt" },
+  "IN": { "Sun Nxt": "com.suntv.sunnxt" }
+}

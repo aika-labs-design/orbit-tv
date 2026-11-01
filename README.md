@@ -1,10 +1,14 @@
 # Orbit
 
+[![Orbit on a Fire TV: Cinema, the Football tab, Journeys and Home Mode for Tolu, from Lagos, living in Berlin. Select to watch the 79-second demo.](docs/media/orbit-demo.gif)](docs/media/orbit-demo.mp4)
+
+[Watch the demo (79 seconds, with sound)](docs/media/orbit-demo.mp4)
+
 A home screen for Fire TV that is shaped by the people who watch it. You build and install it yourself with your own free keys, and everyone who uses the TV sets it up for themselves with the remote: where home is, which languages feel like home, where they live now and what they love. From then on films, live sport, news, radio, videos and travel follow those choices, and Orbit keeps learning from what each person watches. Everything it learns stays on the TV.
 
 Orbit is a personal, non-commercial project. It is not affiliated with Amazon or any service it shows (see [Disclaimer](#disclaimer)).
 
-![Setup, step 2: where is home](docs/images/setup-home.png)
+![Cinema, the home: a film picked for Tolu, in Yorùbá first, with tonight's matches, home news and more below](docs/images/cinema-for-you.png)
 
 ## Features
 
@@ -13,17 +17,17 @@ Orbit is a personal, non-commercial project. It is not affiliated with Amazon or
 - **Cinema, the home.** For You, your home film industry, up to three of your loves, Journeys and Apps. For You starts with "Tonight, for you": live matches of the sport you follow, a film picked for you, new videos for your loves, news from your home town and a live stream. Every row says why it is there, and kick-off times are in your own time zone. Films and series come from TMDB in your languages, with where to watch them in the country you live in.
 - **It keeps learning.** Opens and minutes watched raise a love's weight, a love left untouched for a month fades, and "Orbit noticed" offers an interest you keep watching but never chose. Learning is per person.
 - **Journeys.** Choose a place on a globe, search for any town, or pick what is live right now or waking up at sunrise, then walk it, drive it, eat there, catch a festival or watch a live camera, with the place's own time, weather and sunrise around the picture. Footage comes from YouTube creators.
-- **Home Mode.** "Feels like <your home country>": the time at home, a greeting in your language (where Orbit has a checked one), the weather in your home town, festival days, home news, live home channels, home radio and a soundscape that follows the time of day and the rain there.
+- **Home Mode.** "Feels like <your home country>": the time at home, a greeting in your language (where Orbit has a checked one), the weather in your home town, festival days, home news, live home channels, and home radio.
 - **Screensaver.** The Earth from low orbit with the real sun and city lights.
 
 | | |
 |---|---|
-| ![Which languages feel like home](docs/images/setup-languages.png) | ![What do you love](docs/images/setup-loves.png) |
-| ![Cinema, For You](docs/images/cinema-for-you.png) | ![Journeys atlas](docs/images/journeys-atlas.png) |
+| ![Setup, step 2: where is home. The globe turns to Lagos](docs/images/setup-home.png) | ![Setup, step 3: which languages feel like home, and where you live now](docs/images/setup-languages.png) |
+| ![Setup, step 4: what do you love, with Football's follow-up](docs/images/setup-loves.png) | ![Setup, step 5: the plain-language summary](docs/images/setup-summary.png) |
+| ![A love tab: Fashion](docs/images/love-fashion.png) | ![Journeys: the atlas, with home on the globe](docs/images/journeys-atlas.png) |
+| ![Home Mode for a Lagos home: the time, a Yorùbá greeting and today's festival](docs/images/home-mode.png) | ![A love tab: Football, picked because Tolu follows Arsenal and the Super Eagles](docs/images/love-football.png) |
 
-![Home Mode for a Lagos home](docs/images/home-mode.png)
-
-The example person in these pictures is Tolu, from Lagos, who lives in Berlin. Photographs, film art and video thumbnails from third-party services are blurred in these pictures; on the TV they show as normal.
+The example person in these pictures and the demo is Tolu, from Lagos, who lives in Berlin and watches in Yorùbá, English, Naijá and German. The pictures are real captures from the reference TV. Film art, photographs and logos in them come from third-party services and belong to their owners; see [Media in this repository](THIRD_PARTY_NOTICES.md#media-in-this-repository). The demo's music is "Bathed in the Light" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0.
 
 ## Requirements
 
@@ -31,11 +35,19 @@ The example person in these pictures is Tolu, from Lagos, who lives in Berlin. P
 - A computer (macOS, Linux or Windows) with **JDK 17**, the **Android SDK** command-line tools (`platform-tools`, `build-tools;34.0.0`, `platforms;android-35`) and Git, on the same network as the TV.
 - Two free personal keys: a **TMDB** API key and a **YouTube Data API v3** key. Orbit runs without them, but films (TMDB) and Journeys and love videos (YouTube) stay empty.
 
-## Quick start
+## Install
 
-Step by step, from a new computer to Orbit on the TV, including the keys and the first setup: **[docs/SETUP.md](docs/SETUP.md)**.
+Orbit is not in the Amazon Appstore: you build it on your computer and install it on the TV over your Wi-Fi. The first time takes about 45 to 60 minutes in all, most of it waiting for downloads. Each step links to the full instructions in [docs/SETUP.md](docs/SETUP.md).
 
-Short version, once your tools and `local.properties` are ready:
+1. **Tools on your computer** (about 15 minutes). Install JDK 17, the Android SDK command-line tools and Git. [Step 1](docs/SETUP.md#1-tools-on-your-computer)
+2. **Developer mode on the TV, and connect** (about 5 minutes). Turn on ADB debugging and unknown sources, then `adb connect` to the TV's IP address. [Step 2](docs/SETUP.md#2-prepare-the-fire-tv)
+3. **Your two free keys** (about 10 minutes). A TMDB API key and a YouTube Data API v3 key, both for personal use. [Step 3](docs/SETUP.md#3-get-your-own-two-free-keys)
+4. **Configure `local.properties`** (about 2 minutes). Clone this repository, copy `local.properties.example` and paste in your SDK path and both keys. [Step 4](docs/SETUP.md#4-configure)
+5. **Build, sign and install** (about 10 minutes, longer on the first build). One Gradle build, one `apksigner` command, one `adb install`. [Step 5](docs/SETUP.md#5-build-sign-and-install)
+6. **Permissions and screensaver** (about 2 minutes). Four `adb shell` lines, then open Orbit once from Apps on the TV. [Step 6](docs/SETUP.md#6-permissions-and-the-screensaver)
+7. **First setup on the TV** (about 3 minutes per person). Your name, home, languages and loves, with the remote. Films and live sport arrive over the next few minutes. [Step 7](docs/SETUP.md#7-first-setup-on-the-tv)
+
+### Already set up? Rebuild and install
 
 ```
 ./gradlew assembleRelease
@@ -43,6 +55,17 @@ apksigner sign --ks ~/.android/debug.keystore --ks-pass pass:android --key-pass 
   --ks-key-alias androiddebugkey --out orbit.apk app/build/outputs/apk/release/app-release-unsigned.apk
 adb install -r orbit.apk
 ```
+
+## Use it
+
+Everything is done with the Fire TV remote. The full guide is [docs/USAGE.md](docs/USAGE.md).
+
+- **The remote.** Arrows move, Select opens, Back goes one step back, Menu switches between Cinema and the channel wall. [The remote](docs/USAGE.md#the-remote)
+- **Your home.** Cinema opens on For You: tonight's live sport, a film picked for you, home news and rows for your loves. Rest on a title to see its trailer. [Your home](docs/USAGE.md#your-home-cinema)
+- **Who's watching.** The circle with your initial (top right) switches people, adds a person or changes your setup. [Who's watching](docs/USAGE.md#whos-watching)
+- **Journeys.** Pick a place on the globe or search any town, then walk, drive or eat there. [Journeys](docs/USAGE.md#journeys)
+- **Home Mode.** The "Feels like <your home country>" card in the Home row at the bottom of For You. [Home Mode](docs/USAGE.md#home-mode)
+- **Channel wall.** Menu opens live channels from your home country and the apps on the TV. [Live channels and radio](docs/USAGE.md#live-channels-and-radio)
 
 Your keys are built into the APK you make. Keep that APK to yourself, and run `tools/check-secrets.sh` before every commit and push.
 
@@ -87,7 +110,7 @@ Orbit is an independent, non-commercial project. It is not affiliated with, endo
 
 ## Credits
 
-Bundled fonts, code, images, sounds and data, with their licences and the attribution they require, are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). In short: Inter, Cormorant Garamond, Unbounded, Space Grotesk and Space Mono (SIL Open Font License 1.1); Three.js (MIT); Earth textures from NASA (public domain); Milky Way panorama by ESO/S. Brunier (CC BY 4.0); Home Mode sounds from Wikimedia Commons (CC BY and CC BY-SA, authors listed); places and time zones from GeoNames (CC BY 4.0); language names from Unicode CLDR (Unicode License v3).
+Bundled fonts, code, images and data, with their licences and the attribution they require, are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). In short: Inter, Cormorant Garamond, Unbounded, Space Grotesk and Space Mono (SIL Open Font License 1.1); Three.js (MIT); Earth textures from NASA (public domain); Milky Way panorama by ESO/S. Brunier (CC BY 4.0); places and time zones from GeoNames (CC BY 4.0); language names from Unicode CLDR (Unicode License v3).
 
 ## Licence
 

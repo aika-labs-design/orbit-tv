@@ -131,7 +131,7 @@ class OrbitActivity : Activity() {
     private fun pageUrl(name: String) = WebOrigin.pageUrl(if (name in PAGES) name else "cinema")
     /** Switch the hosted page (the Menu key toggles Cinema and the Wall; pages ask for Home Mode, Atlas, Journey, Setup). */
     private fun showPage(name: String) {
-        // Home Mode is never the page Orbit starts or wakes into, so its sound never starts by itself.
+        // Home Mode is never the page Orbit starts or wakes into, so its radio never starts by itself.
         radio.stop(); if (name != "home") prefs.edit().putString(PREF_PAGE, name).apply(); currentPage = name; pageReady = false; answers.newPage()
         web.loadUrl(pageUrl(name)); Log.i(WebBridge.TAG, "page -> $name")
     }

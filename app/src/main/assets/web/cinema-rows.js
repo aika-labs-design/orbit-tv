@@ -77,10 +77,12 @@
       meta: [t.year, lang, (t.genreNames || [])[0], app && x.country ? `On ${app.name} in ${x.country}` : null].filter(Boolean), data: t,
     }, extra || {}));
   }
-  function liveCard(it, love, why) {
-    const d = it.data || {}, on = !!it.live, next = !on && it.state === 'NEXT';
+  function liveCard(it, love, why, x) {
+    const d = it.data || {}, on = !!it.live, next = !on && it.state === 'NEXT', score = next ? null : d.short || null;
     // The competition (Premier League, IPL) and where it is on (an app here) label every live match; a match not started has no score yet.
-    return card({ id: it.id, kind: 'live', title: it.name, still: d.image || it.art || null, score: next ? null : d.short || null, live: on, startMs: d.startMs || 0,
+    // board: the face of a card with no venue photo, the teams large and the kick-off time (or the score) below.
+    return card({ id: it.id, kind: 'live', title: it.name, still: d.image || it.art || null, score, live: on, startMs: d.startMs || 0,
+      board: { title: it.name, line: next ? (d.startMs && x ? kickoff(d.startMs, x.tz, x.nowMs) : '') : score || '' },
       caption: d.competition || [d.venue, d.handoffLabel].filter(Boolean).join(' · '),
       sub: [d.competition || d.venue, d.handoffLabel ? (it.pkg ? 'on ' + d.handoffLabel : d.handoffLabel) : null].filter(Boolean).join(' · '),
       pkg: it.pkg || null, appLabel: d.handoffLabel || null, eyebrow: on ? 'Live now' : next ? 'Next' : 'Result', why: why || [d.competition, d.handoffLabel].filter(Boolean).join(' · '),
@@ -95,10 +97,17 @@
     const d = day(ms) === day(now) ? 'Today' : day(ms) === day(now + DAY) ? 'Tomorrow' : f(ms, { weekday: 'long' });
     return `${d} ${f(ms, { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })} your time`;
   }
+  // The board's short form: "17:30" today, "Tomorrow 17:30", else "Saturday 17:30".
+  const kickoff = (ms, tz, now) => when(ms, tz, now).replace(/^Today /, '').replace(/ your time$/, '');
+  // A match still called scheduled more than three hours after its start time is stale data, not tonight's match.
+  const STALE = 3 * 3600000;
+  const stale = (state, startMs, now) => (state === 'pre' || state === 'NEXT') && !!startMs && now - startMs > STALE;
   // hand: the love's shared sport card (Shell.items().sport), whose hand-off app a live match opens.
   function fixtureCard(it, l, why, x, hand) {
-    const on = it.state === 'in', d = (hand && hand.data) || {}, pkg = on && hand && hand.pkg ? hand.pkg : undefined;
-    return card({ id: `fx:${l.id}:${it.title}:${it.startMs}`, kind: 'fixture', title: it.title, still: null, score: it.score || null, live: on,
+    const on = it.state === 'in', pre = it.state === 'pre', d = (hand && hand.data) || {}, pkg = on && hand && hand.pkg ? hand.pkg : undefined;
+    const score = pre ? null : it.score || null;   // ESPN reports 0-0 before kick-off: a match not started has no score
+    return card({ id: `fx:${l.id}:${it.title}:${it.startMs}`, kind: 'fixture', title: it.title, still: null, score, live: on,
+      board: { title: it.title, line: pre ? (it.startMs ? kickoff(it.startMs, x.tz, x.nowMs) : '') : score || '' },
       action: on ? (pkg ? 'Watch on ' + (d.handoffLabel || 'the app') : 'Watch') : 'When it plays', pkg, appLabel: pkg ? d.handoffLabel || null : null, handoffLabel: on ? d.handoffLabel || null : null,
       sub: on ? (it.detail || 'Live now') : it.state === 'pre' ? when(it.startMs, x.tz, x.nowMs) : ['Result', it.detail].filter(Boolean).join(' · '),
       eyebrow: on ? 'Live now' : it.state === 'pre' ? 'Next' : 'Result', why, overview: [it.detail, it.venue].filter(Boolean).join(' · '), love: l.id,
@@ -141,9 +150,9 @@
     // Everything one love brings today: live first, then videos, shows and news. Each card names the love it came from.
     function loveCards(l) {
       const f = feed[l.id] || {}, why = whyOf(l);
-      const sport = sportCards(l, o.interests, it.sport).map(s => liveCard(s, l.id, why));
+      const sport = sportCards(l, o.interests, it.sport).filter(s => !stale(s.state, (s.data || {}).startMs, o.nowMs)).map(s => liveCard(s, l.id, why, x));
       const sp = sportOf(l, o.interests), hand = sp ? (it.sport || []).find(s => (s.data || {}).sport === sp) : null;
-      const fixtures = (f.live || []).filter(i => i.kind === 'sport' && !sport.some(s => s.title === i.title)).map(i => fixtureCard(i, l, why, x, hand));
+      const fixtures = (f.live || []).filter(i => i.kind === 'sport' && !stale(i.state, i.startMs, o.nowMs) && !sport.some(s => s.title === i.title)).map(i => fixtureCard(i, l, why, x, hand));
       const streams = (f.live || []).filter(i => i.kind === 'stream').map(v => streamCard(v, l, why));
       const radio = (f.live || []).filter(i => i.kind === 'radio' && i.url).map(r => card({ id: 'r:' + r.url, kind: 'radio', title: r.title, url: r.url, still: null, live: true,
         sub: why + ' · radio', eyebrow: 'Radio', why, overview: [r.title, r.detail].filter(Boolean).join(' · '), love: l.id, data: { kind: 'radio', id: r.url, title: r.title } }));
@@ -213,8 +222,8 @@
       const tag = o.home && o.home.pack && o.home.pack.channelTag;
       const chLive = tag ? (it.ch || []).filter(c => c.live && (c.tag || '').includes(tag)).map(c => channelCard(c, 'Live from ' + homeCountry)) : [];
       const homeCards = [
-        card({ id: 'home:mode', kind: 'homemode', title: 'Feels like ' + homeCountry, still: o.homePhoto || null, caption: city + ' time, radio and the sounds of home', sub: city + ' time, radio and the sounds of home', eyebrow: 'Home',
-          overview: `Home weather, festivals, home news, radio and the sounds of ${city}.` }),
+        card({ id: 'home:mode', kind: 'homemode', title: 'Feels like ' + homeCountry, still: o.homePhoto || null, caption: city + ' time, radio and live channels from home', sub: city + ' time, radio and live channels from home', eyebrow: 'Home',
+          overview: `Home weather, festivals, home news, radio and live channels from ${city}.` }),
         card({ id: 'home:classic', kind: 'classic', title: 'Classic home', caption: 'The previous home screen', sub: 'The previous home screen', eyebrow: 'Home',
           overview: `Rows of tiles, moods and the Netflix Top 10 for ${x.country || 'where you live'}.` }),
       ];

@@ -375,3 +375,42 @@ test('the Feels like card shows the home photograph once it is known', () => {
   assert.strictEqual(card({}).still, null);
   assert.strictEqual(card({ homePhoto: 'https://upload.wikimedia.org/x/960px-Lagos.jpg' }).still, 'https://upload.wikimedia.org/x/960px-Lagos.jpg');
 });
+
+// TV: late in the evening Tonight showed "0-0" on a dark card for a match ESPN still called scheduled hours after 17:30
+const H = 3600000;
+const soccer = (state, startMs, score) => ({ football: Object.assign({}, toluLoves.football, { live: [{ kind: 'sport', title: 'Liverpool v Arsenal', detail: 'Scheduled', state, startMs, venue: 'Anfield', score }] }) });
+const tonightOf = (loves) => build({ loves: Object.assign({}, toluLoves, loves) }).shelves.find(s => s.id === 'tonight').cards;
+
+test('a match not yet started shows its kick-off time, never a score', () => {
+  const c = tonightOf(soccer('pre', Date.UTC(2026, 10, 1, 16, 30) + 2 * H, '0-0')).find(x => x.title === 'Liverpool v Arsenal');   // 19:30 in Berlin
+  assert.strictEqual(c.score, null);
+  assert.deepStrictEqual(c.board, { title: 'Liverpool v Arsenal', line: '19:30' });
+  assert.strictEqual(c.sub, 'Today 19:30 your time');
+});
+
+test('a scheduled match whose start is more than three hours past leaves Tonight and the love rows', () => {
+  const stale = soccer('pre', NOW - 4 * H, '0-0');
+  assert.ok(!tonightOf(stale).some(x => x.title === 'Liverpool v Arsenal'), 'not in Tonight');
+  const tab = build({ loves: Object.assign({}, toluLoves, stale), tab: 'love:football' }).shelves.flatMap(s => s.cards);
+  assert.ok(!tab.some(x => x.title === 'Liverpool v Arsenal'), 'not on the love tab');
+  assert.ok(tonightOf(soccer('pre', NOW - 1 * H, '')).some(x => x.title === 'Liverpool v Arsenal'), 'an hour late may still kick off');
+  assert.ok(tonightOf(soccer('in', NOW - 4 * H, '2-1')).some(x => x.title === 'Liverpool v Arsenal'), 'a long live match stays');
+});
+
+test('a live or finished match shows teams and the score on its board', () => {
+  const live = tonightOf(soccer('in', NOW - H, '1-0')).find(x => x.title === 'Liverpool v Arsenal');
+  assert.deepStrictEqual(live.board, { title: 'Liverpool v Arsenal', line: '1-0' });
+});
+
+test('a NEXT shared sport card shows the teams large and its kick-off time below, with the competition', () => {
+  const next = { kind: 'live', id: 'live:football', name: 'Liverpool v Arsenal', live: false, state: 'NEXT', pkg: 'sky',
+    data: { sport: 'football', state: 'NEXT', short: 'LIV v ARS', startMs: NOW + 2 * H, competition: 'Premier League', handoffLabel: 'Sky Go' } };
+  const c = build({ items: items({ sport: [next] }) }).shelves[0].cards.find(x => x.title === 'Liverpool v Arsenal');
+  assert.deepStrictEqual(c.board, { title: 'Liverpool v Arsenal', line: '21:00' });
+  assert.strictEqual(c.caption, 'Premier League'); assert.strictEqual(c.score, null); assert.strictEqual(c.eyebrow, 'Next');
+  const tomorrow = build({ items: items({ sport: [Object.assign({}, next, { data: Object.assign({}, next.data, { startMs: NOW + 20 * H }) })] }), tab: 'love:football' })
+    .shelves[0].cards.find(x => x.title === 'Liverpool v Arsenal');
+  assert.strictEqual(tomorrow.board.line, 'Tomorrow 15:00');
+  const stale = Object.assign({}, next, { data: Object.assign({}, next.data, { startMs: NOW - 4 * H }) });
+  assert.ok(!build({ items: items({ sport: [stale] }) }).shelves[0].cards.some(x => x.title === 'Liverpool v Arsenal'), 'a stale NEXT card is dropped');
+});

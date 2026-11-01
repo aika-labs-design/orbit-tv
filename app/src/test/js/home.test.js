@@ -5,8 +5,6 @@ const fs = require('node:fs');
 const Home = require(path.join(__dirname, '../../main/assets/web/home.js'));
 const festivals = [{ date: '2026-11-01', name: 'Kannada Rajyotsava', local: 'ಕನ್ನಡ ರಾಜ್ಯೋತ್ಸವ' }, { date: '2026-11-08', name: 'Deepavali', local: 'ದೀಪಾವಳಿ' }];
 const WorldData = require(path.join(__dirname, '../../main/assets/web/world-data.js'));
-let localData = {}; try { localData = JSON.parse(fs.readFileSync(path.join(__dirname, '../../main/assets/web/homes/local.json'), 'utf8')); } catch (e) {}
-if (Home.loadLocal) Home.loadLocal(localData);
 const languages = JSON.parse(fs.readFileSync(path.join(__dirname, '../../main/assets/languages.json'), 'utf8'));
 
 // Tolu, as on the approved pictures: home Lagos, living in Berlin, Yoruba first.
@@ -67,18 +65,18 @@ test('next festival counts India days and stops at thirty', () => {
   assert.strictEqual(Home.nextFestival([], '2026-12-01'), null);
 });
 
-test('buckets, greetings and auto sound follow the home hour and the home weather', () => {
+test('buckets follow the home hour', () => {
   assert.strictEqual(Home.bucket(6), 'dawn'); assert.strictEqual(Home.bucket(9), 'morning'); assert.strictEqual(Home.bucket(14), 'day');
   assert.strictEqual(Home.bucket(18), 'evening'); assert.strictEqual(Home.bucket(23), 'night'); assert.strictEqual(Home.bucket(2), 'night');
-  assert.strictEqual(Home.autoSound('day', true, 'IN'), 'rain'); assert.strictEqual(Home.autoSound('dawn', false, 'IN'), 'temple');
-  assert.strictEqual(Home.autoSound('morning', false, 'IN'), 'birds'); assert.strictEqual(Home.autoSound('evening', false, 'IN'), 'temple'); assert.strictEqual(Home.autoSound('day', false, 'IN'), 'birds'); assert.strictEqual(Home.autoSound('night', false, 'IN'), 'night');
 });
 
-test('the temple recording is Indian, so only an Indian home hears it; every other home gets the generic sounds', () => {
-  assert.strictEqual(Home.autoSound('dawn', false, 'NG'), 'birds'); assert.strictEqual(Home.autoSound('evening', false, 'NG'), 'birds');
-  assert.strictEqual(Home.autoSound('night', false, 'NG'), 'night'); assert.strictEqual(Home.autoSound('day', true, 'NG'), 'rain');
-  assert.deepStrictEqual(Home.sounds('IN'), ['rain', 'temple', 'birds', 'night']);
-  assert.deepStrictEqual(Home.sounds('NG'), ['rain', 'birds', 'night']);
+// Owner: the ambient rain, nature, birds and temple sounds felt creepy; Home Mode plays only radio and live channels.
+test('Home Mode has no ambient sound: no sound helpers, no bundled recordings, no sound row', () => {
+  ['sounds', 'autoSound', 'soundFor', 'loadLocal'].forEach(k => assert.strictEqual(Home[k], undefined, k));
+  const web = path.join(__dirname, '../../main/assets/web');
+  assert.ok(!fs.existsSync(path.join(web, 'homes')), 'web/homes is gone');
+  const page = fs.readFileSync(path.join(web, 'home.html'), 'utf8');
+  assert.doesNotMatch(page, /<audio|homes\/|Sounds|soundFor|ambient/);
 });
 
 const base = { label: 'India', country: 'IN', place: 'Mysuru', weather: [], here: null, festival: null, liveChannel: null, bucket: 'evening', hhmm: '19:30' };
@@ -95,10 +93,12 @@ test('shared rain is noticed, named after the city the person lives in', () => {
   assert.match(all(ctx), /22 degrees in Mysuru, 9 in Toronto/);
 });
 
-test('host lines for a home outside India say nothing about temples or chai', () => {
+test('host lines name no country: the same calm line for every home', () => {
   const lagos = { ...base, label: 'Nigeria', country: 'NG', place: 'Lagos' };
-  ['dawn', 'morning', 'day', 'evening', 'night'].forEach(b => assert.doesNotMatch(all({ ...lagos, bucket: b }), /temple|chai|coffee|Toronto/i, b));
-  assert.match(all({ ...base, bucket: 'evening' }), /chai/);   // an Indian home keeps its evening
+  ['dawn', 'morning', 'day', 'evening', 'night'].forEach(b => {
+    assert.doesNotMatch(all({ ...lagos, bucket: b }), /temple|chai|coffee|Toronto/i, b);
+    assert.strictEqual(all({ ...base, bucket: b }).replace('Mysuru', 'Lagos'), all({ ...lagos, bucket: b }), b);
+  });
 });
 
 test('with no data at all there is still a clean line', () => {
@@ -107,32 +107,12 @@ test('with no data at all there is still a clean line', () => {
   out.forEach(l => assert.doesNotMatch(l, /undefined|null|NaN/));
 });
 
-test('sound is silent while Orbit is paused or the radio is on', () => {
-  const base = { mode: 'auto', bucket: 'dawn', wet: false, radioOn: false, paused: false, country: 'IN' };
-  assert.strictEqual(Home.soundFor(base), 'temple');
-  assert.strictEqual(Home.soundFor({ ...base, paused: true }), '');
-  assert.strictEqual(Home.soundFor({ ...base, radioOn: true }), '');
-  assert.strictEqual(Home.soundFor({ ...base, mode: 'off' }), '');
-  assert.strictEqual(Home.soundFor({ ...base, mode: 'rain' }), 'rain');
-  assert.strictEqual(Home.soundFor({ ...base, mode: 'rain', paused: true }), '');
-});
-
 test('weather older than three hours is not presented as current', () => {
   const w = [{ name: 'Vijayawada', tempC: 24, desc: 'rain', isDay: false, wet: true }], now = Date.UTC(2026, 10, 1, 12);
   assert.deepStrictEqual(Home.freshWeather(w, now - 30 * 60000, now), w);
   assert.deepStrictEqual(Home.freshWeather(w, now - 4 * 3600000, now), []);
   assert.deepStrictEqual(Home.freshWeather(w, 0, now), []);
   assert.deepStrictEqual(Home.freshWeather(undefined, now, now), []);
-});
-
-test('local touches are bundled data: an Indian home gets the temple and its lines, a Nigerian home gets none', () => {
-  assert.ok(localData.IN && localData.IN.sound === 'temple', 'homes/local.json has IN');
-  assert.strictEqual(localData.NG, undefined);
-  assert.deepStrictEqual(Home.sounds('IN'), ['rain', 'temple', 'birds', 'night']);
-  assert.deepStrictEqual(Home.sounds('NG'), ['rain', 'birds', 'night']);
-  const ctx = { label: 'x', place: 'P', weather: [], here: null, festival: null, liveChannel: null, hhmm: '06:00' };
-  assert.match(Home.lines({ ...ctx, bucket: 'dawn', country: 'IN' }).join(' '), new RegExp(localData.IN.dawn.replace(/[.]/g, '\\.')));
-  assert.doesNotMatch(Home.lines({ ...ctx, bucket: 'evening', country: 'NG' }).join(' '), new RegExp(localData.IN.evening.replace(/[.]/g, '\\.')));
 });
 
 test('home.js names no country: no country code literals, no temple or chai', () => {

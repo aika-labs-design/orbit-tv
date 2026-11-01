@@ -41,7 +41,6 @@
   <div id="credit"></div>
   <div id="veil"></div>
 </div>
-<audio id="amb" loop preload="none"></audio>
 <script src="home.js"></script><script src="journeys.js"></script><script src="world-data.js"></script><script src="profiles.js"></script>
 <script src="sky.js"></script><script src="personal.js"></script><script src="wellbeing.js"></script><script src="feeds.js"></script><script src="common.js"></script>
 <script>
@@ -60,7 +59,7 @@
     const weather = Home.freshWeather(h.weather, h.weatherMs, Date.now());
     const live = Shell.channelItems(pr).find(c => c.live);
     const l = pr.living, here = l && l.name !== hp.name ? { name: l.name, tz: l.tz, desc: livingWx && livingWx.desc, tempC: livingWx ? livingWx.tempC : null } : null;
-    return { now, bucket: b, wet: !!(weather[0] && weather[0].wet), weather, place: hp.name, label: p.label || '', country: pr.home.country,
+    return { now, bucket: b, weather, place: hp.name, label: p.label || '',
       festival: Home.nextFestival(p.festivals, now.dateKey), liveChannel: live ? live.name : null, here, hhmm: now.hhmm };
   }
   // The weather where the person lives, from the travel service (as Cinema's header does); asked again after 30 minutes.
@@ -93,41 +92,25 @@
     next.src = u; front = front === 1 ? 2 : 1;
   }
 
-  // ---------- sound ----------
-  let mode = 'auto', playing = '', radioUrl = '', radioState = 'stopped', fadeTimer = 0, paused = false;
-  const amb = $('amb');
-  function ambient(kind) {
-    if (!kind) { clearInterval(fadeTimer); amb.pause(); playing = ''; return; }
-    if (kind === playing && !amb.paused) return;
-    playing = kind; amb.src = `homes/sounds/${kind}.m4a`; amb.volume = 0;
-    const p = amb.play(); if (p && p.catch) p.catch(e => Shell.log('ambient ' + e));
-    clearInterval(fadeTimer); fadeTimer = setInterval(() => { amb.volume = Math.min(0.5, amb.volume + 0.05); if (amb.volume >= 0.5) clearInterval(fadeTimer); }, 200);
-  }
-  function applySound() {
-    if (!isReady()) { ambient(''); return; }
-    const c = ctx(); ambient(Home.soundFor({ mode, bucket: c.bucket, wet: c.wet, country: c.country, radioOn: !!radioUrl, paused: paused || document.hidden }));
-  }
+  // ---------- radio: the only sound Home Mode makes, and only when asked ----------
+  let radioUrl = '', radioState = 'stopped', paused = false;
   function stopRadio() { if (radioUrl) { radioUrl = ''; try { Android.radio('', window.__orbitToken || ''); } catch (e) {} } }
-  function stopAll() { stopRadio(); ambient(''); }
-  function leave() { stopAll(); try { Android.page('cinema', window.__orbitToken || ''); } catch (e) {} }
+  function leave() { stopRadio(); try { Android.page('cinema', window.__orbitToken || ''); } catch (e) {} }
 
   // ---------- rows ----------
-  const NAMES = { live: 'Live from home', radio: 'Radio', sounds: 'Sounds', news: 'News', more: 'More' };
-  const SOUND_NAMES = { auto: 'Auto', rain: 'Rain', temple: 'Temple', birds: 'Birds', night: 'Night', off: 'Off' };
+  const NAMES = { live: 'Live from home', radio: 'Radio', news: 'News', more: 'More' };
   let ri = 0; const ci = {}; let rows = {}, keys = [];
   function build() {
     const ok = isReady(), pr = prof(), p = ok ? pack() : null, h = ok ? home() : null;
     const live = p ? Shell.channelItems(pr) : [];   // the open home's country: curated, or found by the daily live search
     const radio = ((h && h.stations) || []).map(s => ({ kind: 'radio', id: 'r:' + s.url, name: Home.stationName(s.name), url: s.url, color: '#3a2a12', tag: 'RADIO',
       desc: s.name + '. ' + (radioUrl === s.url ? (radioState === 'playing' ? 'On air. Select to stop.' : 'Tuning in...') : 'Select to listen.') }));
-    const sounds = !ok ? [] : ['auto', ...Home.sounds(pr.home.country), 'off'].map(k => ({ kind: 'sound', id: 's:' + k, mode: k, name: SOUND_NAMES[k] || k, color: '#14202e', tag: 'SOUND',
-      desc: k === 'auto' ? 'Follows the time and the weather at home.' : k === 'off' ? 'Silence.' : `${SOUND_NAMES[k] || k} on a loop.` }));
     const n = h && h.news; const news = n && n.headlines.length ? [{ kind: 'today', id: 'news', name: n.label, color: '#162038', tag: `${n.headlines.length} HEADLINES`, data: n, desc: n.headlines[0].title }] : [];
     const other = pr ? Home.next(Shell.profiles(), pr.id) : null;
     const more = [...(other ? [{ kind: 'switch', id: 'switch', to: other.id, name: `Switch to ${other.home.places[0].name} · ${other.name}'s home`, color: '#222a3a', tag: 'HOME',
       desc: `${other.name}'s home. One home at a time. This swaps the whole room.` }] : []),
-      { kind: 'leave', id: 'leave', name: 'Back to Orbit', color: '#222a3a', tag: 'EXIT', desc: 'Stops the sound and goes back to the home screen.' }];
-    rows = { live, radio, sounds, news, more }; keys = Object.keys(rows).filter(k => rows[k].length);
+      { kind: 'leave', id: 'leave', name: 'Back to Orbit', color: '#222a3a', tag: 'EXIT', desc: 'Stops the radio and goes back to the home screen.' }];
+    rows = { live, radio, news, more }; keys = Object.keys(rows).filter(k => rows[k].length);
     if (ri >= keys.length) ri = keys.length - 1;
   }
   function card(it, focused) {
@@ -136,8 +119,8 @@
     let html = it.art ? `<img src="${esc(it.art)}" alt=""><div class="shade"></div>` : '';
     html += `<div class="tag">${esc(it.tag || '')}</div><div class="name">${esc(it.name)}</div>`;
     if (it.kind === 'today') html += `<div class="plain">${esc(it.desc)}</div>`;
-    const on = (it.kind === 'sound' && it.mode === mode) || (it.kind === 'radio' && it.url === radioUrl);
-    if (it.live) html += '<div class="pill">LIVE</div>'; else if (on) html += `<div class="pill next">${it.kind === 'radio' ? (radioState === 'playing' ? 'ON AIR' : 'TUNING') : 'ON'}</div>`;
+    const on = it.kind === 'radio' && it.url === radioUrl;
+    if (it.live) html += '<div class="pill">LIVE</div>'; else if (on) html += `<div class="pill next">${radioState === 'playing' ? 'ON AIR' : 'TUNING'}</div>`;
     el.innerHTML = html; return el;
   }
 
@@ -176,19 +159,17 @@
   function act(it) {
     if (!it) return;
     if (it.kind === 'radio') {
-      if (radioUrl === it.url) { stopRadio(); radioState = 'stopped'; applySound(); }
-      else { radioUrl = it.url; radioState = 'connecting'; ambient(''); Shell.toast('Tuning in'); try { Android.radio(it.url, window.__orbitToken || ''); } catch (e) { Shell.log('radio ' + it.url); } }
-    } else if (it.kind === 'sound') { mode = it.mode; stopRadio(); applySound(); }
-    else if (it.kind === 'today') Shell.openReader(it.data);
-    else if (it.kind === 'switch') { stopAll(); wanted = it.to; try { localStorage.setItem('orbit.home', wanted); } catch (e) {} ri = 0; mode = 'auto'; render(); applySound(); return; }
+      if (radioUrl === it.url) { stopRadio(); radioState = 'stopped'; }
+      else { radioUrl = it.url; radioState = 'connecting'; Shell.toast('Tuning in'); try { Android.radio(it.url, window.__orbitToken || ''); } catch (e) { Shell.log('radio ' + it.url); } }
+    } else if (it.kind === 'today') Shell.openReader(it.data);
+    else if (it.kind === 'switch') { stopRadio(); wanted = it.to; try { localStorage.setItem('orbit.home', wanted); } catch (e) {} ri = 0; render(); return; }
     else if (it.kind === 'leave') { leave(); return; }
-    else if (it.kind === 'channel') { stopAll(); Shell.launchItem(it); return; }
+    else if (it.kind === 'channel') { stopRadio(); Shell.launchItem(it); return; }
     render();
   }
 
-  let wasReady = false;
-  Shell.on('data', () => { render(); if (isReady() !== wasReady) { wasReady = isReady(); applySound(); } });
-  Shell.on('tick', () => { header(); if (mode === 'auto' && !radioUrl) applySound(); });
+  Shell.on('data', render);
+  Shell.on('tick', header);
   Shell.on('key', (k) => {
     paused = false;
     const key = keys[ri]; if (!key) return;
@@ -199,22 +180,21 @@
   });
   Shell.on('back', leave);
   Shell.on('wake', leave);                       // waking never lands in Home Mode, so audio never starts by itself
-  Shell.on('pause', () => { paused = true; stopRadio(); ambient(''); });
-  Shell.on('resume', () => { paused = false; applySound(); });
-  Shell.on('returned', () => { paused = false; applySound(); });
+  Shell.on('pause', () => { paused = true; stopRadio(); });
+  Shell.on('resume', () => { paused = false; });
+  Shell.on('returned', () => { paused = false; });
   Shell.on('radio', (st) => {
     if (!radioUrl) return;
     radioState = st;
-    if (st === 'failed') { radioUrl = ''; Shell.toast('Station not answering'); applySound(); }
-    else if (st === 'stopped') { radioUrl = ''; applySound(); }
+    if (st === 'failed') { radioUrl = ''; Shell.toast('Station not answering'); }
+    else if (st === 'stopped') radioUrl = '';
     render();
   });
-  document.addEventListener('visibilitychange', () => { if (document.hidden) stopAll(); });
+  document.addEventListener('visibilitychange', () => { if (document.hidden) stopRadio(); });
   setInterval(() => { if (lines.length > 1) { li = (li + 1) % lines.length; $('host').style.opacity = 0; setTimeout(() => { $('host').textContent = lines[li]; $('host').style.opacity = 1; }, 600); } }, 30000);
   setInterval(() => { if (photos.length > 1) photo(); }, 20000);
   fetch('data/languages.json').then(r => r.json()).then(l => { WorldData.load(l); header(); }).catch(e => Shell.log('home languages failed: ' + e));
-  fetch('homes/local.json').then(r => r.json()).then(d => { Home.loadLocal(d); render(); applySound(); }).catch(e => Shell.log('home local touches failed: ' + e));
-  render(); applySound();
+  render();
 })();
 </script>
 </body></html>

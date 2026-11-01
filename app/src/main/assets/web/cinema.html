@@ -228,7 +228,10 @@
   function stillHtml(c) {
     let h = '';
     if (c.kind === 'news') h += `<div class="np"><small>${esc(c.face || '')}</small><span>${esc(c.headline || c.title)}</span></div>`;
-    else if ((c.kind === 'live' || c.kind === 'fixture') && !c.still) h += `<div class="board">${esc(c.score || c.title)}</div>`;   // a scoreboard face when there is no venue photo
+    else if ((c.kind === 'live' || c.kind === 'fixture') && !c.still) {   // a scoreboard face when there is no venue photo: teams large, kick-off time or score below
+      const bd = c.board || { title: c.title, line: c.score || '' };
+      h += `<div class="board"><b>${esc(bd.title)}</b>${bd.line ? `<span>${esc(bd.line)}</span>` : ''}</div>`;
+    }
     else if (!c.still) h += `<div class="face"><small>${esc(c.eyebrow || '')}</small>${esc(c.title)}</div>`;
     else if (c.posterOnly) h += `<img class="poster" src="${esc(small(c.still))}" alt="">`;
     if (c.live) h += '<div class="tag">LIVE</div>';
@@ -239,7 +242,7 @@
   let rowKey = '';
   function renderShelf() {
     const s = shelves[ri]; if (!s) { html($('sh'), ''); html($('row'), ''); rowKey = ''; return; } const i = ci[s.id] || 0;
-    const key = s.id + '|' + s.cards.map(c => c.id + ':' + (c.score || '') + ':' + (c.sub || '')).join(',');
+    const key = s.id + '|' + s.cards.map(c => c.id + ':' + (c.score || '') + ':' + (c.sub || '') + ':' + (c.board ? c.board.line : '')).join(',');
     if (key !== rowKey) { rowKey = key; buildRow(s); }
     [...$('row').querySelectorAll('.card')].forEach((el, k) => { el.classList.toggle('f', k === i && zone === 'shelf'); if (k <= i + 4 && el.__bg) { el.firstChild.style.backgroundImage = el.__bg; el.__bg = null; } });   // pictures load as focus nears them
     const ring = $('ring'); if (ring) { ring.style.opacity = zone === 'shelf' ? 1 : 0; ring.style.transform = `translateX(${i * 396}px) scale(1.1) translateY(-10px)`; }

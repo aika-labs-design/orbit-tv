@@ -23,7 +23,7 @@ Pages talk to the shell through one injected `Android` object (`web/WebBridge.kt
 
 A profile is a name, a home (country and up to three places), languages in priority order, where the person lives (city, time zone, country) and loves (catalogue ids with follow-up choices, or a custom search). Up to six people per TV. The shell stores them in the app's `files/profiles.json` (`feeds/Profiles.kt`); an invalid save is refused, so good profiles are never overwritten by a broken list. Per-person page data (history, taste, journey history) is keyed by profile id in WebView storage. Setup (`setup.html`, `setup.js`) creates and edits profiles. An optional git-ignored `local-profiles.json` at the repository root is bundled as a first-launch seed (see SETUP).
 
-Nothing about a country, language, region or sport is written into the code: it comes from the profiles and from data keyed by country or language code (`countries.json`, `languages.json`, `channels/<CC>.json`, `festivals/<CC>.json`, `handoffs.json`, `providers.json`, `web/homes/local.json`, `interests.json`).
+Nothing about a country, language, region or sport is written into the code: it comes from the profiles and from data keyed by country or language code (`countries.json`, `languages.json`, `channels/<CC>.json`, `festivals/<CC>.json`, `handoffs.json`, `providers.json`, `interests.json`).
 
 ## Feeds and caches
 

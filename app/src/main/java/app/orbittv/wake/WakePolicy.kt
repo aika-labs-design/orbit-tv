@@ -20,7 +20,7 @@ object WakePolicy {
     /** The wake intro plays only when Orbit was not already on screen when the TV slept. */
     fun shouldPlayIntro(orbitInFront: Boolean): Boolean = !orbitInFront
 
-    /** Home Mode plays sound, so a wake always lands on the Cinema home instead; other pages stay as they were. */
+    /** Home Mode can play radio, so a wake always lands on the Cinema home instead; other pages stay as they were. */
     fun pageAfterWake(current: String): String = if (current == "home") "cinema" else current
 
     /** A TV with no profiles starts in setup; otherwise the page it was on (never Home Mode, see [pageAfterWake]). */

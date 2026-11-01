@@ -1,4 +1,4 @@
-// Home Mode context: home time, greeting, festivals, soundscape and host lines for one profile's home. Pure functions, no DOM; tested with node.
+// Home Mode context: home time, greeting, festivals and host lines for one profile's home. Pure functions, no DOM; tested with node.
 (function (root) {
   const pad = (n) => String(n).padStart(2, '0');
 
@@ -45,24 +45,15 @@
     return null;
   }
 
-  // The bundled rain, birdsong and night recordings suit any home. Touches that belong to one country (a recording, a dawn or evening line)
-  // come from homes/local.json, keyed by country code; the page loads it with loadLocal.
-  let LOCAL = {};
-  const loadLocal = (data) => { LOCAL = data || {}; };
-  const local = (country) => LOCAL[country] || {};
-  function sounds(country) { const s = local(country).sound; return ['rain', ...(s ? [s] : []), 'birds', 'night']; }
-  function autoSound(b, wet, country) { return wet ? 'rain' : (b === 'dawn' || b === 'evening') ? (local(country).sound || 'birds') : b === 'night' ? 'night' : 'birds'; }
-  // What the page should play right now: nothing while Orbit is paused, the radio is on, or sound is off.
-  function soundFor(s) { if (s.paused || s.radioOn || s.mode === 'off') return ''; return s.mode === 'auto' ? autoSound(s.bucket, s.wet, s.country) : s.mode; }
   // Weather older than maxMs is not "right now"; drop it so the page falls back to its no-weather lines.
   function freshWeather(weather, weatherMs, nowMs, maxMs) { return weather && weatherMs && nowMs - weatherMs <= (maxMs || 3 * 3600 * 1000) ? weather : []; }
 
   const WET = /rain|drizzle|showers|thunder/;
   const TIME = {
-    dawn: (t, p, c) => `${t} in ${p}. ${local(c).dawn || 'The day is only just starting.'}`,
+    dawn: (t, p) => `${t} in ${p}. The day is only just starting.`,
     morning: (t, p) => `${t} in ${p}. The city is on its way to work.`,
     day: (t, p) => `${t} in ${p}. Lunch is done and the afternoon is slow.`,
-    evening: (t, p, c) => `${t} in ${p}. ${local(c).evening || 'The evening is settling in.'}`,
+    evening: (t, p) => `${t} in ${p}. The evening is settling in.`,
     night: (t, p) => `${t} in ${p}. The house back home is quiet now.`,
   };
 
@@ -81,13 +72,13 @@
     const w2 = (ctx.weather || [])[1];
     if (w2) out.push(`${w2.name}: ${w2.tempC} degrees, ${w2.desc}.`);
     if (ctx.liveChannel) out.push(`${ctx.liveChannel} is live from home right now.`);
-    if (ctx.hhmm && TIME[ctx.bucket]) out.push(TIME[ctx.bucket](ctx.hhmm, place, ctx.country));
+    if (ctx.hhmm && TIME[ctx.bucket]) out.push(TIME[ctx.bucket](ctx.hhmm, place));
     if (!out.length) out.push(`Welcome home to ${ctx.label || 'home'}.`);
     return out;
   }
 
   // Radio Browser names run long ("88.9 Noticias - 88.9 FM - XHM-FM - Grupo ACIR - ..."): the card takes the first part.
   const stationName = (n) => String(n || '').split(' - ')[0].trim();
-  const Home = { stationName, loadLocal, localNow, bucket, greet, pick, next, ready, photoUrl, nextFestival, sounds, autoSound, soundFor, freshWeather, lines };
+  const Home = { stationName, localNow, bucket, greet, pick, next, ready, photoUrl, nextFestival, freshWeather, lines };
   if (typeof module !== 'undefined' && module.exports) module.exports = Home; else root.Home = Home;
 })(this);
